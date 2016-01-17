@@ -1,0 +1,41 @@
+\hypertarget{apr__queue_8h}{\section{include/apr\-\_\-queue.h File Reference}
+\label{apr__queue_8h}\index{include/apr\-\_\-queue.\-h@{include/apr\-\_\-queue.\-h}}
+}
+
+
+Thread Safe F\-I\-F\-O bounded queue.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} \hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga9c8c5ec3d8779a6c2ffffb8b74f784c7}{apr\-\_\-queue\-\_\-create} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$$\ast$queue, unsigned int queue\-\_\-capacity, apr\-\_\-pool\-\_\-t $\ast$a)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga220fffb8eb2f23aa2fe626b64076df88}{apr\-\_\-queue\-\_\-push} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga302387f5afb71d3c771b76448088bd34}{apr\-\_\-queue\-\_\-pop} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$$\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_gaba8216476d7e5abc3a5ec8a47adf96d5}{apr\-\_\-queue\-\_\-trypush} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga128207222433384f286f61ec806f4af8}{apr\-\_\-queue\-\_\-trypop} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$$\ast$data)
+\item 
+unsigned int \hyperlink{group___a_p_r___util___f_i_f_o_gaf342a2e2ec195a30d6d8c9d95fbfbc30}{apr\-\_\-queue\-\_\-size} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga8757c7f87105e6ff4cf1ea5ac28dd26f}{apr\-\_\-queue\-\_\-interrupt\-\_\-all} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_gabb8115bceb96a41df3e21544ce79bc68}{apr\-\_\-queue\-\_\-term} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Thread Safe F\-I\-F\-O bounded queue. \begin{DoxyNote}{Note}
+Since most implementations of the queue are backed by a condition variable implementation, it isn't available on systems without threads. Although condition variables are sometimes available without threads. 
+\end{DoxyNote}

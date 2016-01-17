@@ -1,0 +1,43 @@
+#! /bin/sh
+#
+# Created by configure
+
+CFLAGS="-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches   -m64 -mtune=generic"; export CFLAGS
+LDFLAGS="-Wl,-z,relro "; export LDFLAGS
+"./configure" \
+"--build=x86_64-redhat-linux-gnu" \
+"--host=x86_64-redhat-linux-gnu" \
+"--program-prefix=" \
+"--disable-dependency-tracking" \
+"--prefix=/usr" \
+"--exec-prefix=/usr" \
+"--bindir=/usr/bin" \
+"--sbindir=/usr/sbin" \
+"--sysconfdir=/etc" \
+"--datadir=/usr/share" \
+"--includedir=/usr/include" \
+"--libdir=/usr/lib64" \
+"--libexecdir=/usr/libexec" \
+"--localstatedir=/var" \
+"--sharedstatedir=/var/lib" \
+"--mandir=/usr/share/man" \
+"--infodir=/usr/share/info" \
+"--with-apr=/usr" \
+"--includedir=/usr/include/apr-1" \
+"--with-ldap" \
+"--without-gdbm" \
+"--with-sqlite3" \
+"--with-pgsql" \
+"--with-mysql" \
+"--with-freetds" \
+"--with-odbc" \
+"--without-berkeley-db" \
+"--with-crypto" \
+"--with-openssl" \
+"--with-nss" \
+"--without-sqlite2" \
+"build_alias=x86_64-redhat-linux-gnu" \
+"host_alias=x86_64-redhat-linux-gnu" \
+"CFLAGS=-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic" \
+"LDFLAGS=-Wl,-z,relro" \
+"$@"

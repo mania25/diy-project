@@ -1,0 +1,13 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=/usr/lib64
+APRUTIL_MAJOR_VERSION=1
+includedir=/usr/include/apr-1
+
+Name: APR Utils
+Description: Companion library for APR
+Version: 1.5.4
+# assume that apr-util requires libapr of same major version
+Requires: apr-1
+Libs: -L${libdir} -laprutil-${APRUTIL_MAJOR_VERSION} -lldap -llber -lexpat
+Cflags: -I${includedir}

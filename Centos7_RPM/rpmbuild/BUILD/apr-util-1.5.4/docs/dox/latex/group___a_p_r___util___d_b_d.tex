@@ -1,0 +1,1095 @@
+\hypertarget{group___a_p_r___util___d_b_d}{\section{D\-B\-D routines}
+\label{group___a_p_r___util___d_b_d}\index{D\-B\-D routines@{D\-B\-D routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_gaff6a26fb3b384bcb3a9172676c53590b}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T}~0x00
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_ga60a8749e5172b692fd2e356b48ec922b}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}~0x01
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_gad9dc523b0a3b8dea5b8c9b7b0c281ea2}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S}~0x02
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga91778287e3cd1b8ef8719ca2655e2bc8}{typedef struct \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} {\bfseries apr\-\_\-dbd\-\_\-driver\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga91778287e3cd1b8ef8719ca2655e2bc8}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga4738c1f6340184987fc7806522c18ab8}{typedef struct apr\-\_\-dbd\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga4738c1f6340184987fc7806522c18ab8}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga92eb10d7ec8fdb3a39a7d6fdfffdf8fb}{typedef struct \\*
+apr\-\_\-dbd\-\_\-transaction\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-transaction\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga92eb10d7ec8fdb3a39a7d6fdfffdf8fb}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga6765891011818912e1b52fef773bfce6}{typedef struct apr\-\_\-dbd\-\_\-results\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-results\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga6765891011818912e1b52fef773bfce6}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_gab890e4650a1de51725142318825103a5}{typedef struct apr\-\_\-dbd\-\_\-row\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-row\-\_\-t}}\label{group___a_p_r___util___d_b_d_gab890e4650a1de51725142318825103a5}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga1f1179c6480a2ee0134f2cb881106cd3}{typedef struct apr\-\_\-dbd\-\_\-prepared\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-prepared\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga1f1179c6480a2ee0134f2cb881106cd3}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} \{ \\*
+{\bfseries A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230acc06ee0f3fe0c65b9f8265053550e4ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230aaa4f167bb26fa3e85b0d61f34713ebb6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a0c38d32785a3cbddbe4ba692fdde16ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230af3518efb67af10100b92578b5c867c9c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4df919bac6f5b56257bfe63ed3e5968c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a58b37a24a35ddf144a9132a9837ed3d3}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230add86aa288504ec2d4194f35a3a8ac55a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4186d52d5ce586cd7559a0ae8737cbb7}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a8821461a3390bd0a001e714d2180ae6c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ad1907d3eb1235acfa8a971fce43711c5}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a14281587071981d4e6b25de5bb747e98}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77c20702c7c6566369d3ccc894eb9cd8}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4c9490a29ed882c46fa738e7cddede44}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae06c20e9edcd46964dc26bb43134e0e6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a2ad65674a89072f4582e97d0a4fad61d}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ab96a2b4b2b1fb94a7faeb01065d77835}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77bb0dd82ed396f7056ba2aaddd44265}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a5cffb0a0cc618ab3d0c187ca176d61ad}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae4db1948f1f1ef7651c5f01c12d1e56a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a60d6a6ab49b20a306443b7a9ad8c6f11}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230adf428a7365d71eacdf24a89c202c1f72}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a706a286af4fe4a9b97ee68adc11cd6cc}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga7969f50d38bda792cbef72136300a574}{apr\-\_\-dbd\-\_\-init} (apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga8ba85faccf7e8eea525812f8f2dfed25}{apr\-\_\-dbd\-\_\-get\-\_\-driver} (apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$name, const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$$\ast$driver)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_gabddb1fdcb2f8a5f5b83127485c78e8ae}{apr\-\_\-dbd\-\_\-open\-\_\-ex} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, apr\-\_\-dbd\-\_\-t $\ast$$\ast$handle, const char $\ast$$\ast$error)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_gaeff12b01f78ac78721acc4a0a318e673}{apr\-\_\-dbd\-\_\-open} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, apr\-\_\-dbd\-\_\-t $\ast$$\ast$handle)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga4abe00d844cd547cc69880fe14af4aca}{apr\-\_\-dbd\-\_\-close} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga7a14e0073a36bd97dd82baa5f20e874c}{apr\-\_\-dbd\-\_\-name} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver)
+\item 
+void $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gab2a238e15942e66a2b92836c392d5334}{apr\-\_\-dbd\-\_\-native\-\_\-handle} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gae3fca3b3c05f835f9849668a338d82d1}{apr\-\_\-dbd\-\_\-check\-\_\-conn} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gafecb22f98684f29e579fd73eb58b1e86}{apr\-\_\-dbd\-\_\-set\-\_\-dbname} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$name)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga1c401df12087d3bf1f15a9b80a8f572d}{apr\-\_\-dbd\-\_\-transaction\-\_\-start} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$$\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga6f3a5d6b351cd05646c9399a64eafeb5}{apr\-\_\-dbd\-\_\-transaction\-\_\-end} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga2a54cfffc3a348a424002eba937b5853}{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gab78c0464926311ef64882adfee2f0f42}{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans, int mode)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga40dbb6bb3f3f171f3443d21f3594a66a}{apr\-\_\-dbd\-\_\-query} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, const char $\ast$statement)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga144d354a36140fade933c1ef72661004}{apr\-\_\-dbd\-\_\-select} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, const char $\ast$statement, int random)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga77d1bccedee2c61dc96de6852f3a7cc4}{apr\-\_\-dbd\-\_\-num\-\_\-cols} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga2c9f511aba325f8904e69158eacd3987}{apr\-\_\-dbd\-\_\-num\-\_\-tuples} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gad4cdc5f4e8981b93f5a467a8c8a768f1}{apr\-\_\-dbd\-\_\-get\-\_\-row} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$$\ast$row, int rownum)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga1d6d3b38a0d677e3d65501074832a5b8}{apr\-\_\-dbd\-\_\-get\-\_\-entry} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga8eac8897bd1211564166b08492f458d7}{apr\-\_\-dbd\-\_\-get\-\_\-name} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, int col)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gaffa947c657862c2996707da339482287}{apr\-\_\-dbd\-\_\-error} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle, int errnum)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gab5806cd6535aaeafe8e9f79ef2cc90c9}{apr\-\_\-dbd\-\_\-escape} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$string, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gacf21412447c4357c64d1e9200a0f5eec}{apr\-\_\-dbd\-\_\-prepare} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$query, const char $\ast$label, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$$\ast$statement)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga1c4b005abda896011ca414679edfe112}{apr\-\_\-dbd\-\_\-pquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int nargs, const char $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga9f9ee377c2d335f8f1a9bffe4bf7194f}{apr\-\_\-dbd\-\_\-pselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, int nargs, const char $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga52ad74205d0afa92098e546303b9ee4c}{apr\-\_\-dbd\-\_\-pvquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gafbd4dbbddfa76586f172ec0832d4fd37}{apr\-\_\-dbd\-\_\-pvselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga7933396b01b4676ae2835d1f09d9a1be}{apr\-\_\-dbd\-\_\-pbquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const void $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga19b88ed11097a2d07bef1e31619fff0a}{apr\-\_\-dbd\-\_\-pbselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const void $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga27d1ca34ce4064bb14ac3cb315ba8d14}{apr\-\_\-dbd\-\_\-pvbquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gacfe85d56d78d5e4767684238287b700b}{apr\-\_\-dbd\-\_\-pvbselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random,...)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga67e57ef4eb7952df79ceaa6e92767d41}{apr\-\_\-dbd\-\_\-datum\-\_\-get} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col, \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} type, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___d_b_d_gaff6a26fb3b384bcb3a9172676c53590b}{\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T}}
+\index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T~0x00}}\label{group___a_p_r___util___d_b_d_gaff6a26fb3b384bcb3a9172676c53590b}
+commit the transaction \hypertarget{group___a_p_r___util___d_b_d_gad9dc523b0a3b8dea5b8c9b7b0c281ea2}{\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S}}
+\index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S~0x02}}\label{group___a_p_r___util___d_b_d_gad9dc523b0a3b8dea5b8c9b7b0c281ea2}
+ignore transaction errors \hypertarget{group___a_p_r___util___d_b_d_ga60a8749e5172b692fd2e356b48ec922b}{\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}}
+\index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K~0x01}}\label{group___a_p_r___util___d_b_d_ga60a8749e5172b692fd2e356b48ec922b}
+rollback the transaction 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-type\-\_\-e@{apr\-\_\-dbd\-\_\-type\-\_\-e}}
+\index{apr\-\_\-dbd\-\_\-type\-\_\-e@{apr\-\_\-dbd\-\_\-type\-\_\-e}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-type\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-dbd\-\_\-type\-\_\-e}}}\label{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}
+Mapping of C to S\-Q\-L types, used for prepared statements. \begin{DoxyRemark}{Remarks}
+For apr\-\_\-dbd\-\_\-p\mbox{[}v\mbox{]}query/select functions, in and out parameters are always const char $\ast$ (i.\-e. regular nul terminated strings). L\-O\-B types are passed with four (4) arguments\-: payload, length, table and column, all as const char $\ast$, where table and column are reserved for future use by Oracle. 
+
+For apr\-\_\-dbd\-\_\-p\mbox{[}v\mbox{]}bquery/select functions, in and out parameters are described next to each enumeration constant and are generally native binary types or some A\-P\-R data type. L\-O\-B types are passed with four (4) arguments\-: payload (char$\ast$), length (apr\-\_\-size\-\_\-t$\ast$), table (char$\ast$) and column (char$\ast$). Table and column are reserved for future use by Oracle. 
+\end{DoxyRemark}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230acc06ee0f3fe0c65b9f8265053550e4ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230acc06ee0f3fe0c65b9f8265053550e4ee}
+}]\%hhd \-: in, out\-: char$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230aaa4f167bb26fa3e85b0d61f34713ebb6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230aaa4f167bb26fa3e85b0d61f34713ebb6}
+}]\%hhu \-: in, out\-: unsigned char$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a0c38d32785a3cbddbe4ba692fdde16ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a0c38d32785a3cbddbe4ba692fdde16ee}
+}]\%hd \-: in, out\-: short$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230af3518efb67af10100b92578b5c867c9c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230af3518efb67af10100b92578b5c867c9c}
+}]\%hu \-: in, out\-: unsigned short$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4df919bac6f5b56257bfe63ed3e5968c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4df919bac6f5b56257bfe63ed3e5968c}
+}]\%d \-: in, out\-: int$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a58b37a24a35ddf144a9132a9837ed3d3}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a58b37a24a35ddf144a9132a9837ed3d3}
+}]\%u \-: in, out\-: unsigned int$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230add86aa288504ec2d4194f35a3a8ac55a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230add86aa288504ec2d4194f35a3a8ac55a}
+}]\%ld \-: in, out\-: long$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4186d52d5ce586cd7559a0ae8737cbb7}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4186d52d5ce586cd7559a0ae8737cbb7}
+}]\%lu \-: in, out\-: unsigned long$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a8821461a3390bd0a001e714d2180ae6c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a8821461a3390bd0a001e714d2180ae6c}
+}]\%lld \-: in, out\-: apr\-\_\-int64\-\_\-t$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ad1907d3eb1235acfa8a971fce43711c5}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ad1907d3eb1235acfa8a971fce43711c5}
+}]\%llu \-: in, out\-: apr\-\_\-uint64\-\_\-t$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a14281587071981d4e6b25de5bb747e98}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a14281587071981d4e6b25de5bb747e98}
+}]\%f \-: in, out\-: float$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77c20702c7c6566369d3ccc894eb9cd8}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77c20702c7c6566369d3ccc894eb9cd8}
+}]\%lf \-: in, out\-: double$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4c9490a29ed882c46fa738e7cddede44}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4c9490a29ed882c46fa738e7cddede44}
+}]\%s \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae06c20e9edcd46964dc26bb43134e0e6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae06c20e9edcd46964dc26bb43134e0e6}
+}]\%p\-Dt \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a2ad65674a89072f4582e97d0a4fad61d}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a2ad65674a89072f4582e97d0a4fad61d}
+}]\%p\-Di \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ab96a2b4b2b1fb94a7faeb01065d77835}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ab96a2b4b2b1fb94a7faeb01065d77835}
+}]\%p\-Dd \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77bb0dd82ed396f7056ba2aaddd44265}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77bb0dd82ed396f7056ba2aaddd44265}
+}]\%p\-Da \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a5cffb0a0cc618ab3d0c187ca176d61ad}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a5cffb0a0cc618ab3d0c187ca176d61ad}
+}]\%p\-Ds \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae4db1948f1f1ef7651c5f01c12d1e56a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae4db1948f1f1ef7651c5f01c12d1e56a}
+}]\%p\-Dz \-: in\-: char$\ast$, out\-: char$\ast$$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a60d6a6ab49b20a306443b7a9ad8c6f11}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a60d6a6ab49b20a306443b7a9ad8c6f11}
+}]\%p\-Db \-: in\-: char$\ast$ apr\-\_\-size\-\_\-t$\ast$ char$\ast$ char$\ast$, out\-: apr\-\_\-bucket\-\_\-brigade$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230adf428a7365d71eacdf24a89c202c1f72}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230adf428a7365d71eacdf24a89c202c1f72}
+}]\%p\-Dc \-: in\-: char$\ast$ apr\-\_\-size\-\_\-t$\ast$ char$\ast$ char$\ast$, out\-: apr\-\_\-bucket\-\_\-brigade$\ast$ \index{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L}!D\-B\-D routines@{D\-B\-D routines}}\index{D\-B\-D routines@{D\-B\-D routines}!A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L@{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L}}\item[{\em 
+\hypertarget{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a706a286af4fe4a9b97ee68adc11cd6cc}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L}\label{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a706a286af4fe4a9b97ee68adc11cd6cc}
+}]\%p\-Dn \-: in\-: void$\ast$, out\-: void$\ast$$\ast$ \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___d_b_d_gae3fca3b3c05f835f9849668a338d82d1}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-check\-\_\-conn@{apr\-\_\-dbd\-\_\-check\-\_\-conn}}
+\index{apr\-\_\-dbd\-\_\-check\-\_\-conn@{apr\-\_\-dbd\-\_\-check\-\_\-conn}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-check\-\_\-conn}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-check\-\_\-conn (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gae3fca3b3c05f835f9849668a338d82d1}
+check\-\_\-conn\-: check status of a database connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga4abe00d844cd547cc69880fe14af4aca}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-close@{apr\-\_\-dbd\-\_\-close}}
+\index{apr\-\_\-dbd\-\_\-close@{apr\-\_\-dbd\-\_\-close}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga4abe00d844cd547cc69880fe14af4aca}
+apr\-\_\-dbd\-\_\-close\-: close a connection to a backend
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ driver struct. \\
+\hline
+{\em handle} & -\/ handle to close \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success or error status 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga67e57ef4eb7952df79ceaa6e92767d41}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-datum\-\_\-get@{apr\-\_\-dbd\-\_\-datum\-\_\-get}}
+\index{apr\-\_\-dbd\-\_\-datum\-\_\-get@{apr\-\_\-dbd\-\_\-datum\-\_\-get}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-datum\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-datum\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$}]{row, }
+\item[{int}]{col, }
+\item[{{\bf apr\-\_\-dbd\-\_\-type\-\_\-e}}]{type, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga67e57ef4eb7952df79ceaa6e92767d41}
+apr\-\_\-dbd\-\_\-datum\-\_\-get\-: get a binary entry from a row
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em row} & -\/ row pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+{\em type} & -\/ type of data to get \\
+\hline
+{\em data} & -\/ pointer to data, allocated by the caller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on success, A\-P\-R\-\_\-\-E\-N\-O\-E\-N\-T if data is N\-U\-L\-L or A\-P\-R\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gaffa947c657862c2996707da339482287}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-error@{apr\-\_\-dbd\-\_\-error}}
+\index{apr\-\_\-dbd\-\_\-error@{apr\-\_\-dbd\-\_\-error}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int}]{errnum}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gaffa947c657862c2996707da339482287}
+apr\-\_\-dbd\-\_\-error\-: get current error message (if any)
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em errnum} & -\/ error code from operation that returned an error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the database current error message, or message for errnum (implementation-\/dependent whether errnum is ignored) 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gab5806cd6535aaeafe8e9f79ef2cc90c9}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-escape@{apr\-\_\-dbd\-\_\-escape}}
+\index{apr\-\_\-dbd\-\_\-escape@{apr\-\_\-dbd\-\_\-escape}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-escape}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-escape (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{const char $\ast$}]{string, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gab5806cd6535aaeafe8e9f79ef2cc90c9}
+apr\-\_\-dbd\-\_\-escape\-: escape a string so it is safe for use in query/select
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ pool to alloc the result from \\
+\hline
+{\em string} & -\/ the string to escape \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the escaped, safe string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga8ba85faccf7e8eea525812f8f2dfed25}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-get\-\_\-driver@{apr\-\_\-dbd\-\_\-get\-\_\-driver}}
+\index{apr\-\_\-dbd\-\_\-get\-\_\-driver@{apr\-\_\-dbd\-\_\-get\-\_\-driver}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-get\-\_\-driver}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-get\-\_\-driver (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{const char $\ast$}]{name, }
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$$\ast$}]{driver}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga8ba85faccf7e8eea525812f8f2dfed25}
+apr\-\_\-dbd\-\_\-get\-\_\-driver\-: get the driver struct for a name
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ (process) pool to register cleanup \\
+\hline
+{\em name} & -\/ driver name \\
+\hline
+{\em driver} & -\/ pointer to driver struct. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L for no driver (when D\-S\-O not enabled) 
+
+A\-P\-R\-\_\-\-E\-D\-S\-O\-O\-P\-E\-N if D\-S\-O driver file can't be opened 
+
+A\-P\-R\-\_\-\-E\-S\-Y\-M\-N\-O\-T\-F\-O\-U\-N\-D if the driver file doesn't contain a driver 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga1d6d3b38a0d677e3d65501074832a5b8}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-get\-\_\-entry@{apr\-\_\-dbd\-\_\-get\-\_\-entry}}
+\index{apr\-\_\-dbd\-\_\-get\-\_\-entry@{apr\-\_\-dbd\-\_\-get\-\_\-entry}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-get\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-get\-\_\-entry (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$}]{row, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga1d6d3b38a0d677e3d65501074832a5b8}
+apr\-\_\-dbd\-\_\-get\-\_\-entry\-: get an entry from a row
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em row} & -\/ row pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+value from the row, or N\-U\-L\-L if col is out of bounds. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga8eac8897bd1211564166b08492f458d7}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-get\-\_\-name@{apr\-\_\-dbd\-\_\-get\-\_\-name}}
+\index{apr\-\_\-dbd\-\_\-get\-\_\-name@{apr\-\_\-dbd\-\_\-get\-\_\-name}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-get\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$}]{res, }
+\item[{int}]{col}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga8eac8897bd1211564166b08492f458d7}
+apr\-\_\-dbd\-\_\-get\-\_\-name\-: get an entry name from a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em res} & -\/ result set pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+name of the entry, or N\-U\-L\-L if col is out of bounds. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gad4cdc5f4e8981b93f5a467a8c8a768f1}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-get\-\_\-row@{apr\-\_\-dbd\-\_\-get\-\_\-row}}
+\index{apr\-\_\-dbd\-\_\-get\-\_\-row@{apr\-\_\-dbd\-\_\-get\-\_\-row}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-get\-\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-get\-\_\-row (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$}]{res, }
+\item[{apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$$\ast$}]{row, }
+\item[{int}]{rownum}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gad4cdc5f4e8981b93f5a467a8c8a768f1}
+apr\-\_\-dbd\-\_\-get\-\_\-row\-: get a row from a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ pool to allocate the row \\
+\hline
+{\em res} & -\/ result set pointer \\
+\hline
+{\em row} & -\/ pointer to row pointer. May point to N\-U\-L\-L on entry \\
+\hline
+{\em rownum} & -\/ row number (counting from 1), or -\/1 for \char`\"{}next row\char`\"{}. Ignored if random access is not supported. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for rownum out of range or data finished 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga7969f50d38bda792cbef72136300a574}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-init@{apr\-\_\-dbd\-\_\-init}}
+\index{apr\-\_\-dbd\-\_\-init@{apr\-\_\-dbd\-\_\-init}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga7969f50d38bda792cbef72136300a574}
+apr\-\_\-dbd\-\_\-init\-: perform once-\/only initialisation. Call once only.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to register any shutdown cleanups, etc \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_d_ga7a14e0073a36bd97dd82baa5f20e874c}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-name@{apr\-\_\-dbd\-\_\-name}}
+\index{apr\-\_\-dbd\-\_\-name@{apr\-\_\-dbd\-\_\-name}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga7a14e0073a36bd97dd82baa5f20e874c}
+apr\-\_\-dbd\-\_\-name\-: get the name of the driver
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ name 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gab2a238e15942e66a2b92836c392d5334}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-native\-\_\-handle@{apr\-\_\-dbd\-\_\-native\-\_\-handle}}
+\index{apr\-\_\-dbd\-\_\-native\-\_\-handle@{apr\-\_\-dbd\-\_\-native\-\_\-handle}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-native\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-dbd\-\_\-native\-\_\-handle (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gab2a238e15942e66a2b92836c392d5334}
+apr\-\_\-dbd\-\_\-native\-\_\-handle\-: get native database handle of the underlying db
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em handle} & -\/ apr\-\_\-dbd handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ native handle 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga77d1bccedee2c61dc96de6852f3a7cc4}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-num\-\_\-cols@{apr\-\_\-dbd\-\_\-num\-\_\-cols}}
+\index{apr\-\_\-dbd\-\_\-num\-\_\-cols@{apr\-\_\-dbd\-\_\-num\-\_\-cols}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-num\-\_\-cols}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-num\-\_\-cols (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$}]{res}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga77d1bccedee2c61dc96de6852f3a7cc4}
+apr\-\_\-dbd\-\_\-num\-\_\-cols\-: get the number of columns in a results set
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em res} & -\/ result set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of columns 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga2c9f511aba325f8904e69158eacd3987}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-num\-\_\-tuples@{apr\-\_\-dbd\-\_\-num\-\_\-tuples}}
+\index{apr\-\_\-dbd\-\_\-num\-\_\-tuples@{apr\-\_\-dbd\-\_\-num\-\_\-tuples}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-num\-\_\-tuples}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-num\-\_\-tuples (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$}]{res}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga2c9f511aba325f8904e69158eacd3987}
+apr\-\_\-dbd\-\_\-num\-\_\-tuples\-: get the number of rows in a results set of a synchronous select
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em res} & -\/ result set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of rows, or -\/1 if the results are asynchronous 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gaeff12b01f78ac78721acc4a0a318e673}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-open@{apr\-\_\-dbd\-\_\-open}}
+\index{apr\-\_\-dbd\-\_\-open@{apr\-\_\-dbd\-\_\-open}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{const char $\ast$}]{params, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$$\ast$}]{handle}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gaeff12b01f78ac78721acc4a0a318e673}
+apr\-\_\-dbd\-\_\-open\-: open a connection to a backend
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ driver struct. \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em params} & -\/ arguments to driver (implementation-\/dependent) \\
+\hline
+{\em handle} & -\/ pointer to handle to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+
+A\-P\-R\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L if driver exists but connection failed 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___d_b_d_gabddb1fdcb2f8a5f5b83127485c78e8ae}{apr\-\_\-dbd\-\_\-open\-\_\-ex} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___d_b_d_gabddb1fdcb2f8a5f5b83127485c78e8ae}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-open\-\_\-ex@{apr\-\_\-dbd\-\_\-open\-\_\-ex}}
+\index{apr\-\_\-dbd\-\_\-open\-\_\-ex@{apr\-\_\-dbd\-\_\-open\-\_\-ex}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-open\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-dbd\-\_\-open\-\_\-ex (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{const char $\ast$}]{params, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$$\ast$}]{handle, }
+\item[{const char $\ast$$\ast$}]{error}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gabddb1fdcb2f8a5f5b83127485c78e8ae}
+apr\-\_\-dbd\-\_\-open\-\_\-ex\-: open a connection to a backend
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ driver struct. \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em params} & -\/ arguments to driver (implementation-\/dependent) \\
+\hline
+{\em handle} & -\/ pointer to handle to return \\
+\hline
+{\em error} & -\/ descriptive error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+
+A\-P\-R\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L if driver exists but connection failed 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Postgre\-S\-Q\-L\-: the params is passed directly to the P\-Qconnectdb() function (check Postgre\-S\-Q\-L documentation for more details on the syntax). 
+
+S\-Q\-Lite2\-: the params is split on a colon, with the first part used as the filename and second part converted to an integer and used as file mode. 
+
+S\-Q\-Lite3\-: the params is passed directly to the sqlite3\-\_\-open() function as a filename to be opened (check S\-Q\-Lite3 documentation for more details). 
+
+Oracle\-: the params can have \char`\"{}user\char`\"{}, \char`\"{}pass\char`\"{}, \char`\"{}dbname\char`\"{} and \char`\"{}server\char`\"{} keys, each followed by an equal sign and a value. Such key/value pairs can be delimited by space, C\-R, L\-F, tab, semicolon, vertical bar or comma. 
+
+My\-S\-Q\-L\-: the params can have \char`\"{}host\char`\"{}, \char`\"{}port\char`\"{}, \char`\"{}user\char`\"{}, \char`\"{}pass\char`\"{}, \char`\"{}dbname\char`\"{}, \char`\"{}sock\char`\"{}, \char`\"{}flags\char`\"{} \char`\"{}fldsz\char`\"{}, \char`\"{}group\char`\"{} and \char`\"{}reconnect\char`\"{} keys, each followed by an equal sign and a value. Such key/value pairs can be delimited by space, C\-R, L\-F, tab, semicolon, vertical bar or comma. For now, \char`\"{}flags\char`\"{} can only recognise C\-L\-I\-E\-N\-T\-\_\-\-F\-O\-U\-N\-D\-\_\-\-R\-O\-W\-S (check My\-S\-Q\-L manual for details). The value associated with \char`\"{}fldsz\char`\"{} determines maximum amount of memory (in bytes) for each of the fields in the result set of prepared statements. By default, this value is 1 M\-B. The value associated with \char`\"{}group\char`\"{} determines which group from configuration file to use (see M\-Y\-S\-Q\-L\-\_\-\-R\-E\-A\-D\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-G\-R\-O\-U\-P option of mysql\-\_\-options() in My\-S\-Q\-L manual). Reconnect is set to 1 by default (i.\-e. true). 
+
+Free\-T\-D\-S\-: the params can have \char`\"{}username\char`\"{}, \char`\"{}password\char`\"{}, \char`\"{}appname\char`\"{}, \char`\"{}dbname\char`\"{}, \char`\"{}host\char`\"{}, \char`\"{}charset\char`\"{}, \char`\"{}lang\char`\"{} and \char`\"{}server\char`\"{} keys, each followed by an equal sign and a value. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_d_ga7933396b01b4676ae2835d1f09d9a1be}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pbquery@{apr\-\_\-dbd\-\_\-pbquery}}
+\index{apr\-\_\-dbd\-\_\-pbquery@{apr\-\_\-dbd\-\_\-pbquery}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pbquery}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pbquery (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int $\ast$}]{nrows, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{const void $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga7933396b01b4676ae2835d1f09d9a1be}
+apr\-\_\-dbd\-\_\-pbquery\-: query using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga19b88ed11097a2d07bef1e31619fff0a}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pbselect@{apr\-\_\-dbd\-\_\-pbselect}}
+\index{apr\-\_\-dbd\-\_\-pbselect@{apr\-\_\-dbd\-\_\-pbselect}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pbselect}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pbselect (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$}]{res, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{int}]{random, }
+\item[{const void $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga19b88ed11097a2d07bef1e31619fff0a}
+apr\-\_\-dbd\-\_\-pbselect\-: select using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga1c4b005abda896011ca414679edfe112}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pquery@{apr\-\_\-dbd\-\_\-pquery}}
+\index{apr\-\_\-dbd\-\_\-pquery@{apr\-\_\-dbd\-\_\-pquery}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pquery}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pquery (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int $\ast$}]{nrows, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{int}]{nargs, }
+\item[{const char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga1c4b005abda896011ca414679edfe112}
+apr\-\_\-dbd\-\_\-pquery\-: query using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em nargs} & -\/ ignored (for backward compatibility only) \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gacf21412447c4357c64d1e9200a0f5eec}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-prepare@{apr\-\_\-dbd\-\_\-prepare}}
+\index{apr\-\_\-dbd\-\_\-prepare@{apr\-\_\-dbd\-\_\-prepare}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-prepare}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-prepare (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{const char $\ast$}]{query, }
+\item[{const char $\ast$}]{label, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$$\ast$}]{statement}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gacf21412447c4357c64d1e9200a0f5eec}
+apr\-\_\-dbd\-\_\-prepare\-: prepare a statement
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ pool to alloc the result from \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em query} & -\/ the S\-Q\-L query \\
+\hline
+{\em label} & -\/ A label for the prepared statement. use N\-U\-L\-L for temporary prepared statements (eg within a Request in httpd) \\
+\hline
+{\em statement} & -\/ statement to prepare. May point to null on entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+To specify parameters of the prepared query, use \%s, \%d etc. (see below for full list) in place of database specific parameter syntax (e.\-g. for Postgre\-S\-Q\-L, this would be \$1, \$2, for S\-Q\-Lite3 this would be ? etc.). For instance\-: \char`\"{}\-S\-E\-L\-E\-C\-T name F\-R\-O\-M customers W\-H\-E\-R\-E name=\%s\char`\"{} would be a query that this function understands. 
+
+Here is the full list of format specifiers that this function understands and what they map to in S\-Q\-L\-: \%hhd (T\-I\-N\-Y I\-N\-T), \%hhu (U\-N\-S\-I\-G\-N\-E\-D T\-I\-N\-Y I\-N\-T), \%hd (S\-H\-O\-R\-T), \%hu (U\-N\-S\-I\-G\-N\-E\-D S\-H\-O\-R\-T), \%d (I\-N\-T), \%u (U\-N\-S\-I\-G\-N\-E\-D I\-N\-T), \%ld (L\-O\-N\-G), \%lu (U\-N\-S\-I\-G\-N\-E\-D L\-O\-N\-G), \%lld (L\-O\-N\-G L\-O\-N\-G), \%llu (U\-N\-S\-I\-G\-N\-E\-D L\-O\-N\-G L\-O\-N\-G), \%f (F\-L\-O\-A\-T, R\-E\-A\-L), \%lf (D\-O\-U\-B\-L\-E P\-R\-E\-C\-I\-S\-I\-O\-N), \%s (V\-A\-R\-C\-H\-A\-R), \%p\-Dt (T\-E\-X\-T), \%p\-Di (T\-I\-M\-E), \%p\-Dd (D\-A\-T\-E), \%p\-Da (D\-A\-T\-E\-T\-I\-M\-E), \%p\-Ds (T\-I\-M\-E\-S\-T\-A\-M\-P), \%p\-Dz (T\-I\-M\-E\-S\-T\-A\-M\-P W\-I\-T\-H T\-I\-M\-E Z\-O\-N\-E), \%p\-Db (B\-L\-O\-B), \%p\-Dc (C\-L\-O\-B) and \%p\-Dn (N\-U\-L\-L). Not all databases have support for all these types, so the underlying driver will attempt the \char`\"{}best match\char`\"{} where possible. A \% followed by any letter not in the above list will be interpreted as V\-A\-R\-C\-H\-A\-R (i.\-e. \%s). 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_d_ga9f9ee377c2d335f8f1a9bffe4bf7194f}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pselect@{apr\-\_\-dbd\-\_\-pselect}}
+\index{apr\-\_\-dbd\-\_\-pselect@{apr\-\_\-dbd\-\_\-pselect}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pselect}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pselect (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$}]{res, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{int}]{random, }
+\item[{int}]{nargs, }
+\item[{const char $\ast$$\ast$}]{args}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga9f9ee377c2d335f8f1a9bffe4bf7194f}
+apr\-\_\-dbd\-\_\-pselect\-: select using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em nargs} & -\/ ignored (for backward compatibility only) \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga27d1ca34ce4064bb14ac3cb315ba8d14}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pvbquery@{apr\-\_\-dbd\-\_\-pvbquery}}
+\index{apr\-\_\-dbd\-\_\-pvbquery@{apr\-\_\-dbd\-\_\-pvbquery}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pvbquery}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pvbquery (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int $\ast$}]{nrows, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga27d1ca34ce4064bb14ac3cb315ba8d14}
+apr\-\_\-dbd\-\_\-pvbquery\-: query using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em ...} & -\/ varargs list of binary args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gacfe85d56d78d5e4767684238287b700b}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pvbselect@{apr\-\_\-dbd\-\_\-pvbselect}}
+\index{apr\-\_\-dbd\-\_\-pvbselect@{apr\-\_\-dbd\-\_\-pvbselect}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pvbselect}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pvbselect (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$}]{res, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{int}]{random, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gacfe85d56d78d5e4767684238287b700b}
+apr\-\_\-dbd\-\_\-pvbselect\-: select using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em ...} & -\/ varargs list of binary args \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga52ad74205d0afa92098e546303b9ee4c}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pvquery@{apr\-\_\-dbd\-\_\-pvquery}}
+\index{apr\-\_\-dbd\-\_\-pvquery@{apr\-\_\-dbd\-\_\-pvquery}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pvquery}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pvquery (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int $\ast$}]{nrows, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga52ad74205d0afa92098e546303b9ee4c}
+apr\-\_\-dbd\-\_\-pvquery\-: query using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em ...} & -\/ varargs list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gafbd4dbbddfa76586f172ec0832d4fd37}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-pvselect@{apr\-\_\-dbd\-\_\-pvselect}}
+\index{apr\-\_\-dbd\-\_\-pvselect@{apr\-\_\-dbd\-\_\-pvselect}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-pvselect}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-pvselect (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$}]{res, }
+\item[{apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$}]{statement, }
+\item[{int}]{random, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gafbd4dbbddfa76586f172ec0832d4fd37}
+apr\-\_\-dbd\-\_\-pvselect\-: select using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em ...} & -\/ varargs list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga40dbb6bb3f3f171f3443d21f3594a66a}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-query@{apr\-\_\-dbd\-\_\-query}}
+\index{apr\-\_\-dbd\-\_\-query@{apr\-\_\-dbd\-\_\-query}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-query}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-query (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{int $\ast$}]{nrows, }
+\item[{const char $\ast$}]{statement}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga40dbb6bb3f3f171f3443d21f3594a66a}
+apr\-\_\-dbd\-\_\-query\-: execute an S\-Q\-L query that doesn't return a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the S\-Q\-L statement to execute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga144d354a36140fade933c1ef72661004}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-select@{apr\-\_\-dbd\-\_\-select}}
+\index{apr\-\_\-dbd\-\_\-select@{apr\-\_\-dbd\-\_\-select}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-select}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-select (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$}]{res, }
+\item[{const char $\ast$}]{statement, }
+\item[{int}]{random}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga144d354a36140fade933c1ef72661004}
+apr\-\_\-dbd\-\_\-select\-: execute an S\-Q\-L query that returns a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ pool to allocate the result set \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to result set pointer. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the S\-Q\-L statement to execute \\
+\hline
+{\em random} & -\/ 1 to support random access to results (seek any row); 0 to support only looping through results in order (async access -\/ faster) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gafecb22f98684f29e579fd73eb58b1e86}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-set\-\_\-dbname@{apr\-\_\-dbd\-\_\-set\-\_\-dbname}}
+\index{apr\-\_\-dbd\-\_\-set\-\_\-dbname@{apr\-\_\-dbd\-\_\-set\-\_\-dbname}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-set\-\_\-dbname}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-set\-\_\-dbname (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gafecb22f98684f29e579fd73eb58b1e86}
+apr\-\_\-dbd\-\_\-set\-\_\-dbname\-: select database name. May be a no-\/op if not supported.
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em name} & -\/ the database to select \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga6f3a5d6b351cd05646c9399a64eafeb5}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-transaction\-\_\-end@{apr\-\_\-dbd\-\_\-transaction\-\_\-end}}
+\index{apr\-\_\-dbd\-\_\-transaction\-\_\-end@{apr\-\_\-dbd\-\_\-transaction\-\_\-end}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-transaction\-\_\-end}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-transaction\-\_\-end (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$}]{trans}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga6f3a5d6b351cd05646c9399a64eafeb5}
+apr\-\_\-dbd\-\_\-transaction\-\_\-end\-: end a transaction (commit on success, rollback on error). May be a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em handle} & -\/ the db connection \\
+\hline
+{\em trans} & -\/ the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga2a54cfffc3a348a424002eba937b5853}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get@{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get}}
+\index{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get@{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$}]{trans}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga2a54cfffc3a348a424002eba937b5853}
+apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get\-: get the mode of transaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em trans} & -\/ the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mode of transaction 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_gab78c0464926311ef64882adfee2f0f42}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set@{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set}}
+\index{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set@{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$}]{trans, }
+\item[{int}]{mode}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_gab78c0464926311ef64882adfee2f0f42}
+apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set\-: set the mode of transaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em trans} & -\/ the transaction \\
+\hline
+{\em mode} & -\/ new mode of the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the mode of transaction in force after the call 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___d_b_d_ga1c401df12087d3bf1f15a9b80a8f572d}{\index{D\-B\-D routines@{D\-B\-D routines}!apr\-\_\-dbd\-\_\-transaction\-\_\-start@{apr\-\_\-dbd\-\_\-transaction\-\_\-start}}
+\index{apr\-\_\-dbd\-\_\-transaction\-\_\-start@{apr\-\_\-dbd\-\_\-transaction\-\_\-start}!DBD routines@{D\-B\-D routines}}
+\subsubsection[{apr\-\_\-dbd\-\_\-transaction\-\_\-start}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-dbd\-\_\-transaction\-\_\-start (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$}]{driver, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{apr\-\_\-dbd\-\_\-t $\ast$}]{handle, }
+\item[{apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$$\ast$}]{trans}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_d_ga1c401df12087d3bf1f15a9b80a8f572d}
+apr\-\_\-dbd\-\_\-transaction\-\_\-start\-: start a transaction. May be a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ the driver \\
+\hline
+{\em pool} & -\/ a pool to use for error messages (if any). \\
+\hline
+{\em handle} & -\/ the db connection \\
+\hline
+{\em trans} & -\/ ptr to a transaction. May be null on entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+Note that transaction modes, set by calling \hyperlink{group___a_p_r___util___d_b_d_gab78c0464926311ef64882adfee2f0f42}{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set()}, will affect all query/select calls within a transaction. By default, any error in query/select during a transaction will cause the transaction to inherit the error code and any further query/select calls will fail immediately. Put transaction in \char`\"{}ignore
+errors\char`\"{} mode to avoid that. Use \char`\"{}rollback\char`\"{} mode to do explicit rollback. 
+\end{DoxyRemark}

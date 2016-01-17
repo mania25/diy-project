@@ -1,0 +1,28 @@
+\hypertarget{apr__optional__hooks_8h}{\section{include/apr\-\_\-optional\-\_\-hooks.h File Reference}
+\label{apr__optional__hooks_8h}\index{include/apr\-\_\-optional\-\_\-hooks.\-h@{include/apr\-\_\-optional\-\_\-hooks.\-h}}
+}
+
+
+\hyperlink{namespace_apache}{Apache} optional hook functions.  
+
+
+{\ttfamily \#include \char`\"{}apr\-\_\-tables.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_ga808d07f9a3e5df6517ba027972c79e4f}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K}(ns, name, pfn, asz\-Pre, asz\-Succ, n\-Order)
+\item 
+\#define \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_ga3e6fa7b8e9ce140b26d8f6ce34e6ae82}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}(ns, link, ret, name, args\-\_\-decl, args\-\_\-use, ok, decline)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}{apr\-\_\-optional\-\_\-hook\-\_\-add} (const char $\ast$sz\-Name, void($\ast$pfn)(void), const char $\ast$const $\ast$asz\-Pre, const char $\ast$const $\ast$asz\-Succ, int n\-Order)
+\item 
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k_gae7cfa7b32c41fb38eb19f0bba85abfeb}{apr\-\_\-array\-\_\-header\-\_\-t $\ast$ {\bfseries apr\-\_\-optional\-\_\-hook\-\_\-get} (const char $\ast$sz\-Name)}\label{group___a_p_r___util___o_p_t___h_o_o_k_gae7cfa7b32c41fb38eb19f0bba85abfeb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_apache}{Apache} optional hook functions. 

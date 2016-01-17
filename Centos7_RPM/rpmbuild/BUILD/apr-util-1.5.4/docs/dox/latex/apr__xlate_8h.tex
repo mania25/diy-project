@@ -1,0 +1,40 @@
+\hypertarget{apr__xlate_8h}{\section{include/apr\-\_\-xlate.h File Reference}
+\label{apr__xlate_8h}\index{include/apr\-\_\-xlate.\-h@{include/apr\-\_\-xlate.\-h}}
+}
+
+
+A\-P\-R I18\-N translation library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___x_l_a_t_e_ga3276c680eb0917ff51ff22c9b9959fa9}{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T}~(const char $\ast$)0
+\item 
+\#define \hyperlink{group___a_p_r___x_l_a_t_e_ga0e46c333fb1c900f0dd4a78664f5a0de}{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T}~(const char $\ast$)1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_gab7d55348056d7e4cadbc35cfb8e1e624}{apr\-\_\-xlate\-\_\-open} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$$\ast$convset, const char $\ast$topage, const char $\ast$frompage, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga578875b2e6b2a19f8466b80e0768792e}{apr\-\_\-xlate\-\_\-sb\-\_\-get} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, int $\ast$onoff)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_gab92a20b644aa78ca94c6147b254a54f1}{apr\-\_\-xlate\-\_\-conv\-\_\-buffer} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, const char $\ast$inbuf, apr\-\_\-size\-\_\-t $\ast$inbytes\-\_\-left, char $\ast$outbuf, apr\-\_\-size\-\_\-t $\ast$outbytes\-\_\-left)
+\item 
+apr\-\_\-int32\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga90173cefe2dee6e5032ff17b15fea14b}{apr\-\_\-xlate\-\_\-conv\-\_\-byte} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, unsigned char inchar)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga2f88b0f72cd2512b8002344308480a8f}{apr\-\_\-xlate\-\_\-close} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R I18\-N translation library. 

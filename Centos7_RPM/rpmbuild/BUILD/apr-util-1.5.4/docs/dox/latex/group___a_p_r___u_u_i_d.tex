@@ -1,0 +1,76 @@
+\hypertarget{group___a_p_r___u_u_i_d}{\section{U\-U\-I\-D Handling}
+\label{group___a_p_r___u_u_i_d}\index{U\-U\-I\-D Handling@{U\-U\-I\-D Handling}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__uuid__t}{apr\-\_\-uuid\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___u_u_i_d_ga295b64f854c9dff02bb0c44e4be917a3}{A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H}~36
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___a_p_r___u_u_i_d_ga129830a7a3c6b77047d2e74e261a7364}{apr\-\_\-uuid\-\_\-get} (\hyperlink{structapr__uuid__t}{apr\-\_\-uuid\-\_\-t} $\ast$uuid)
+\item 
+void \hyperlink{group___a_p_r___u_u_i_d_ga539a9fee8522a416634194b648ca9790}{apr\-\_\-uuid\-\_\-format} (char $\ast$buffer, const \hyperlink{structapr__uuid__t}{apr\-\_\-uuid\-\_\-t} $\ast$uuid)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___u_u_i_d_ga66d90e0c926ef51a8d607d164e2d7ae7}{apr\-\_\-uuid\-\_\-parse} (\hyperlink{structapr__uuid__t}{apr\-\_\-uuid\-\_\-t} $\ast$uuid, const char $\ast$uuid\-\_\-str)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___u_u_i_d_ga295b64f854c9dff02bb0c44e4be917a3}{\index{U\-U\-I\-D Handling@{U\-U\-I\-D Handling}!A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H@{A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H}}
+\index{A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H@{A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H}!UUID Handling@{U\-U\-I\-D Handling}}
+\subsubsection[{A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H~36}}\label{group___a_p_r___u_u_i_d_ga295b64f854c9dff02bb0c44e4be917a3}
+U\-U\-I\-Ds are formatted as\-: 00112233-\/4455-\/6677-\/8899-\/\-A\-A\-B\-B\-C\-C\-D\-D\-E\-E\-F\-F 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___u_u_i_d_ga539a9fee8522a416634194b648ca9790}{\index{U\-U\-I\-D Handling@{U\-U\-I\-D Handling}!apr\-\_\-uuid\-\_\-format@{apr\-\_\-uuid\-\_\-format}}
+\index{apr\-\_\-uuid\-\_\-format@{apr\-\_\-uuid\-\_\-format}!UUID Handling@{U\-U\-I\-D Handling}}
+\subsubsection[{apr\-\_\-uuid\-\_\-format}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-uuid\-\_\-format (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{buffer, }
+\item[{const {\bf apr\-\_\-uuid\-\_\-t} $\ast$}]{uuid}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___u_u_i_d_ga539a9fee8522a416634194b648ca9790}
+Format a U\-U\-I\-D into a string, following the standard format 
+\begin{DoxyParams}{Parameters}
+{\em buffer} & The buffer to place the formatted U\-U\-I\-D string into. It must be at least A\-P\-R\-\_\-\-U\-U\-I\-D\-\_\-\-F\-O\-R\-M\-A\-T\-T\-E\-D\-\_\-\-L\-E\-N\-G\-T\-H + 1 bytes long to hold the formatted U\-U\-I\-D and a null terminator \\
+\hline
+{\em uuid} & The U\-U\-I\-D to format \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___u_u_i_d_ga129830a7a3c6b77047d2e74e261a7364}{\index{U\-U\-I\-D Handling@{U\-U\-I\-D Handling}!apr\-\_\-uuid\-\_\-get@{apr\-\_\-uuid\-\_\-get}}
+\index{apr\-\_\-uuid\-\_\-get@{apr\-\_\-uuid\-\_\-get}!UUID Handling@{U\-U\-I\-D Handling}}
+\subsubsection[{apr\-\_\-uuid\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-uuid\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-uuid\-\_\-t} $\ast$}]{uuid}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___u_u_i_d_ga129830a7a3c6b77047d2e74e261a7364}
+Generate and return a (new) U\-U\-I\-D 
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The resulting U\-U\-I\-D \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___u_u_i_d_ga66d90e0c926ef51a8d607d164e2d7ae7}{\index{U\-U\-I\-D Handling@{U\-U\-I\-D Handling}!apr\-\_\-uuid\-\_\-parse@{apr\-\_\-uuid\-\_\-parse}}
+\index{apr\-\_\-uuid\-\_\-parse@{apr\-\_\-uuid\-\_\-parse}!UUID Handling@{U\-U\-I\-D Handling}}
+\subsubsection[{apr\-\_\-uuid\-\_\-parse}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-uuid\-\_\-parse (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-uuid\-\_\-t} $\ast$}]{uuid, }
+\item[{const char $\ast$}]{uuid\-\_\-str}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___u_u_i_d_ga66d90e0c926ef51a8d607d164e2d7ae7}
+Parse a standard-\/format string into a U\-U\-I\-D 
+\begin{DoxyParams}{Parameters}
+{\em uuid} & The resulting U\-U\-I\-D \\
+\hline
+{\em uuid\-\_\-str} & The formatted U\-U\-I\-D \\
+\hline
+\end{DoxyParams}

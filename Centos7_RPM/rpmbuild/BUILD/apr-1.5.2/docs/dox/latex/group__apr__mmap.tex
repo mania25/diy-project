@@ -1,0 +1,154 @@
+\hypertarget{group__apr__mmap}{\section{M\-M\-A\-P (Memory Map) Routines}
+\label{group__apr__mmap}\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D}~1
+\item 
+\#define \hyperlink{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E}~2
+\item 
+\#define \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}~1
+\item 
+\#define \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}~(4$\ast$1024$\ast$1024)
+\item 
+\#define \hyperlink{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E}(filelength)~((filelength $>$= \hyperlink{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}) \&\& (filelength $<$ \hyperlink{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}))
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} \hyperlink{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}{apr\-\_\-mmap\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}{apr\-\_\-mmap\-\_\-create} (\hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} $\ast$$\ast$newmmap, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$file, apr\-\_\-off\-\_\-t offset, apr\-\_\-size\-\_\-t size, apr\-\_\-int32\-\_\-t flag, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cntxt)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}{apr\-\_\-mmap\-\_\-dup} (\hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} $\ast$$\ast$new\-\_\-mmap, \hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} $\ast$old\-\_\-mmap, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}{apr\-\_\-mmap\-\_\-delete} (\hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} $\ast$mm)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}{apr\-\_\-mmap\-\_\-offset} (void $\ast$$\ast$addr, \hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} $\ast$mm, apr\-\_\-off\-\_\-t offset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E}}
+\index{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-C\-A\-N\-D\-I\-D\-A\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{filelength}
+\end{DoxyParamCaption}
+)~((filelength $>$= {\bf A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}) \&\& (filelength $<$ {\bf A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}))}}\label{group__apr__mmap_ga4f469432098e986567576fd4c4ce5adc}
+Can this file be M\-Maped \hypertarget{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}}
+\index{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-L\-I\-M\-I\-T~(4$\ast$1024$\ast$1024)}}\label{group__apr__mmap_ga548e49b3c9e8265ad8ccf70994f4fe25}
+Maximum size of M\-Map region \hypertarget{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-R\-E\-A\-D~1}}\label{group__apr__mmap_gac231fdf15d2d29802e0abbc5d0cf25b8}
+M\-Map opened for reading \hypertarget{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}}
+\index{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-T\-H\-R\-E\-S\-H\-O\-L\-D~1}}\label{group__apr__mmap_ga19d1916e7b64bfb1a969648fe7b0846a}
+Files have to be at least this big before they're mmap()d. This is to deal with systems where the expense of doing an mmap() and an munmap() outweighs the benefit for small files. It shouldn't be set lower than 1. \hypertarget{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E}}
+\index{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-M\-A\-P\-\_\-\-W\-R\-I\-T\-E~2}}\label{group__apr__mmap_gac2eb7f697d8bf190e630b85f967c8273}
+M\-Map opened for writing 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!apr\-\_\-mmap\-\_\-t@{apr\-\_\-mmap\-\_\-t}}
+\index{apr\-\_\-mmap\-\_\-t@{apr\-\_\-mmap\-\_\-t}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{apr\-\_\-mmap\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-mmap\-\_\-t} {\bf apr\-\_\-mmap\-\_\-t}}}\label{group__apr__mmap_ga766b01a3e1e0438d06dc88d76f826f80}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__mmap__t}{apr\-\_\-mmap\-\_\-t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!apr\-\_\-mmap\-\_\-create@{apr\-\_\-mmap\-\_\-create}}
+\index{apr\-\_\-mmap\-\_\-create@{apr\-\_\-mmap\-\_\-create}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{apr\-\_\-mmap\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-mmap\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-mmap\-\_\-t} $\ast$$\ast$}]{newmmap, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{file, }
+\item[{apr\-\_\-off\-\_\-t}]{offset, }
+\item[{apr\-\_\-size\-\_\-t}]{size, }
+\item[{apr\-\_\-int32\-\_\-t}]{flag, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cntxt}
+\end{DoxyParamCaption}
+)}}\label{group__apr__mmap_gac6b103139be2e859741ec94cc6ad34cc}
+Create a new mmap'ed file out of an existing A\-P\-R file. 
+\begin{DoxyParams}{Parameters}
+{\em newmmap} & The newly created mmap'ed file. \\
+\hline
+{\em file} & The file to turn into an mmap. \\
+\hline
+{\em offset} & The offset into the file to start the data pointer at. \\
+\hline
+{\em size} & The size of the file \\
+\hline
+{\em flag} & bit-\/wise or of\-: 
+\begin{DoxyPre}
+         APR\_MMAP\_READ       MMap opened for reading
+         APR\_MMAP\_WRITE      MMap opened for writing
+\end{DoxyPre}
+ \\
+\hline
+{\em cntxt} & The pool to use when creating the mmap. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!apr\-\_\-mmap\-\_\-delete@{apr\-\_\-mmap\-\_\-delete}}
+\index{apr\-\_\-mmap\-\_\-delete@{apr\-\_\-mmap\-\_\-delete}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{apr\-\_\-mmap\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-mmap\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-mmap\-\_\-t} $\ast$}]{mm}
+\end{DoxyParamCaption}
+)}}\label{group__apr__mmap_ga4b67a2d22a07707897cc1183a1682040}
+Remove a mmap'ed. 
+\begin{DoxyParams}{Parameters}
+{\em mm} & The mmap'ed file. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!apr\-\_\-mmap\-\_\-dup@{apr\-\_\-mmap\-\_\-dup}}
+\index{apr\-\_\-mmap\-\_\-dup@{apr\-\_\-mmap\-\_\-dup}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{apr\-\_\-mmap\-\_\-dup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-mmap\-\_\-dup (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-mmap\-\_\-t} $\ast$$\ast$}]{new\-\_\-mmap, }
+\item[{{\bf apr\-\_\-mmap\-\_\-t} $\ast$}]{old\-\_\-mmap, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__mmap_ga9fcdbf8090e924a4e8f2b301519bb4c8}
+Duplicate the specified M\-M\-A\-P. 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-mmap} & The structure to duplicate into. \\
+\hline
+{\em old\-\_\-mmap} & The mmap to duplicate. \\
+\hline
+{\em p} & The pool to use for new\-\_\-mmap. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}{\index{M\-M\-A\-P (\-Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}!apr\-\_\-mmap\-\_\-offset@{apr\-\_\-mmap\-\_\-offset}}
+\index{apr\-\_\-mmap\-\_\-offset@{apr\-\_\-mmap\-\_\-offset}!MMAP (Memory Map) Routines@{M\-M\-A\-P (\-Memory Map) Routines}}
+\subsubsection[{apr\-\_\-mmap\-\_\-offset}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-mmap\-\_\-offset (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{addr, }
+\item[{{\bf apr\-\_\-mmap\-\_\-t} $\ast$}]{mm, }
+\item[{apr\-\_\-off\-\_\-t}]{offset}
+\end{DoxyParamCaption}
+)}}\label{group__apr__mmap_ga4c1d31bd9e911744bd5edb97e17210ec}
+Move the pointer into the mmap'ed file to the specified offset. 
+\begin{DoxyParams}{Parameters}
+{\em addr} & The pointer to the offset specified. \\
+\hline
+{\em mm} & The mmap'ed file. \\
+\hline
+{\em offset} & The offset to move to. \\
+\hline
+\end{DoxyParams}

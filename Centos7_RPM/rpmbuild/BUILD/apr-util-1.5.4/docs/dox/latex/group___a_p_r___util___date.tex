@@ -1,0 +1,112 @@
+\hypertarget{group___a_p_r___util___date}{\section{Date routines}
+\label{group___a_p_r___util___date}\index{Date routines@{Date routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___date_ga8be88b25f4b477ad13c4067c959411b0}{A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D}~((apr\-\_\-time\-\_\-t)0)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___a_p_r___util___date_ga6576e5747a46f262c54dc4286f65d6f8}{apr\-\_\-date\-\_\-checkmask} (const char $\ast$data, const char $\ast$mask)
+\item 
+apr\-\_\-time\-\_\-t \hyperlink{group___a_p_r___util___date_gabd0ad0c1000ed8c95fb6a9660aed27c6}{apr\-\_\-date\-\_\-parse\-\_\-http} (const char $\ast$date)
+\item 
+apr\-\_\-time\-\_\-t \hyperlink{group___a_p_r___util___date_gaa6d4a18ff9f40c37c0f145d063c50e96}{apr\-\_\-date\-\_\-parse\-\_\-rfc} (const char $\ast$date)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___date_ga8be88b25f4b477ad13c4067c959411b0}{\index{Date routines@{Date routines}!A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D@{A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D}}
+\index{A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D@{A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D}!Date routines@{Date routines}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-A\-T\-E\-\_\-\-B\-A\-D~((apr\-\_\-time\-\_\-t)0)}}\label{group___a_p_r___util___date_ga8be88b25f4b477ad13c4067c959411b0}
+A bad date. 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___date_ga6576e5747a46f262c54dc4286f65d6f8}{\index{Date routines@{Date routines}!apr\-\_\-date\-\_\-checkmask@{apr\-\_\-date\-\_\-checkmask}}
+\index{apr\-\_\-date\-\_\-checkmask@{apr\-\_\-date\-\_\-checkmask}!Date routines@{Date routines}}
+\subsubsection[{apr\-\_\-date\-\_\-checkmask}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-date\-\_\-checkmask (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{data, }
+\item[{const char $\ast$}]{mask}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___date_ga6576e5747a46f262c54dc4286f65d6f8}
+Compare a string to a mask 
+\begin{DoxyParams}{Parameters}
+{\em data} & The string to compare \\
+\hline
+{\em mask} & Mask characters (arbitrary maximum is 256 characters)\-: 
+\begin{DoxyPre}
+  '@' - uppercase letter
+  '\$' - lowercase letter
+  '\&' - hex digit
+  '\#' - digit
+  '~' - digit or space
+  '*' - swallow remaining characters
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The mask tests for an exact match for any other character 
+\end{DoxyRemark}
+\begin{DoxyReturn}{Returns}
+1 if the string matches, 0 otherwise 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___date_gabd0ad0c1000ed8c95fb6a9660aed27c6}{\index{Date routines@{Date routines}!apr\-\_\-date\-\_\-parse\-\_\-http@{apr\-\_\-date\-\_\-parse\-\_\-http}}
+\index{apr\-\_\-date\-\_\-parse\-\_\-http@{apr\-\_\-date\-\_\-parse\-\_\-http}!Date routines@{Date routines}}
+\subsubsection[{apr\-\_\-date\-\_\-parse\-\_\-http}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-time\-\_\-t apr\-\_\-date\-\_\-parse\-\_\-http (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___date_gabd0ad0c1000ed8c95fb6a9660aed27c6}
+Parses an H\-T\-T\-P date in one of three standard forms\-: 
+\begin{DoxyPre}
+    Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123
+    Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036
+    Sun Nov  6 08:49:37 1994       ; ANSI C's asctime() format
+\end{DoxyPre}
+ 
+\begin{DoxyParams}{Parameters}
+{\em date} & The date in one of the three formats above \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the apr\-\_\-time\-\_\-t number of microseconds since 1 Jan 1970 G\-M\-T, or 0 if this would be out of range or if the date is invalid. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___date_gaa6d4a18ff9f40c37c0f145d063c50e96}{\index{Date routines@{Date routines}!apr\-\_\-date\-\_\-parse\-\_\-rfc@{apr\-\_\-date\-\_\-parse\-\_\-rfc}}
+\index{apr\-\_\-date\-\_\-parse\-\_\-rfc@{apr\-\_\-date\-\_\-parse\-\_\-rfc}!Date routines@{Date routines}}
+\subsubsection[{apr\-\_\-date\-\_\-parse\-\_\-rfc}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-time\-\_\-t apr\-\_\-date\-\_\-parse\-\_\-rfc (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{date}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___date_gaa6d4a18ff9f40c37c0f145d063c50e96}
+Parses a string resembling an R\-F\-C 822 date. This is meant to be leinent in its parsing of dates. Hence, this will parse a wider range of dates than apr\-\_\-date\-\_\-parse\-\_\-http.
+
+The prominent mailer (or poster, if mailer is unknown) that has been seen in the wild is included for the unknown formats. 
+\begin{DoxyPre}
+    Sun, 06 Nov 1994 08:49:37 GMT  ; RFC 822, updated by RFC 1123
+    Sunday, 06-Nov-94 08:49:37 GMT ; RFC 850, obsoleted by RFC 1036
+    Sun Nov  6 08:49:37 1994       ; ANSI C's asctime() format
+    Sun, 6 Nov 1994 08:49:37 GMT   ; RFC 822, updated by RFC 1123
+    Sun, 06 Nov 94 08:49:37 GMT    ; RFC 822
+    Sun, 6 Nov 94 08:49:37 GMT     ; RFC 822
+    Sun, 06 Nov 94 08:49 GMT       ; Unknown [drtr@ast.cam.ac.uk] 
+    Sun, 6 Nov 94 08:49 GMT        ; Unknown [drtr@ast.cam.ac.uk]
+    Sun, 06 Nov 94 8:49:37 GMT     ; Unknown [Elm 70.85]
+    Sun, 6 Nov 94 8:49:37 GMT      ; Unknown [Elm 70.85] 
+\end{DoxyPre}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The date in one of the formats above \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the apr\-\_\-time\-\_\-t number of microseconds since 1 Jan 1970 G\-M\-T, or 0 if this would be out of range or if the date is invalid. 
+\end{DoxyReturn}

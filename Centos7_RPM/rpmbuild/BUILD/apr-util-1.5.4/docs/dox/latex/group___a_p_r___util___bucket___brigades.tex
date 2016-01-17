@@ -1,0 +1,2162 @@
+\hypertarget{group___a_p_r___util___bucket___brigades}{\section{Bucket Brigades}
+\label{group___a_p_r___util___bucket___brigades}\index{Bucket Brigades@{Bucket Brigades}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t}
+\item 
+struct \hyperlink{structapr__bucket}{apr\-\_\-bucket}
+\item 
+struct \hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade}
+\item 
+struct \hyperlink{structapr__bucket__refcount}{apr\-\_\-bucket\-\_\-refcount}
+\item 
+struct \hyperlink{structapr__bucket__heap}{apr\-\_\-bucket\-\_\-heap}
+\item 
+struct \hyperlink{structapr__bucket__pool}{apr\-\_\-bucket\-\_\-pool}
+\item 
+struct \hyperlink{structapr__bucket__mmap}{apr\-\_\-bucket\-\_\-mmap}
+\item 
+struct \hyperlink{structapr__bucket__file}{apr\-\_\-bucket\-\_\-file}
+\item 
+union \hyperlink{unionapr__bucket__structs}{apr\-\_\-bucket\-\_\-structs}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga82bf404af30875135c65e2c13ad035e5}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E}~8000
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}(b)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}(e)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga858da66dccab1e063415678bb115788a}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L}(b)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L(\&(b)-\/$>$list, \hyperlink{structapr__bucket}{apr\-\_\-bucket}, link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga836f61da6cce15074eff257ce4b6fc0f}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y}(b)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-M\-P\-T\-Y(\&(b)-\/$>$list, \hyperlink{structapr__bucket}{apr\-\_\-bucket}, link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gab5826a11eb6ba90786a94282f806c230}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T}(b)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-F\-I\-R\-S\-T(\&(b)-\/$>$list)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga40e0ef2a904aa519ca9d63288dee0b4d}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T}(b)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-L\-A\-S\-T(\&(b)-\/$>$list)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga6dc39d8757e18941a6fb069b0c18fbd3}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D}(b, e)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga5447595f8374296c5ffe208db39b2f5d}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L}(b, e)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga7cecbc89be912ce9ab24c889eb8f955b}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T}(a, b)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga52ba212f76507a79ccae213875150ad1}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D}(a, b)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gae012adeccda754eabc42b7855bec081e}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E}(a, b)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga1f8114b7316d1fef1deb95abc8f02341}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R}(a, b)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga7171f690b203d548a5b6ae0b079068d8}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T}(e)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-N\-E\-X\-T((e), link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gaf229fecd4174efd4d6a9774e3048ae28}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V}(e)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-P\-R\-E\-V((e), link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E}(e)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-R\-E\-M\-O\-V\-E((e), link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga00c2e104125f124c3a52627863432de9}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T}(e)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-L\-E\-M\-\_\-\-I\-N\-I\-T((e), link)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga506cb29cc1ec1abeb487e01b122bd4d9}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}(e)~((e)-\/$>$type-\/$>$is\-\_\-metadata)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga24105da0bb755a775c4b2a519d7c25f9}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_gaecc113cfcc7751dfe70876437a2f51d7}{apr\-\_\-bucket\-\_\-type\-\_\-flush})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga89b225e1c08473766eec719b985ca0d6}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga829cac9b4843b85a902ddd64dffbfb12}{apr\-\_\-bucket\-\_\-type\-\_\-eos})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga1d54037bb6953c73d5c61f64c311d470}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga5f17aa7e616179411a06475ec09626e9}{apr\-\_\-bucket\-\_\-type\-\_\-file})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga03e62d86c994d1d1cc9be3eb8b8f6ac6}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga334a875abb2908364a40abbfa80c401f}{apr\-\_\-bucket\-\_\-type\-\_\-pipe})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga4b8315b498e4eb67efde1c83bdbe8b87}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_gaa6d9978cc10895bdf0a4686728822a84}{apr\-\_\-bucket\-\_\-type\-\_\-socket})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga3dee4fbd5b4e16e5188a6cfec40b6961}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga2c5608267ed7b860657f5a1c89c2f40d}{apr\-\_\-bucket\-\_\-type\-\_\-heap})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga1a7e7ac5fddbab4ce189e8d3007446ff}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga1692ced61c1966e67adc05ec2a69ce9b}{apr\-\_\-bucket\-\_\-type\-\_\-transient})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga53f1188c168acf7dcfabfa1ac5a08655}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga391ac24b2c85969e8efa504588b364bb}{apr\-\_\-bucket\-\_\-type\-\_\-immortal})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga1693d49aeb0287e3b171c922c6b633d2}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga63f9ce8e4d6e796921aad14a218a3b23}{apr\-\_\-bucket\-\_\-type\-\_\-mmap})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gadbe80a9016da6a06ab414ba61d6625d0}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L}(e)~((e)-\/$>$type == \&\hyperlink{group___a_p_r___util___bucket___brigades_ga87bace819fdbf07c12497a8289b3567b}{apr\-\_\-bucket\-\_\-type\-\_\-pool})
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gae3ccf4c383c9e7fea28354cc8e029626}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E}~A\-P\-R\-\_\-\-A\-L\-I\-G\-N\-\_\-\-D\-E\-F\-A\-U\-L\-T(2$\ast$sizeof(\hyperlink{unionapr__bucket__structs}{apr\-\_\-bucket\-\_\-structs}))
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{apr\-\_\-bucket\-\_\-destroy}(e)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga8925c02a7f95e8c1c3986294d4678797}{apr\-\_\-bucket\-\_\-delete}(e)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}{apr\-\_\-bucket\-\_\-read}(e, str, len, block)~(e)-\/$>$type-\/$>$read(e, str, len, block)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gab00941ffd472982693eb415a964de7af}{apr\-\_\-bucket\-\_\-setaside}(e, p)~(e)-\/$>$type-\/$>$setaside(e,p)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_ga5bb8827a8dd1baa6ac32682e13e9d8c2}{apr\-\_\-bucket\-\_\-split}(e, point)~(e)-\/$>$type-\/$>$split(e, point)
+\item 
+\#define \hyperlink{group___a_p_r___util___bucket___brigades_gab33cc08b7f064d06397f312e427279c3}{apr\-\_\-bucket\-\_\-copy}(e, c)~(e)-\/$>$type-\/$>$copy(e, c)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} \hyperlink{group___a_p_r___util___bucket___brigades_ga9f50254e85c7aad79ca289a0ba069025}{apr\-\_\-bucket\-\_\-brigade}
+\item 
+typedef struct \hyperlink{structapr__bucket}{apr\-\_\-bucket} \hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{apr\-\_\-bucket}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t}
+\item 
+typedef struct \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga4a152aaf7d851c81af73b7e84dc1a8a2}{apr\-\_\-bucket\-\_\-type\-\_\-t}
+\item 
+typedef apr\-\_\-status\-\_\-t($\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} )(\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, void $\ast$ctx)
+\item 
+typedef struct \hyperlink{structapr__bucket__refcount}{apr\-\_\-bucket\-\_\-refcount} \hyperlink{group___a_p_r___util___bucket___brigades_ga785fd3402961b30315975b0c87c87706}{apr\-\_\-bucket\-\_\-refcount}
+\item 
+typedef struct \hyperlink{structapr__bucket__heap}{apr\-\_\-bucket\-\_\-heap} \hyperlink{group___a_p_r___util___bucket___brigades_gaede6e77d621d0f3f7d2685d489d01283}{apr\-\_\-bucket\-\_\-heap}
+\item 
+typedef struct \hyperlink{structapr__bucket__pool}{apr\-\_\-bucket\-\_\-pool} \hyperlink{group___a_p_r___util___bucket___brigades_ga211e00d871029de148116cd24b070aed}{apr\-\_\-bucket\-\_\-pool}
+\item 
+typedef struct \hyperlink{structapr__bucket__mmap}{apr\-\_\-bucket\-\_\-mmap} \hyperlink{group___a_p_r___util___bucket___brigades_ga27ede7c3a29627c7d184dc7cfbc4f767}{apr\-\_\-bucket\-\_\-mmap}
+\item 
+typedef struct \hyperlink{structapr__bucket__file}{apr\-\_\-bucket\-\_\-file} \hyperlink{group___a_p_r___util___bucket___brigades_ga1a786f7edac4d7a2c212f0fe74457b3d}{apr\-\_\-bucket\-\_\-file}
+\item 
+typedef union \hyperlink{unionapr__bucket__structs}{apr\-\_\-bucket\-\_\-structs} \hyperlink{group___a_p_r___util___bucket___brigades_ga3c0929c971f94de4521fb0fea6fd3209}{apr\-\_\-bucket\-\_\-structs}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___bucket___brigades_ga756973fb6392bd1026c3d96b4519776d}{apr\-\_\-read\-\_\-type\-\_\-e} \{ \hyperlink{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da2d983f5b7fd996434e0dded171c261d8}{A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}, 
+\hyperlink{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da42b97663ca71fbbf2e2af7c8192e5dd8}{A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gaeb422371006699c68f0ed3b496cc12a2}{apr\-\_\-brigade\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga2eba1e262dece0d4444ddd25ae7b250a}{apr\-\_\-brigade\-\_\-destroy} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gafd6a8378a15e8b42a57a5923a03de7f2}{apr\-\_\-brigade\-\_\-cleanup} (void $\ast$data)
+\item 
+\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga36448fa89ab3239fd46591fbc82624e6}{apr\-\_\-brigade\-\_\-split\-\_\-ex} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e, \hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$a)
+\item 
+\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gacaf2929f951920a464e170baf2b4c345}{apr\-\_\-brigade\-\_\-split} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga4b2f22ba70ac9f65788014c61d4f5b76}{apr\-\_\-brigade\-\_\-partition} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, apr\-\_\-off\-\_\-t point, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$$\ast$after\-\_\-point)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga65075839e31fd85e2c80717f4e9e0461}{apr\-\_\-brigade\-\_\-length} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, int read\-\_\-all, apr\-\_\-off\-\_\-t $\ast$length)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga301aeb943e68ef4b99c1ae6a18dcf78e}{apr\-\_\-brigade\-\_\-flatten} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, char $\ast$c, apr\-\_\-size\-\_\-t $\ast$len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gaa5da970af09d1a87e020db054f2d1c94}{apr\-\_\-brigade\-\_\-pflatten} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, char $\ast$$\ast$c, apr\-\_\-size\-\_\-t $\ast$len, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga257dece60dbdc910bc09e1fc0d7db622}{apr\-\_\-brigade\-\_\-split\-\_\-line} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb\-Out, \hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb\-In, \hyperlink{group___a_p_r___util___bucket___brigades_ga756973fb6392bd1026c3d96b4519776d}{apr\-\_\-read\-\_\-type\-\_\-e} block, apr\-\_\-off\-\_\-t maxbytes)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga904bdc4a9a9c800d2d2b20b4ddefa6f7}{apr\-\_\-brigade\-\_\-to\-\_\-iovec} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, struct iovec $\ast$vec, int $\ast$nvec)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga382871c1aec5cf9fbbcf19d67cff6b43}{apr\-\_\-brigade\-\_\-vputstrs} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, va\-\_\-list va)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga7242dae50995fc1a9174476ca3053d99}{apr\-\_\-brigade\-\_\-write} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const char $\ast$str, apr\-\_\-size\-\_\-t nbyte)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gafc116a4359b717cd3a78a19ddf169486}{apr\-\_\-brigade\-\_\-writev} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const struct iovec $\ast$vec, apr\-\_\-size\-\_\-t nvec)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga2d1fed26db94e3006223098737a06f5a}{apr\-\_\-brigade\-\_\-puts} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const char $\ast$str)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga362999cb255297fd0fd433f03236302d}{apr\-\_\-brigade\-\_\-putc} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const char c)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga1f27949d92196cbf150b7d6256cbf4b7}{apr\-\_\-brigade\-\_\-putstrs} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx,...)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga4120ba3834c545db3b9229d858e33b47}{apr\-\_\-brigade\-\_\-printf} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const char $\ast$fmt,...)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga9e1af8c10946264e1bb37a3f56e4bfd8}{apr\-\_\-brigade\-\_\-vprintf} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$b, \hyperlink{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{apr\-\_\-brigade\-\_\-flush} flush, void $\ast$ctx, const char $\ast$fmt, va\-\_\-list va)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga7c4981f7050333a181e440e753c20555}{apr\-\_\-brigade\-\_\-insert\-\_\-file} (\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} $\ast$bb, apr\-\_\-file\-\_\-t $\ast$f, apr\-\_\-off\-\_\-t start, apr\-\_\-off\-\_\-t len, apr\-\_\-pool\-\_\-t $\ast$p)
+\item 
+\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga2d96fa729a17a86dc5221958e8c13c96}{apr\-\_\-bucket\-\_\-alloc\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p)
+\item 
+\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga252642139099350d0b987889d5c0868c}{apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex} (apr\-\_\-allocator\-\_\-t $\ast$allocator)
+\item 
+void \hyperlink{group___a_p_r___util___bucket___brigades_gaf5eb58cc232851c8449ba1d98d049a0a}{apr\-\_\-bucket\-\_\-alloc\-\_\-destroy} (\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+void $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gae47c2235a3740432f4a0990fccfe4102}{apr\-\_\-bucket\-\_\-alloc} (apr\-\_\-size\-\_\-t size, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+void \hyperlink{group___a_p_r___util___bucket___brigades_ga951beb3a8249648214e130ab06275a3a}{apr\-\_\-bucket\-\_\-free} (void $\ast$block)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gae6135b83d9f7bd7e1b60dbc761a3ca5f}{apr\-\_\-bucket\-\_\-setaside\-\_\-noop} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$data, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gade52b057161f657a6b298d9c6a78b339}{apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$data, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga305766ff39440711da93e72f5b348a3a}{apr\-\_\-bucket\-\_\-split\-\_\-notimpl} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$data, apr\-\_\-size\-\_\-t point)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga5fc17c10cee2abf02557669f6f507e89}{apr\-\_\-bucket\-\_\-copy\-\_\-notimpl} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$$\ast$c)
+\item 
+void \hyperlink{group___a_p_r___util___bucket___brigades_ga09221bea9541ca2340a4e8b5e1e7ac56}{apr\-\_\-bucket\-\_\-destroy\-\_\-noop} (void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga9fd8c7d9e42dd04b8f153072655e875c}{apr\-\_\-bucket\-\_\-simple\-\_\-split} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-size\-\_\-t point)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga123c95e832734f92e6f1139b6a68cfa6}{apr\-\_\-bucket\-\_\-simple\-\_\-copy} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$a, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$$\ast$b)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga562251ac5776e88f7384158b85e74be8}{apr\-\_\-bucket\-\_\-shared\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, void $\ast$data, apr\-\_\-off\-\_\-t start, apr\-\_\-size\-\_\-t length)
+\item 
+int \hyperlink{group___a_p_r___util___bucket___brigades_ga43c7dc7e3eb961a91bbc0b69a47e503c}{apr\-\_\-bucket\-\_\-shared\-\_\-destroy} (void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga871e54ba20487a2085a73a673ffa4110}{apr\-\_\-bucket\-\_\-shared\-\_\-split} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-size\-\_\-t point)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_ga2e9a035d340ef6b4279b178eff614670}{apr\-\_\-bucket\-\_\-shared\-\_\-copy} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$a, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$$\ast$b)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gaac308b459ecdab87e94b12adad1b8760}{apr\-\_\-bucket\-\_\-eos\-\_\-create} (\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga06312ba339cb0ec1844b698d30e754c4}{apr\-\_\-bucket\-\_\-eos\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga48347f3f7d5738cdb61fe35c25c09666}{apr\-\_\-bucket\-\_\-flush\-\_\-create} (\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gaee543b95249a320a27ae9bb03e2c4f23}{apr\-\_\-bucket\-\_\-flush\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gad81543da24b144c0e100dd1e6d843adb}{apr\-\_\-bucket\-\_\-immortal\-\_\-create} (const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga33b21eb55cad9d28b5cdd40ad4181774}{apr\-\_\-bucket\-\_\-immortal\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga554f2d87c718f30a9259d52c6f81a405}{apr\-\_\-bucket\-\_\-transient\-\_\-create} (const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga7e1f9a0ae64781ff4430d08c25e6e831}{apr\-\_\-bucket\-\_\-transient\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gadde6843cfe311a60d290adc1d6635cac}{apr\-\_\-bucket\-\_\-heap\-\_\-create} (const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte, void($\ast$free\-\_\-func)(void $\ast$data), \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga71de285204d21507420068f05b12a541}{apr\-\_\-bucket\-\_\-heap\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, const char $\ast$buf, apr\-\_\-size\-\_\-t nbyte, void($\ast$free\-\_\-func)(void $\ast$data))
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga154ea763ee9de4ccb8692b9e3b60ebb2}{apr\-\_\-bucket\-\_\-pool\-\_\-create} (const char $\ast$buf, apr\-\_\-size\-\_\-t length, apr\-\_\-pool\-\_\-t $\ast$pool, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga01197c5b2cda6382354628cecdeae145}{apr\-\_\-bucket\-\_\-pool\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, const char $\ast$buf, apr\-\_\-size\-\_\-t length, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gaee338c7d218ce1fbbf8c1aefedcc0632}{apr\-\_\-bucket\-\_\-mmap\-\_\-create} (apr\-\_\-mmap\-\_\-t $\ast$mm, apr\-\_\-off\-\_\-t start, apr\-\_\-size\-\_\-t length, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gab561ac92d1811e5a2589783536e64a1a}{apr\-\_\-bucket\-\_\-mmap\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-mmap\-\_\-t $\ast$mm, apr\-\_\-off\-\_\-t start, apr\-\_\-size\-\_\-t length)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gacd9f08b40eb2204cd93b42e58338aeb2}{apr\-\_\-bucket\-\_\-socket\-\_\-create} (apr\-\_\-socket\-\_\-t $\ast$thissock, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga2fffd4c4701ad55c6df27cdee0c47200}{apr\-\_\-bucket\-\_\-socket\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-socket\-\_\-t $\ast$thissock)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gab9ea07d5f9246e06c1bb3e76ee90cd71}{apr\-\_\-bucket\-\_\-pipe\-\_\-create} (apr\-\_\-file\-\_\-t $\ast$thispipe, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gae7b4daa1318226beda4bf0eead2f5582}{apr\-\_\-bucket\-\_\-pipe\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-file\-\_\-t $\ast$thispipe)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_ga421f96e8e9387a9c27fe010ebdee0202}{apr\-\_\-bucket\-\_\-file\-\_\-create} (apr\-\_\-file\-\_\-t $\ast$fd, apr\-\_\-off\-\_\-t offset, apr\-\_\-size\-\_\-t len, apr\-\_\-pool\-\_\-t $\ast$p, \hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$list)
+\item 
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$ \hyperlink{group___a_p_r___util___bucket___brigades_gacb716dea400092f2f8c84a3f0f6d3a10}{apr\-\_\-bucket\-\_\-file\-\_\-make} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, apr\-\_\-file\-\_\-t $\ast$fd, apr\-\_\-off\-\_\-t offset, apr\-\_\-size\-\_\-t len, apr\-\_\-pool\-\_\-t $\ast$p)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___bucket___brigades_gab18ee46f66634c35ad79b6a74559cbb8}{apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap} (\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, int enabled)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_gaecc113cfcc7751dfe70876437a2f51d7}{apr\-\_\-bucket\-\_\-type\-\_\-flush}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga829cac9b4843b85a902ddd64dffbfb12}{apr\-\_\-bucket\-\_\-type\-\_\-eos}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga5f17aa7e616179411a06475ec09626e9}{apr\-\_\-bucket\-\_\-type\-\_\-file}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga2c5608267ed7b860657f5a1c89c2f40d}{apr\-\_\-bucket\-\_\-type\-\_\-heap}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga63f9ce8e4d6e796921aad14a218a3b23}{apr\-\_\-bucket\-\_\-type\-\_\-mmap}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga87bace819fdbf07c12497a8289b3567b}{apr\-\_\-bucket\-\_\-type\-\_\-pool}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga334a875abb2908364a40abbfa80c401f}{apr\-\_\-bucket\-\_\-type\-\_\-pipe}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga391ac24b2c85969e8efa504588b364bb}{apr\-\_\-bucket\-\_\-type\-\_\-immortal}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_ga1692ced61c1966e67adc05ec2a69ce9b}{apr\-\_\-bucket\-\_\-type\-\_\-transient}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} \hyperlink{group___a_p_r___util___bucket___brigades_gaa6d9978cc10895bdf0a4686728822a84}{apr\-\_\-bucket\-\_\-type\-\_\-socket}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}
+checks the ring pointers in a bucket brigade for consistency. an abort() will be triggered if any inconsistencies are found. note\-: this is a no-\/op unless A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-E\-B\-U\-G is defined. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga7cecbc89be912ce9ab24c889eb8f955b}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga7cecbc89be912ce9ab24c889eb8f955b}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                    \(\backslash\)
+        APR\_RING\_CONCAT(&(a)->list, &(b)->list, \hyperlink{structapr__bucket}{apr\_bucket}, link);    
+      \hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{        APR\_BRIGADE\_CHECK\_CONSISTENCY}((a));                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Concatenate brigade b onto the end of brigade a, leaving brigade b empty 
+\begin{DoxyParams}{Parameters}
+{\em a} & The first brigade \\
+\hline
+{\em b} & The second brigade \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga836f61da6cce15074eff257ce4b6fc0f}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-E\-M\-P\-T\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-M\-P\-T\-Y(\&(b)-\/$>$list, {\bf apr\-\_\-bucket}, link)}}\label{group___a_p_r___util___bucket___brigades_ga836f61da6cce15074eff257ce4b6fc0f}
+Determine if the bucket brigade is empty 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab5826a11eb6ba90786a94282f806c230}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-F\-I\-R\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-F\-I\-R\-S\-T(\&(b)-\/$>$list)}}\label{group___a_p_r___util___bucket___brigades_gab5826a11eb6ba90786a94282f806c230}
+Return the first bucket in a brigade 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The first bucket in the brigade 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga6dc39d8757e18941a6fb069b0c18fbd3}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-H\-E\-A\-D(
+\begin{DoxyParamCaption}
+\item[{}]{b, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga6dc39d8757e18941a6fb069b0c18fbd3}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{    apr\_bucket} *ap\_\_b = (e);                                        \(\backslash\)
+    APR\_RING\_INSERT\_HEAD(&(b)->list, ap\_\_b, \hyperlink{structapr__bucket}{apr\_bucket}, link);    \hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{        APR\_BRIGADE\_CHECK\_CONSISTENCY}((b));                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Insert a single bucket at the front of a brigade 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to add to \\
+\hline
+{\em e} & The bucket to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga5447595f8374296c5ffe208db39b2f5d}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-T\-A\-I\-L(
+\begin{DoxyParamCaption}
+\item[{}]{b, }
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga5447595f8374296c5ffe208db39b2f5d}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{    apr\_bucket} *ap\_\_b = (e);                 \(\backslash\)
+    APR\_RING\_INSERT\_TAIL(&(b)->list, ap\_\_b, \hyperlink{structapr__bucket}{apr\_bucket}, link);    \hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{        APR\_BRIGADE\_CHECK\_CONSISTENCY}((b));                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Insert a single bucket at the end of a brigade 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to add to \\
+\hline
+{\em e} & The bucket to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga40e0ef2a904aa519ca9d63288dee0b4d}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-L\-A\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-L\-A\-S\-T(\&(b)-\/$>$list)}}\label{group___a_p_r___util___bucket___brigades_ga40e0ef2a904aa519ca9d63288dee0b4d}
+Return the last bucket in a brigade 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to query \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The last bucket in the brigade 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga52ba212f76507a79ccae213875150ad1}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-P\-R\-E\-P\-E\-N\-D(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga52ba212f76507a79ccae213875150ad1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                    \(\backslash\)
+        APR\_RING\_PREPEND(&(a)->list, &(b)->list, \hyperlink{structapr__bucket}{apr\_bucket}, link);   
+      \hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gae1dfe8bf117d10e7dc5b8e0c08f0ebb2}{        APR\_BRIGADE\_CHECK\_CONSISTENCY}((a));                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Prepend brigade b onto the beginning of brigade a, leaving brigade b empty 
+\begin{DoxyParams}{Parameters}
+{\em a} & The first brigade \\
+\hline
+{\em b} & The second brigade \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga858da66dccab1e063415678bb115788a}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L}}
+\index{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L@{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L(
+\begin{DoxyParamCaption}
+\item[{}]{b}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-S\-E\-N\-T\-I\-N\-E\-L(\&(b)-\/$>$list, {\bf apr\-\_\-bucket}, link)}}\label{group___a_p_r___util___bucket___brigades_ga858da66dccab1e063415678bb115788a}
+Wrappers around the R\-I\-N\-G macros to reduce the verbosity of the code that handles bucket brigades. The magic pointer value that indicates the head of the brigade \begin{DoxyRemark}{Remarks}
+This is used to find the beginning and end of the brigade, eg\-: 
+\begin{DoxyPre}
+     while (e != \hyperlink{group___a_p_r___util___bucket___brigades_ga858da66dccab1e063415678bb115788a}{APR\_BRIGADE\_SENTINEL(b)}) \{
+         ...
+         e = \hyperlink{group___a_p_r___util___bucket___brigades_ga7171f690b203d548a5b6ae0b079068d8}{APR\_BUCKET\_NEXT(e)};
+     \}
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The magic pointer value 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae3ccf4c383c9e7fea28354cc8e029626}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-A\-L\-L\-O\-C\-\_\-\-S\-I\-Z\-E~A\-P\-R\-\_\-\-A\-L\-I\-G\-N\-\_\-\-D\-E\-F\-A\-U\-L\-T(2$\ast$sizeof({\bf apr\-\_\-bucket\-\_\-structs}))}}\label{group___a_p_r___util___bucket___brigades_gae3ccf4c383c9e7fea28354cc8e029626}
+The amount that \hyperlink{group___a_p_r___util___bucket___brigades_gae47c2235a3740432f4a0990fccfe4102}{apr\-\_\-bucket\-\_\-alloc()} should allocate in the common case. Note\-: this is twice as big as \hyperlink{unionapr__bucket__structs}{apr\-\_\-bucket\-\_\-structs} to allow breathing room for third-\/party bucket types. \hypertarget{group___a_p_r___util___bucket___brigades_ga82bf404af30875135c65e2c13ad035e5}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-B\-U\-F\-F\-\_\-\-S\-I\-Z\-E~8000}}\label{group___a_p_r___util___bucket___brigades_ga82bf404af30875135c65e2c13ad035e5}
+default bucket buffer size -\/ 8\-K\-B minus room for memory allocator headers \hypertarget{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-N\-S\-I\-S\-T\-E\-N\-C\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}
+checks the brigade a bucket is in for ring consistency. an abort() will be triggered if any inconsistencies are found. note\-: this is a no-\/op unless A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-E\-B\-U\-G is defined. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab33cc08b7f064d06397f312e427279c3}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-copy@{apr\-\_\-bucket\-\_\-copy}}
+\index{apr\-\_\-bucket\-\_\-copy@{apr\-\_\-bucket\-\_\-copy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-copy(
+\begin{DoxyParamCaption}
+\item[{}]{e, }
+\item[{}]{c}
+\end{DoxyParamCaption}
+)~(e)-\/$>$type-\/$>$copy(e, c)}}\label{group___a_p_r___util___bucket___brigades_gab33cc08b7f064d06397f312e427279c3}
+Copy a bucket. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to copy \\
+\hline
+{\em c} & Returns a pointer to the new bucket \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga8925c02a7f95e8c1c3986294d4678797}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-delete@{apr\-\_\-bucket\-\_\-delete}}
+\index{apr\-\_\-bucket\-\_\-delete@{apr\-\_\-bucket\-\_\-delete}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-delete(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga8925c02a7f95e8c1c3986294d4678797}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                    \hyperlink{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}{        APR\_BUCKET\_REMOVE}(e);                      \hyperlink{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{        apr\_bucket\_destroy}(e);                        \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Delete a bucket by removing it from its brigade (if any) and then destroying it. \begin{DoxyRemark}{Remarks}
+This mainly acts as an aid in avoiding code verbosity. It is the preferred exact equivalent to\-: 
+\begin{DoxyPre}
+     \hyperlink{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}{APR\_BUCKET\_REMOVE(e)};
+     \hyperlink{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{apr\_bucket\_destroy(e)};
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to delete \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-destroy@{apr\-\_\-bucket\-\_\-destroy}}
+\index{apr\-\_\-bucket\-\_\-destroy@{apr\-\_\-bucket\-\_\-destroy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-destroy(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                    \(\backslash\)
+        (e)->type->destroy((e)->data);                  \(\backslash\)
+        (e)->free(e);                           \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Free the resources used by a bucket. If multiple buckets refer to the same resource it is freed when the last one goes away. \begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___bucket___brigades_ga8925c02a7f95e8c1c3986294d4678797}{apr\-\_\-bucket\-\_\-delete()} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga00c2e104125f124c3a52627863432de9}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-L\-E\-M\-\_\-\-I\-N\-I\-T((e), link)}}\label{group___a_p_r___util___bucket___brigades_ga00c2e104125f124c3a52627863432de9}
+Initialize a new bucket's prev/next pointers 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to initialize \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1f8114b7316d1fef1deb95abc8f02341}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-A\-F\-T\-E\-R(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga1f8114b7316d1fef1deb95abc8f02341}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{    apr\_bucket} *ap\_\_a = (a), *ap\_\_b = (b);               \(\backslash\)
+    APR\_RING\_INSERT\_AFTER(ap\_\_a, ap\_\_b, link);          \hyperlink{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{        APR\_BUCKET\_CHECK\_CONSISTENCY}(ap\_\_a);                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Insert a single bucket after a specified bucket 
+\begin{DoxyParams}{Parameters}
+{\em a} & The bucket to insert after \\
+\hline
+{\em b} & The bucket to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae012adeccda754eabc42b7855bec081e}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-N\-S\-E\-R\-T\-\_\-\-B\-E\-F\-O\-R\-E(
+\begin{DoxyParamCaption}
+\item[{}]{a, }
+\item[{}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gae012adeccda754eabc42b7855bec081e}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{                \hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{    apr\_bucket} *ap\_\_a = (a), *ap\_\_b = (b);               \(\backslash\)
+    APR\_RING\_INSERT\_BEFORE(ap\_\_a, ap\_\_b, link);         \hyperlink{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___bucket___brigades_gaedaeb3fbe71aac408377471b8a54dc08}{        APR\_BUCKET\_CHECK\_CONSISTENCY}(ap\_\_a);                \(\backslash\)
+    \} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Insert a single bucket before a specified bucket 
+\begin{DoxyParams}{Parameters}
+{\em a} & The bucket to insert before \\
+\hline
+{\em b} & The bucket to insert \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga89b225e1c08473766eec719b985ca0d6}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-E\-O\-S(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-eos})}}\label{group___a_p_r___util___bucket___brigades_ga89b225e1c08473766eec719b985ca0d6}
+Determine if a bucket is an E\-O\-S bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1d54037bb6953c73d5c61f64c311d470}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-file})}}\label{group___a_p_r___util___bucket___brigades_ga1d54037bb6953c73d5c61f64c311d470}
+Determine if a bucket is a F\-I\-L\-E bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga24105da0bb755a775c4b2a519d7c25f9}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-F\-L\-U\-S\-H(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-flush})}}\label{group___a_p_r___util___bucket___brigades_ga24105da0bb755a775c4b2a519d7c25f9}
+Determine if a bucket is a F\-L\-U\-S\-H bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga3dee4fbd5b4e16e5188a6cfec40b6961}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-H\-E\-A\-P(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-heap})}}\label{group___a_p_r___util___bucket___brigades_ga3dee4fbd5b4e16e5188a6cfec40b6961}
+Determine if a bucket is a H\-E\-A\-P bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga53f1188c168acf7dcfabfa1ac5a08655}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-I\-M\-M\-O\-R\-T\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-immortal})}}\label{group___a_p_r___util___bucket___brigades_ga53f1188c168acf7dcfabfa1ac5a08655}
+Determine if a bucket is a I\-M\-M\-O\-R\-T\-A\-L bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga506cb29cc1ec1abeb487e01b122bd4d9}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type-\/$>$is\-\_\-metadata)}}\label{group___a_p_r___util___bucket___brigades_ga506cb29cc1ec1abeb487e01b122bd4d9}
+Determine if a bucket contains metadata. An empty bucket is safe to arbitrarily remove if and only if this is false. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1693d49aeb0287e3b171c922c6b633d2}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-M\-M\-A\-P(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-mmap})}}\label{group___a_p_r___util___bucket___brigades_ga1693d49aeb0287e3b171c922c6b633d2}
+Determine if a bucket is a M\-M\-A\-P bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga03e62d86c994d1d1cc9be3eb8b8f6ac6}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-I\-P\-E(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-pipe})}}\label{group___a_p_r___util___bucket___brigades_ga03e62d86c994d1d1cc9be3eb8b8f6ac6}
+Determine if a bucket is a P\-I\-P\-E bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gadbe80a9016da6a06ab414ba61d6625d0}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-P\-O\-O\-L(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-pool})}}\label{group___a_p_r___util___bucket___brigades_gadbe80a9016da6a06ab414ba61d6625d0}
+Determine if a bucket is a P\-O\-O\-L bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga4b8315b498e4eb67efde1c83bdbe8b87}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-S\-O\-C\-K\-E\-T(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-socket})}}\label{group___a_p_r___util___bucket___brigades_ga4b8315b498e4eb67efde1c83bdbe8b87}
+Determine if a bucket is a S\-O\-C\-K\-E\-T bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1a7e7ac5fddbab4ce189e8d3007446ff}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-I\-S\-\_\-\-T\-R\-A\-N\-S\-I\-E\-N\-T(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~((e)-\/$>$type == \&{\bf apr\-\_\-bucket\-\_\-type\-\_\-transient})}}\label{group___a_p_r___util___bucket___brigades_ga1a7e7ac5fddbab4ce189e8d3007446ff}
+Determine if a bucket is a T\-R\-A\-N\-S\-I\-E\-N\-T bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to inspect \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true or false 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga7171f690b203d548a5b6ae0b079068d8}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-N\-E\-X\-T(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-N\-E\-X\-T((e), link)}}\label{group___a_p_r___util___bucket___brigades_ga7171f690b203d548a5b6ae0b079068d8}
+Get the next bucket in the list 
+\begin{DoxyParams}{Parameters}
+{\em e} & The current bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The next bucket 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaf229fecd4174efd4d6a9774e3048ae28}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-P\-R\-E\-V(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-P\-R\-E\-V((e), link)}}\label{group___a_p_r___util___bucket___brigades_gaf229fecd4174efd4d6a9774e3048ae28}
+Get the previous bucket in the list 
+\begin{DoxyParams}{Parameters}
+{\em e} & The current bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The previous bucket 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-read@{apr\-\_\-bucket\-\_\-read}}
+\index{apr\-\_\-bucket\-\_\-read@{apr\-\_\-bucket\-\_\-read}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-read(
+\begin{DoxyParamCaption}
+\item[{}]{e, }
+\item[{}]{str, }
+\item[{}]{len, }
+\item[{}]{block}
+\end{DoxyParamCaption}
+)~(e)-\/$>$type-\/$>$read(e, str, len, block)}}\label{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}
+Read some data from the bucket.
+
+The apr\-\_\-bucket\-\_\-read function returns a convenient amount of data from the bucket provided, writing the address and length of the data to the pointers provided by the caller. The function tries as hard as possible to avoid a memory copy.
+
+Buckets are expected to be a member of a brigade at the time they are read.
+
+In typical application code, buckets are read in a loop, and after each bucket is read and processed, it is moved or deleted from the brigade and the next bucket read.
+
+The definition of \char`\"{}convenient\char`\"{} depends on the type of bucket that is being read, and is decided by A\-P\-R. In the case of memory based buckets such as heap and immortal buckets, a pointer will be returned to the location of the buffer containing the complete contents of the bucket.
+
+Some buckets, such as the socket bucket, might have no concept of length. If an attempt is made to read such a bucket, the apr\-\_\-bucket\-\_\-read function will read a convenient amount of data from the socket. The socket bucket is magically morphed into a heap bucket containing the just-\/read data, and a new socket bucket is inserted just after this heap bucket.
+
+To understand why apr\-\_\-bucket\-\_\-read might do this, consider the loop described above to read and process buckets. The current bucket is magically morphed into a heap bucket and returned to the caller. The caller processes the data, and deletes the heap bucket, moving onto the next bucket, the new socket bucket. This process repeats, giving the illusion of a bucket brigade that contains potentially infinite amounts of data. It is up to the caller to decide at what point to stop reading buckets.
+
+Some buckets, such as the file bucket, might have a fixed size, but be significantly larger than is practical to store in R\-A\-M in one go. As with the socket bucket, if an attempt is made to read from a file bucket, the file bucket is magically morphed into a heap bucket containing a convenient amount of data read from the current offset in the file. During the read, the offset will be moved forward on the file, and a new file bucket will be inserted directly after the current bucket representing the remainder of the file. If the heap bucket was large enough to store the whole remainder of the file, no more file buckets are inserted, and the file bucket will disappear completely.
+
+The pattern for reading buckets described above does create the illusion that the code is willing to swallow buckets that might be too large for the system to handle in one go. This however is just an illusion\-: A\-P\-R will always ensure that large (file) or infinite (socket) buckets are broken into convenient bite sized heap buckets before data is returned to the caller.
+
+There is a potential gotcha to watch for\-: if buckets are read in a loop, and aren't deleted after being processed, the potentially large bucket will slowly be converted into R\-A\-M resident heap buckets. If the file is larger than available R\-A\-M, an out of memory condition could be caused if the application is not careful to manage this.
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to read from \\
+\hline
+{\em str} & The location to store a pointer to the data in \\
+\hline
+{\em len} & The location to store the amount of data read \\
+\hline
+{\em block} & Whether the read function blocks \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}{\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E}}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-R\-E\-M\-O\-V\-E(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-R\-E\-M\-O\-V\-E((e), link)}}\label{group___a_p_r___util___bucket___brigades_ga2c46a1b717a87b68bd98b425e0c64977}
+Remove a bucket from its bucket brigade 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to remove \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab00941ffd472982693eb415a964de7af}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-setaside@{apr\-\_\-bucket\-\_\-setaside}}
+\index{apr\-\_\-bucket\-\_\-setaside@{apr\-\_\-bucket\-\_\-setaside}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-setaside}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-setaside(
+\begin{DoxyParamCaption}
+\item[{}]{e, }
+\item[{}]{p}
+\end{DoxyParamCaption}
+)~(e)-\/$>$type-\/$>$setaside(e,p)}}\label{group___a_p_r___util___bucket___brigades_gab00941ffd472982693eb415a964de7af}
+Setaside data so that stack data is not destroyed on returning from the function 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to setaside \\
+\hline
+{\em p} & The pool to setaside into \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga5bb8827a8dd1baa6ac32682e13e9d8c2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-split@{apr\-\_\-bucket\-\_\-split}}
+\index{apr\-\_\-bucket\-\_\-split@{apr\-\_\-bucket\-\_\-split}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-bucket\-\_\-split(
+\begin{DoxyParamCaption}
+\item[{}]{e, }
+\item[{}]{point}
+\end{DoxyParamCaption}
+)~(e)-\/$>$type-\/$>$split(e, point)}}\label{group___a_p_r___util___bucket___brigades_ga5bb8827a8dd1baa6ac32682e13e9d8c2}
+Split one bucket in two at the point provided.
+
+Once split, the original bucket becomes the first of the two new buckets.
+
+(It is assumed that the bucket is a member of a brigade when this function is called). 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to split \\
+\hline
+{\em point} & The offset to split the bucket at \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-flush@{apr\-\_\-brigade\-\_\-flush}}
+\index{apr\-\_\-brigade\-\_\-flush@{apr\-\_\-brigade\-\_\-flush}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}typedef apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-brigade\-\_\-flush)({\bf apr\-\_\-bucket\-\_\-brigade} $\ast$bb, void $\ast$ctx)}}\label{group___a_p_r___util___bucket___brigades_gacdf6dc9d4c81c64834e5e509281f7f16}
+Function called when a brigade should be flushed \hypertarget{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket@{apr\-\_\-bucket}}
+\index{apr\-\_\-bucket@{apr\-\_\-bucket}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket} {\bf apr\-\_\-bucket}}}\label{group___a_p_r___util___bucket___brigades_gaa17a456120961b1c5af0525f4900a457}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-alloc\-\_\-t@{apr\-\_\-bucket\-\_\-alloc\-\_\-t}}
+\index{apr\-\_\-bucket\-\_\-alloc\-\_\-t@{apr\-\_\-bucket\-\_\-alloc\-\_\-t}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-alloc\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} {\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t}}}\label{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga9f50254e85c7aad79ca289a0ba069025}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}}
+\index{apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-brigade}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-brigade} {\bf apr\-\_\-bucket\-\_\-brigade}}}\label{group___a_p_r___util___bucket___brigades_ga9f50254e85c7aad79ca289a0ba069025}
+The one-\/sentence buzzword-\/laden overview\-: Bucket brigades represent a complex data stream that can be passed through a layered I\-O system without unnecessary copying. A longer overview follows...
+
+A bucket brigade is a doubly linked list (ring) of buckets, so we aren't limited to inserting at the front and removing at the end. Buckets are only passed around as members of a brigade, although singleton buckets can occur for short periods of time.
+
+Buckets are data stores of various types. They can refer to data in memory, or part of a file or mmap area, or the output of a process, etc. Buckets also have some type-\/dependent accessor functions\-: read, split, copy, setaside, and destroy.
+
+read returns the address and size of the data in the bucket. If the data isn't in memory then it is read in and the bucket changes type so that it can refer to the new location of the data. If all the data doesn't fit in the bucket then a new bucket is inserted into the brigade to hold the rest of it.
+
+split divides the data in a bucket into two regions. After a split the original bucket refers to the first part of the data and a new bucket inserted into the brigade after the original bucket refers to the second part of the data. Reference counts are maintained as necessary.
+
+setaside ensures that the data in the bucket has a long enough lifetime. Sometimes it is convenient to create a bucket referring to data on the stack in the expectation that it will be consumed (output to the network) before the stack is unwound. If that expectation turns out not to be valid, the setaside function is called to move the data somewhere safer.
+
+copy makes a duplicate of the bucket structure as long as it's possible to have multiple references to a single copy of the data itself. Not all bucket types can be copied.
+
+destroy maintains the reference counts on the resources used by a bucket and frees them if necessary.
+
+Note\-: all of the above functions have wrapper macros (\hyperlink{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}{apr\-\_\-bucket\-\_\-read()}, \hyperlink{group___a_p_r___util___bucket___brigades_gafc0dae1e90a798284ed777a0c9e90ec6}{apr\-\_\-bucket\-\_\-destroy()}, etc), and those macros should be used rather than using the function pointers directly.
+
+To write a bucket brigade, they are first made into an iovec, so that we don't write too little data at one time. Currently we ignore compacting the buckets into as few buckets as possible, but if we really want good performance, then we need to compact the buckets before we convert to an iovec, or possibly while we are converting to an iovec.\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1a786f7edac4d7a2c212f0fe74457b3d}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-file@{apr\-\_\-bucket\-\_\-file}}
+\index{apr\-\_\-bucket\-\_\-file@{apr\-\_\-bucket\-\_\-file}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-file} {\bf apr\-\_\-bucket\-\_\-file}}}\label{group___a_p_r___util___bucket___brigades_ga1a786f7edac4d7a2c212f0fe74457b3d}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__file}{apr\-\_\-bucket\-\_\-file} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaede6e77d621d0f3f7d2685d489d01283}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-heap@{apr\-\_\-bucket\-\_\-heap}}
+\index{apr\-\_\-bucket\-\_\-heap@{apr\-\_\-bucket\-\_\-heap}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-heap}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-heap} {\bf apr\-\_\-bucket\-\_\-heap}}}\label{group___a_p_r___util___bucket___brigades_gaede6e77d621d0f3f7d2685d489d01283}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__heap}{apr\-\_\-bucket\-\_\-heap} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga27ede7c3a29627c7d184dc7cfbc4f767}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-mmap@{apr\-\_\-bucket\-\_\-mmap}}
+\index{apr\-\_\-bucket\-\_\-mmap@{apr\-\_\-bucket\-\_\-mmap}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-mmap}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-mmap} {\bf apr\-\_\-bucket\-\_\-mmap}}}\label{group___a_p_r___util___bucket___brigades_ga27ede7c3a29627c7d184dc7cfbc4f767}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__mmap}{apr\-\_\-bucket\-\_\-mmap} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga211e00d871029de148116cd24b070aed}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-pool@{apr\-\_\-bucket\-\_\-pool}}
+\index{apr\-\_\-bucket\-\_\-pool@{apr\-\_\-bucket\-\_\-pool}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-pool} {\bf apr\-\_\-bucket\-\_\-pool}}}\label{group___a_p_r___util___bucket___brigades_ga211e00d871029de148116cd24b070aed}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__pool}{apr\-\_\-bucket\-\_\-pool} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga785fd3402961b30315975b0c87c87706}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-refcount@{apr\-\_\-bucket\-\_\-refcount}}
+\index{apr\-\_\-bucket\-\_\-refcount@{apr\-\_\-bucket\-\_\-refcount}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-refcount}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-refcount} {\bf apr\-\_\-bucket\-\_\-refcount}}}\label{group___a_p_r___util___bucket___brigades_ga785fd3402961b30315975b0c87c87706}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__refcount}{apr\-\_\-bucket\-\_\-refcount} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga3c0929c971f94de4521fb0fea6fd3209}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-structs@{apr\-\_\-bucket\-\_\-structs}}
+\index{apr\-\_\-bucket\-\_\-structs@{apr\-\_\-bucket\-\_\-structs}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-structs}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf apr\-\_\-bucket\-\_\-structs} {\bf apr\-\_\-bucket\-\_\-structs}}}\label{group___a_p_r___util___bucket___brigades_ga3c0929c971f94de4521fb0fea6fd3209}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{unionapr__bucket__structs}{apr\-\_\-bucket\-\_\-structs} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga4a152aaf7d851c81af73b7e84dc1a8a2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} {\bf apr\-\_\-bucket\-\_\-type\-\_\-t}}}\label{group___a_p_r___util___bucket___brigades_ga4a152aaf7d851c81af73b7e84dc1a8a2}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga756973fb6392bd1026c3d96b4519776d}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-read\-\_\-type\-\_\-e@{apr\-\_\-read\-\_\-type\-\_\-e}}
+\index{apr\-\_\-read\-\_\-type\-\_\-e@{apr\-\_\-read\-\_\-type\-\_\-e}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-read\-\_\-type\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-read\-\_\-type\-\_\-e}}}\label{group___a_p_r___util___bucket___brigades_ga756973fb6392bd1026c3d96b4519776d}
+Determines how a bucket or brigade should be read \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}!Bucket Brigades@{Bucket Brigades}}\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}}\item[{\em 
+\hypertarget{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da2d983f5b7fd996434e0dded171c261d8}{A\-P\-R\-\_\-\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}\label{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da2d983f5b7fd996434e0dded171c261d8}
+}]block until data becomes available \index{A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}!Bucket Brigades@{Bucket Brigades}}\index{Bucket Brigades@{Bucket Brigades}!A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}}\item[{\em 
+\hypertarget{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da42b97663ca71fbbf2e2af7c8192e5dd8}{A\-P\-R\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K\-\_\-\-R\-E\-A\-D}\label{group___a_p_r___util___bucket___brigades_gga756973fb6392bd1026c3d96b4519776da42b97663ca71fbbf2e2af7c8192e5dd8}
+}]return immediately if no data is available \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___bucket___brigades_gafd6a8378a15e8b42a57a5923a03de7f2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-cleanup@{apr\-\_\-brigade\-\_\-cleanup}}
+\index{apr\-\_\-brigade\-\_\-cleanup@{apr\-\_\-brigade\-\_\-cleanup}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-cleanup (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gafd6a8378a15e8b42a57a5923a03de7f2}
+empty out an entire bucket brigade. This includes destroying all of the buckets within the bucket brigade's bucket list. This is similar to \hyperlink{group___a_p_r___util___bucket___brigades_ga2eba1e262dece0d4444ddd25ae7b250a}{apr\-\_\-brigade\-\_\-destroy()}, except that it does not deregister the brigade's pool cleanup function. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The bucket brigade to clean up \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Generally, you should use \hyperlink{group___a_p_r___util___bucket___brigades_ga2eba1e262dece0d4444ddd25ae7b250a}{apr\-\_\-brigade\-\_\-destroy()}. This function can be useful in situations where you have a single brigade that you wish to reuse many times by destroying all of the buckets in the brigade and putting new buckets into it later. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaeb422371006699c68f0ed3b496cc12a2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-create@{apr\-\_\-brigade\-\_\-create}}
+\index{apr\-\_\-brigade\-\_\-create@{apr\-\_\-brigade\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-brigade}$\ast$ apr\-\_\-brigade\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaeb422371006699c68f0ed3b496cc12a2}
+Create a new bucket brigade. The bucket brigade is originally empty. 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool to associate with the brigade. Data is not allocated out of the pool, but a cleanup is registered. \\
+\hline
+{\em list} & The bucket allocator to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The empty bucket brigade 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2eba1e262dece0d4444ddd25ae7b250a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-destroy@{apr\-\_\-brigade\-\_\-destroy}}
+\index{apr\-\_\-brigade\-\_\-destroy@{apr\-\_\-brigade\-\_\-destroy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga2eba1e262dece0d4444ddd25ae7b250a}
+destroy an entire bucket brigade. This includes destroying all of the buckets within the bucket brigade's bucket list. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga301aeb943e68ef4b99c1ae6a18dcf78e}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-flatten@{apr\-\_\-brigade\-\_\-flatten}}
+\index{apr\-\_\-brigade\-\_\-flatten@{apr\-\_\-brigade\-\_\-flatten}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-flatten}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-flatten (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb, }
+\item[{char $\ast$}]{c, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga301aeb943e68ef4b99c1ae6a18dcf78e}
+Take a bucket brigade and store the data in a flat char$\ast$ 
+\begin{DoxyParams}{Parameters}
+{\em bb} & The bucket brigade to create the char$\ast$ from \\
+\hline
+{\em c} & The char$\ast$ to write into \\
+\hline
+{\em len} & The maximum length of the char array. On return, it is the actual length of the char array. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga7c4981f7050333a181e440e753c20555}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-insert\-\_\-file@{apr\-\_\-brigade\-\_\-insert\-\_\-file}}
+\index{apr\-\_\-brigade\-\_\-insert\-\_\-file@{apr\-\_\-brigade\-\_\-insert\-\_\-file}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-insert\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-brigade\-\_\-insert\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb, }
+\item[{apr\-\_\-file\-\_\-t $\ast$}]{f, }
+\item[{apr\-\_\-off\-\_\-t}]{start, }
+\item[{apr\-\_\-off\-\_\-t}]{len, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga7c4981f7050333a181e440e753c20555}
+Utility function to insert a file (or a segment of a file) onto the end of the brigade. The file is split into multiple buckets if it is larger than the maximum size which can be represented by a single bucket. 
+\begin{DoxyParams}{Parameters}
+{\em bb} & the brigade to insert into \\
+\hline
+{\em f} & the file to insert \\
+\hline
+{\em start} & the offset of the start of the segment \\
+\hline
+{\em len} & the length of the segment of the file to insert \\
+\hline
+{\em p} & pool from which file buckets are allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the last bucket inserted 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga65075839e31fd85e2c80717f4e9e0461}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-length@{apr\-\_\-brigade\-\_\-length}}
+\index{apr\-\_\-brigade\-\_\-length@{apr\-\_\-brigade\-\_\-length}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-length}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-length (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb, }
+\item[{int}]{read\-\_\-all, }
+\item[{apr\-\_\-off\-\_\-t $\ast$}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga65075839e31fd85e2c80717f4e9e0461}
+Return the total length of the brigade. 
+\begin{DoxyParams}{Parameters}
+{\em bb} & The brigade to compute the length of \\
+\hline
+{\em read\-\_\-all} & Read unknown-\/length buckets to force a size \\
+\hline
+{\em length} & Returns the length of the brigade (up to the end, or up to a bucket read error), or -\/1 if the brigade has buckets of indeterminate length and read\-\_\-all is 0. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga4b2f22ba70ac9f65788014c61d4f5b76}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-partition@{apr\-\_\-brigade\-\_\-partition}}
+\index{apr\-\_\-brigade\-\_\-partition@{apr\-\_\-brigade\-\_\-partition}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-partition}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-partition (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{apr\-\_\-off\-\_\-t}]{point, }
+\item[{{\bf apr\-\_\-bucket} $\ast$$\ast$}]{after\-\_\-point}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga4b2f22ba70ac9f65788014c61d4f5b76}
+Partition a bucket brigade at a given offset (in bytes from the start of the brigade). This is useful whenever a filter wants to use known ranges of bytes from the brigade; the ranges can even overlap. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to partition \\
+\hline
+{\em point} & The offset at which to partition the brigade \\
+\hline
+{\em after\-\_\-point} & Returns a pointer to the first bucket after the partition \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on success, A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E if the contents of the brigade were shorter than {\itshape point}, or an error code. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+if A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E is returned, {\itshape after\-\_\-point} will be set to the brigade sentinel. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaa5da970af09d1a87e020db054f2d1c94}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-pflatten@{apr\-\_\-brigade\-\_\-pflatten}}
+\index{apr\-\_\-brigade\-\_\-pflatten@{apr\-\_\-brigade\-\_\-pflatten}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-pflatten}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-pflatten (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb, }
+\item[{char $\ast$$\ast$}]{c, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{len, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaa5da970af09d1a87e020db054f2d1c94}
+Creates a pool-\/allocated string representing a flat bucket brigade 
+\begin{DoxyParams}{Parameters}
+{\em bb} & The bucket brigade to create the char array from \\
+\hline
+{\em c} & On return, the allocated char array \\
+\hline
+{\em len} & On return, the length of the char array. \\
+\hline
+{\em pool} & The pool to allocate the string from. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga4120ba3834c545db3b9229d858e33b47}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-printf@{apr\-\_\-brigade\-\_\-printf}}
+\index{apr\-\_\-brigade\-\_\-printf@{apr\-\_\-brigade\-\_\-printf}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-printf}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-printf (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const char $\ast$}]{fmt, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga4120ba3834c545db3b9229d858e33b47}
+Evaluate a printf and put the resulting string at the end of the bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to write to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em fmt} & The format of the string to write \\
+\hline
+{\em ...} & The arguments to fill out the format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga362999cb255297fd0fd433f03236302d}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-putc@{apr\-\_\-brigade\-\_\-putc}}
+\index{apr\-\_\-brigade\-\_\-putc@{apr\-\_\-brigade\-\_\-putc}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-putc}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-putc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const char}]{c}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga362999cb255297fd0fd433f03236302d}
+This function writes a character into a bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em c} & The character to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2d1fed26db94e3006223098737a06f5a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-puts@{apr\-\_\-brigade\-\_\-puts}}
+\index{apr\-\_\-brigade\-\_\-puts@{apr\-\_\-brigade\-\_\-puts}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-puts}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-puts (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga2d1fed26db94e3006223098737a06f5a}
+This function writes a string into a bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em bb} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em str} & The string to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga1f27949d92196cbf150b7d6256cbf4b7}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-putstrs@{apr\-\_\-brigade\-\_\-putstrs}}
+\index{apr\-\_\-brigade\-\_\-putstrs@{apr\-\_\-brigade\-\_\-putstrs}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-putstrs}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-putstrs (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga1f27949d92196cbf150b7d6256cbf4b7}
+This function writes an unspecified number of strings into a bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em ...} & The strings to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gacaf2929f951920a464e170baf2b4c345}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-split@{apr\-\_\-brigade\-\_\-split}}
+\index{apr\-\_\-brigade\-\_\-split@{apr\-\_\-brigade\-\_\-split}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-brigade}$\ast$ apr\-\_\-brigade\-\_\-split (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{e}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gacaf2929f951920a464e170baf2b4c345}
+Create a new bucket brigade and move the buckets from the tail end of an existing brigade into the new brigade. Buckets from {\itshape e} to the last bucket (inclusively) of brigade {\itshape b} are moved from {\itshape b} to the returned brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to split \\
+\hline
+{\em e} & The first bucket to move \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new brigade 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Note that this function always allocates a new brigade so memory consumption should be carefully considered. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga36448fa89ab3239fd46591fbc82624e6}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-split\-\_\-ex@{apr\-\_\-brigade\-\_\-split\-\_\-ex}}
+\index{apr\-\_\-brigade\-\_\-split\-\_\-ex@{apr\-\_\-brigade\-\_\-split\-\_\-ex}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-split\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-brigade}$\ast$ apr\-\_\-brigade\-\_\-split\-\_\-ex (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{e, }
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga36448fa89ab3239fd46591fbc82624e6}
+Move the buckets from the tail end of the existing brigade {\itshape b} into the brigade {\itshape a}. If {\itshape a} is N\-U\-L\-L a new brigade is created. Buckets from {\itshape e} to the last bucket (inclusively) of brigade {\itshape b} are moved from {\itshape b} to the returned brigade {\itshape a}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to split \\
+\hline
+{\em e} & The first bucket to move \\
+\hline
+{\em a} & The brigade which should be used for the result or N\-U\-L\-L if a new brigade should be created. The brigade {\itshape a} will be cleared if it is not empty. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The brigade supplied in {\itshape a} or a new one if {\itshape a} was N\-U\-L\-L. 
+\end{DoxyReturn}
+\begin{DoxyWarning}{Warning}
+Note that this function allocates a new brigade if {\itshape a} is N\-U\-L\-L so memory consumption should be carefully considered. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga257dece60dbdc910bc09e1fc0d7db622}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-split\-\_\-line@{apr\-\_\-brigade\-\_\-split\-\_\-line}}
+\index{apr\-\_\-brigade\-\_\-split\-\_\-line@{apr\-\_\-brigade\-\_\-split\-\_\-line}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-split\-\_\-line}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-split\-\_\-line (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb\-Out, }
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{bb\-In, }
+\item[{{\bf apr\-\_\-read\-\_\-type\-\_\-e}}]{block, }
+\item[{apr\-\_\-off\-\_\-t}]{maxbytes}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga257dece60dbdc910bc09e1fc0d7db622}
+Split a brigade to represent one L\-F line. 
+\begin{DoxyParams}{Parameters}
+{\em bb\-Out} & The bucket brigade that will have the L\-F line appended to. \\
+\hline
+{\em bb\-In} & The input bucket brigade to search for a L\-F-\/line. \\
+\hline
+{\em block} & The blocking mode to be used to split the line. \\
+\hline
+{\em maxbytes} & The maximum bytes to read. If this many bytes are seen without a L\-F, the brigade will contain a partial line. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga904bdc4a9a9c800d2d2b20b4ddefa6f7}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-to\-\_\-iovec@{apr\-\_\-brigade\-\_\-to\-\_\-iovec}}
+\index{apr\-\_\-brigade\-\_\-to\-\_\-iovec@{apr\-\_\-brigade\-\_\-to\-\_\-iovec}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-to\-\_\-iovec}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-to\-\_\-iovec (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{struct iovec $\ast$}]{vec, }
+\item[{int $\ast$}]{nvec}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga904bdc4a9a9c800d2d2b20b4ddefa6f7}
+Create an iovec of the elements in a bucket\-\_\-brigade... return number of elements used. This is useful for writing to a file or to the network efficiently. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to create the iovec from \\
+\hline
+{\em vec} & The iovec to create \\
+\hline
+{\em nvec} & The number of elements in the iovec. On return, it is the number of iovec elements actually filled out. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga9e1af8c10946264e1bb37a3f56e4bfd8}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-vprintf@{apr\-\_\-brigade\-\_\-vprintf}}
+\index{apr\-\_\-brigade\-\_\-vprintf@{apr\-\_\-brigade\-\_\-vprintf}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-vprintf}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-vprintf (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const char $\ast$}]{fmt, }
+\item[{va\-\_\-list}]{va}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga9e1af8c10946264e1bb37a3f56e4bfd8}
+Evaluate a printf and put the resulting string at the end of the bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The brigade to write to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em fmt} & The format of the string to write \\
+\hline
+{\em va} & The arguments to fill out the format \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga382871c1aec5cf9fbbcf19d67cff6b43}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-vputstrs@{apr\-\_\-brigade\-\_\-vputstrs}}
+\index{apr\-\_\-brigade\-\_\-vputstrs@{apr\-\_\-brigade\-\_\-vputstrs}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-vputstrs}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-vputstrs (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{va\-\_\-list}]{va}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga382871c1aec5cf9fbbcf19d67cff6b43}
+This function writes a list of strings into a bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em va} & A list of strings to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga7242dae50995fc1a9174476ca3053d99}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-write@{apr\-\_\-brigade\-\_\-write}}
+\index{apr\-\_\-brigade\-\_\-write@{apr\-\_\-brigade\-\_\-write}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-write}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-write (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const char $\ast$}]{str, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga7242dae50995fc1a9174476ca3053d99}
+This function writes a string into a bucket brigade.
+
+The apr\-\_\-brigade\-\_\-write function attempts to be efficient with the handling of heap buckets. Regardless of the amount of data stored inside a heap bucket, heap buckets are a fixed size to promote their reuse.
+
+If an attempt is made to write a string to a brigade that already ends with a heap bucket, this function will attempt to pack the string into the remaining space in the previous heap bucket, before allocating a new heap bucket.
+
+This function always returns A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, unless a flush function is passed, in which case the return value of the flush function will be returned if used. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em str} & The string to add \\
+\hline
+{\em nbyte} & The number of bytes to write \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gafc116a4359b717cd3a78a19ddf169486}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-brigade\-\_\-writev@{apr\-\_\-brigade\-\_\-writev}}
+\index{apr\-\_\-brigade\-\_\-writev@{apr\-\_\-brigade\-\_\-writev}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-brigade\-\_\-writev}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-brigade\-\_\-writev (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-brigade} $\ast$}]{b, }
+\item[{{\bf apr\-\_\-brigade\-\_\-flush}}]{flush, }
+\item[{void $\ast$}]{ctx, }
+\item[{const struct iovec $\ast$}]{vec, }
+\item[{apr\-\_\-size\-\_\-t}]{nvec}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gafc116a4359b717cd3a78a19ddf169486}
+This function writes multiple strings into a bucket brigade. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket brigade to add to \\
+\hline
+{\em flush} & The flush function to use if the brigade is full \\
+\hline
+{\em ctx} & The structure to pass to the flush function \\
+\hline
+{\em vec} & The strings to add (address plus length for each) \\
+\hline
+{\em nvec} & The number of entries in iovec \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error code 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae47c2235a3740432f4a0990fccfe4102}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-alloc@{apr\-\_\-bucket\-\_\-alloc}}
+\index{apr\-\_\-bucket\-\_\-alloc@{apr\-\_\-bucket\-\_\-alloc}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-bucket\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-size\-\_\-t}]{size, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gae47c2235a3740432f4a0990fccfe4102}
+Allocate memory for use by the buckets. 
+\begin{DoxyParams}{Parameters}
+{\em size} & The amount to allocate. \\
+\hline
+{\em list} & The allocator from which to allocate the memory. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2d96fa729a17a86dc5221958e8c13c96}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-alloc\-\_\-create@{apr\-\_\-bucket\-\_\-alloc\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-alloc\-\_\-create@{apr\-\_\-bucket\-\_\-alloc\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-alloc\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t}$\ast$ apr\-\_\-bucket\-\_\-alloc\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga2d96fa729a17a86dc5221958e8c13c96}
+Create a bucket allocator. 
+\begin{DoxyParams}{Parameters}
+{\em p} & This pool's underlying apr\-\_\-allocator\-\_\-t is used to allocate memory for the bucket allocator. When the pool is destroyed, the bucket allocator's cleanup routine will free all memory that has been allocated from it. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The reason the allocator gets its memory from the pool's apr\-\_\-allocator\-\_\-t rather than from the pool itself is because the bucket allocator will free large memory blocks back to the allocator when it's done with them, thereby preventing memory footprint growth that would occur if we allocated from the pool. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+The allocator must never be used by more than one thread at a time. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga252642139099350d0b987889d5c0868c}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex@{apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex}}
+\index{apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex@{apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t}$\ast$ apr\-\_\-bucket\-\_\-alloc\-\_\-create\-\_\-ex (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-allocator\-\_\-t $\ast$}]{allocator}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga252642139099350d0b987889d5c0868c}
+Create a bucket allocator. 
+\begin{DoxyParams}{Parameters}
+{\em allocator} & This apr\-\_\-allocator\-\_\-t is used to allocate both the bucket allocator and all memory handed out by the bucket allocator. The caller is responsible for destroying the bucket allocator and the apr\-\_\-allocator\-\_\-t -- no automatic cleanups will happen. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+The allocator must never be used by more than one thread at a time. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaf5eb58cc232851c8449ba1d98d049a0a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-alloc\-\_\-destroy@{apr\-\_\-bucket\-\_\-alloc\-\_\-destroy}}
+\index{apr\-\_\-bucket\-\_\-alloc\-\_\-destroy@{apr\-\_\-bucket\-\_\-alloc\-\_\-destroy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-alloc\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-bucket\-\_\-alloc\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaf5eb58cc232851c8449ba1d98d049a0a}
+Destroy a bucket allocator. 
+\begin{DoxyParams}{Parameters}
+{\em list} & The allocator to be destroyed \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga5fc17c10cee2abf02557669f6f507e89}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-copy\-\_\-notimpl@{apr\-\_\-bucket\-\_\-copy\-\_\-notimpl}}
+\index{apr\-\_\-bucket\-\_\-copy\-\_\-notimpl@{apr\-\_\-bucket\-\_\-copy\-\_\-notimpl}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-copy\-\_\-notimpl}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-copy\-\_\-notimpl (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{e, }
+\item[{{\bf apr\-\_\-bucket} $\ast$$\ast$}]{c}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga5fc17c10cee2abf02557669f6f507e89}
+A place holder function that signifies that the copy function was not implemented for this bucket 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to copy \\
+\hline
+{\em c} & Returns a pointer to the new bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga09221bea9541ca2340a4e8b5e1e7ac56}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-destroy\-\_\-noop@{apr\-\_\-bucket\-\_\-destroy\-\_\-noop}}
+\index{apr\-\_\-bucket\-\_\-destroy\-\_\-noop@{apr\-\_\-bucket\-\_\-destroy\-\_\-noop}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-destroy\-\_\-noop}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-bucket\-\_\-destroy\-\_\-noop (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga09221bea9541ca2340a4e8b5e1e7ac56}
+A place holder function that signifies that this bucket does not need to do anything special to be destroyed. That's only the case for buckets that either have no data (metadata buckets) or buckets whose data pointer points to something that's not a bucket-\/type-\/specific structure, as with simple buckets where data points to a string and pipe buckets where data points directly to the apr\-\_\-file\-\_\-t. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The bucket data to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaac308b459ecdab87e94b12adad1b8760}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-eos\-\_\-create@{apr\-\_\-bucket\-\_\-eos\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-eos\-\_\-create@{apr\-\_\-bucket\-\_\-eos\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-eos\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-eos\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaac308b459ecdab87e94b12adad1b8760}
+Create an End of Stream bucket. This indicates that there is no more data coming from down the filter stack. All filters should flush at this point. 
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga06312ba339cb0ec1844b698d30e754c4}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-eos\-\_\-make@{apr\-\_\-bucket\-\_\-eos\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-eos\-\_\-make@{apr\-\_\-bucket\-\_\-eos\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-eos\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-eos\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga06312ba339cb0ec1844b698d30e754c4}
+Make the bucket passed in an E\-O\-S bucket. This indicates that there is no more data coming from down the filter stack. All filters should flush at this point. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into an E\-O\-S bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga421f96e8e9387a9c27fe010ebdee0202}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-file\-\_\-create@{apr\-\_\-bucket\-\_\-file\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-file\-\_\-create@{apr\-\_\-bucket\-\_\-file\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-file\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-file\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-file\-\_\-t $\ast$}]{fd, }
+\item[{apr\-\_\-off\-\_\-t}]{offset, }
+\item[{apr\-\_\-size\-\_\-t}]{len, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga421f96e8e9387a9c27fe010ebdee0202}
+Create a bucket referring to a file. 
+\begin{DoxyParams}{Parameters}
+{\em fd} & The file to put in the bucket \\
+\hline
+{\em offset} & The offset where the data of interest begins in the file \\
+\hline
+{\em len} & The amount of data in the file we are interested in \\
+\hline
+{\em p} & The pool into which any needed structures should be created while reading from this file bucket \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+If the file is truncated such that the segment of the file referenced by the bucket no longer exists, an attempt to read from the bucket will fail with A\-P\-R\-\_\-\-E\-O\-F. 
+
+\hyperlink{group___a_p_r___util___bucket___brigades_ga7c4981f7050333a181e440e753c20555}{apr\-\_\-brigade\-\_\-insert\-\_\-file()} should generally be used to insert files into brigades, since that function can correctly handle large file issues. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab18ee46f66634c35ad79b6a74559cbb8}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap@{apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap}}
+\index{apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap@{apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-file\-\_\-enable\-\_\-mmap (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{int}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gab18ee46f66634c35ad79b6a74559cbb8}
+Enable or disable memory-\/mapping for a F\-I\-L\-E bucket (default is enabled) 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket \\
+\hline
+{\em enabled} & Whether memory-\/mapping should be enabled \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S normally, or an error code if the operation fails 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gacb716dea400092f2f8c84a3f0f6d3a10}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-file\-\_\-make@{apr\-\_\-bucket\-\_\-file\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-file\-\_\-make@{apr\-\_\-bucket\-\_\-file\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-file\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-file\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-file\-\_\-t $\ast$}]{fd, }
+\item[{apr\-\_\-off\-\_\-t}]{offset, }
+\item[{apr\-\_\-size\-\_\-t}]{len, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gacb716dea400092f2f8c84a3f0f6d3a10}
+Make the bucket passed in a bucket refer to a file 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a F\-I\-L\-E bucket \\
+\hline
+{\em fd} & The file to put in the bucket \\
+\hline
+{\em offset} & The offset where the data of interest begins in the file \\
+\hline
+{\em len} & The amount of data in the file we are interested in \\
+\hline
+{\em p} & The pool into which any needed structures should be created while reading from this file bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga48347f3f7d5738cdb61fe35c25c09666}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-flush\-\_\-create@{apr\-\_\-bucket\-\_\-flush\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-flush\-\_\-create@{apr\-\_\-bucket\-\_\-flush\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-flush\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-flush\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga48347f3f7d5738cdb61fe35c25c09666}
+Create a flush bucket. This indicates that filters should flush their data. There is no guarantee that they will flush it, but this is the best we can do. 
+\begin{DoxyParams}{Parameters}
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaee543b95249a320a27ae9bb03e2c4f23}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-flush\-\_\-make@{apr\-\_\-bucket\-\_\-flush\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-flush\-\_\-make@{apr\-\_\-bucket\-\_\-flush\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-flush\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-flush\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaee543b95249a320a27ae9bb03e2c4f23}
+Make the bucket passed in a F\-L\-U\-S\-H bucket. This indicates that filters should flush their data. There is no guarantee that they will flush it, but this is the best we can do. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a F\-L\-U\-S\-H bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga951beb3a8249648214e130ab06275a3a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-free@{apr\-\_\-bucket\-\_\-free}}
+\index{apr\-\_\-bucket\-\_\-free@{apr\-\_\-bucket\-\_\-free}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-bucket\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{block}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga951beb3a8249648214e130ab06275a3a}
+Free memory previously allocated with \hyperlink{group___a_p_r___util___bucket___brigades_gae47c2235a3740432f4a0990fccfe4102}{apr\-\_\-bucket\-\_\-alloc()}. 
+\begin{DoxyParams}{Parameters}
+{\em block} & The block of memory to be freed. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___bucket___brigades_gadde6843cfe311a60d290adc1d6635cac}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-heap\-\_\-create@{apr\-\_\-bucket\-\_\-heap\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-heap\-\_\-create@{apr\-\_\-bucket\-\_\-heap\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-heap\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-heap\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte, }
+\item[{void($\ast$)(void $\ast$data)}]{free\-\_\-func, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gadde6843cfe311a60d290adc1d6635cac}
+Create a bucket referring to memory on the heap. If the caller asks for the data to be copied, this function always allocates 4\-K of memory so that more data can be added to the bucket without requiring another allocation. Therefore not all the data may be put into the bucket. If copying is not requested then the bucket takes over responsibility for free()ing the memory. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the buffer to insert. \\
+\hline
+{\em free\-\_\-func} & Function to use to free the data; N\-U\-L\-L indicates that the bucket should make a copy of the data \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga71de285204d21507420068f05b12a541}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-heap\-\_\-make@{apr\-\_\-bucket\-\_\-heap\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-heap\-\_\-make@{apr\-\_\-bucket\-\_\-heap\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-heap\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-heap\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte, }
+\item[{void($\ast$)(void $\ast$data)}]{free\-\_\-func}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga71de285204d21507420068f05b12a541}
+Make the bucket passed in a bucket refer to heap data 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a H\-E\-A\-P bucket \\
+\hline
+{\em buf} & The buffer to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the buffer to insert. \\
+\hline
+{\em free\-\_\-func} & Function to use to free the data; N\-U\-L\-L indicates that the bucket should make a copy of the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gad81543da24b144c0e100dd1e6d843adb}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-immortal\-\_\-create@{apr\-\_\-bucket\-\_\-immortal\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-immortal\-\_\-create@{apr\-\_\-bucket\-\_\-immortal\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-immortal\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-immortal\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gad81543da24b144c0e100dd1e6d843adb}
+Create a bucket referring to long-\/lived data. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The data to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the data to insert. \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga33b21eb55cad9d28b5cdd40ad4181774}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-immortal\-\_\-make@{apr\-\_\-bucket\-\_\-immortal\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-immortal\-\_\-make@{apr\-\_\-bucket\-\_\-immortal\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-immortal\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-immortal\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga33b21eb55cad9d28b5cdd40ad4181774}
+Make the bucket passed in a bucket refer to long-\/lived data 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a I\-M\-M\-O\-R\-T\-A\-L bucket \\
+\hline
+{\em buf} & The data to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the data to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gaee338c7d218ce1fbbf8c1aefedcc0632}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-mmap\-\_\-create@{apr\-\_\-bucket\-\_\-mmap\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-mmap\-\_\-create@{apr\-\_\-bucket\-\_\-mmap\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-mmap\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-mmap\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-mmap\-\_\-t $\ast$}]{mm, }
+\item[{apr\-\_\-off\-\_\-t}]{start, }
+\item[{apr\-\_\-size\-\_\-t}]{length, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gaee338c7d218ce1fbbf8c1aefedcc0632}
+Create a bucket referring to mmap()ed memory. 
+\begin{DoxyParams}{Parameters}
+{\em mm} & The mmap to insert into the bucket \\
+\hline
+{\em start} & The offset of the first byte in the mmap that this bucket refers to \\
+\hline
+{\em length} & The number of bytes referred to by this bucket \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab561ac92d1811e5a2589783536e64a1a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-mmap\-\_\-make@{apr\-\_\-bucket\-\_\-mmap\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-mmap\-\_\-make@{apr\-\_\-bucket\-\_\-mmap\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-mmap\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-mmap\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-mmap\-\_\-t $\ast$}]{mm, }
+\item[{apr\-\_\-off\-\_\-t}]{start, }
+\item[{apr\-\_\-size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gab561ac92d1811e5a2589783536e64a1a}
+Make the bucket passed in a bucket refer to an M\-M\-A\-P'ed file 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a M\-M\-A\-P bucket \\
+\hline
+{\em mm} & The mmap to insert into the bucket \\
+\hline
+{\em start} & The offset of the first byte in the mmap that this bucket refers to \\
+\hline
+{\em length} & The number of bytes referred to by this bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gab9ea07d5f9246e06c1bb3e76ee90cd71}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-pipe\-\_\-create@{apr\-\_\-bucket\-\_\-pipe\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-pipe\-\_\-create@{apr\-\_\-bucket\-\_\-pipe\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-pipe\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-pipe\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-file\-\_\-t $\ast$}]{thispipe, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gab9ea07d5f9246e06c1bb3e76ee90cd71}
+Create a bucket referring to a pipe. 
+\begin{DoxyParams}{Parameters}
+{\em thispipe} & The pipe to put in the bucket \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae7b4daa1318226beda4bf0eead2f5582}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-pipe\-\_\-make@{apr\-\_\-bucket\-\_\-pipe\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-pipe\-\_\-make@{apr\-\_\-bucket\-\_\-pipe\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-pipe\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-pipe\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-file\-\_\-t $\ast$}]{thispipe}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gae7b4daa1318226beda4bf0eead2f5582}
+Make the bucket passed in a bucket refer to a pipe 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a P\-I\-P\-E bucket \\
+\hline
+{\em thispipe} & The pipe to put in the bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga154ea763ee9de4ccb8692b9e3b60ebb2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-pool\-\_\-create@{apr\-\_\-bucket\-\_\-pool\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-pool\-\_\-create@{apr\-\_\-bucket\-\_\-pool\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-pool\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-pool\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{length, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga154ea763ee9de4ccb8692b9e3b60ebb2}
+Create a bucket referring to memory allocated from a pool.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buf} & The buffer to insert into the bucket \\
+\hline
+{\em length} & The number of bytes referred to by this bucket \\
+\hline
+{\em pool} & The pool the memory was allocated from \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga01197c5b2cda6382354628cecdeae145}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-pool\-\_\-make@{apr\-\_\-bucket\-\_\-pool\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-pool\-\_\-make@{apr\-\_\-bucket\-\_\-pool\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-pool\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-pool\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{length, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga01197c5b2cda6382354628cecdeae145}
+Make the bucket passed in a bucket refer to pool data 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a pool bucket \\
+\hline
+{\em buf} & The buffer to insert into the bucket \\
+\hline
+{\em length} & The number of bytes referred to by this bucket \\
+\hline
+{\em pool} & The pool the memory was allocated from \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gae6135b83d9f7bd7e1b60dbc761a3ca5f}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-setaside\-\_\-noop@{apr\-\_\-bucket\-\_\-setaside\-\_\-noop}}
+\index{apr\-\_\-bucket\-\_\-setaside\-\_\-noop@{apr\-\_\-bucket\-\_\-setaside\-\_\-noop}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-setaside\-\_\-noop}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-setaside\-\_\-noop (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{data, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gae6135b83d9f7bd7e1b60dbc761a3ca5f}
+This function simply returns A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S to denote that the bucket does not require anything to happen for its setaside() function. This is appropriate for buckets that have \char`\"{}immortal\char`\"{} data -- the data will live at least as long as the bucket. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The bucket to setaside \\
+\hline
+{\em pool} & The pool defining the desired lifetime of the bucket data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gade52b057161f657a6b298d9c6a78b339}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl@{apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl}}
+\index{apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl@{apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-setaside\-\_\-notimpl (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{data, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gade52b057161f657a6b298d9c6a78b339}
+A place holder function that signifies that the setaside function was not implemented for this bucket 
+\begin{DoxyParams}{Parameters}
+{\em data} & The bucket to setaside \\
+\hline
+{\em pool} & The pool defining the desired lifetime of the bucket data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2e9a035d340ef6b4279b178eff614670}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-shared\-\_\-copy@{apr\-\_\-bucket\-\_\-shared\-\_\-copy}}
+\index{apr\-\_\-bucket\-\_\-shared\-\_\-copy@{apr\-\_\-bucket\-\_\-shared\-\_\-copy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-shared\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-shared\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{a, }
+\item[{{\bf apr\-\_\-bucket} $\ast$$\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga2e9a035d340ef6b4279b178eff614670}
+Copy a refcounted bucket, incrementing the reference count. Most reference-\/counting bucket types will be able to use this function as their copy function without any additional type-\/specific handling. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The bucket to copy \\
+\hline
+{\em b} & Returns a pointer to the new bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M if allocation failed; or A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga43c7dc7e3eb961a91bbc0b69a47e503c}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-shared\-\_\-destroy@{apr\-\_\-bucket\-\_\-shared\-\_\-destroy}}
+\index{apr\-\_\-bucket\-\_\-shared\-\_\-destroy@{apr\-\_\-bucket\-\_\-shared\-\_\-destroy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-shared\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-bucket\-\_\-shared\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga43c7dc7e3eb961a91bbc0b69a47e503c}
+Decrement the refcount of the data in the bucket. This function should only be called by type-\/specific bucket destruction functions. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The private data pointer from the bucket to be destroyed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\-R\-U\-E or F\-A\-L\-S\-E; T\-R\-U\-E if the reference count is now zero, indicating that the shared resource itself can be destroyed by the caller. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga562251ac5776e88f7384158b85e74be8}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-shared\-\_\-make@{apr\-\_\-bucket\-\_\-shared\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-shared\-\_\-make@{apr\-\_\-bucket\-\_\-shared\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-shared\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-shared\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{void $\ast$}]{data, }
+\item[{apr\-\_\-off\-\_\-t}]{start, }
+\item[{apr\-\_\-size\-\_\-t}]{length}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga562251ac5776e88f7384158b85e74be8}
+Initialize a bucket containing reference-\/counted data that may be shared. The caller must allocate the bucket if necessary and initialize its type-\/dependent fields, and allocate and initialize its own private data structure. This function should only be called by type-\/specific bucket creation functions. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to initialize \\
+\hline
+{\em data} & A pointer to the private data structure with the reference count at the start \\
+\hline
+{\em start} & The start of the data in the bucket relative to the private base pointer \\
+\hline
+{\em length} & The length of the data in the bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga871e54ba20487a2085a73a673ffa4110}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-shared\-\_\-split@{apr\-\_\-bucket\-\_\-shared\-\_\-split}}
+\index{apr\-\_\-bucket\-\_\-shared\-\_\-split@{apr\-\_\-bucket\-\_\-shared\-\_\-split}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-shared\-\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-shared\-\_\-split (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-size\-\_\-t}]{point}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga871e54ba20487a2085a73a673ffa4110}
+Split a bucket into two at the given point, and adjust the refcount to the underlying data. Most reference-\/counting bucket types will be able to use this function as their split function without any additional type-\/specific handling. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to be split \\
+\hline
+{\em point} & The offset of the first byte in the new bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L if the point is not within the bucket; A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M if allocation failed; or A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga123c95e832734f92e6f1139b6a68cfa6}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-simple\-\_\-copy@{apr\-\_\-bucket\-\_\-simple\-\_\-copy}}
+\index{apr\-\_\-bucket\-\_\-simple\-\_\-copy@{apr\-\_\-bucket\-\_\-simple\-\_\-copy}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-simple\-\_\-copy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-simple\-\_\-copy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{a, }
+\item[{{\bf apr\-\_\-bucket} $\ast$$\ast$}]{b}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga123c95e832734f92e6f1139b6a68cfa6}
+Copy a simple bucket. Most non-\/reference-\/counting buckets that allow multiple references to the same block of data (eg transient and immortal) will use this as their copy function without any additional type-\/specific handling. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The bucket to copy \\
+\hline
+{\em b} & Returns a pointer to the new bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M if allocation failed; or A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga9fd8c7d9e42dd04b8f153072655e875c}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-simple\-\_\-split@{apr\-\_\-bucket\-\_\-simple\-\_\-split}}
+\index{apr\-\_\-bucket\-\_\-simple\-\_\-split@{apr\-\_\-bucket\-\_\-simple\-\_\-split}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-simple\-\_\-split}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-simple\-\_\-split (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-size\-\_\-t}]{point}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga9fd8c7d9e42dd04b8f153072655e875c}
+Split a simple bucket into two at the given point. Most non-\/reference counting buckets that allow multiple references to the same block of data (eg transient and immortal) will use this as their split function without any additional type-\/specific handling. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to be split \\
+\hline
+{\em point} & The offset of the first byte in the new bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L if the point is not within the bucket; A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M if allocation failed; or A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_gacd9f08b40eb2204cd93b42e58338aeb2}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-socket\-\_\-create@{apr\-\_\-bucket\-\_\-socket\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-socket\-\_\-create@{apr\-\_\-bucket\-\_\-socket\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-socket\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-socket\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-socket\-\_\-t $\ast$}]{thissock, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_gacd9f08b40eb2204cd93b42e58338aeb2}
+Create a bucket referring to a socket. 
+\begin{DoxyParams}{Parameters}
+{\em thissock} & The socket to put in the bucket \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga2fffd4c4701ad55c6df27cdee0c47200}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-socket\-\_\-make@{apr\-\_\-bucket\-\_\-socket\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-socket\-\_\-make@{apr\-\_\-bucket\-\_\-socket\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-socket\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-socket\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{apr\-\_\-socket\-\_\-t $\ast$}]{thissock}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga2fffd4c4701ad55c6df27cdee0c47200}
+Make the bucket passed in a bucket refer to a socket 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a S\-O\-C\-K\-E\-T bucket \\
+\hline
+{\em thissock} & The socket to put in the bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga305766ff39440711da93e72f5b348a3a}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-split\-\_\-notimpl@{apr\-\_\-bucket\-\_\-split\-\_\-notimpl}}
+\index{apr\-\_\-bucket\-\_\-split\-\_\-notimpl@{apr\-\_\-bucket\-\_\-split\-\_\-notimpl}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-split\-\_\-notimpl}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-bucket\-\_\-split\-\_\-notimpl (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{data, }
+\item[{apr\-\_\-size\-\_\-t}]{point}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga305766ff39440711da93e72f5b348a3a}
+A place holder function that signifies that the split function was not implemented for this bucket 
+\begin{DoxyParams}{Parameters}
+{\em data} & The bucket to split \\
+\hline
+{\em point} & The location to split the bucket \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga554f2d87c718f30a9259d52c6f81a405}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-transient\-\_\-create@{apr\-\_\-bucket\-\_\-transient\-\_\-create}}
+\index{apr\-\_\-bucket\-\_\-transient\-\_\-create@{apr\-\_\-bucket\-\_\-transient\-\_\-create}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-transient\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-transient\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte, }
+\item[{{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$}]{list}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga554f2d87c718f30a9259d52c6f81a405}
+Create a bucket referring to data on the stack. 
+\begin{DoxyParams}{Parameters}
+{\em buf} & The data to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the data to insert. \\
+\hline
+{\em list} & The freelist from which this bucket should be allocated \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga7e1f9a0ae64781ff4430d08c25e6e831}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-transient\-\_\-make@{apr\-\_\-bucket\-\_\-transient\-\_\-make}}
+\index{apr\-\_\-bucket\-\_\-transient\-\_\-make@{apr\-\_\-bucket\-\_\-transient\-\_\-make}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-transient\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket}$\ast$ apr\-\_\-bucket\-\_\-transient\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket} $\ast$}]{b, }
+\item[{const char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{nbyte}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___bucket___brigades_ga7e1f9a0ae64781ff4430d08c25e6e831}
+Make the bucket passed in a bucket refer to stack data 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to make into a T\-R\-A\-N\-S\-I\-E\-N\-T bucket \\
+\hline
+{\em buf} & The data to insert into the bucket \\
+\hline
+{\em nbyte} & The size of the data to insert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The new bucket, or N\-U\-L\-L if allocation failed 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\hypertarget{group___a_p_r___util___bucket___brigades_ga829cac9b4843b85a902ddd64dffbfb12}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-eos@{apr\-\_\-bucket\-\_\-type\-\_\-eos}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-eos@{apr\-\_\-bucket\-\_\-type\-\_\-eos}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-eos}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-eos}}\label{group___a_p_r___util___bucket___brigades_ga829cac9b4843b85a902ddd64dffbfb12}
+The E\-O\-S bucket type. This signifies that there will be no more data, ever. All filters M\-U\-S\-T send all data to the next filter when they receive a bucket of this type \hypertarget{group___a_p_r___util___bucket___brigades_ga5f17aa7e616179411a06475ec09626e9}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-file@{apr\-\_\-bucket\-\_\-type\-\_\-file}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-file@{apr\-\_\-bucket\-\_\-type\-\_\-file}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-file}}\label{group___a_p_r___util___bucket___brigades_ga5f17aa7e616179411a06475ec09626e9}
+The F\-I\-L\-E bucket type. This bucket represents a file on disk \hypertarget{group___a_p_r___util___bucket___brigades_gaecc113cfcc7751dfe70876437a2f51d7}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-flush@{apr\-\_\-bucket\-\_\-type\-\_\-flush}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-flush@{apr\-\_\-bucket\-\_\-type\-\_\-flush}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-flush}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-flush}}\label{group___a_p_r___util___bucket___brigades_gaecc113cfcc7751dfe70876437a2f51d7}
+There is no apr\-\_\-bucket\-\_\-destroy\-\_\-notimpl, because destruction is required to be implemented (it could be a noop, but only if that makes sense for the bucket type) The flush bucket type. This signifies that all data should be flushed to the next filter. The flush bucket should be sent with the other buckets. \hypertarget{group___a_p_r___util___bucket___brigades_ga2c5608267ed7b860657f5a1c89c2f40d}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-heap@{apr\-\_\-bucket\-\_\-type\-\_\-heap}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-heap@{apr\-\_\-bucket\-\_\-type\-\_\-heap}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-heap}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-heap}}\label{group___a_p_r___util___bucket___brigades_ga2c5608267ed7b860657f5a1c89c2f40d}
+The H\-E\-A\-P bucket type. This bucket represents a data allocated from the heap. \hypertarget{group___a_p_r___util___bucket___brigades_ga391ac24b2c85969e8efa504588b364bb}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-immortal@{apr\-\_\-bucket\-\_\-type\-\_\-immortal}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-immortal@{apr\-\_\-bucket\-\_\-type\-\_\-immortal}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-immortal}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-immortal}}\label{group___a_p_r___util___bucket___brigades_ga391ac24b2c85969e8efa504588b364bb}
+The I\-M\-M\-O\-R\-T\-A\-L bucket type. This bucket represents a segment of data that the creator is willing to take responsibility for. The core will do nothing with the data in an immortal bucket \hypertarget{group___a_p_r___util___bucket___brigades_ga63f9ce8e4d6e796921aad14a218a3b23}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-mmap@{apr\-\_\-bucket\-\_\-type\-\_\-mmap}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-mmap@{apr\-\_\-bucket\-\_\-type\-\_\-mmap}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-mmap}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-mmap}}\label{group___a_p_r___util___bucket___brigades_ga63f9ce8e4d6e796921aad14a218a3b23}
+The M\-M\-A\-P bucket type. This bucket represents an M\-M\-A\-P'ed file \hypertarget{group___a_p_r___util___bucket___brigades_ga334a875abb2908364a40abbfa80c401f}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-pipe@{apr\-\_\-bucket\-\_\-type\-\_\-pipe}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-pipe@{apr\-\_\-bucket\-\_\-type\-\_\-pipe}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-pipe}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-pipe}}\label{group___a_p_r___util___bucket___brigades_ga334a875abb2908364a40abbfa80c401f}
+The P\-I\-P\-E bucket type. This bucket represents a pipe to another program. \hypertarget{group___a_p_r___util___bucket___brigades_ga87bace819fdbf07c12497a8289b3567b}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-pool@{apr\-\_\-bucket\-\_\-type\-\_\-pool}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-pool@{apr\-\_\-bucket\-\_\-type\-\_\-pool}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-pool}}\label{group___a_p_r___util___bucket___brigades_ga87bace819fdbf07c12497a8289b3567b}
+The P\-O\-O\-L bucket type. This bucket represents a data that was allocated from a pool. I\-F this bucket is still available when the pool is cleared, the data is copied on to the heap. \hypertarget{group___a_p_r___util___bucket___brigades_gaa6d9978cc10895bdf0a4686728822a84}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-socket@{apr\-\_\-bucket\-\_\-type\-\_\-socket}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-socket@{apr\-\_\-bucket\-\_\-type\-\_\-socket}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-socket}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-socket}}\label{group___a_p_r___util___bucket___brigades_gaa6d9978cc10895bdf0a4686728822a84}
+The S\-O\-C\-K\-E\-T bucket type. This bucket represents a socket to another machine \hypertarget{group___a_p_r___util___bucket___brigades_ga1692ced61c1966e67adc05ec2a69ce9b}{\index{Bucket Brigades@{Bucket Brigades}!apr\-\_\-bucket\-\_\-type\-\_\-transient@{apr\-\_\-bucket\-\_\-type\-\_\-transient}}
+\index{apr\-\_\-bucket\-\_\-type\-\_\-transient@{apr\-\_\-bucket\-\_\-type\-\_\-transient}!Bucket Brigades@{Bucket Brigades}}
+\subsubsection[{apr\-\_\-bucket\-\_\-type\-\_\-transient}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t} apr\-\_\-bucket\-\_\-type\-\_\-transient}}\label{group___a_p_r___util___bucket___brigades_ga1692ced61c1966e67adc05ec2a69ce9b}
+The T\-R\-A\-N\-S\-I\-E\-N\-T bucket type. This bucket represents a data allocated off the stack. When the setaside function is called, this data is copied on to the heap 

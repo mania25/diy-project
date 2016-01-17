@@ -1,0 +1,132 @@
+\hypertarget{group___a_p_r___util___base64}{\section{Base64 Encoding}
+\label{group___a_p_r___util___base64}\index{Base64 Encoding@{Base64 Encoding}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group___a_p_r___util___base64_ga5dad9df13a7018e3946a54c8d2c27ae9}{apr\-\_\-base64\-\_\-encode\-\_\-len} (int len)
+\item 
+int \hyperlink{group___a_p_r___util___base64_ga6176124b05512773de40cc5e899058b9}{apr\-\_\-base64\-\_\-encode} (char $\ast$coded\-\_\-dst, const char $\ast$plain\-\_\-src, int len\-\_\-plain\-\_\-src)
+\item 
+int \hyperlink{group___a_p_r___util___base64_gae7480ce6b723e71cf91583217d96f1d7}{apr\-\_\-base64\-\_\-encode\-\_\-binary} (char $\ast$coded\-\_\-dst, const unsigned char $\ast$plain\-\_\-src, int len\-\_\-plain\-\_\-src)
+\item 
+int \hyperlink{group___a_p_r___util___base64_gad1ba714a6708376e6a21722a40a698a2}{apr\-\_\-base64\-\_\-decode\-\_\-len} (const char $\ast$coded\-\_\-src)
+\item 
+int \hyperlink{group___a_p_r___util___base64_ga1f717903883e7405c2a0d0ec5814f865}{apr\-\_\-base64\-\_\-decode} (char $\ast$plain\-\_\-dst, const char $\ast$coded\-\_\-src)
+\item 
+int \hyperlink{group___a_p_r___util___base64_ga3d8f1517351d8b7a18b8396642b98975}{apr\-\_\-base64\-\_\-decode\-\_\-binary} (unsigned char $\ast$plain\-\_\-dst, const char $\ast$coded\-\_\-src)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___base64_ga1f717903883e7405c2a0d0ec5814f865}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-decode@{apr\-\_\-base64\-\_\-decode}}
+\index{apr\-\_\-base64\-\_\-decode@{apr\-\_\-base64\-\_\-decode}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-decode}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-decode (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{plain\-\_\-dst, }
+\item[{const char $\ast$}]{coded\-\_\-src}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_ga1f717903883e7405c2a0d0ec5814f865}
+Decode a string to plain text 
+\begin{DoxyParams}{Parameters}
+{\em plain\-\_\-dst} & The destination string for the plain text \\
+\hline
+{\em coded\-\_\-src} & The encoded string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the plain text string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___base64_ga3d8f1517351d8b7a18b8396642b98975}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-decode\-\_\-binary@{apr\-\_\-base64\-\_\-decode\-\_\-binary}}
+\index{apr\-\_\-base64\-\_\-decode\-\_\-binary@{apr\-\_\-base64\-\_\-decode\-\_\-binary}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-decode\-\_\-binary}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-decode\-\_\-binary (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{plain\-\_\-dst, }
+\item[{const char $\ast$}]{coded\-\_\-src}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_ga3d8f1517351d8b7a18b8396642b98975}
+Decode an E\-B\-C\-D\-I\-C string to plain text 
+\begin{DoxyParams}{Parameters}
+{\em plain\-\_\-dst} & The destination string for the plain text \\
+\hline
+{\em coded\-\_\-src} & The encoded string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the plain text string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___base64_gad1ba714a6708376e6a21722a40a698a2}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-decode\-\_\-len@{apr\-\_\-base64\-\_\-decode\-\_\-len}}
+\index{apr\-\_\-base64\-\_\-decode\-\_\-len@{apr\-\_\-base64\-\_\-decode\-\_\-len}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-decode\-\_\-len}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-decode\-\_\-len (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{coded\-\_\-src}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_gad1ba714a6708376e6a21722a40a698a2}
+Determine the maximum buffer length required to decode the plain text string given the encoded string. 
+\begin{DoxyParams}{Parameters}
+{\em coded\-\_\-src} & The encoded string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the maximum required buffer length for the plain text string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___base64_ga6176124b05512773de40cc5e899058b9}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-encode@{apr\-\_\-base64\-\_\-encode}}
+\index{apr\-\_\-base64\-\_\-encode@{apr\-\_\-base64\-\_\-encode}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-encode}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-encode (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{coded\-\_\-dst, }
+\item[{const char $\ast$}]{plain\-\_\-src, }
+\item[{int}]{len\-\_\-plain\-\_\-src}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_ga6176124b05512773de40cc5e899058b9}
+Encode a text string using base64encoding. 
+\begin{DoxyParams}{Parameters}
+{\em coded\-\_\-dst} & The destination string for the encoded string. \\
+\hline
+{\em plain\-\_\-src} & The original string in plain text \\
+\hline
+{\em len\-\_\-plain\-\_\-src} & The length of the plain text string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the encoded string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___base64_gae7480ce6b723e71cf91583217d96f1d7}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-encode\-\_\-binary@{apr\-\_\-base64\-\_\-encode\-\_\-binary}}
+\index{apr\-\_\-base64\-\_\-encode\-\_\-binary@{apr\-\_\-base64\-\_\-encode\-\_\-binary}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-encode\-\_\-binary}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-encode\-\_\-binary (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{coded\-\_\-dst, }
+\item[{const unsigned char $\ast$}]{plain\-\_\-src, }
+\item[{int}]{len\-\_\-plain\-\_\-src}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_gae7480ce6b723e71cf91583217d96f1d7}
+Encode an E\-B\-C\-D\-I\-C string using base64encoding. 
+\begin{DoxyParams}{Parameters}
+{\em coded\-\_\-dst} & The destination string for the encoded string. \\
+\hline
+{\em plain\-\_\-src} & The original string in plain text \\
+\hline
+{\em len\-\_\-plain\-\_\-src} & The length of the plain text string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the encoded string 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___base64_ga5dad9df13a7018e3946a54c8d2c27ae9}{\index{Base64 Encoding@{Base64 Encoding}!apr\-\_\-base64\-\_\-encode\-\_\-len@{apr\-\_\-base64\-\_\-encode\-\_\-len}}
+\index{apr\-\_\-base64\-\_\-encode\-\_\-len@{apr\-\_\-base64\-\_\-encode\-\_\-len}!Base64 Encoding@{Base64 Encoding}}
+\subsubsection[{apr\-\_\-base64\-\_\-encode\-\_\-len}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-base64\-\_\-encode\-\_\-len (
+\begin{DoxyParamCaption}
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___base64_ga5dad9df13a7018e3946a54c8d2c27ae9}
+Given the length of an un-\/encoded string, get the length of the encoded string. 
+\begin{DoxyParams}{Parameters}
+{\em len} & the length of an unencoded string. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the length of the string after it is encoded, including the trailing \textbackslash{}0 
+\end{DoxyReturn}

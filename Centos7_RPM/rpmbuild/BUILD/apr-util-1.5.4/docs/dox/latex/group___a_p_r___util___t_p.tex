@@ -1,0 +1,510 @@
+\hypertarget{group___a_p_r___util___t_p}{\section{Thread Pool routines}
+\label{group___a_p_r___util___t_p}\index{Thread Pool routines@{Thread Pool routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___t_p_ga312691aaa41f45820e13c2566a4c6780}{\#define {\bfseries A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-\-L\-O\-W\-E\-S\-T}~0}\label{group___a_p_r___util___t_p_ga312691aaa41f45820e13c2566a4c6780}
+
+\item 
+\hypertarget{group___a_p_r___util___t_p_ga19879c994e9a71e9954e580a179b62c1}{\#define {\bfseries A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-\-L\-O\-W}~63}\label{group___a_p_r___util___t_p_ga19879c994e9a71e9954e580a179b62c1}
+
+\item 
+\hypertarget{group___a_p_r___util___t_p_ga84d2ac8fa8a538661715b0d2e2736cb1}{\#define {\bfseries A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-\-N\-O\-R\-M\-A\-L}~127}\label{group___a_p_r___util___t_p_ga84d2ac8fa8a538661715b0d2e2736cb1}
+
+\item 
+\hypertarget{group___a_p_r___util___t_p_ga289d5e1346b5807b43db9ea7d4ea5c17}{\#define {\bfseries A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-\-H\-I\-G\-H}~191}\label{group___a_p_r___util___t_p_ga289d5e1346b5807b43db9ea7d4ea5c17}
+
+\item 
+\hypertarget{group___a_p_r___util___t_p_ga5fa01e4e210270d119382a80aae13d1d}{\#define {\bfseries A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-T\-A\-S\-K\-\_\-\-P\-R\-I\-O\-R\-I\-T\-Y\-\_\-\-H\-I\-G\-H\-E\-S\-T}~255}\label{group___a_p_r___util___t_p_ga5fa01e4e210270d119382a80aae13d1d}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct apr\-\_\-thread\-\_\-pool \hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga9c4351f2f93d223c159c1f8e5481830e}{apr\-\_\-thread\-\_\-pool\-\_\-create} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$$\ast$me, apr\-\_\-size\-\_\-t init\-\_\-threads, apr\-\_\-size\-\_\-t max\-\_\-threads, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_gab06b4fdfc684c88781abf201d53a44eb}{apr\-\_\-thread\-\_\-pool\-\_\-destroy} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_gad66fb92679a8f456ff8e8ea1629eb041}{apr\-\_\-thread\-\_\-pool\-\_\-push} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-thread\-\_\-start\-\_\-t func, void $\ast$param, apr\-\_\-byte\-\_\-t priority, void $\ast$owner)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaa79df50c650442b8d39e169f4e422d3b}{apr\-\_\-thread\-\_\-pool\-\_\-schedule} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-thread\-\_\-start\-\_\-t func, void $\ast$param, apr\-\_\-interval\-\_\-time\-\_\-t time, void $\ast$owner)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga9acb6218820184f0617eecf56f0d3d84}{apr\-\_\-thread\-\_\-pool\-\_\-top} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-thread\-\_\-start\-\_\-t func, void $\ast$param, apr\-\_\-byte\-\_\-t priority, void $\ast$owner)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaee3d7332cf2591f42472e8be0bcbff87}{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, void $\ast$owner)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga4f628cbec0365bb39be715a3c7ff0ec3}{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gac0324b95f6b61dbfb184cbe84c541b42}{apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga9a2642a5a61df9560da438e818d5fad3}{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaf839cda931928964f450e3a17d153b24}{apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gae6c5b87d1fee7150f74baa1008cb00c0}{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga07c5e4dca589ff024e9adfc8f818c481}{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-size\-\_\-t cnt)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaab5c9c8afc46793ea5c413edfc9ef46e}{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga5eda07fb7fac1b4c4165137f34c5c31c}{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gab6dcdaa6129caf35fa370e694a67ff08}{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gafcf0a761a77b2a27fc043d650606c122}{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga6dd7fdcaac5cb2848aecd2ee1426d41e}{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaa352b6337b31ebab796b604240a907e9}{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-size\-\_\-t cnt)
+\item 
+apr\-\_\-interval\-\_\-time\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga382b90c482d39184b2a80157f64166ec}{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-interval\-\_\-time\-\_\-t timeout)
+\item 
+apr\-\_\-interval\-\_\-time\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga6ef255c2d556fa757e9b78c2745c9bac}{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaca755ea05976c5e1b782dcf40a1ef443}{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga1c35f1bd809dde4300f4a3f77026f446}{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me, apr\-\_\-size\-\_\-t val)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___t_p_ga38f4ad8e384cde0e9d32867031c7a935}{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get} (\hyperlink{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$me)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___t_p_gaefbaa0f765567e8e5a79adaaf346755f}{apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get} (apr\-\_\-thread\-\_\-t $\ast$thd, void $\ast$$\ast$owner)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-t@{apr\-\_\-thread\-\_\-pool\-\_\-t}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-t@{apr\-\_\-thread\-\_\-pool\-\_\-t}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct apr\-\_\-thread\-\_\-pool {\bf apr\-\_\-thread\-\_\-pool\-\_\-t}}}\label{group___a_p_r___util___t_p_gab31b68a03a0d5eec3e1879c253d3b620}
+Opaque Thread Pool structure. 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___t_p_gaf839cda931928964f450e3a17d153b24}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-busy\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaf839cda931928964f450e3a17d153b24}
+Get the current number of busy threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of busy threads 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga9c4351f2f93d223c159c1f8e5481830e}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-create@{apr\-\_\-thread\-\_\-pool\-\_\-create}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-create@{apr\-\_\-thread\-\_\-pool\-\_\-create}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$$\ast$}]{me, }
+\item[{apr\-\_\-size\-\_\-t}]{init\-\_\-threads, }
+\item[{apr\-\_\-size\-\_\-t}]{max\-\_\-threads, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga9c4351f2f93d223c159c1f8e5481830e}
+Create a thread pool 
+\begin{DoxyParams}{Parameters}
+{\em me} & The pointer in which to return the newly created apr\-\_\-thread\-\_\-pool object, or N\-U\-L\-L if thread pool creation fails. \\
+\hline
+{\em init\-\_\-threads} & The number of threads to be created initially, this number will also be used as the initial value for the maximum number of idle threads. \\
+\hline
+{\em max\-\_\-threads} & The maximum number of threads that can be created \\
+\hline
+{\em pool} & The pool to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the thread pool was created successfully. Otherwise, the error code. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gab06b4fdfc684c88781abf201d53a44eb}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-destroy@{apr\-\_\-thread\-\_\-pool\-\_\-destroy}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-destroy@{apr\-\_\-thread\-\_\-pool\-\_\-destroy}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gab06b4fdfc684c88781abf201d53a44eb}
+Destroy the thread pool and stop all the threads \begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if all threads are stopped. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gae6c5b87d1fee7150f74baa1008cb00c0}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gae6c5b87d1fee7150f74baa1008cb00c0}
+Get the current number of idle threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of idle threads 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga6dd7fdcaac5cb2848aecd2ee1426d41e}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga6dd7fdcaac5cb2848aecd2ee1426d41e}
+Access function for the maximum number of idle threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current maximum number 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga07c5e4dca589ff024e9adfc8f818c481}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-max\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-size\-\_\-t}]{cnt}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga07c5e4dca589ff024e9adfc8f818c481}
+Access function for the maximum number of idle threads. Number of current idle threads will be reduced to the new limit. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em cnt} & The number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of threads that were stopped. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga6ef255c2d556fa757e9b78c2745c9bac}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-interval\-\_\-time\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga6ef255c2d556fa757e9b78c2745c9bac}
+Access function for the maximum wait time (in microseconds) of an idling thread that exceeds the maximum number of idling threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current maximum wait time 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga382b90c482d39184b2a80157f64166ec}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-interval\-\_\-time\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-idle\-\_\-wait\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-interval\-\_\-time\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga382b90c482d39184b2a80157f64166ec}
+Access function for the maximum wait time (in microseconds) of an idling thread that exceeds the maximum number of idling threads. A non-\/zero value allows for the reaping of idling threads to shrink over time. Which helps reduce thrashing. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em timeout} & The number of microseconds an idle thread should wait till it reaps itself \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original maximum wait time 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gad66fb92679a8f456ff8e8ea1629eb041}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-push@{apr\-\_\-thread\-\_\-pool\-\_\-push}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-push@{apr\-\_\-thread\-\_\-pool\-\_\-push}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-push}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-push (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-thread\-\_\-start\-\_\-t}]{func, }
+\item[{void $\ast$}]{param, }
+\item[{apr\-\_\-byte\-\_\-t}]{priority, }
+\item[{void $\ast$}]{owner}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gad66fb92679a8f456ff8e8ea1629eb041}
+Schedule a task to the bottom of the tasks of same priority. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em func} & The task function \\
+\hline
+{\em param} & The parameter for the task function \\
+\hline
+{\em priority} & The priority of the task. \\
+\hline
+{\em owner} & Owner of this task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the task had been scheduled successfully 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaa79df50c650442b8d39e169f4e422d3b}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-schedule@{apr\-\_\-thread\-\_\-pool\-\_\-schedule}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-schedule@{apr\-\_\-thread\-\_\-pool\-\_\-schedule}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-schedule}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-schedule (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-thread\-\_\-start\-\_\-t}]{func, }
+\item[{void $\ast$}]{param, }
+\item[{apr\-\_\-interval\-\_\-time\-\_\-t}]{time, }
+\item[{void $\ast$}]{owner}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaa79df50c650442b8d39e169f4e422d3b}
+Schedule a task to be run after a delay 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em func} & The task function \\
+\hline
+{\em param} & The parameter for the task function \\
+\hline
+{\em time} & Time in microseconds \\
+\hline
+{\em owner} & Owner of this task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the task had been scheduled successfully 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gac0324b95f6b61dbfb184cbe84c541b42}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-scheduled\-\_\-tasks\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gac0324b95f6b61dbfb184cbe84c541b42}
+Get the current number of scheduled tasks waiting in the queue 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of scheduled tasks in the queue 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaefbaa0f765567e8e5a79adaaf346755f}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-task\-\_\-owner\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-thread\-\_\-t $\ast$}]{thd, }
+\item[{void $\ast$$\ast$}]{owner}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaefbaa0f765567e8e5a79adaaf346755f}
+Get owner of the task currently been executed by the thread. 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread is executing a task \\
+\hline
+{\em owner} & Pointer to receive owner of the task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the owner is retrieved successfully 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaee3d7332cf2591f42472e8be0bcbff87}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-cancel (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{void $\ast$}]{owner}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaee3d7332cf2591f42472e8be0bcbff87}
+Cancel tasks submitted by the owner. If there is any task from the owner that is currently running, the function will spin until the task finished. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em owner} & Owner of the task \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the task has been cancelled successfully 
+\end{DoxyReturn}
+\begin{DoxyNote}{Note}
+The task function should not be calling cancel, otherwise the function may get stuck forever. The function assert if it detect such a case. 
+\end{DoxyNote}
+\hypertarget{group___a_p_r___util___t_p_ga4f628cbec0365bb39be715a3c7ff0ec3}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga4f628cbec0365bb39be715a3c7ff0ec3}
+Get the current number of tasks waiting in the queue 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks in the queue 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga5eda07fb7fac1b4c4165137f34c5c31c}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-high\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga5eda07fb7fac1b4c4165137f34c5c31c}
+Get high water mark of the number of tasks waiting to run 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+High water mark of tasks waiting to run 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaab5c9c8afc46793ea5c413edfc9ef46e}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-tasks\-\_\-run\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaab5c9c8afc46793ea5c413edfc9ef46e}
+Get number of tasks that have run 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of tasks that have run 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaca755ea05976c5e1b782dcf40a1ef443}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaca755ea05976c5e1b782dcf40a1ef443}
+Access function for the maximum number of threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current maximum number 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gaa352b6337b31ebab796b604240a907e9}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-thread\-\_\-max\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-size\-\_\-t}]{cnt}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gaa352b6337b31ebab796b604240a907e9}
+Access function for the maximum number of threads. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em cnt} & Number of threads \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original maximum number of threads 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga9a2642a5a61df9560da438e818d5fad3}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga9a2642a5a61df9560da438e818d5fad3}
+Get the current number of threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total number of threads 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gab6dcdaa6129caf35fa370e694a67ff08}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-high\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gab6dcdaa6129caf35fa370e694a67ff08}
+Get high water mark of the number of threads 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+High water mark of threads in thread pool 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_gafcf0a761a77b2a27fc043d650606c122}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count@{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-threads\-\_\-idle\-\_\-timeout\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_gafcf0a761a77b2a27fc043d650606c122}
+Get the number of idle threads that were destroyed after timing out 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of idle threads that timed out 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga38f4ad8e384cde0e9d32867031c7a935}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga38f4ad8e384cde0e9d32867031c7a935}
+Access function for the threshold of tasks in queue to trigger a new thread. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The current threshold 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga1c35f1bd809dde4300f4a3f77026f446}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set@{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-threshold\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-size\-\_\-t}]{val}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga1c35f1bd809dde4300f4a3f77026f446}
+Access function for the threshold of tasks in queue to trigger a new thread. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em cnt} & The new threshold \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The original threshold 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___t_p_ga9acb6218820184f0617eecf56f0d3d84}{\index{Thread Pool routines@{Thread Pool routines}!apr\-\_\-thread\-\_\-pool\-\_\-top@{apr\-\_\-thread\-\_\-pool\-\_\-top}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-top@{apr\-\_\-thread\-\_\-pool\-\_\-top}!Thread Pool routines@{Thread Pool routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-top}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-thread\-\_\-pool\-\_\-top (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-pool\-\_\-t} $\ast$}]{me, }
+\item[{apr\-\_\-thread\-\_\-start\-\_\-t}]{func, }
+\item[{void $\ast$}]{param, }
+\item[{apr\-\_\-byte\-\_\-t}]{priority, }
+\item[{void $\ast$}]{owner}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___t_p_ga9acb6218820184f0617eecf56f0d3d84}
+Schedule a task to the top of the tasks of same priority. 
+\begin{DoxyParams}{Parameters}
+{\em me} & The thread pool \\
+\hline
+{\em func} & The task function \\
+\hline
+{\em param} & The parameter for the task function \\
+\hline
+{\em priority} & The priority of the task. \\
+\hline
+{\em owner} & Owner of this task. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the task had been scheduled successfully 
+\end{DoxyReturn}

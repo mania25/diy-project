@@ -1,0 +1,77 @@
+\hypertarget{group___a_p_r___util___str_match}{\section{String matching routines}
+\label{group___a_p_r___util___str_match}\index{String matching routines@{String matching routines}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} \hyperlink{group___a_p_r___util___str_match_gab7fc6f6d1b15c8d8750b4637b8ac5679}{apr\-\_\-strmatch\-\_\-pattern}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___str_match_gada0fdf0c9dcb92083159bb4f8bfb9158}{apr\-\_\-strmatch} (const \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} $\ast$pattern, const char $\ast$s, apr\-\_\-size\-\_\-t slen)
+\item 
+const \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} $\ast$ \hyperlink{group___a_p_r___util___str_match_gaf38b738b333c59a3f6439b71f1277dd9}{apr\-\_\-strmatch\-\_\-precompile} (apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$s, int case\-\_\-sensitive)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___str_match_gab7fc6f6d1b15c8d8750b4637b8ac5679}{\index{String matching routines@{String matching routines}!apr\-\_\-strmatch\-\_\-pattern@{apr\-\_\-strmatch\-\_\-pattern}}
+\index{apr\-\_\-strmatch\-\_\-pattern@{apr\-\_\-strmatch\-\_\-pattern}!String matching routines@{String matching routines}}
+\subsubsection[{apr\-\_\-strmatch\-\_\-pattern}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-strmatch\-\_\-pattern} {\bf apr\-\_\-strmatch\-\_\-pattern}}}\label{group___a_p_r___util___str_match_gab7fc6f6d1b15c8d8750b4637b8ac5679}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___str_match_gada0fdf0c9dcb92083159bb4f8bfb9158}{\index{String matching routines@{String matching routines}!apr\-\_\-strmatch@{apr\-\_\-strmatch}}
+\index{apr\-\_\-strmatch@{apr\-\_\-strmatch}!String matching routines@{String matching routines}}
+\subsubsection[{apr\-\_\-strmatch}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-strmatch (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-strmatch\-\_\-pattern} $\ast$}]{pattern, }
+\item[{const char $\ast$}]{s, }
+\item[{apr\-\_\-size\-\_\-t}]{slen}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___str_match_gada0fdf0c9dcb92083159bb4f8bfb9158}
+Search for a precompiled pattern within a string 
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern \\
+\hline
+{\em s} & The string in which to search for the pattern \\
+\hline
+{\em slen} & The length of s (excluding null terminator) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the first instance of the pattern in s, or N\-U\-L\-L if not found 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___str_match_gaf38b738b333c59a3f6439b71f1277dd9}{\index{String matching routines@{String matching routines}!apr\-\_\-strmatch\-\_\-precompile@{apr\-\_\-strmatch\-\_\-precompile}}
+\index{apr\-\_\-strmatch\-\_\-precompile@{apr\-\_\-strmatch\-\_\-precompile}!String matching routines@{String matching routines}}
+\subsubsection[{apr\-\_\-strmatch\-\_\-precompile}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-strmatch\-\_\-pattern}$\ast$ apr\-\_\-strmatch\-\_\-precompile (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{const char $\ast$}]{s, }
+\item[{int}]{case\-\_\-sensitive}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___str_match_gaf38b738b333c59a3f6439b71f1277dd9}
+Precompile a pattern for matching using the Boyer-\/\-Moore-\/\-Horspool algorithm 
+\begin{DoxyParams}{Parameters}
+{\em p} & The pool from which to allocate the pattern \\
+\hline
+{\em s} & The pattern string \\
+\hline
+{\em case\-\_\-sensitive} & Whether the matching should be case-\/sensitive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pointer to the compiled pattern, or N\-U\-L\-L if compilation fails 
+\end{DoxyReturn}

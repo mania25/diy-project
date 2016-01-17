@@ -1,0 +1,141 @@
+\hypertarget{group__apr__thread__mutex}{\section{Thread Mutex Routines}
+\label{group__apr__thread__mutex}\index{Thread Mutex Routines@{Thread Mutex Routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__thread__mutex_ga579050872f9aff06e773b084264f7d06}{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}~0x0
+\item 
+\#define \hyperlink{group__apr__thread__mutex_gaf421e0445dbc3c739130f5f6544c2e78}{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D}~0x1
+\item 
+\#define \hyperlink{group__apr__thread__mutex_gac31107f3db115edc0c26ea48943c6a16}{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D}~0x2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__mutex_ga927e99580a669f577fbcb6508814ff12}{apr\-\_\-thread\-\_\-mutex\-\_\-create} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$$\ast$mutex, unsigned int flags, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__mutex_ga1430fd10d8d260c0e3832c959742a977}{apr\-\_\-thread\-\_\-mutex\-\_\-lock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__mutex_ga6ac9c8ebee83ff89416f00231a858798}{apr\-\_\-thread\-\_\-mutex\-\_\-trylock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__mutex_ga74e58f753737283f9b826d8cdcbcb4bf}{apr\-\_\-thread\-\_\-mutex\-\_\-unlock} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__mutex_gae80e6f9c2a2fbaa94f5a6954e02118f4}{apr\-\_\-thread\-\_\-mutex\-\_\-destroy} (\hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$ \hyperlink{group__apr__thread__mutex_gafec9362d92f8bd67660b97cb3c246544}{apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get} (const \hyperlink{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$thethread\-\_\-mutex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__thread__mutex_ga579050872f9aff06e773b084264f7d06}{\index{Thread Mutex Routines@{Thread Mutex Routines}!A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}}
+\index{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T~0x0}}\label{group__apr__thread__mutex_ga579050872f9aff06e773b084264f7d06}
+platform-\/optimal lock behavior \hypertarget{group__apr__thread__mutex_gaf421e0445dbc3c739130f5f6544c2e78}{\index{Thread Mutex Routines@{Thread Mutex Routines}!A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D}}
+\index{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-N\-E\-S\-T\-E\-D~0x1}}\label{group__apr__thread__mutex_gaf421e0445dbc3c739130f5f6544c2e78}
+enable nested (recursive) locks \hypertarget{group__apr__thread__mutex_gac31107f3db115edc0c26ea48943c6a16}{\index{Thread Mutex Routines@{Thread Mutex Routines}!A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D}}
+\index{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D@{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-U\-N\-N\-E\-S\-T\-E\-D~0x2}}\label{group__apr__thread__mutex_gac31107f3db115edc0c26ea48943c6a16}
+disable nested locks 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-t@{apr\-\_\-thread\-\_\-mutex\-\_\-t}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-t@{apr\-\_\-thread\-\_\-mutex\-\_\-t}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} {\bf apr\-\_\-thread\-\_\-mutex\-\_\-t}}}\label{group__apr__thread__mutex_ga95712060ba3a192036416e1ccef1db75}
+Opaque thread-\/local mutex structure 
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__thread__mutex_ga927e99580a669f577fbcb6508814ff12}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-create@{apr\-\_\-thread\-\_\-mutex\-\_\-create}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-create@{apr\-\_\-thread\-\_\-mutex\-\_\-create}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-mutex\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$$\ast$}]{mutex, }
+\item[{unsigned int}]{flags, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_ga927e99580a669f577fbcb6508814ff12}
+Create and initialize a mutex that can be used to synchronize threads. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the memory address where the newly created mutex will be stored. \\
+\hline
+{\em flags} & Or'ed value of\-: 
+\begin{DoxyPre}
+          APR\_THREAD\_MUTEX\_DEFAULT   platform-optimal lock behavior.
+          APR\_THREAD\_MUTEX\_NESTED    enable nested (recursive) locks.
+          APR\_THREAD\_MUTEX\_UNNESTED  disable nested locks (non-recursive).
+\end{DoxyPre}
+ \\
+\hline
+{\em pool} & the pool from which to allocate the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Be cautious in using A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-M\-U\-T\-E\-X\-\_\-\-D\-E\-F\-A\-U\-L\-T. While this is the most optimal mutex based on a given platform's performance characteristics, it will behave as either a nested or an unnested lock. 
+\end{DoxyWarning}
+\hypertarget{group__apr__thread__mutex_gae80e6f9c2a2fbaa94f5a6954e02118f4}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-destroy@{apr\-\_\-thread\-\_\-mutex\-\_\-destroy}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-destroy@{apr\-\_\-thread\-\_\-mutex\-\_\-destroy}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-mutex\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_gae80e6f9c2a2fbaa94f5a6954e02118f4}
+Destroy the mutex and free the memory associated with the lock. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex to destroy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__mutex_ga1430fd10d8d260c0e3832c959742a977}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-lock@{apr\-\_\-thread\-\_\-mutex\-\_\-lock}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-lock@{apr\-\_\-thread\-\_\-mutex\-\_\-lock}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-mutex\-\_\-lock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_ga1430fd10d8d260c0e3832c959742a977}
+Acquire the lock for the given mutex. If the mutex is already locked, the current thread will be put to sleep until the lock becomes available. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to acquire the lock. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__mutex_gafec9362d92f8bd67660b97cb3c246544}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get@{apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get@{apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-pool\-\_\-t}$\ast$ apr\-\_\-thread\-\_\-mutex\-\_\-pool\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$}]{thethread\-\_\-mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_gafec9362d92f8bd67660b97cb3c246544}
+Get the pool used by this thread\-\_\-mutex. \begin{DoxyReturn}{Returns}
+apr\-\_\-pool\-\_\-t the pool 
+\end{DoxyReturn}
+\hypertarget{group__apr__thread__mutex_ga6ac9c8ebee83ff89416f00231a858798}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-trylock@{apr\-\_\-thread\-\_\-mutex\-\_\-trylock}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-trylock@{apr\-\_\-thread\-\_\-mutex\-\_\-trylock}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-trylock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-mutex\-\_\-trylock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_ga6ac9c8ebee83ff89416f00231a858798}
+Attempt to acquire the lock for the given mutex. If the mutex has already been acquired, the call returns immediately with A\-P\-R\-\_\-\-E\-B\-U\-S\-Y. Note\-: it is important that the \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabb92ad7b6ef304132de70e9e5cbaa896}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-U\-S\-Y(s)} macro be used to determine if the return value was A\-P\-R\-\_\-\-E\-B\-U\-S\-Y, for portability reasons. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to attempt the lock acquiring. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__mutex_ga74e58f753737283f9b826d8cdcbcb4bf}{\index{Thread Mutex Routines@{Thread Mutex Routines}!apr\-\_\-thread\-\_\-mutex\-\_\-unlock@{apr\-\_\-thread\-\_\-mutex\-\_\-unlock}}
+\index{apr\-\_\-thread\-\_\-mutex\-\_\-unlock@{apr\-\_\-thread\-\_\-mutex\-\_\-unlock}!Thread Mutex Routines@{Thread Mutex Routines}}
+\subsubsection[{apr\-\_\-thread\-\_\-mutex\-\_\-unlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-mutex\-\_\-unlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__mutex_ga74e58f753737283f9b826d8cdcbcb4bf}
+Release the lock for the given mutex. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex from which to release the lock. \\
+\hline
+\end{DoxyParams}

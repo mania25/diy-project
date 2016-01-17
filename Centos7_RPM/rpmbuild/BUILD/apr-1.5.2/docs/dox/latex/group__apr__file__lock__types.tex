@@ -1,0 +1,33 @@
+\hypertarget{group__apr__file__lock__types}{\section{File Lock Types}
+\label{group__apr__file__lock__types}\index{File Lock Types@{File Lock Types}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D}~1
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}~2
+\item 
+\#define \hyperlink{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K}~0x000\-F
+\item 
+\#define \hyperlink{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}~0x0010
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}{\index{File Lock Types@{File Lock Types}!A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}}
+\index{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}!File Lock Types@{File Lock Types}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E~2}}\label{group__apr__file__lock__types_gafbf0caa093b99bdf11e25360b9099852}
+Exclusive lock. Only one process may hold an exclusive lock at any given time. This is analogous to a \char`\"{}write lock\char`\"{}. \hypertarget{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}{\index{File Lock Types@{File Lock Types}!A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}!File Lock Types@{File Lock Types}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K~0x0010}}\label{group__apr__file__lock__types_gab327fa0250e19006f20d5ec65fe7f22a}
+do not block while acquiring the file lock \hypertarget{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}{\index{File Lock Types@{File Lock Types}!A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D}}
+\index{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D}!File Lock Types@{File Lock Types}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D~1}}\label{group__apr__file__lock__types_gaba177fe81cd70b389753ad2096b2ce7c}
+Shared lock. More than one process or thread can hold a shared lock at any given time. Essentially, this is a \char`\"{}read lock\char`\"{}, preventing writers from establishing an exclusive lock. \hypertarget{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}{\index{File Lock Types@{File Lock Types}!A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K}}
+\index{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K@{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K}!File Lock Types@{File Lock Types}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-T\-Y\-P\-E\-M\-A\-S\-K~0x000\-F}}\label{group__apr__file__lock__types_ga40777e364fb20bb9a9ee57e74b19c13d}
+mask to extract lock type 

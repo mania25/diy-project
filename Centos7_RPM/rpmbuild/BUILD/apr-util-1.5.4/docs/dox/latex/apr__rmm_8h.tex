@@ -1,0 +1,49 @@
+\hypertarget{apr__rmm_8h}{\section{include/apr\-\_\-rmm.h File Reference}
+\label{apr__rmm_8h}\index{include/apr\-\_\-rmm.\-h@{include/apr\-\_\-rmm.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L Relocatable Memory Management Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-anylock.\-h\char`\"{}}\\*
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t}
+\item 
+typedef apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga65ebaca1a86f0667156592f40b81b681}{apr\-\_\-rmm\-\_\-init} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$$\ast$rmm, \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} $\ast$lock, void $\ast$membuf, apr\-\_\-size\-\_\-t memsize, apr\-\_\-pool\-\_\-t $\ast$cont)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga8ccae93038489f2acb7588292df5d80a}{apr\-\_\-rmm\-\_\-destroy} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gadf144b4071c5c4d85cded37ca0e58dff}{apr\-\_\-rmm\-\_\-attach} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$$\ast$rmm, \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} $\ast$lock, void $\ast$membuf, apr\-\_\-pool\-\_\-t $\ast$cont)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga2171746dcfa1e0f07717224ad106091e}{apr\-\_\-rmm\-\_\-detach} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga31e42a7c40bbd3f7f132eaf347a79d32}{apr\-\_\-rmm\-\_\-malloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, apr\-\_\-size\-\_\-t reqsize)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga78561452a8fb3fef18f1203efaa0b92f}{apr\-\_\-rmm\-\_\-realloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, void $\ast$entity, apr\-\_\-size\-\_\-t reqsize)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga12ff2a4c23548e2f1616a17734defaf8}{apr\-\_\-rmm\-\_\-calloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, apr\-\_\-size\-\_\-t reqsize)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gad22b65c95d0964e37aecd4134294b016}{apr\-\_\-rmm\-\_\-free} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} entity)
+\item 
+void $\ast$ \hyperlink{group___a_p_r___util___r_m_m_ga6bf67e9f2d08f9f36d2c420648d8d3a0}{apr\-\_\-rmm\-\_\-addr\-\_\-get} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} entity)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga3ed2e880ebc695aa8dd241e21b5a666e}{apr\-\_\-rmm\-\_\-offset\-\_\-get} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, void $\ast$entity)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gae638ec990cb1600f6f70a8b3a1e07ff8}{apr\-\_\-rmm\-\_\-overhead\-\_\-get} (int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L Relocatable Memory Management Routines. 

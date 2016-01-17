@@ -1,0 +1,240 @@
+\hypertarget{group__apr__proc__mutex}{\section{Process Locking Routines}
+\label{group__apr__proc__mutex}\index{Process Locking Routines@{Process Locking Routines}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\-\_\-lockmech\-\_\-e} \{ \\*
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ad9dad69d83d1e112054ad21a7e4e16b3}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a1d06f73a37dae31233299401c9594b41}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a642536695bd4c233761a15d48b1d6487}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4abd5e7cca2c9f6023b541131f3841057a}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D}, 
+\\*
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a6d65d9d745e13d8759bd8f1057f27041}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M}, 
+\hyperlink{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ae91fb435c45216bcf84f506db99d0f19}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga57a0ad8cc6209dcbc8cf7c4bdf4a2c22}{apr\-\_\-proc\-\_\-mutex\-\_\-create} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\-\_\-lockmech\-\_\-e} mech, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga52c440b92eda07dc9c851a4e98f2ac83}{apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$$\ast$mutex, const char $\ast$fname, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga9af7c9eabf4f99a5a33b41dc322af06f}{apr\-\_\-proc\-\_\-mutex\-\_\-lock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga7c41927ce5014374eb4fc66d410f9513}{apr\-\_\-proc\-\_\-mutex\-\_\-trylock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga4ecd9a73fbb0e6e6853e5d0769bbb183}{apr\-\_\-proc\-\_\-mutex\-\_\-unlock} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_gaa692ccd799305e0166fb81f258870830}{apr\-\_\-proc\-\_\-mutex\-\_\-destroy} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__proc__mutex_ga71ec4d283f58e893322f44116e6f8ea2}{apr\-\_\-proc\-\_\-mutex\-\_\-cleanup} (void $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_gad4dcc5ec2a5a6ede7be178e13f56377a}{apr\-\_\-proc\-\_\-mutex\-\_\-lockfile} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_ga3e5cf6b6fd0736502efd91312d50881c}{apr\-\_\-proc\-\_\-mutex\-\_\-name} (\hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$mutex)
+\item 
+const char $\ast$ \hyperlink{group__apr__proc__mutex_gaf4425adc130f83784c552b6bc1563036}{apr\-\_\-proc\-\_\-mutex\-\_\-defname} (void)
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$ \hyperlink{group__apr__proc__mutex_ga9d7eda31ec4ad2183ddfcbff2f07daf9}{apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get} (const \hyperlink{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$theproc\-\_\-mutex)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-t@{apr\-\_\-proc\-\_\-mutex\-\_\-t}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-t@{apr\-\_\-proc\-\_\-mutex\-\_\-t}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} {\bf apr\-\_\-proc\-\_\-mutex\-\_\-t}}}\label{group__apr__proc__mutex_ga0fae3a1ab686cd1f252c6062e4c97bd2}
+Opaque structure representing a process mutex. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-lockmech\-\_\-e@{apr\-\_\-lockmech\-\_\-e}}
+\index{apr\-\_\-lockmech\-\_\-e@{apr\-\_\-lockmech\-\_\-e}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-lockmech\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-lockmech\-\_\-e}}}\label{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}
+Enumerated potential types for A\-P\-R process locking methods \begin{DoxyWarning}{Warning}
+Check A\-P\-R\-\_\-\-H\-A\-S\-\_\-foo\-\_\-\-S\-E\-R\-I\-A\-L\-I\-Z\-E defines to see if the platform supports A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-foo. Only A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T is portable. 
+\end{DoxyWarning}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ad9dad69d83d1e112054ad21a7e4e16b3}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-C\-N\-T\-L}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ad9dad69d83d1e112054ad21a7e4e16b3}
+}]fcntl() \index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a1d06f73a37dae31233299401c9594b41}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-F\-L\-O\-C\-K}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a1d06f73a37dae31233299401c9594b41}
+}]flock() \index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a642536695bd4c233761a15d48b1d6487}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-S\-Y\-S\-V\-S\-E\-M}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a642536695bd4c233761a15d48b1d6487}
+}]System V Semaphores \index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4abd5e7cca2c9f6023b541131f3841057a}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-R\-O\-C\-\_\-\-P\-T\-H\-R\-E\-A\-D}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4abd5e7cca2c9f6023b541131f3841057a}
+}]P\-O\-S\-I\-X pthread process-\/based locking \index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a6d65d9d745e13d8759bd8f1057f27041}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-P\-O\-S\-I\-X\-S\-E\-M}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4a6d65d9d745e13d8759bd8f1057f27041}
+}]P\-O\-S\-I\-X semaphore process-\/based locking \index{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T}!Process Locking Routines@{Process Locking Routines}}\index{Process Locking Routines@{Process Locking Routines}!A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T}}\item[{\em 
+\hypertarget{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ae91fb435c45216bcf84f506db99d0f19}{A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T}\label{group__apr__proc__mutex_gga75dd95a48a1e855a87b509b522746ed4ae91fb435c45216bcf84f506db99d0f19}
+}]Use the default process lock \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__proc__mutex_ga52c440b92eda07dc9c851a4e98f2ac83}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init@{apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init@{apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-child\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$$\ast$}]{mutex, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga52c440b92eda07dc9c851a4e98f2ac83}
+Re-\/open a mutex in a child process. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & The newly re-\/opened mutex structure. \\
+\hline
+{\em fname} & A file name to use if the mutex mechanism requires one. This argument should always be provided. The mutex code itself will determine if it should be used. This filename should be the same one that was passed to \hyperlink{group__apr__proc__mutex_ga57a0ad8cc6209dcbc8cf7c4bdf4a2c22}{apr\-\_\-proc\-\_\-mutex\-\_\-create()}. \\
+\hline
+{\em pool} & The pool to operate on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This function must be called to maintain portability, even if the underlying lock mechanism does not require it. 
+\end{DoxyRemark}
+\hypertarget{group__apr__proc__mutex_ga71ec4d283f58e893322f44116e6f8ea2}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-cleanup@{apr\-\_\-proc\-\_\-mutex\-\_\-cleanup}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-cleanup@{apr\-\_\-proc\-\_\-mutex\-\_\-cleanup}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-cleanup (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga71ec4d283f58e893322f44116e6f8ea2}
+Destroy the mutex and free the memory associated with the lock. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex to destroy. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is generally used to kill a cleanup on an already created mutex 
+\end{DoxyNote}
+\hypertarget{group__apr__proc__mutex_ga57a0ad8cc6209dcbc8cf7c4bdf4a2c22}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-create@{apr\-\_\-proc\-\_\-mutex\-\_\-create}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-create@{apr\-\_\-proc\-\_\-mutex\-\_\-create}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$$\ast$}]{mutex, }
+\item[{const char $\ast$}]{fname, }
+\item[{{\bf apr\-\_\-lockmech\-\_\-e}}]{mech, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga57a0ad8cc6209dcbc8cf7c4bdf4a2c22}
+Create and initialize a mutex that can be used to synchronize processes. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the memory address where the newly created mutex will be stored. \\
+\hline
+{\em fname} & A file name to use if the lock mechanism requires one. This argument should always be provided. The lock code itself will determine if it should be used. \\
+\hline
+{\em mech} & The mechanism to use for the interprocess lock, if any; one of 
+\begin{DoxyPre}
+           APR\_LOCK\_FCNTL
+           APR\_LOCK\_FLOCK
+           APR\_LOCK\_SYSVSEM
+           APR\_LOCK\_POSIXSEM
+           APR\_LOCK\_PROC\_PTHREAD
+           APR\_LOCK\_DEFAULT     pick the default mechanism for the platform
+\end{DoxyPre}
+ \\
+\hline
+{\em pool} & the pool from which to allocate the mutex. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__proc__mutex_ga75dd95a48a1e855a87b509b522746ed4}{apr\-\_\-lockmech\-\_\-e} 
+\end{DoxySeeAlso}
+\begin{DoxyWarning}{Warning}
+Check A\-P\-R\-\_\-\-H\-A\-S\-\_\-foo\-\_\-\-S\-E\-R\-I\-A\-L\-I\-Z\-E defines to see if the platform supports A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-foo. Only A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T is portable. 
+\end{DoxyWarning}
+\hypertarget{group__apr__proc__mutex_gaf4425adc130f83784c552b6bc1563036}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-defname@{apr\-\_\-proc\-\_\-mutex\-\_\-defname}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-defname@{apr\-\_\-proc\-\_\-mutex\-\_\-defname}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-defname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-proc\-\_\-mutex\-\_\-defname (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_gaf4425adc130f83784c552b6bc1563036}
+Display the name of the default mutex\-: A\-P\-R\-\_\-\-L\-O\-C\-K\-\_\-\-D\-E\-F\-A\-U\-L\-T \hypertarget{group__apr__proc__mutex_gaa692ccd799305e0166fb81f258870830}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-destroy@{apr\-\_\-proc\-\_\-mutex\-\_\-destroy}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-destroy@{apr\-\_\-proc\-\_\-mutex\-\_\-destroy}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_gaa692ccd799305e0166fb81f258870830}
+Destroy the mutex and free the memory associated with the lock. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex to destroy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__proc__mutex_ga9af7c9eabf4f99a5a33b41dc322af06f}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-lock@{apr\-\_\-proc\-\_\-mutex\-\_\-lock}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-lock@{apr\-\_\-proc\-\_\-mutex\-\_\-lock}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-lock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga9af7c9eabf4f99a5a33b41dc322af06f}
+Acquire the lock for the given mutex. If the mutex is already locked, the current thread will be put to sleep until the lock becomes available. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to acquire the lock. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__proc__mutex_gad4dcc5ec2a5a6ede7be178e13f56377a}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-lockfile@{apr\-\_\-proc\-\_\-mutex\-\_\-lockfile}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-lockfile@{apr\-\_\-proc\-\_\-mutex\-\_\-lockfile}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-lockfile}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-proc\-\_\-mutex\-\_\-lockfile (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_gad4dcc5ec2a5a6ede7be178e13f56377a}
+Return the name of the lockfile for the mutex, or N\-U\-L\-L if the mutex doesn't use a lock file \hypertarget{group__apr__proc__mutex_ga3e5cf6b6fd0736502efd91312d50881c}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-name@{apr\-\_\-proc\-\_\-mutex\-\_\-name}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-name@{apr\-\_\-proc\-\_\-mutex\-\_\-name}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-proc\-\_\-mutex\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga3e5cf6b6fd0736502efd91312d50881c}
+Display the name of the mutex, as it relates to the actual method used. This matches the valid options for Apache's Accept\-Mutex directive 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the name of the mutex \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__proc__mutex_ga9d7eda31ec4ad2183ddfcbff2f07daf9}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get@{apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get@{apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-pool\-\_\-t}$\ast$ apr\-\_\-proc\-\_\-mutex\-\_\-pool\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{theproc\-\_\-mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga9d7eda31ec4ad2183ddfcbff2f07daf9}
+Get the pool used by this proc\-\_\-mutex. \begin{DoxyReturn}{Returns}
+apr\-\_\-pool\-\_\-t the pool 
+\end{DoxyReturn}
+\hypertarget{group__apr__proc__mutex_ga7c41927ce5014374eb4fc66d410f9513}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-trylock@{apr\-\_\-proc\-\_\-mutex\-\_\-trylock}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-trylock@{apr\-\_\-proc\-\_\-mutex\-\_\-trylock}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-trylock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-trylock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga7c41927ce5014374eb4fc66d410f9513}
+Attempt to acquire the lock for the given mutex. If the mutex has already been acquired, the call returns immediately with A\-P\-R\-\_\-\-E\-B\-U\-S\-Y. Note\-: it is important that the \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabb92ad7b6ef304132de70e9e5cbaa896}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-U\-S\-Y(s)} macro be used to determine if the return value was A\-P\-R\-\_\-\-E\-B\-U\-S\-Y, for portability reasons. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex on which to attempt the lock acquiring. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__proc__mutex_ga4ecd9a73fbb0e6e6853e5d0769bbb183}{\index{Process Locking Routines@{Process Locking Routines}!apr\-\_\-proc\-\_\-mutex\-\_\-unlock@{apr\-\_\-proc\-\_\-mutex\-\_\-unlock}}
+\index{apr\-\_\-proc\-\_\-mutex\-\_\-unlock@{apr\-\_\-proc\-\_\-mutex\-\_\-unlock}!Process Locking Routines@{Process Locking Routines}}
+\subsubsection[{apr\-\_\-proc\-\_\-mutex\-\_\-unlock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-mutex\-\_\-unlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-mutex\-\_\-t} $\ast$}]{mutex}
+\end{DoxyParamCaption}
+)}}\label{group__apr__proc__mutex_ga4ecd9a73fbb0e6e6853e5d0769bbb183}
+Release the lock for the given mutex. 
+\begin{DoxyParams}{Parameters}
+{\em mutex} & the mutex from which to release the lock. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,237 @@
+\hypertarget{group___a_p_r___util___r_m_m}{\section{Relocatable Memory Management Routines}
+\label{group___a_p_r___util___r_m_m}\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t}
+\item 
+typedef apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga65ebaca1a86f0667156592f40b81b681}{apr\-\_\-rmm\-\_\-init} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$$\ast$rmm, \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} $\ast$lock, void $\ast$membuf, apr\-\_\-size\-\_\-t memsize, apr\-\_\-pool\-\_\-t $\ast$cont)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga8ccae93038489f2acb7588292df5d80a}{apr\-\_\-rmm\-\_\-destroy} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gadf144b4071c5c4d85cded37ca0e58dff}{apr\-\_\-rmm\-\_\-attach} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$$\ast$rmm, \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} $\ast$lock, void $\ast$membuf, apr\-\_\-pool\-\_\-t $\ast$cont)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_ga2171746dcfa1e0f07717224ad106091e}{apr\-\_\-rmm\-\_\-detach} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga31e42a7c40bbd3f7f132eaf347a79d32}{apr\-\_\-rmm\-\_\-malloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, apr\-\_\-size\-\_\-t reqsize)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga78561452a8fb3fef18f1203efaa0b92f}{apr\-\_\-rmm\-\_\-realloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, void $\ast$entity, apr\-\_\-size\-\_\-t reqsize)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga12ff2a4c23548e2f1616a17734defaf8}{apr\-\_\-rmm\-\_\-calloc} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, apr\-\_\-size\-\_\-t reqsize)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gad22b65c95d0964e37aecd4134294b016}{apr\-\_\-rmm\-\_\-free} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} entity)
+\item 
+void $\ast$ \hyperlink{group___a_p_r___util___r_m_m_ga6bf67e9f2d08f9f36d2c420648d8d3a0}{apr\-\_\-rmm\-\_\-addr\-\_\-get} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, \hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} entity)
+\item 
+\hyperlink{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{apr\-\_\-rmm\-\_\-off\-\_\-t} \hyperlink{group___a_p_r___util___r_m_m_ga3ed2e880ebc695aa8dd241e21b5a666e}{apr\-\_\-rmm\-\_\-offset\-\_\-get} (\hyperlink{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{apr\-\_\-rmm\-\_\-t} $\ast$rmm, void $\ast$entity)
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{group___a_p_r___util___r_m_m_gae638ec990cb1600f6f70a8b3a1e07ff8}{apr\-\_\-rmm\-\_\-overhead\-\_\-get} (int n)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-off\-\_\-t@{apr\-\_\-rmm\-\_\-off\-\_\-t}}
+\index{apr\-\_\-rmm\-\_\-off\-\_\-t@{apr\-\_\-rmm\-\_\-off\-\_\-t}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-off\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef apr\-\_\-size\-\_\-t {\bf apr\-\_\-rmm\-\_\-off\-\_\-t}}}\label{group___a_p_r___util___r_m_m_ga70b508c81a0bc75350efdefb3410af12}
+Fundamental allocation unit, within a specific apr\-\_\-rmm\-\_\-t \hypertarget{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-t@{apr\-\_\-rmm\-\_\-t}}
+\index{apr\-\_\-rmm\-\_\-t@{apr\-\_\-rmm\-\_\-t}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-rmm\-\_\-t} {\bf apr\-\_\-rmm\-\_\-t}}}\label{group___a_p_r___util___r_m_m_gadb4d418c417ece33c4430ba9df59070a}
+Structure to access Relocatable, Managed Memory 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___r_m_m_ga6bf67e9f2d08f9f36d2c420648d8d3a0}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-addr\-\_\-get@{apr\-\_\-rmm\-\_\-addr\-\_\-get}}
+\index{apr\-\_\-rmm\-\_\-addr\-\_\-get@{apr\-\_\-rmm\-\_\-addr\-\_\-get}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-addr\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-rmm\-\_\-addr\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{{\bf apr\-\_\-rmm\-\_\-off\-\_\-t}}]{entity}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga6bf67e9f2d08f9f36d2c420648d8d3a0}
+Retrieve the physical address of a relocatable allocation of memory 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em entity} & The memory allocation to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+address The address, aligned with A\-P\-R\-\_\-\-A\-L\-I\-G\-N\-\_\-\-D\-E\-F\-A\-U\-L\-T. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___r_m_m_gadf144b4071c5c4d85cded37ca0e58dff}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-attach@{apr\-\_\-rmm\-\_\-attach}}
+\index{apr\-\_\-rmm\-\_\-attach@{apr\-\_\-rmm\-\_\-attach}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-attach}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-rmm\-\_\-attach (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$$\ast$}]{rmm, }
+\item[{{\bf apr\-\_\-anylock\-\_\-t} $\ast$}]{lock, }
+\item[{void $\ast$}]{membuf, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_gadf144b4071c5c4d85cded37ca0e58dff}
+Attach to a relocatable memory block already managed by the apr\-\_\-rmm A\-P\-I. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em lock} & An \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} of the appropriate type of lock \\
+\hline
+{\em membuf} & The block of relocatable memory already under management \\
+\hline
+{\em cont} & The pool to use for local storage and management \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga12ff2a4c23548e2f1616a17734defaf8}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-calloc@{apr\-\_\-rmm\-\_\-calloc}}
+\index{apr\-\_\-rmm\-\_\-calloc@{apr\-\_\-rmm\-\_\-calloc}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-calloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-rmm\-\_\-off\-\_\-t} apr\-\_\-rmm\-\_\-calloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{apr\-\_\-size\-\_\-t}]{reqsize}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga12ff2a4c23548e2f1616a17734defaf8}
+Allocate memory from the block of relocatable memory and initialize it to zero. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em reqsize} & How much memory to allocate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga8ccae93038489f2acb7588292df5d80a}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-destroy@{apr\-\_\-rmm\-\_\-destroy}}
+\index{apr\-\_\-rmm\-\_\-destroy@{apr\-\_\-rmm\-\_\-destroy}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-rmm\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga8ccae93038489f2acb7588292df5d80a}
+Destroy a managed memory block. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga2171746dcfa1e0f07717224ad106091e}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-detach@{apr\-\_\-rmm\-\_\-detach}}
+\index{apr\-\_\-rmm\-\_\-detach@{apr\-\_\-rmm\-\_\-detach}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-detach}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-rmm\-\_\-detach (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga2171746dcfa1e0f07717224ad106091e}
+Detach from the managed block of memory. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block to detach from \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_gad22b65c95d0964e37aecd4134294b016}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-free@{apr\-\_\-rmm\-\_\-free}}
+\index{apr\-\_\-rmm\-\_\-free@{apr\-\_\-rmm\-\_\-free}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-rmm\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{{\bf apr\-\_\-rmm\-\_\-off\-\_\-t}}]{entity}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_gad22b65c95d0964e37aecd4134294b016}
+Free allocation returned by apr\-\_\-rmm\-\_\-malloc or apr\-\_\-rmm\-\_\-calloc. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em entity} & The memory allocation to free \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga65ebaca1a86f0667156592f40b81b681}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-init@{apr\-\_\-rmm\-\_\-init}}
+\index{apr\-\_\-rmm\-\_\-init@{apr\-\_\-rmm\-\_\-init}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-rmm\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$$\ast$}]{rmm, }
+\item[{{\bf apr\-\_\-anylock\-\_\-t} $\ast$}]{lock, }
+\item[{void $\ast$}]{membuf, }
+\item[{apr\-\_\-size\-\_\-t}]{memsize, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga65ebaca1a86f0667156592f40b81b681}
+Initialize a relocatable memory block to be managed by the apr\-\_\-rmm A\-P\-I. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em lock} & An \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} of the appropriate type of lock, or N\-U\-L\-L if no locking is required. \\
+\hline
+{\em membuf} & The block of relocatable memory to be managed \\
+\hline
+{\em memsize} & The size of relocatable memory block to be managed \\
+\hline
+{\em cont} & The pool to use for local storage and management \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Both 
+\end{DoxyRemark}
+
+\begin{DoxyParams}{Parameters}
+{\em membuf} & and \\
+\hline
+{\em memsize} & must be aligned (for instance using A\-P\-R\-\_\-\-A\-L\-I\-G\-N\-\_\-\-D\-E\-F\-A\-U\-L\-T). \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga31e42a7c40bbd3f7f132eaf347a79d32}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-malloc@{apr\-\_\-rmm\-\_\-malloc}}
+\index{apr\-\_\-rmm\-\_\-malloc@{apr\-\_\-rmm\-\_\-malloc}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-malloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-rmm\-\_\-off\-\_\-t} apr\-\_\-rmm\-\_\-malloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{apr\-\_\-size\-\_\-t}]{reqsize}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga31e42a7c40bbd3f7f132eaf347a79d32}
+Allocate memory from the block of relocatable memory. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em reqsize} & How much memory to allocate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga3ed2e880ebc695aa8dd241e21b5a666e}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-offset\-\_\-get@{apr\-\_\-rmm\-\_\-offset\-\_\-get}}
+\index{apr\-\_\-rmm\-\_\-offset\-\_\-get@{apr\-\_\-rmm\-\_\-offset\-\_\-get}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-offset\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-rmm\-\_\-off\-\_\-t} apr\-\_\-rmm\-\_\-offset\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{void $\ast$}]{entity}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga3ed2e880ebc695aa8dd241e21b5a666e}
+Compute the offset of a relocatable allocation of memory 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em entity} & The physical address to convert to an offset \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_gae638ec990cb1600f6f70a8b3a1e07ff8}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-overhead\-\_\-get@{apr\-\_\-rmm\-\_\-overhead\-\_\-get}}
+\index{apr\-\_\-rmm\-\_\-overhead\-\_\-get@{apr\-\_\-rmm\-\_\-overhead\-\_\-get}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-overhead\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-rmm\-\_\-overhead\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{int}]{n}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_gae638ec990cb1600f6f70a8b3a1e07ff8}
+Compute the required overallocation of memory needed to fit n allocs 
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of alloc/calloc regions desired \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_m_m_ga78561452a8fb3fef18f1203efaa0b92f}{\index{Relocatable Memory Management Routines@{Relocatable Memory Management Routines}!apr\-\_\-rmm\-\_\-realloc@{apr\-\_\-rmm\-\_\-realloc}}
+\index{apr\-\_\-rmm\-\_\-realloc@{apr\-\_\-rmm\-\_\-realloc}!Relocatable Memory Management Routines@{Relocatable Memory Management Routines}}
+\subsubsection[{apr\-\_\-rmm\-\_\-realloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-rmm\-\_\-off\-\_\-t} apr\-\_\-rmm\-\_\-realloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-rmm\-\_\-t} $\ast$}]{rmm, }
+\item[{void $\ast$}]{entity, }
+\item[{apr\-\_\-size\-\_\-t}]{reqsize}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_m_m_ga78561452a8fb3fef18f1203efaa0b92f}
+Realloc memory from the block of relocatable memory. 
+\begin{DoxyParams}{Parameters}
+{\em rmm} & The relocatable memory block \\
+\hline
+{\em entity} & The memory allocation to realloc \\
+\hline
+{\em reqsize} & The new size \\
+\hline
+\end{DoxyParams}

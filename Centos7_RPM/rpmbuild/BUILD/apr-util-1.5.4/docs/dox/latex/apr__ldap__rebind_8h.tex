@@ -1,0 +1,24 @@
+\hypertarget{apr__ldap__rebind_8h}{\section{include/apr\-\_\-ldap\-\_\-rebind.h File Reference}
+\label{apr__ldap__rebind_8h}\index{include/apr\-\_\-ldap\-\_\-rebind.\-h@{include/apr\-\_\-ldap\-\_\-rebind.\-h}}
+}
+
+
+\hyperlink{namespace_apache}{Apache} L\-D\-A\-P library.  
+
+
+{\ttfamily \#include \char`\"{}apr\-\_\-ldap.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___l_d_a_p_ga465eeada97b097be91505534a319a001}{apr\-\_\-ldap\-\_\-rebind\-\_\-init} (apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___l_d_a_p_gaadf4bef6259aa733246e767cddde80ef}{apr\-\_\-ldap\-\_\-rebind\-\_\-add} (apr\-\_\-pool\-\_\-t $\ast$pool, L\-D\-A\-P $\ast$ld, const char $\ast$bind\-D\-N, const char $\ast$bind\-P\-W)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___l_d_a_p_gaab75697e70fef5dbf5dfe272ea25630a}{apr\-\_\-ldap\-\_\-rebind\-\_\-remove} (L\-D\-A\-P $\ast$ld)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{namespace_apache}{Apache} L\-D\-A\-P library. The A\-P\-R L\-D\-A\-P rebind functions provide an implementation of a rebind procedure that can be used to allow clients to chase referrals, using the same credentials used to log in originally.
+
+Use of this implementation is optional. 

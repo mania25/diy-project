@@ -1,0 +1,146 @@
+\hypertarget{apr__dbd_8h}{\section{include/apr\-\_\-dbd.h File Reference}
+\label{apr__dbd_8h}\index{include/apr\-\_\-dbd.\-h@{include/apr\-\_\-dbd.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L D\-B\-D library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_gaff6a26fb3b384bcb3a9172676c53590b}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-C\-O\-M\-M\-I\-T}~0x00
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_ga60a8749e5172b692fd2e356b48ec922b}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-R\-O\-L\-L\-B\-A\-C\-K}~0x01
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_d_gad9dc523b0a3b8dea5b8c9b7b0c281ea2}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-R\-A\-N\-S\-A\-C\-T\-I\-O\-N\-\_\-\-I\-G\-N\-O\-R\-E\-\_\-\-E\-R\-R\-O\-R\-S}~0x02
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga91778287e3cd1b8ef8719ca2655e2bc8}{typedef struct \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} {\bfseries apr\-\_\-dbd\-\_\-driver\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga91778287e3cd1b8ef8719ca2655e2bc8}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga4738c1f6340184987fc7806522c18ab8}{typedef struct apr\-\_\-dbd\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga4738c1f6340184987fc7806522c18ab8}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga92eb10d7ec8fdb3a39a7d6fdfffdf8fb}{typedef struct \\*
+apr\-\_\-dbd\-\_\-transaction\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-transaction\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga92eb10d7ec8fdb3a39a7d6fdfffdf8fb}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga6765891011818912e1b52fef773bfce6}{typedef struct apr\-\_\-dbd\-\_\-results\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-results\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga6765891011818912e1b52fef773bfce6}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_gab890e4650a1de51725142318825103a5}{typedef struct apr\-\_\-dbd\-\_\-row\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-row\-\_\-t}}\label{group___a_p_r___util___d_b_d_gab890e4650a1de51725142318825103a5}
+
+\item 
+\hypertarget{group___a_p_r___util___d_b_d_ga1f1179c6480a2ee0134f2cb881106cd3}{typedef struct apr\-\_\-dbd\-\_\-prepared\-\_\-t {\bfseries apr\-\_\-dbd\-\_\-prepared\-\_\-t}}\label{group___a_p_r___util___d_b_d_ga1f1179c6480a2ee0134f2cb881106cd3}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} \{ \\*
+{\bfseries A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230acc06ee0f3fe0c65b9f8265053550e4ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-N\-Y}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230aaa4f167bb26fa3e85b0d61f34713ebb6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-T\-I\-N\-Y}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a0c38d32785a3cbddbe4ba692fdde16ee}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-H\-O\-R\-T}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230af3518efb67af10100b92578b5c867c9c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-S\-H\-O\-R\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4df919bac6f5b56257bfe63ed3e5968c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-I\-N\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a58b37a24a35ddf144a9132a9837ed3d3}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-I\-N\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230add86aa288504ec2d4194f35a3a8ac55a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4186d52d5ce586cd7559a0ae8737cbb7}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a8821461a3390bd0a001e714d2180ae6c}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-L\-O\-N\-G\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ad1907d3eb1235acfa8a971fce43711c5}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-U\-L\-O\-N\-G\-L\-O\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a14281587071981d4e6b25de5bb747e98}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-F\-L\-O\-A\-T}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77c20702c7c6566369d3ccc894eb9cd8}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-O\-U\-B\-L\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a4c9490a29ed882c46fa738e7cddede44}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-S\-T\-R\-I\-N\-G}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae06c20e9edcd46964dc26bb43134e0e6}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-E\-X\-T}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a2ad65674a89072f4582e97d0a4fad61d}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ab96a2b4b2b1fb94a7faeb01065d77835}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a77bb0dd82ed396f7056ba2aaddd44265}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-D\-A\-T\-E\-T\-I\-M\-E}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a5cffb0a0cc618ab3d0c187ca176d61ad}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-T\-I\-M\-E\-S\-T\-A\-M\-P}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230ae4db1948f1f1ef7651c5f01c12d1e56a}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-Z\-T\-I\-M\-E\-S\-T\-A\-M\-P}, 
+\\*
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a60d6a6ab49b20a306443b7a9ad8c6f11}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-B\-L\-O\-B}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230adf428a7365d71eacdf24a89c202c1f72}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-C\-L\-O\-B}, 
+\hyperlink{group___a_p_r___util___d_b_d_gga19608fa5d518a5121bee23daacc5c230a706a286af4fe4a9b97ee68adc11cd6cc}{A\-P\-R\-\_\-\-D\-B\-D\-\_\-\-T\-Y\-P\-E\-\_\-\-N\-U\-L\-L}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga7969f50d38bda792cbef72136300a574}{apr\-\_\-dbd\-\_\-init} (apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga8ba85faccf7e8eea525812f8f2dfed25}{apr\-\_\-dbd\-\_\-get\-\_\-driver} (apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$name, const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$$\ast$driver)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_gabddb1fdcb2f8a5f5b83127485c78e8ae}{apr\-\_\-dbd\-\_\-open\-\_\-ex} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, apr\-\_\-dbd\-\_\-t $\ast$$\ast$handle, const char $\ast$$\ast$error)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_gaeff12b01f78ac78721acc4a0a318e673}{apr\-\_\-dbd\-\_\-open} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, apr\-\_\-dbd\-\_\-t $\ast$$\ast$handle)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga4abe00d844cd547cc69880fe14af4aca}{apr\-\_\-dbd\-\_\-close} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga7a14e0073a36bd97dd82baa5f20e874c}{apr\-\_\-dbd\-\_\-name} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver)
+\item 
+void $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gab2a238e15942e66a2b92836c392d5334}{apr\-\_\-dbd\-\_\-native\-\_\-handle} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gae3fca3b3c05f835f9849668a338d82d1}{apr\-\_\-dbd\-\_\-check\-\_\-conn} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gafecb22f98684f29e579fd73eb58b1e86}{apr\-\_\-dbd\-\_\-set\-\_\-dbname} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$name)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga1c401df12087d3bf1f15a9b80a8f572d}{apr\-\_\-dbd\-\_\-transaction\-\_\-start} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$$\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga6f3a5d6b351cd05646c9399a64eafeb5}{apr\-\_\-dbd\-\_\-transaction\-\_\-end} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga2a54cfffc3a348a424002eba937b5853}{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-get} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gab78c0464926311ef64882adfee2f0f42}{apr\-\_\-dbd\-\_\-transaction\-\_\-mode\-\_\-set} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans, int mode)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga40dbb6bb3f3f171f3443d21f3594a66a}{apr\-\_\-dbd\-\_\-query} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, const char $\ast$statement)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga144d354a36140fade933c1ef72661004}{apr\-\_\-dbd\-\_\-select} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, const char $\ast$statement, int random)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga77d1bccedee2c61dc96de6852f3a7cc4}{apr\-\_\-dbd\-\_\-num\-\_\-cols} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga2c9f511aba325f8904e69158eacd3987}{apr\-\_\-dbd\-\_\-num\-\_\-tuples} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gad4cdc5f4e8981b93f5a467a8c8a768f1}{apr\-\_\-dbd\-\_\-get\-\_\-row} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$$\ast$row, int rownum)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga1d6d3b38a0d677e3d65501074832a5b8}{apr\-\_\-dbd\-\_\-get\-\_\-entry} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_ga8eac8897bd1211564166b08492f458d7}{apr\-\_\-dbd\-\_\-get\-\_\-name} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, int col)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gaffa947c657862c2996707da339482287}{apr\-\_\-dbd\-\_\-error} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-t $\ast$handle, int errnum)
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___d_b_d_gab5806cd6535aaeafe8e9f79ef2cc90c9}{apr\-\_\-dbd\-\_\-escape} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$string, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gacf21412447c4357c64d1e9200a0f5eec}{apr\-\_\-dbd\-\_\-prepare} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$query, const char $\ast$label, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$$\ast$statement)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga1c4b005abda896011ca414679edfe112}{apr\-\_\-dbd\-\_\-pquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int nargs, const char $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga9f9ee377c2d335f8f1a9bffe4bf7194f}{apr\-\_\-dbd\-\_\-pselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, int nargs, const char $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga52ad74205d0afa92098e546303b9ee4c}{apr\-\_\-dbd\-\_\-pvquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gafbd4dbbddfa76586f172ec0832d4fd37}{apr\-\_\-dbd\-\_\-pvselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga7933396b01b4676ae2835d1f09d9a1be}{apr\-\_\-dbd\-\_\-pbquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const void $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga19b88ed11097a2d07bef1e31619fff0a}{apr\-\_\-dbd\-\_\-pbselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const void $\ast$$\ast$args)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_ga27d1ca34ce4064bb14ac3cb315ba8d14}{apr\-\_\-dbd\-\_\-pvbquery} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement,...)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_d_gacfe85d56d78d5e4767684238287b700b}{apr\-\_\-dbd\-\_\-pvbselect} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random,...)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_d_ga67e57ef4eb7952df79ceaa6e92767d41}{apr\-\_\-dbd\-\_\-datum\-\_\-get} (const \hyperlink{structapr__dbd__driver__t}{apr\-\_\-dbd\-\_\-driver\-\_\-t} $\ast$driver, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col, \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} type, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L D\-B\-D library. 

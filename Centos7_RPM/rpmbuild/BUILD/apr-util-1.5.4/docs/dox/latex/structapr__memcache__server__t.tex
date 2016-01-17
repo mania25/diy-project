@@ -1,0 +1,48 @@
+\hypertarget{structapr__memcache__server__t}{\section{apr\-\_\-memcache\-\_\-server\-\_\-t Struct Reference}
+\label{structapr__memcache__server__t}\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structapr__memcache__server__t_a3f0cbe5cde09d28791f8a8950258b305}{host}
+\item 
+apr\-\_\-port\-\_\-t \hyperlink{structapr__memcache__server__t_aade2ee234b229b6711a80fe2a3de853b}{port}
+\item 
+\hyperlink{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t} \hyperlink{structapr__memcache__server__t_a641c9cd95499a998ba2717ec5f03b174}{status}
+\item 
+\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$ \hyperlink{structapr__memcache__server__t_a49f27525b9dd7de3dfb15dba3b86bd05}{conns}
+\item 
+\hypertarget{structapr__memcache__server__t_a2acd73a302db659fb888889837ce4fc3}{apr\-\_\-pool\-\_\-t $\ast$ {\bfseries p}}\label{structapr__memcache__server__t_a2acd73a302db659fb888889837ce4fc3}
+
+\item 
+apr\-\_\-thread\-\_\-mutex\-\_\-t $\ast$ \hyperlink{structapr__memcache__server__t_aab472a87e5f0abe993e565a8e3a72490}{lock}
+\item 
+\hypertarget{structapr__memcache__server__t_a5f7fede39227399f9af9a0d19c9ba8c0}{apr\-\_\-time\-\_\-t {\bfseries btime}}\label{structapr__memcache__server__t_a5f7fede39227399f9af9a0d19c9ba8c0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structapr__memcache__server__t_a49f27525b9dd7de3dfb15dba3b86bd05}{\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!conns@{conns}}
+\index{conns@{conns}!apr_memcache_server_t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\subsubsection[{conns}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-reslist\-\_\-t}$\ast$ apr\-\_\-memcache\-\_\-server\-\_\-t\-::conns}}\label{structapr__memcache__server__t_a49f27525b9dd7de3dfb15dba3b86bd05}
+Resource list of actual client connections \hypertarget{structapr__memcache__server__t_a3f0cbe5cde09d28791f8a8950258b305}{\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!host@{host}}
+\index{host@{host}!apr_memcache_server_t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\subsubsection[{host}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-memcache\-\_\-server\-\_\-t\-::host}}\label{structapr__memcache__server__t_a3f0cbe5cde09d28791f8a8950258b305}
+Hostname of this Server \hypertarget{structapr__memcache__server__t_aab472a87e5f0abe993e565a8e3a72490}{\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!lock@{lock}}
+\index{lock@{lock}!apr_memcache_server_t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\subsubsection[{lock}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-thread\-\_\-mutex\-\_\-t$\ast$ apr\-\_\-memcache\-\_\-server\-\_\-t\-::lock}}\label{structapr__memcache__server__t_aab472a87e5f0abe993e565a8e3a72490}
+Pool to use for private allocations \hypertarget{structapr__memcache__server__t_aade2ee234b229b6711a80fe2a3de853b}{\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!port@{port}}
+\index{port@{port}!apr_memcache_server_t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-port\-\_\-t apr\-\_\-memcache\-\_\-server\-\_\-t\-::port}}\label{structapr__memcache__server__t_aade2ee234b229b6711a80fe2a3de853b}
+Port of this Server \hypertarget{structapr__memcache__server__t_a641c9cd95499a998ba2717ec5f03b174}{\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!status@{status}}
+\index{status@{status}!apr_memcache_server_t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\subsubsection[{status}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t} apr\-\_\-memcache\-\_\-server\-\_\-t\-::status}}\label{structapr__memcache__server__t_a641c9cd95499a998ba2717ec5f03b174}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t} 
+\end{DoxySeeAlso}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__memcache_8h}{apr\-\_\-memcache.\-h}\end{DoxyCompactItemize}

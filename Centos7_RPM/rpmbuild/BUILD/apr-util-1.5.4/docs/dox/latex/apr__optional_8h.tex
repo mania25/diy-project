@@ -1,0 +1,38 @@
+\hypertarget{apr__optional_8h}{\section{include/apr\-\_\-optional.h File Reference}
+\label{apr__optional_8h}\index{include/apr\-\_\-optional.\-h@{include/apr\-\_\-optional.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L registration of functions exported by modules.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name)~apr\-\_\-\-O\-F\-N\-\_\-\#\#name\#\#\-\_\-t
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_gaf3ff372e28978d4ce0be7517ca2fddbd}{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(ret, name, args)~typedef ret (\hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name)) args
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_gab611deabd6e78b5f666071e8cbdcc736}{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(name)
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_ga35f2df25ca06248d2fdd3e7463446418}{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(name)~(\hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name) $\ast$)apr\-\_\-dynamic\-\_\-fn\-\_\-retrieve(\#name)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void( \hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} )(void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___opt_gaa9c7d3cc32128521274543c384e9698d}{void {\bfseries apr\-\_\-dynamic\-\_\-fn\-\_\-register} (const char $\ast$sz\-Name, \hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} $\ast$pfn)}\label{group___a_p_r___util___opt_gaa9c7d3cc32128521274543c384e9698d}
+
+\item 
+\hypertarget{group___a_p_r___util___opt_ga1ecfa6a6ced7332d03b5867735a5e49d}{\hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} $\ast$ {\bfseries apr\-\_\-dynamic\-\_\-fn\-\_\-retrieve} (const char $\ast$sz\-Name)}\label{group___a_p_r___util___opt_ga1ecfa6a6ced7332d03b5867735a5e49d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L registration of functions exported by modules. 

@@ -1,0 +1,587 @@
+\hypertarget{structapr__dbd__driver__t}{\section{apr\-\_\-dbd\-\_\-driver\-\_\-t Struct Reference}
+\label{structapr__dbd__driver__t}\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structapr__dbd__driver__t_a5483b4c47dde6814395bebfb7959fb37}{name}
+\item 
+void($\ast$ \hyperlink{structapr__dbd__driver__t_aee4cda10b8f3c7680d3f8fe9d9835d6e}{init} )(apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+void $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_a435f098bde2b17e3b156ef33d0c9c37e}{native\-\_\-handle} )(apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+apr\-\_\-dbd\-\_\-t $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_a911ce972cd9c1dbbcf770aed475e6428}{open} )(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, const char $\ast$$\ast$\hyperlink{structapr__dbd__driver__t_a0f43ae627fef47fb6eb2d5a6bca07c65}{error})
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbd__driver__t_a93567b4557c0bf19c3ce104fb4636f46}{check\-\_\-conn} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbd__driver__t_aef39417149ae8af2738bd8aaa92bcb42}{close} )(apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a5ec15b2e1c4f2cee690d09c14fef689b}{set\-\_\-dbname} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$\hyperlink{structapr__dbd__driver__t_a5483b4c47dde6814395bebfb7959fb37}{name})
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_ad1a4117f436e9fb54e75922a0b21541e}{start\-\_\-transaction} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$$\ast$trans)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a8bb760ec3ffb8c0ff8514a7133cf8cb3}{end\-\_\-transaction} )(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a87de2303419493ddab5b0c1a298c9837}{query} )(apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, const char $\ast$statement)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_adc4a483ffb93e88532034a25600ab1e4}{select} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, const char $\ast$statement, int random)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_ab71099e0877a99b7743f70b927f44353}{num\-\_\-cols} )(apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a8e307da83a358c169706ea9154f58f22}{num\-\_\-tuples} )(apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a93b4e127622c1f118da3855c518941cc}{get\-\_\-row} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$$\ast$row, int rownum)
+\item 
+const char $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_a21742ca8a1b183de2a93ca04d030843f}{get\-\_\-entry} )(const apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col)
+\item 
+const char $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_a0f43ae627fef47fb6eb2d5a6bca07c65}{error} )(apr\-\_\-dbd\-\_\-t $\ast$handle, int errnum)
+\item 
+const char $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_aee7333b952c8e7fca206d10b5cf673fc}{escape} )(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$string, apr\-\_\-dbd\-\_\-t $\ast$handle)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_ab8c46d23cfa5340ae9cac02c4c12cf67}{prepare} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast$\hyperlink{structapr__dbd__driver__t_a87de2303419493ddab5b0c1a298c9837}{query}, const char $\ast$label, int nargs, int nvals, \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} $\ast$types, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$$\ast$statement)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_ac57585d1c31c541770a149b7a7aa1eda}{pvquery} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, va\-\_\-list args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a62353e8e12d36a7bc827703db6893a47}{pvselect} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, va\-\_\-list args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_ac4cca58779bfc3c11f531f0c7e3c8333}{pquery} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const char $\ast$$\ast$args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a4078c2f51108fccd7f745805b9cec354}{pselect} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const char $\ast$$\ast$args)
+\item 
+const char $\ast$($\ast$ \hyperlink{structapr__dbd__driver__t_af8201f5eac24c7120b052c7a312f0126}{get\-\_\-name} )(const apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, int col)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a3f749fdff0337dcab151af585e097c8f}{transaction\-\_\-mode\-\_\-get} )(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a2737c71d4629ae1b9860b0043fdab720}{transaction\-\_\-mode\-\_\-set} )(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans, int mode)
+\item 
+const char $\ast$ \hyperlink{structapr__dbd__driver__t_a975698d5688012fe2810542769ac4f05}{pformat}
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a7e99bd85d667e3c58f30c5f18833ebb0}{pvbquery} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, va\-\_\-list args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a70c5afda302bc90a4ba01d12bca8fa51}{pvbselect} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, va\-\_\-list args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a60b2fb9eb3b2244a5d9f0b0fc8b0b5bd}{pbquery} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const void $\ast$$\ast$args)
+\item 
+int($\ast$ \hyperlink{structapr__dbd__driver__t_a97850cebe0fbaf7309e14c948c1c3a91}{pbselect} )(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const void $\ast$$\ast$args)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbd__driver__t_a67ff50c786b46c305936c6593a6c5959}{datum\-\_\-get} )(const apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col, \hyperlink{group___a_p_r___util___d_b_d_ga19608fa5d518a5121bee23daacc5c230}{apr\-\_\-dbd\-\_\-type\-\_\-e} type, void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\subsection{Field Documentation}
+\hypertarget{structapr__dbd__driver__t_a93567b4557c0bf19c3ce104fb4636f46}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!check\-\_\-conn@{check\-\_\-conn}}
+\index{check\-\_\-conn@{check\-\_\-conn}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{check\-\_\-conn}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::check\-\_\-conn)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle)}}\label{structapr__dbd__driver__t_a93567b4557c0bf19c3ce104fb4636f46}
+check\-\_\-conn\-: check status of a database connection
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ a pool to use for error messages (if any). \\
+\hline
+{\em handle} & -\/ the connection to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_aef39417149ae8af2738bd8aaa92bcb42}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!close@{close}}
+\index{close@{close}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::close)(apr\-\_\-dbd\-\_\-t $\ast$handle)}}\label{structapr__dbd__driver__t_aef39417149ae8af2738bd8aaa92bcb42}
+close\-: close/release a connection obtained from \hyperlink{structapr__dbd__driver__t_a911ce972cd9c1dbbcf770aed475e6428}{open()}
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & -\/ the connection to release \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S or error 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a67ff50c786b46c305936c6593a6c5959}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!datum\-\_\-get@{datum\-\_\-get}}
+\index{datum\-\_\-get@{datum\-\_\-get}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{datum\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::datum\-\_\-get)(const apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col, {\bf apr\-\_\-dbd\-\_\-type\-\_\-e} type, void $\ast$data)}}\label{structapr__dbd__driver__t_a67ff50c786b46c305936c6593a6c5959}
+datum\-\_\-get\-: get a binary entry from a row
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & -\/ row pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+{\em type} & -\/ type of data to get \\
+\hline
+{\em data} & -\/ pointer to data, allocated by the caller \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S, an error code on error or if col is out of bounds 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a8bb760ec3ffb8c0ff8514a7133cf8cb3}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!end\-\_\-transaction@{end\-\_\-transaction}}
+\index{end\-\_\-transaction@{end\-\_\-transaction}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{end\-\_\-transaction}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::end\-\_\-transaction)(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)}}\label{structapr__dbd__driver__t_a8bb760ec3ffb8c0ff8514a7133cf8cb3}
+end\-\_\-transaction\-: end a transaction (commit on success, rollback on error). May be a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & -\/ the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a0f43ae627fef47fb6eb2d5a6bca07c65}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!error@{error}}
+\index{error@{error}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{error}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::error)(apr\-\_\-dbd\-\_\-t $\ast$handle, int errnum)}}\label{structapr__dbd__driver__t_a0f43ae627fef47fb6eb2d5a6bca07c65}
+error\-: get current error message (if any)
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & -\/ the connection \\
+\hline
+{\em errnum} & -\/ error code from operation that returned an error \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the database current error message, or message for errnum (implementation-\/dependent whether errnum is ignored) 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_aee7333b952c8e7fca206d10b5cf673fc}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!escape@{escape}}
+\index{escape@{escape}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{escape}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::escape)(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$string, apr\-\_\-dbd\-\_\-t $\ast$handle)}}\label{structapr__dbd__driver__t_aee7333b952c8e7fca206d10b5cf673fc}
+escape\-: escape a string so it is safe for use in query/select
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to alloc the result from \\
+\hline
+{\em string} & -\/ the string to escape \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the escaped, safe string 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a21742ca8a1b183de2a93ca04d030843f}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!get\-\_\-entry@{get\-\_\-entry}}
+\index{get\-\_\-entry@{get\-\_\-entry}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{get\-\_\-entry}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::get\-\_\-entry)(const apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$row, int col)}}\label{structapr__dbd__driver__t_a21742ca8a1b183de2a93ca04d030843f}
+get\-\_\-entry\-: get an entry from a row
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & -\/ row pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+{\em val} & -\/ entry to fill \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for no data, +1 for general error 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_af8201f5eac24c7120b052c7a312f0126}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!get\-\_\-name@{get\-\_\-name}}
+\index{get\-\_\-name@{get\-\_\-name}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{get\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::get\-\_\-name)(const apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, int col)}}\label{structapr__dbd__driver__t_af8201f5eac24c7120b052c7a312f0126}
+get\-\_\-name\-: get a column title from a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & -\/ result set pointer \\
+\hline
+{\em col} & -\/ entry number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+param name, or N\-U\-L\-L if col is out of bounds. 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a93b4e127622c1f118da3855c518941cc}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!get\-\_\-row@{get\-\_\-row}}
+\index{get\-\_\-row@{get\-\_\-row}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{get\-\_\-row}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::get\-\_\-row)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res, apr\-\_\-dbd\-\_\-row\-\_\-t $\ast$$\ast$row, int rownum)}}\label{structapr__dbd__driver__t_a93b4e127622c1f118da3855c518941cc}
+get\-\_\-row\-: get a row from a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to allocate the row \\
+\hline
+{\em res} & -\/ result set pointer \\
+\hline
+{\em row} & -\/ pointer to row pointer. May point to N\-U\-L\-L on entry \\
+\hline
+{\em rownum} & -\/ row number, or -\/1 for \char`\"{}next row\char`\"{}. Ignored if random access is not supported. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success, -\/1 for rownum out of range or data finished 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_aee4cda10b8f3c7680d3f8fe9d9835d6e}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!init@{init}}
+\index{init@{init}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::init)(apr\-\_\-pool\-\_\-t $\ast$pool)}}\label{structapr__dbd__driver__t_aee4cda10b8f3c7680d3f8fe9d9835d6e}
+init\-: allow driver to perform once-\/only initialisation. Called once only. May be N\-U\-L\-L \hypertarget{structapr__dbd__driver__t_a5483b4c47dde6814395bebfb7959fb37}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!name@{name}}
+\index{name@{name}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::name}}\label{structapr__dbd__driver__t_a5483b4c47dde6814395bebfb7959fb37}
+name \hypertarget{structapr__dbd__driver__t_a435f098bde2b17e3b156ef33d0c9c37e}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!native\-\_\-handle@{native\-\_\-handle}}
+\index{native\-\_\-handle@{native\-\_\-handle}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{native\-\_\-handle}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::native\-\_\-handle)(apr\-\_\-dbd\-\_\-t $\ast$handle)}}\label{structapr__dbd__driver__t_a435f098bde2b17e3b156ef33d0c9c37e}
+native\-\_\-handle\-: return the native database handle of the underlying db
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & -\/ apr\-\_\-dbd handle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+-\/ native handle 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_ab71099e0877a99b7743f70b927f44353}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!num\-\_\-cols@{num\-\_\-cols}}
+\index{num\-\_\-cols@{num\-\_\-cols}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{num\-\_\-cols}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::num\-\_\-cols)(apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)}}\label{structapr__dbd__driver__t_ab71099e0877a99b7743f70b927f44353}
+num\-\_\-cols\-: get the number of columns in a results set
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & -\/ result set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of columns 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a8e307da83a358c169706ea9154f58f22}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!num\-\_\-tuples@{num\-\_\-tuples}}
+\index{num\-\_\-tuples@{num\-\_\-tuples}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{num\-\_\-tuples}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::num\-\_\-tuples)(apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$res)}}\label{structapr__dbd__driver__t_a8e307da83a358c169706ea9154f58f22}
+num\-\_\-tuples\-: get the number of rows in a results set of a synchronous select
+
+
+\begin{DoxyParams}{Parameters}
+{\em res} & -\/ result set. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+number of rows, or -\/1 if the results are asynchronous 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a911ce972cd9c1dbbcf770aed475e6428}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!open@{open}}
+\index{open@{open}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-dbd\-\_\-t$\ast$($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::open)(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$params, const char $\ast$$\ast${\bf error})}}\label{structapr__dbd__driver__t_a911ce972cd9c1dbbcf770aed475e6428}
+open\-: obtain a database connection from the server rec. Must be explicitly closed when you're finished with it. W\-A\-R\-N\-I\-N\-G\-: only use this when you need a connection with a lifetime other than a request
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ a pool to use for error messages (if any). \\
+\hline
+{\em params} & -\/ connection parameters. \\
+\hline
+{\em error} & -\/ descriptive error. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+database handle, or N\-U\-L\-L on error. 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a60b2fb9eb3b2244a5d9f0b0fc8b0b5bd}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pbquery@{pbquery}}
+\index{pbquery@{pbquery}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pbquery}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pbquery)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const void $\ast$$\ast$args)}}\label{structapr__dbd__driver__t_a60b2fb9eb3b2244a5d9f0b0fc8b0b5bd}
+pbquery\-: query using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a97850cebe0fbaf7309e14c948c1c3a91}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pbselect@{pbselect}}
+\index{pbselect@{pbselect}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pbselect}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pbselect)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const void $\ast$$\ast$args)}}\label{structapr__dbd__driver__t_a97850cebe0fbaf7309e14c948c1c3a91}
+pbselect\-: select using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a975698d5688012fe2810542769ac4f05}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pformat@{pformat}}
+\index{pformat@{pformat}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pformat}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pformat}}\label{structapr__dbd__driver__t_a975698d5688012fe2810542769ac4f05}
+format of prepared statement parameters \hypertarget{structapr__dbd__driver__t_ac4cca58779bfc3c11f531f0c7e3c8333}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pquery@{pquery}}
+\index{pquery@{pquery}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pquery}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pquery)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, const char $\ast$$\ast$args)}}\label{structapr__dbd__driver__t_ac4cca58779bfc3c11f531f0c7e3c8333}
+pquery\-: query using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_ab8c46d23cfa5340ae9cac02c4c12cf67}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!prepare@{prepare}}
+\index{prepare@{prepare}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{prepare}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::prepare)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast${\bf query}, const char $\ast$label, int nargs, int nvals, {\bf apr\-\_\-dbd\-\_\-type\-\_\-e} $\ast$types, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$$\ast$statement)}}\label{structapr__dbd__driver__t_ab8c46d23cfa5340ae9cac02c4c12cf67}
+prepare\-: prepare a statement
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to alloc the result from \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em query} & -\/ the S\-Q\-L query \\
+\hline
+{\em label} & -\/ A label for the prepared statement. use N\-U\-L\-L for temporary prepared statements (eg within a Request in httpd) \\
+\hline
+{\em nargs} & -\/ number of parameters in the query \\
+\hline
+{\em nvals} & -\/ number of values passed in p\mbox{[}b\mbox{]}query/select \\
+\hline
+{\em types} & -\/ pointer to an array with types of parameters \\
+\hline
+{\em statement} & -\/ statement to prepare. May point to null on entry. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a4078c2f51108fccd7f745805b9cec354}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pselect@{pselect}}
+\index{pselect@{pselect}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pselect}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pselect)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, const char $\ast$$\ast$args)}}\label{structapr__dbd__driver__t_a4078c2f51108fccd7f745805b9cec354}
+pselect\-: select using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a7e99bd85d667e3c58f30c5f18833ebb0}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pvbquery@{pvbquery}}
+\index{pvbquery@{pvbquery}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pvbquery}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pvbquery)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, va\-\_\-list args)}}\label{structapr__dbd__driver__t_a7e99bd85d667e3c58f30c5f18833ebb0}
+pvbquery\-: query using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a70c5afda302bc90a4ba01d12bca8fa51}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pvbselect@{pvbselect}}
+\index{pvbselect@{pvbselect}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pvbselect}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pvbselect)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, va\-\_\-list args)}}\label{structapr__dbd__driver__t_a70c5afda302bc90a4ba01d12bca8fa51}
+pvbselect\-: select using a prepared statement + binary args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em args} & -\/ binary args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_ac57585d1c31c541770a149b7a7aa1eda}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pvquery@{pvquery}}
+\index{pvquery@{pvquery}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pvquery}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pvquery)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, va\-\_\-list args)}}\label{structapr__dbd__driver__t_ac57585d1c31c541770a149b7a7aa1eda}
+pvquery\-: query using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a62353e8e12d36a7bc827703db6893a47}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!pvselect@{pvselect}}
+\index{pvselect@{pvselect}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{pvselect}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::pvselect)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, apr\-\_\-dbd\-\_\-prepared\-\_\-t $\ast$statement, int random, va\-\_\-list args)}}\label{structapr__dbd__driver__t_a62353e8e12d36a7bc827703db6893a47}
+pvselect\-: select using a prepared statement + args
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to query results. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the prepared statement to execute \\
+\hline
+{\em random} & -\/ Whether to support random-\/access to results \\
+\hline
+{\em args} & -\/ args to prepared statement \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a87de2303419493ddab5b0c1a298c9837}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!query@{query}}
+\index{query@{query}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::query)(apr\-\_\-dbd\-\_\-t $\ast$handle, int $\ast$nrows, const char $\ast$statement)}}\label{structapr__dbd__driver__t_a87de2303419493ddab5b0c1a298c9837}
+query\-: execute an S\-Q\-L query that doesn't return a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & -\/ the connection \\
+\hline
+{\em nrows} & -\/ number of rows affected. \\
+\hline
+{\em statement} & -\/ the S\-Q\-L statement to execute \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_adc4a483ffb93e88532034a25600ab1e4}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!select@{select}}
+\index{select@{select}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{select}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::select)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-results\-\_\-t $\ast$$\ast$res, const char $\ast$statement, int random)}}\label{structapr__dbd__driver__t_adc4a483ffb93e88532034a25600ab1e4}
+select\-: execute an S\-Q\-L query that returns a result set
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to allocate the result set \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em res} & -\/ pointer to result set pointer. May point to N\-U\-L\-L on entry \\
+\hline
+{\em statement} & -\/ the S\-Q\-L statement to execute \\
+\hline
+{\em random} & -\/ 1 to support random access to results (seek any row); 0 to support only looping through results in order (async access -\/ faster) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a5ec15b2e1c4f2cee690d09c14fef689b}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!set\-\_\-dbname@{set\-\_\-dbname}}
+\index{set\-\_\-dbname@{set\-\_\-dbname}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{set\-\_\-dbname}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::set\-\_\-dbname)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, const char $\ast${\bf name})}}\label{structapr__dbd__driver__t_a5ec15b2e1c4f2cee690d09c14fef689b}
+set\-\_\-dbname\-: select database name. May be a no-\/op if not supported.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ working pool \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em name} & -\/ the database to select \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_ad1a4117f436e9fb54e75922a0b21541e}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!start\-\_\-transaction@{start\-\_\-transaction}}
+\index{start\-\_\-transaction@{start\-\_\-transaction}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{start\-\_\-transaction}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::start\-\_\-transaction)(apr\-\_\-pool\-\_\-t $\ast$pool, apr\-\_\-dbd\-\_\-t $\ast$handle, apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$$\ast$trans)}}\label{structapr__dbd__driver__t_ad1a4117f436e9fb54e75922a0b21541e}
+transaction\-: start a transaction. May be a no-\/op.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ a pool to use for error messages (if any). \\
+\hline
+{\em handle} & -\/ the connection \\
+\hline
+{\em trans} & -\/ ptr to a transaction. May be null on entry \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 for success or error code 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a3f749fdff0337dcab151af585e097c8f}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!transaction\-\_\-mode\-\_\-get@{transaction\-\_\-mode\-\_\-get}}
+\index{transaction\-\_\-mode\-\_\-get@{transaction\-\_\-mode\-\_\-get}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{transaction\-\_\-mode\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::transaction\-\_\-mode\-\_\-get)(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans)}}\label{structapr__dbd__driver__t_a3f749fdff0337dcab151af585e097c8f}
+transaction\-\_\-mode\-\_\-get\-: get the mode of transaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & -\/ the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mode of transaction 
+\end{DoxyReturn}
+\hypertarget{structapr__dbd__driver__t_a2737c71d4629ae1b9860b0043fdab720}{\index{apr\-\_\-dbd\-\_\-driver\-\_\-t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}!transaction\-\_\-mode\-\_\-set@{transaction\-\_\-mode\-\_\-set}}
+\index{transaction\-\_\-mode\-\_\-set@{transaction\-\_\-mode\-\_\-set}!apr_dbd_driver_t@{apr\-\_\-dbd\-\_\-driver\-\_\-t}}
+\subsubsection[{transaction\-\_\-mode\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbd\-\_\-driver\-\_\-t\-::transaction\-\_\-mode\-\_\-set)(apr\-\_\-dbd\-\_\-transaction\-\_\-t $\ast$trans, int mode)}}\label{structapr__dbd__driver__t_a2737c71d4629ae1b9860b0043fdab720}
+transaction\-\_\-mode\-\_\-set\-: get the mode of transaction
+
+
+\begin{DoxyParams}{Parameters}
+{\em trans} & -\/ the transaction. \\
+\hline
+{\em mode} & -\/ new mode of the transaction \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the mode of transaction in force after the call 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/private/apr\-\_\-dbd\-\_\-internal.\-h\end{DoxyCompactItemize}

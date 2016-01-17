@@ -1,0 +1,276 @@
+\hypertarget{group__apr__errno}{\section{Error Codes}
+\label{group__apr__errno}\index{Error Codes@{Error Codes}}
+}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___a_p_r___e_r_r_o_r__map}{A\-P\-R Error Space}
+\item 
+\hyperlink{group___a_p_r___error}{A\-P\-R Error Values}
+\item 
+\hyperlink{group___a_p_r___s_t_a_t_u_s___i_s}{Status Value Tests}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e + \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e)
+\item 
+\#define \hyperlink{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e -\/ \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})
+\item 
+\#define \hyperlink{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e)
+\item 
+\#define \hyperlink{group__apr__errno_gaa76e122da00af0ce2e8c8d7ff538bdfa}{apr\-\_\-get\-\_\-os\-\_\-error}()~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_ga9a2d9a03ad314b03a142574be6d7d8a7}{apr\-\_\-set\-\_\-os\-\_\-error}(e)~(errno = (e))
+\item 
+\#define \hyperlink{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}{apr\-\_\-get\-\_\-netos\-\_\-error}()~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}{apr\-\_\-set\-\_\-netos\-\_\-error}(e)~(errno = (e))
+\item 
+\#define \hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R}~20000
+\item 
+\#define \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}~50000
+\item 
+\#define \hyperlink{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}~20000
+\item 
+\#define \hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}
+\item 
+\#define \hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R}~\hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}
+\item 
+\#define \hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}
+\item 
+\#define \hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R}~(\hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}{apr\-\_\-strerror} (\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} statcode, char $\ast$buf, apr\-\_\-size\-\_\-t bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}}
+\index{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e == 0 ? {\bf A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e + {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})}}\label{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}
+Fold a platform specific error into an apr\-\_\-status\-\_\-t code. \begin{DoxyReturn}{Returns}
+apr\-\_\-status\-\_\-t 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the syserr argument may be evaluated multiple times. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}}
+\index{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e)}}\label{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}
+Fold a platform specific error into an apr\-\_\-status\-\_\-t code. \begin{DoxyReturn}{Returns}
+apr\-\_\-status\-\_\-t 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the syserr argument may be evaluated multiple times. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}{\index{Error Codes@{Error Codes}!apr\-\_\-get\-\_\-netos\-\_\-error@{apr\-\_\-get\-\_\-netos\-\_\-error}}
+\index{apr\-\_\-get\-\_\-netos\-\_\-error@{apr\-\_\-get\-\_\-netos\-\_\-error}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-get\-\_\-netos\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-get\-\_\-netos\-\_\-error(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(errno)}}\label{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}
+Return the last socket error, folded into apr\-\_\-status\-\_\-t, on all platforms \begin{DoxyRemark}{Remarks}
+This retrieves errno or calls a Get\-Last\-Socket\-Error() style function, and folds it with A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R. 
+\end{DoxyRemark}
+\hypertarget{group__apr__errno_gaa76e122da00af0ce2e8c8d7ff538bdfa}{\index{Error Codes@{Error Codes}!apr\-\_\-get\-\_\-os\-\_\-error@{apr\-\_\-get\-\_\-os\-\_\-error}}
+\index{apr\-\_\-get\-\_\-os\-\_\-error@{apr\-\_\-get\-\_\-os\-\_\-error}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-get\-\_\-os\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-get\-\_\-os\-\_\-error(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~(errno)}}\label{group__apr__errno_gaa76e122da00af0ce2e8c8d7ff538bdfa}
+\begin{DoxyReturn}{Returns}
+apr\-\_\-status\-\_\-t the last platform error, folded into apr\-\_\-status\-\_\-t, on most platforms 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+This retrieves errno, or calls a Get\-Last\-Error() style function, and folds it with A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R. Some platforms (such as O\-S2) have no such mechanism, so this call may be unsupported. Do N\-O\-T use this call for socket errors from socket, send, recv etc! 
+\end{DoxyRemark}
+\hypertarget{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E~50000}}\label{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E is the maximum number of errors you can fit into one of the error/status ranges below -- except for A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R, which see. \hypertarget{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}}\label{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(\hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{APR\_OS\_START\_USERERR} \(\backslash\)
+                                 + (\hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{APR\_OS\_ERRSPACE\_SIZE} * 10))
+\end{DoxyCode}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R is where A\-P\-R versions of errno values are defined on systems which don't have the corresponding errno. \hypertarget{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R~({\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})}}\label{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R folds E\-A\-I\-\_\- error codes from getaddrinfo() into apr\-\_\-status\-\_\-t values. \hypertarget{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R~20000}}\label{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R is where the A\-P\-R specific error values start. \hypertarget{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S~({\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})}}\label{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S is where the A\-P\-R specific status codes start. \hypertarget{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R~({\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R} + {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})}}\label{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R folds platform-\/specific system error values into apr\-\_\-status\-\_\-t values. \hypertarget{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R~{\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}}}\label{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R is obsolete, defined for compatibility only. Use A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R instead. \hypertarget{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}}
+\index{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R@{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R~({\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})}}\label{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}
+A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R are reserved for applications that use A\-P\-R that layer their own error codes along with A\-P\-R's. Note that the error immediately following this one is set ten times farther away than usual, so that users of apr have a lot of room in which to declare custom error codes.
+
+In general applications should try and create unique error codes. To try and assist in finding suitable ranges of numbers to use, the following ranges are known to be used by the listed applications. If your application defines error codes please advise the range of numbers it uses to \href{mailto:dev@apr.apache.org}{\tt dev@apr.\-apache.\-org} for inclusion in this list.
+
+Ranges shown are in relation to A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R
+
+Subversion -\/ Defined ranges, of less than 100, at intervals of 5000 starting at an offset of 5000, e.\-g. +5000 to 5100, +10000 to 10100
+
+Apache H\-T\-T\-P\-D -\/ +2000 to 2999 \hypertarget{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}{\index{Error Codes@{Error Codes}!apr\-\_\-set\-\_\-netos\-\_\-error@{apr\-\_\-set\-\_\-netos\-\_\-error}}
+\index{apr\-\_\-set\-\_\-netos\-\_\-error@{apr\-\_\-set\-\_\-netos\-\_\-error}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-set\-\_\-netos\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-set\-\_\-netos\-\_\-error(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(errno = (e))}}\label{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}
+Reset the last socket error, unfolded from an apr\-\_\-status\-\_\-t 
+\begin{DoxyParams}{Parameters}
+{\em e} & The socket error folded in a prior call to \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This is a macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\-\_\-get\-\_\-os\-\_\-error or A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R, the results are undefined. This macro sets errno, or calls a W\-S\-A\-Set\-Last\-Error() style function, unfolding socketcode with A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_ga9a2d9a03ad314b03a142574be6d7d8a7}{\index{Error Codes@{Error Codes}!apr\-\_\-set\-\_\-os\-\_\-error@{apr\-\_\-set\-\_\-os\-\_\-error}}
+\index{apr\-\_\-set\-\_\-os\-\_\-error@{apr\-\_\-set\-\_\-os\-\_\-error}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-set\-\_\-os\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}\#define apr\-\_\-set\-\_\-os\-\_\-error(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(errno = (e))}}\label{group__apr__errno_ga9a2d9a03ad314b03a142574be6d7d8a7}
+Reset the last platform error, unfolded from an apr\-\_\-status\-\_\-t, on some platforms 
+\begin{DoxyParams}{Parameters}
+{\em e} & The O\-S error folded in a prior call to \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R()} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This is a macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\-\_\-get\-\_\-os\-\_\-error or A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R, the results are undefined. This macro sets errno, or calls a Set\-Last\-Error() style function, unfolding statcode with A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R. Some platforms (such as O\-S2) have no such mechanism, so this call may be unsupported. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}}
+\index{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S@{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S~0}}\label{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}
+no error. \hypertarget{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}}
+\index{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e == 0 ? {\bf A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e -\/ {\bf A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})}}\label{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}
+\begin{DoxyReturn}{Returns}
+os\-\_\-err\-\_\-type Fold an apr\-\_\-status\-\_\-t code back to the native platform defined error. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The apr\-\_\-status\-\_\-t folded platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\-\_\-get\-\_\-os\-\_\-error or A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R, the results are undefined. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}}
+\index{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R@{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R(
+\begin{DoxyParamCaption}
+\item[{}]{e}
+\end{DoxyParamCaption}
+)~(e)}}\label{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}
+\begin{DoxyReturn}{Returns}
+os\-\_\-err\-\_\-type Fold an apr\-\_\-status\-\_\-t code back to the native platform defined error. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The apr\-\_\-status\-\_\-t folded platform os error code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+macro implementation; the statcode argument may be evaluated multiple times. If the statcode was not created by apr\-\_\-get\-\_\-os\-\_\-error or A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R, the results are undefined. 
+\end{DoxyWarning}
+\hypertarget{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E~20000}}\label{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}
+A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E is the size of the space that is reserved for use within apr-\/util. This space is reserved above that used by A\-P\-R internally. \begin{DoxyNote}{Note}
+This number M\-U\-S\-T be smaller than A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E by a large enough amount that A\-P\-R has sufficient room for its codes. 
+\end{DoxyNote}
+\hypertarget{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}{\index{Error Codes@{Error Codes}!A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S@{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}}
+\index{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S@{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}!Error Codes@{Error Codes}}
+\subsubsection[{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}}\label{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{APR\_OS\_START\_STATUS} + \(\backslash\)
+                           (\hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{APR\_OS\_ERRSPACE\_SIZE} - 
+      \hyperlink{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{APR\_UTIL\_ERRSPACE\_SIZE}))
+\end{DoxyCode}
+A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S is where A\-P\-R-\/\-Util starts defining its status codes. 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{\index{Error Codes@{Error Codes}!apr\-\_\-status\-\_\-t@{apr\-\_\-status\-\_\-t}}
+\index{apr\-\_\-status\-\_\-t@{apr\-\_\-status\-\_\-t}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-status\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef int {\bf apr\-\_\-status\-\_\-t}}}\label{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}
+Type for specifying an error or status code. 
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}{\index{Error Codes@{Error Codes}!apr\-\_\-strerror@{apr\-\_\-strerror}}
+\index{apr\-\_\-strerror@{apr\-\_\-strerror}!Error Codes@{Error Codes}}
+\subsubsection[{apr\-\_\-strerror}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-strerror (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-status\-\_\-t}}]{statcode, }
+\item[{char $\ast$}]{buf, }
+\item[{apr\-\_\-size\-\_\-t}]{bufsize}
+\end{DoxyParamCaption}
+)}}\label{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}
+Return a human readable string describing the specified error. 
+\begin{DoxyParams}{Parameters}
+{\em statcode} & The error code to get a string for. \\
+\hline
+{\em buf} & A buffer to hold the error string. \\
+\hline
+{\em bufsize} & Size of the buffer to hold the string. \\
+\hline
+\end{DoxyParams}

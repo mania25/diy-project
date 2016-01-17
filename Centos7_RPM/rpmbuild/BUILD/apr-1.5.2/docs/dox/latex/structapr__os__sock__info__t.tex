@@ -1,0 +1,51 @@
+\hypertarget{structapr__os__sock__info__t}{\section{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t Struct Reference}
+\label{structapr__os__sock__info__t}\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-portable.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__portabile_ga2965cd2e48cb6513bc0ba05aa6083ed7}{apr\-\_\-os\-\_\-sock\-\_\-t} $\ast$ \hyperlink{structapr__os__sock__info__t_a952464d2f91ca4650e8b4848a81745b5}{os\-\_\-sock}
+\item 
+struct sockaddr $\ast$ \hyperlink{structapr__os__sock__info__t_afaf470560cbc3088479af708878aa086}{local}
+\item 
+struct sockaddr $\ast$ \hyperlink{structapr__os__sock__info__t_ae71fe14a5eb9141fc4ad0a6d0a91f17e}{remote}
+\item 
+int \hyperlink{structapr__os__sock__info__t_aa29fd0cf57b0b5e3559961f068fa8b7e}{family}
+\item 
+int \hyperlink{structapr__os__sock__info__t_a248fb394cd644b31619f44de0936aa04}{type}
+\item 
+int \hyperlink{structapr__os__sock__info__t_a176ede3ecf40abf0f82a01bfeb95f1e3}{protocol}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+everything A\-P\-R needs to know about an active socket to construct an A\-P\-R socket from it; currently, this is platform-\/independent 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__os__sock__info__t_aa29fd0cf57b0b5e3559961f068fa8b7e}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!family@{family}}
+\index{family@{family}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{family}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::family}}\label{structapr__os__sock__info__t_aa29fd0cf57b0b5e3559961f068fa8b7e}
+always required (A\-P\-R\-\_\-\-I\-N\-E\-T, A\-P\-R\-\_\-\-I\-N\-E\-T6, etc.) \hypertarget{structapr__os__sock__info__t_afaf470560cbc3088479af708878aa086}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!local@{local}}
+\index{local@{local}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{local}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr$\ast$ apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::local}}\label{structapr__os__sock__info__t_afaf470560cbc3088479af708878aa086}
+N\-U\-L\-L if not yet bound \hypertarget{structapr__os__sock__info__t_a952464d2f91ca4650e8b4848a81745b5}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!os\-\_\-sock@{os\-\_\-sock}}
+\index{os\-\_\-sock@{os\-\_\-sock}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{os\-\_\-sock}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-os\-\_\-sock\-\_\-t}$\ast$ apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::os\-\_\-sock}}\label{structapr__os__sock__info__t_a952464d2f91ca4650e8b4848a81745b5}
+always required \hypertarget{structapr__os__sock__info__t_a176ede3ecf40abf0f82a01bfeb95f1e3}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!protocol@{protocol}}
+\index{protocol@{protocol}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{protocol}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::protocol}}\label{structapr__os__sock__info__t_a176ede3ecf40abf0f82a01bfeb95f1e3}
+0 or actual protocol (A\-P\-R\-\_\-\-P\-R\-O\-T\-O\-\_\-\-S\-C\-T\-P, A\-P\-R\-\_\-\-P\-R\-O\-T\-O\-\_\-\-T\-C\-P, etc.) \hypertarget{structapr__os__sock__info__t_ae71fe14a5eb9141fc4ad0a6d0a91f17e}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!remote@{remote}}
+\index{remote@{remote}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{remote}]{\setlength{\rightskip}{0pt plus 5cm}struct sockaddr$\ast$ apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::remote}}\label{structapr__os__sock__info__t_ae71fe14a5eb9141fc4ad0a6d0a91f17e}
+N\-U\-L\-L if not connected \hypertarget{structapr__os__sock__info__t_a248fb394cd644b31619f44de0936aa04}{\index{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}!type@{type}}
+\index{type@{type}!apr_os_sock_info_t@{apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-os\-\_\-sock\-\_\-info\-\_\-t\-::type}}\label{structapr__os__sock__info__t_a248fb394cd644b31619f44de0936aa04}
+always required (S\-O\-C\-K\-\_\-\-S\-T\-R\-E\-A\-M, S\-O\-C\-K\-\_\-\-D\-G\-R\-A\-M, etc.) 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__portable_8h}{apr\-\_\-portable.\-h}\end{DoxyCompactItemize}

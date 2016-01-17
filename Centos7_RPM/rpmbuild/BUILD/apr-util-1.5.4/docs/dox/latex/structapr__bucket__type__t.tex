@@ -1,0 +1,119 @@
+\hypertarget{structapr__bucket__type__t}{\section{apr\-\_\-bucket\-\_\-type\-\_\-t Struct Reference}
+\label{structapr__bucket__type__t}\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-buckets.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \hyperlink{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a53d3ef9d6a275fe2b72a91acea7017d5}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A} = 0, 
+\hyperlink{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a9bf38b4eb3ea41c4af230432ac7a5fb1}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structapr__bucket__type__t_ac6d779be45de214c6abd2cc205c48901}{name}
+\item 
+int \hyperlink{structapr__bucket__type__t_ad4bd2ffb03cb2f5f3b3941ce20468038}{num\-\_\-func}
+\item 
+enum apr\-\_\-bucket\-\_\-type\-\_\-t\-:: \{ ... \}  \hyperlink{structapr__bucket__type__t_a34cef542a8eee5bb734ba8dcd8329711}{is\-\_\-metadata}
+\item 
+void($\ast$ \hyperlink{structapr__bucket__type__t_aa5a8ae7611ba3be480e3fd12ff3ac352}{destroy} )(void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__bucket__type__t_a8e9f3f5b2a5513691f3cea130a1aa54b}{read} )(\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$b, const char $\ast$$\ast$str, apr\-\_\-size\-\_\-t $\ast$len, \hyperlink{group___a_p_r___util___bucket___brigades_ga756973fb6392bd1026c3d96b4519776d}{apr\-\_\-read\-\_\-type\-\_\-e} block)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__bucket__type__t_a4e2015fd6e927ed55157a9b003ed5fdb}{setaside} )(\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__bucket__type__t_af30959bc15fc60e21224d5e3c8c0a814}{split} )(\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e, apr\-\_\-size\-\_\-t point)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__bucket__type__t_a300d6b15d55a3a1f13eeec7379100c38}{copy} )(\hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$e, \hyperlink{structapr__bucket}{apr\-\_\-bucket} $\ast$$\ast$c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Basic bucket type 
+
+\subsection{Member Enumeration Documentation}
+\hypertarget{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85}{\subsubsection[{anonymous enum}]{\setlength{\rightskip}{0pt plus 5cm}anonymous enum}}\label{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85}
+Whether the bucket contains metadata (ie, information that describes the regular contents of the brigade). The metadata is not returned by \hyperlink{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}{apr\-\_\-bucket\-\_\-read()} and is not indicated by the -\/$>$length of the \hyperlink{structapr__bucket}{apr\-\_\-bucket} itself. In other words, an empty bucket is safe to arbitrarily remove if and only if it contains no metadata. In this sense, \char`\"{}data\char`\"{} is just raw bytes that are the \char`\"{}content\char`\"{} of the brigade and \char`\"{}metadata\char`\"{} describes that data but is not a proper part of it. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}!apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}}\item[{\em 
+\hypertarget{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a53d3ef9d6a275fe2b72a91acea7017d5}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-D\-A\-T\-A}\label{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a53d3ef9d6a275fe2b72a91acea7017d5}
+}]This bucket type represents actual data to send to the client. \index{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}!apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A@{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}}\item[{\em 
+\hypertarget{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a9bf38b4eb3ea41c4af230432ac7a5fb1}{A\-P\-R\-\_\-\-B\-U\-C\-K\-E\-T\-\_\-\-M\-E\-T\-A\-D\-A\-T\-A}\label{structapr__bucket__type__t_a117f85e4a58c5e7d7e373705ad138f85a9bf38b4eb3ea41c4af230432ac7a5fb1}
+}]This bucket type represents metadata. \end{description}
+\end{Desc}
+
+
+\subsection{Field Documentation}
+\hypertarget{structapr__bucket__type__t_a300d6b15d55a3a1f13eeec7379100c38}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!copy@{copy}}
+\index{copy@{copy}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{copy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::copy)({\bf apr\-\_\-bucket} $\ast$e, {\bf apr\-\_\-bucket} $\ast$$\ast$c)}}\label{structapr__bucket__type__t_a300d6b15d55a3a1f13eeec7379100c38}
+Copy the bucket structure (not the data), assuming that this is possible for the bucket type. If it's not, A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L is returned. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to copy \\
+\hline
+{\em c} & Returns a pointer to the new bucket \\
+\hline
+\end{DoxyParams}
+\hypertarget{structapr__bucket__type__t_aa5a8ae7611ba3be480e3fd12ff3ac352}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!destroy@{destroy}}
+\index{destroy@{destroy}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{destroy}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::destroy)(void $\ast$data)}}\label{structapr__bucket__type__t_aa5a8ae7611ba3be480e3fd12ff3ac352}
+Free the private data and any resources used by the bucket (if they aren't shared with another bucket). This function is required to be implemented for all bucket types, though it might be a no-\/op on some of them (namely ones that never allocate any private data structures). 
+\begin{DoxyParams}{Parameters}
+{\em data} & The private data pointer from the bucket to be destroyed \\
+\hline
+\end{DoxyParams}
+\hypertarget{structapr__bucket__type__t_a34cef542a8eee5bb734ba8dcd8329711}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!is\-\_\-metadata@{is\-\_\-metadata}}
+\index{is\-\_\-metadata@{is\-\_\-metadata}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{is\-\_\-metadata}]{\setlength{\rightskip}{0pt plus 5cm}enum \{ ... \}   apr\-\_\-bucket\-\_\-type\-\_\-t\-::is\-\_\-metadata}}\label{structapr__bucket__type__t_a34cef542a8eee5bb734ba8dcd8329711}
+Whether the bucket contains metadata (ie, information that describes the regular contents of the brigade). The metadata is not returned by \hyperlink{group___a_p_r___util___bucket___brigades_gae44ae938c6c60e148430fdb098dcf28f}{apr\-\_\-bucket\-\_\-read()} and is not indicated by the -\/$>$length of the \hyperlink{structapr__bucket}{apr\-\_\-bucket} itself. In other words, an empty bucket is safe to arbitrarily remove if and only if it contains no metadata. In this sense, \char`\"{}data\char`\"{} is just raw bytes that are the \char`\"{}content\char`\"{} of the brigade and \char`\"{}metadata\char`\"{} describes that data but is not a proper part of it. \hypertarget{structapr__bucket__type__t_ac6d779be45de214c6abd2cc205c48901}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!name@{name}}
+\index{name@{name}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::name}}\label{structapr__bucket__type__t_ac6d779be45de214c6abd2cc205c48901}
+The name of the bucket type \hypertarget{structapr__bucket__type__t_ad4bd2ffb03cb2f5f3b3941ce20468038}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!num\-\_\-func@{num\-\_\-func}}
+\index{num\-\_\-func@{num\-\_\-func}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{num\-\_\-func}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-bucket\-\_\-type\-\_\-t\-::num\-\_\-func}}\label{structapr__bucket__type__t_ad4bd2ffb03cb2f5f3b3941ce20468038}
+The number of functions this bucket understands. Can not be less than five. \hypertarget{structapr__bucket__type__t_a8e9f3f5b2a5513691f3cea130a1aa54b}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!read@{read}}
+\index{read@{read}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{read}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::read)({\bf apr\-\_\-bucket} $\ast$b, const char $\ast$$\ast$str, apr\-\_\-size\-\_\-t $\ast$len, {\bf apr\-\_\-read\-\_\-type\-\_\-e} block)}}\label{structapr__bucket__type__t_a8e9f3f5b2a5513691f3cea130a1aa54b}
+Read the data from the bucket. This is required to be implemented for all bucket types. 
+\begin{DoxyParams}{Parameters}
+{\em b} & The bucket to read from \\
+\hline
+{\em str} & A place to store the data read. Allocation should only be done if absolutely necessary. \\
+\hline
+{\em len} & The amount of data read. \\
+\hline
+{\em block} & Should this read function block if there is more data that cannot be read immediately. \\
+\hline
+\end{DoxyParams}
+\hypertarget{structapr__bucket__type__t_a4e2015fd6e927ed55157a9b003ed5fdb}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!setaside@{setaside}}
+\index{setaside@{setaside}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{setaside}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::setaside)({\bf apr\-\_\-bucket} $\ast$e, apr\-\_\-pool\-\_\-t $\ast$pool)}}\label{structapr__bucket__type__t_a4e2015fd6e927ed55157a9b003ed5fdb}
+Make it possible to set aside the data for at least as long as the given pool. Buckets containing data that could potentially die before this pool (e.\-g. the data resides on the stack, in a child pool of the given pool, or in a disjoint pool) must somehow copy, shift, or transform the data to have the proper lifetime. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to convert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Some bucket types contain data that will always outlive the bucket itself. For example no data (E\-O\-S and F\-L\-U\-S\-H), or the data resides in global, constant memory (I\-M\-M\-O\-R\-T\-A\-L), or the data is on the heap (H\-E\-A\-P). For these buckets, apr\-\_\-bucket\-\_\-setaside\-\_\-noop can be used. 
+\end{DoxyRemark}
+\hypertarget{structapr__bucket__type__t_af30959bc15fc60e21224d5e3c8c0a814}{\index{apr\-\_\-bucket\-\_\-type\-\_\-t@{apr\-\_\-bucket\-\_\-type\-\_\-t}!split@{split}}
+\index{split@{split}!apr_bucket_type_t@{apr\-\_\-bucket\-\_\-type\-\_\-t}}
+\subsubsection[{split}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-bucket\-\_\-type\-\_\-t\-::split)({\bf apr\-\_\-bucket} $\ast$e, apr\-\_\-size\-\_\-t point)}}\label{structapr__bucket__type__t_af30959bc15fc60e21224d5e3c8c0a814}
+Split one bucket in two at the specified position by duplicating the bucket structure (not the data) and modifying any necessary start/end/offset information. If it's not possible to do this for the bucket type (perhaps the length of the data is indeterminate, as with pipe and socket buckets), then A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L is returned. 
+\begin{DoxyParams}{Parameters}
+{\em e} & The bucket to split \\
+\hline
+{\em point} & The offset of the first byte in the new bucket \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__buckets_8h}{apr\-\_\-buckets.\-h}\end{DoxyCompactItemize}

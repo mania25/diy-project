@@ -1,0 +1,579 @@
+\hypertarget{group___a_p_r___util___m_c}{\section{Memcached Client Routines}
+\label{group___a_p_r___util___m_c}\index{Memcached Client Routines@{Memcached Client Routines}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__value__t}{apr\-\_\-memcache\-\_\-value\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__stats__t}{apr\-\_\-memcache\-\_\-stats\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}{apr\-\_\-memcache\-\_\-conn\-\_\-t} \hyperlink{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}{apr\-\_\-memcache\-\_\-conn\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} \hyperlink{group___a_p_r___util___m_c_gaa7b43f2275de0fc700cc05e2467bbc4b}{apr\-\_\-memcache\-\_\-server\-\_\-t}
+\item 
+\hypertarget{group___a_p_r___util___m_c_ga27f0376041ada9a7a8efc657b543cd24}{typedef apr\-\_\-uint32\-\_\-t($\ast$ {\bfseries apr\-\_\-memcache\-\_\-hash\-\_\-func} )(void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)}\label{group___a_p_r___util___m_c_ga27f0376041ada9a7a8efc657b543cd24}
+
+\item 
+\hypertarget{group___a_p_r___util___m_c_ga5bec59e17d9a29de2ffb38afae165371}{typedef struct \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} {\bfseries apr\-\_\-memcache\-\_\-t}}\label{group___a_p_r___util___m_c_ga5bec59e17d9a29de2ffb38afae165371}
+
+\item 
+\hypertarget{group___a_p_r___util___m_c_gae9144ffbb456332c7edbe0dd09759bba}{typedef \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$($\ast$ {\bfseries apr\-\_\-memcache\-\_\-server\-\_\-func} )(void $\ast$baton, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)}\label{group___a_p_r___util___m_c_gae9144ffbb456332c7edbe0dd09759bba}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t} \{ \hyperlink{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a211c8d3d7a4a187b5c8f936a6929d007}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E}, 
+\hyperlink{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a6dffa918006f926e0fdf0074f4bdac28}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga945a83f7f56800b18243ec5933c16593}{apr\-\_\-memcache\-\_\-hash} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga103ab58d59ca8e4668d31631ee0d3222}{apr\-\_\-memcache\-\_\-hash\-\_\-crc32} (void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga6e2fa2e270332d2cdb44abf775f8022e}{apr\-\_\-memcache\-\_\-hash\-\_\-default} (void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga22fe48405f08eaded915f5205d9fc221}{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga0c1f483d299b083e0c06e9ec1c9eb316}{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default} (void $\ast$baton, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga9d6381d9d9f8f83f4fa5450cc8066590}{apr\-\_\-memcache\-\_\-add\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$server)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga76b77e042ced1bae3b23f71696482a7e}{apr\-\_\-memcache\-\_\-find\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$host, apr\-\_\-port\-\_\-t port)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gafe4824659cbe261409b57a48d85c34e3}{apr\-\_\-memcache\-\_\-enable\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gae8a982e8794a08a78264ec3a966797fc}{apr\-\_\-memcache\-\_\-disable\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga18ddd72bc1ab5edb0a08a8f26f193bd3}{apr\-\_\-memcache\-\_\-server\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$host, apr\-\_\-port\-\_\-t port, apr\-\_\-uint32\-\_\-t min, apr\-\_\-uint32\-\_\-t smax, apr\-\_\-uint32\-\_\-t max, apr\-\_\-uint32\-\_\-t ttl, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$$\ast$ns)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga5a510d8ac3f5bf12cf2da1a445f4854b}{apr\-\_\-memcache\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p, apr\-\_\-uint16\-\_\-t max\-\_\-servers, apr\-\_\-uint32\-\_\-t flags, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$$\ast$mc)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gac41597ff979e7a181da459398196196f}{apr\-\_\-memcache\-\_\-getp} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$key, char $\ast$$\ast$baton, apr\-\_\-size\-\_\-t $\ast$len, apr\-\_\-uint16\-\_\-t $\ast$flags)
+\item 
+void \hyperlink{group___a_p_r___util___m_c_gac94d47eedb9baebe823b2e5eeed54157}{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key} (apr\-\_\-pool\-\_\-t $\ast$data\-\_\-pool, const char $\ast$key, apr\-\_\-hash\-\_\-t $\ast$$\ast$values)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga4a5beadb98954331896e95c35324b0fc}{apr\-\_\-memcache\-\_\-multgetp} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, apr\-\_\-pool\-\_\-t $\ast$temp\-\_\-pool, apr\-\_\-pool\-\_\-t $\ast$data\-\_\-pool, apr\-\_\-hash\-\_\-t $\ast$values)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gaa5bbe2c60302a689773d6a70da8f99fb}{apr\-\_\-memcache\-\_\-set} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga3c150706f243bf2b9cd89152d416ee56}{apr\-\_\-memcache\-\_\-add} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga0f7b9fdb5d7a0a1feb5642d7778e268d}{apr\-\_\-memcache\-\_\-replace} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga97d2c5be42ef773ba82fd8293b219ece}{apr\-\_\-memcache\-\_\-delete} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-uint32\-\_\-t timeout)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga2cfc95fe963f2d4190996153a2ddb748}{apr\-\_\-memcache\-\_\-incr} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-int32\-\_\-t n, apr\-\_\-uint32\-\_\-t $\ast$nv)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gacf93837a1fd4c3d230644098f3043a39}{apr\-\_\-memcache\-\_\-decr} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-int32\-\_\-t n, apr\-\_\-uint32\-\_\-t $\ast$new\-\_\-value)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga1d1b9478138b907eb9c10576cb1653ff}{apr\-\_\-memcache\-\_\-version} (\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms, apr\-\_\-pool\-\_\-t $\ast$p, char $\ast$$\ast$baton)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gad81ba4ef97f7dd64e37a0fbb09677859}{apr\-\_\-memcache\-\_\-stats} (\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms, apr\-\_\-pool\-\_\-t $\ast$p, \hyperlink{structapr__memcache__stats__t}{apr\-\_\-memcache\-\_\-stats\-\_\-t} $\ast$$\ast$stats)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-conn\-\_\-t@{apr\-\_\-memcache\-\_\-conn\-\_\-t}}
+\index{apr\-\_\-memcache\-\_\-conn\-\_\-t@{apr\-\_\-memcache\-\_\-conn\-\_\-t}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-conn\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-memcache\-\_\-conn\-\_\-t} {\bf apr\-\_\-memcache\-\_\-conn\-\_\-t}}}\label{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}
+Opaque memcache client connection object \hypertarget{group___a_p_r___util___m_c_gaa7b43f2275de0fc700cc05e2467bbc4b}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}}
+\index{apr\-\_\-memcache\-\_\-server\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-t}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-server\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-memcache\-\_\-server\-\_\-t} {\bf apr\-\_\-memcache\-\_\-server\-\_\-t}}}\label{group___a_p_r___util___m_c_gaa7b43f2275de0fc700cc05e2467bbc4b}
+Memcache Server Info Object 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t}}
+\index{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t@{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t}}}\label{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}
+Specifies the status of a memcached server \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E@{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E}!Memcached Client Routines@{Memcached Client Routines}}\index{Memcached Client Routines@{Memcached Client Routines}!A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E@{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E}}\item[{\em 
+\hypertarget{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a211c8d3d7a4a187b5c8f936a6929d007}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E}\label{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a211c8d3d7a4a187b5c8f936a6929d007}
+}]Server is alive and responding to requests \index{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D@{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D}!Memcached Client Routines@{Memcached Client Routines}}\index{Memcached Client Routines@{Memcached Client Routines}!A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D@{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D}}\item[{\em 
+\hypertarget{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a6dffa918006f926e0fdf0074f4bdac28}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D}\label{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a6dffa918006f926e0fdf0074f4bdac28}
+}]Server is not responding to requests \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___m_c_ga3c150706f243bf2b9cd89152d416ee56}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-add@{apr\-\_\-memcache\-\_\-add}}
+\index{apr\-\_\-memcache\-\_\-add@{apr\-\_\-memcache\-\_\-add}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-add (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{char $\ast$}]{baton, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-size, }
+\item[{apr\-\_\-uint32\-\_\-t}]{timeout, }
+\item[{apr\-\_\-uint16\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga3c150706f243bf2b9cd89152d416ee56}
+Adds value by key on the server 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em baton} & data to store on the server \\
+\hline
+{\em data\-\_\-size} & length of data at baton \\
+\hline
+{\em timeout} & time for the data to live on the server \\
+\hline
+{\em flags} & any flags set by the client for this key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the key was added, A\-P\-R\-\_\-\-E\-E\-X\-I\-S\-T if the key already exists on the server. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_gac94d47eedb9baebe823b2e5eeed54157}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key@{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key}}
+\index{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key@{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{data\-\_\-pool, }
+\item[{const char $\ast$}]{key, }
+\item[{apr\-\_\-hash\-\_\-t $\ast$$\ast$}]{values}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gac94d47eedb9baebe823b2e5eeed54157}
+Add a key to a hash for a multiget query if the hash ($\ast$value) is N\-U\-L\-L it will be created 
+\begin{DoxyParams}{Parameters}
+{\em data\-\_\-pool} & pool from where the hash and their items are created from \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em values} & hash of keys and values that this key will be added to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_ga9d6381d9d9f8f83f4fa5450cc8066590}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-add\-\_\-server@{apr\-\_\-memcache\-\_\-add\-\_\-server}}
+\index{apr\-\_\-memcache\-\_\-add\-\_\-server@{apr\-\_\-memcache\-\_\-add\-\_\-server}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-add\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-add\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$}]{server}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga9d6381d9d9f8f83f4fa5450cc8066590}
+Adds a server to a client object 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em server} & Server to add \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Adding servers is not thread safe, and should be done once at startup. 
+\end{DoxyRemark}
+\begin{DoxyWarning}{Warning}
+Changing servers after startup may cause keys to go to different servers. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___util___m_c_ga5a510d8ac3f5bf12cf2da1a445f4854b}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-create@{apr\-\_\-memcache\-\_\-create}}
+\index{apr\-\_\-memcache\-\_\-create@{apr\-\_\-memcache\-\_\-create}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{apr\-\_\-uint16\-\_\-t}]{max\-\_\-servers, }
+\item[{apr\-\_\-uint32\-\_\-t}]{flags, }
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$$\ast$}]{mc}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga5a510d8ac3f5bf12cf2da1a445f4854b}
+Creates a new memcached client object 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to use \\
+\hline
+{\em max\-\_\-servers} & maximum number of servers \\
+\hline
+{\em flags} & Not currently used \\
+\hline
+{\em mc} & location of the new memcache client object \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_gacf93837a1fd4c3d230644098f3043a39}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-decr@{apr\-\_\-memcache\-\_\-decr}}
+\index{apr\-\_\-memcache\-\_\-decr@{apr\-\_\-memcache\-\_\-decr}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-decr}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-decr (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{apr\-\_\-int32\-\_\-t}]{n, }
+\item[{apr\-\_\-uint32\-\_\-t $\ast$}]{new\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gacf93837a1fd4c3d230644098f3043a39}
+Decrements a value 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em n} & number to decrement by \\
+\hline
+{\em new\-\_\-value} & new value after decrementing \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_ga97d2c5be42ef773ba82fd8293b219ece}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-delete@{apr\-\_\-memcache\-\_\-delete}}
+\index{apr\-\_\-memcache\-\_\-delete@{apr\-\_\-memcache\-\_\-delete}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{apr\-\_\-uint32\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga97d2c5be42ef773ba82fd8293b219ece}
+Deletes a key from a server 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em timeout} & time for the delete to stop other clients from adding \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_gae8a982e8794a08a78264ec3a966797fc}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-disable\-\_\-server@{apr\-\_\-memcache\-\_\-disable\-\_\-server}}
+\index{apr\-\_\-memcache\-\_\-disable\-\_\-server@{apr\-\_\-memcache\-\_\-disable\-\_\-server}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-disable\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-disable\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$}]{ms}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gae8a982e8794a08a78264ec3a966797fc}
+Disable a Server 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em ms} & Server to Disable \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_gafe4824659cbe261409b57a48d85c34e3}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-enable\-\_\-server@{apr\-\_\-memcache\-\_\-enable\-\_\-server}}
+\index{apr\-\_\-memcache\-\_\-enable\-\_\-server@{apr\-\_\-memcache\-\_\-enable\-\_\-server}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-enable\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-enable\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$}]{ms}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gafe4824659cbe261409b57a48d85c34e3}
+Enables a Server for use again 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em ms} & Server to Activate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_ga76b77e042ced1bae3b23f71696482a7e}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-find\-\_\-server@{apr\-\_\-memcache\-\_\-find\-\_\-server}}
+\index{apr\-\_\-memcache\-\_\-find\-\_\-server@{apr\-\_\-memcache\-\_\-find\-\_\-server}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-find\-\_\-server}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-memcache\-\_\-server\-\_\-t}$\ast$ apr\-\_\-memcache\-\_\-find\-\_\-server (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{host, }
+\item[{apr\-\_\-port\-\_\-t}]{port}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga76b77e042ced1bae3b23f71696482a7e}
+Finds a Server object based on a hostname/port pair 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em host} & Hostname of the server \\
+\hline
+{\em port} & Port of the server \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Server with matching Hostname and Port, or N\-U\-L\-L if none was found. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_ga22fe48405f08eaded915f5205d9fc221}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash@{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash}}
+\index{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash@{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-memcache\-\_\-server\-\_\-t}$\ast$ apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const apr\-\_\-uint32\-\_\-t}]{hash}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga22fe48405f08eaded915f5205d9fc221}
+Picks a server based on a hash 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em hash} & Hashed value of a Key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+server that controls specified hash 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___m_c_ga945a83f7f56800b18243ec5933c16593}{apr\-\_\-memcache\-\_\-hash} 
+\end{DoxySeeAlso}
+\hypertarget{group___a_p_r___util___m_c_ga0c1f483d299b083e0c06e9ec1c9eb316}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default@{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default}}
+\index{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default@{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-memcache\-\_\-server\-\_\-t}$\ast$ apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{baton, }
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const apr\-\_\-uint32\-\_\-t}]{hash}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga0c1f483d299b083e0c06e9ec1c9eb316}
+server selection compatible with the standard Perl Client. \hypertarget{group___a_p_r___util___m_c_gac41597ff979e7a181da459398196196f}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-getp@{apr\-\_\-memcache\-\_\-getp}}
+\index{apr\-\_\-memcache\-\_\-getp@{apr\-\_\-memcache\-\_\-getp}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-getp}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-getp (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{const char $\ast$}]{key, }
+\item[{char $\ast$$\ast$}]{baton, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{len, }
+\item[{apr\-\_\-uint16\-\_\-t $\ast$}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gac41597ff979e7a181da459398196196f}
+Gets a value from the server, allocating the value out of p 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em p} & Pool to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em baton} & location of the allocated value \\
+\hline
+{\em len} & length of data at baton \\
+\hline
+{\em flags} & any flags set by the client for this key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_ga945a83f7f56800b18243ec5933c16593}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-hash@{apr\-\_\-memcache\-\_\-hash}}
+\index{apr\-\_\-memcache\-\_\-hash@{apr\-\_\-memcache\-\_\-hash}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-hash}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-memcache\-\_\-hash (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{data, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga945a83f7f56800b18243ec5933c16593}
+Creates a crc32 hash used to split keys between servers 
+\begin{DoxyParams}{Parameters}
+{\em mc} & The memcache client object to use \\
+\hline
+{\em data} & Data to be hashed \\
+\hline
+{\em data\-\_\-len} & Length of the data to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+crc32 hash of data 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The crc32 hash is not compatible with old memcached clients. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___m_c_ga103ab58d59ca8e4668d31631ee0d3222}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-hash\-\_\-crc32@{apr\-\_\-memcache\-\_\-hash\-\_\-crc32}}
+\index{apr\-\_\-memcache\-\_\-hash\-\_\-crc32@{apr\-\_\-memcache\-\_\-hash\-\_\-crc32}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-hash\-\_\-crc32}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-memcache\-\_\-hash\-\_\-crc32 (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{baton, }
+\item[{const char $\ast$}]{data, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga103ab58d59ca8e4668d31631ee0d3222}
+Pure C\-R\-C32 Hash. Used by some clients. \hypertarget{group___a_p_r___util___m_c_ga6e2fa2e270332d2cdb44abf775f8022e}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-hash\-\_\-default@{apr\-\_\-memcache\-\_\-hash\-\_\-default}}
+\index{apr\-\_\-memcache\-\_\-hash\-\_\-default@{apr\-\_\-memcache\-\_\-hash\-\_\-default}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-hash\-\_\-default}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-memcache\-\_\-hash\-\_\-default (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{baton, }
+\item[{const char $\ast$}]{data, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga6e2fa2e270332d2cdb44abf775f8022e}
+hash compatible with the standard Perl Client. \hypertarget{group___a_p_r___util___m_c_ga2cfc95fe963f2d4190996153a2ddb748}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-incr@{apr\-\_\-memcache\-\_\-incr}}
+\index{apr\-\_\-memcache\-\_\-incr@{apr\-\_\-memcache\-\_\-incr}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-incr}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-incr (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{apr\-\_\-int32\-\_\-t}]{n, }
+\item[{apr\-\_\-uint32\-\_\-t $\ast$}]{nv}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga2cfc95fe963f2d4190996153a2ddb748}
+Increments a value 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em n} & number to increment by \\
+\hline
+{\em nv} & new value after incrementing \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_ga4a5beadb98954331896e95c35324b0fc}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-multgetp@{apr\-\_\-memcache\-\_\-multgetp}}
+\index{apr\-\_\-memcache\-\_\-multgetp@{apr\-\_\-memcache\-\_\-multgetp}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-multgetp}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-multgetp (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{temp\-\_\-pool, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{data\-\_\-pool, }
+\item[{apr\-\_\-hash\-\_\-t $\ast$}]{values}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga4a5beadb98954331896e95c35324b0fc}
+Gets multiple values from the server, allocating the values out of p 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em temp\-\_\-pool} & Pool used for temporary allocations. May be cleared inside this call. \\
+\hline
+{\em data\-\_\-pool} & Pool used to allocate data for the returned values. \\
+\hline
+{\em values} & hash of \hyperlink{structapr__memcache__value__t}{apr\-\_\-memcache\-\_\-value\-\_\-t} keyed by strings, contains the result of the multiget call. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_ga0f7b9fdb5d7a0a1feb5642d7778e268d}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-replace@{apr\-\_\-memcache\-\_\-replace}}
+\index{apr\-\_\-memcache\-\_\-replace@{apr\-\_\-memcache\-\_\-replace}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-replace}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-replace (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{char $\ast$}]{baton, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-size, }
+\item[{apr\-\_\-uint32\-\_\-t}]{timeout, }
+\item[{apr\-\_\-uint16\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga0f7b9fdb5d7a0a1feb5642d7778e268d}
+Replaces value by key on the server 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em baton} & data to store on the server \\
+\hline
+{\em data\-\_\-size} & length of data at baton \\
+\hline
+{\em timeout} & time for the data to live on the server \\
+\hline
+{\em flags} & any flags set by the client for this key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if the key was added, A\-P\-R\-\_\-\-E\-E\-X\-I\-S\-T if the key did not exist on the server. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___m_c_ga18ddd72bc1ab5edb0a08a8f26f193bd3}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-server\-\_\-create@{apr\-\_\-memcache\-\_\-server\-\_\-create}}
+\index{apr\-\_\-memcache\-\_\-server\-\_\-create@{apr\-\_\-memcache\-\_\-server\-\_\-create}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-server\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-server\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{const char $\ast$}]{host, }
+\item[{apr\-\_\-port\-\_\-t}]{port, }
+\item[{apr\-\_\-uint32\-\_\-t}]{min, }
+\item[{apr\-\_\-uint32\-\_\-t}]{smax, }
+\item[{apr\-\_\-uint32\-\_\-t}]{max, }
+\item[{apr\-\_\-uint32\-\_\-t}]{ttl, }
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$$\ast$}]{ns}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga18ddd72bc1ab5edb0a08a8f26f193bd3}
+Creates a new Server Object 
+\begin{DoxyParams}{Parameters}
+{\em p} & Pool to use \\
+\hline
+{\em host} & hostname of the server \\
+\hline
+{\em port} & port of the server \\
+\hline
+{\em min} & minimum number of client sockets to open \\
+\hline
+{\em smax} & soft maximum number of client connections to open \\
+\hline
+{\em max} & hard maximum number of client connections \\
+\hline
+{\em ttl} & time to live in microseconds of a client connection \\
+\hline
+{\em ns} & location of the new server object \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group___a_p_r___util___r_l_ga608ebcddce542603a7f1d3cf51ae8d3c}{apr\-\_\-reslist\-\_\-create} 
+\end{DoxySeeAlso}
+\begin{DoxyRemark}{Remarks}
+min, smax, and max are only used when A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-T\-H\-R\-E\-A\-D\-S 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___m_c_gaa5bbe2c60302a689773d6a70da8f99fb}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-set@{apr\-\_\-memcache\-\_\-set}}
+\index{apr\-\_\-memcache\-\_\-set@{apr\-\_\-memcache\-\_\-set}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-t} $\ast$}]{mc, }
+\item[{const char $\ast$}]{key, }
+\item[{char $\ast$}]{baton, }
+\item[{const apr\-\_\-size\-\_\-t}]{data\-\_\-size, }
+\item[{apr\-\_\-uint32\-\_\-t}]{timeout, }
+\item[{apr\-\_\-uint16\-\_\-t}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gaa5bbe2c60302a689773d6a70da8f99fb}
+Sets a value by key on the server 
+\begin{DoxyParams}{Parameters}
+{\em mc} & client to use \\
+\hline
+{\em key} & null terminated string containing the key \\
+\hline
+{\em baton} & data to store on the server \\
+\hline
+{\em data\-\_\-size} & length of data at baton \\
+\hline
+{\em timeout} & time in seconds for the data to live on the server \\
+\hline
+{\em flags} & any flags set by the client for this key \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_gad81ba4ef97f7dd64e37a0fbb09677859}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-stats@{apr\-\_\-memcache\-\_\-stats}}
+\index{apr\-\_\-memcache\-\_\-stats@{apr\-\_\-memcache\-\_\-stats}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-stats}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-stats (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$}]{ms, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{{\bf apr\-\_\-memcache\-\_\-stats\-\_\-t} $\ast$$\ast$}]{stats}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_gad81ba4ef97f7dd64e37a0fbb09677859}
+Query a server for statistics 
+\begin{DoxyParams}{Parameters}
+{\em ms} & server to query \\
+\hline
+{\em p} & Pool to allocate answer from \\
+\hline
+{\em stats} & location of the new statistics structure \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_c_ga1d1b9478138b907eb9c10576cb1653ff}{\index{Memcached Client Routines@{Memcached Client Routines}!apr\-\_\-memcache\-\_\-version@{apr\-\_\-memcache\-\_\-version}}
+\index{apr\-\_\-memcache\-\_\-version@{apr\-\_\-memcache\-\_\-version}!Memcached Client Routines@{Memcached Client Routines}}
+\subsubsection[{apr\-\_\-memcache\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-memcache\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$}]{ms, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p, }
+\item[{char $\ast$$\ast$}]{baton}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_c_ga1d1b9478138b907eb9c10576cb1653ff}
+Query a server's version 
+\begin{DoxyParams}{Parameters}
+{\em ms} & server to query \\
+\hline
+{\em p} & Pool to allocate answer from \\
+\hline
+{\em baton} & location to store server version string \\
+\hline
+{\em len} & length of the server version string \\
+\hline
+\end{DoxyParams}

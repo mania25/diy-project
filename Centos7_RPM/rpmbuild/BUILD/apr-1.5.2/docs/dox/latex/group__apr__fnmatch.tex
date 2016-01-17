@@ -1,0 +1,134 @@
+\hypertarget{group__apr__fnmatch}{\section{Filename Matching Functions}
+\label{group__apr__fnmatch}\index{Filename Matching Functions@{Filename Matching Functions}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H}~1
+\item 
+\#define \hyperlink{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E}~0x01
+\item 
+\#define \hyperlink{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E}~0x02
+\item 
+\#define \hyperlink{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D}~0x04
+\item 
+\#define \hyperlink{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D}~0x08
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__fnmatch_gabe9c7d7efe6afc203a01befbc45bad96}{apr\-\_\-fnmatch} (const char $\ast$pattern, const char $\ast$strings, int flags)
+\item 
+int \hyperlink{group__apr__fnmatch_ga4e7828bb7be756d999f13b8af8202204}{apr\-\_\-fnmatch\-\_\-test} (const char $\ast$pattern)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__fnmatch_ga25c7eacaa966d0c9c09ef160644ac997}{apr\-\_\-match\-\_\-glob} (const char $\ast$dir\-\_\-pattern, \hyperlink{structapr__array__header__t}{apr\-\_\-array\-\_\-header\-\_\-t} $\ast$$\ast$result, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}{\index{Filename Matching Functions@{Filename Matching Functions}!A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D}}
+\index{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-C\-A\-S\-E\-\_\-\-B\-L\-I\-N\-D~0x08}}\label{group__apr__fnmatch_ga5cee1c0a917a283a193721d11160b502}
+Compare characters case-\/insensitively. \hypertarget{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}{\index{Filename Matching Functions@{Filename Matching Functions}!A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E}}
+\index{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-E\-S\-C\-A\-P\-E~0x01}}\label{group__apr__fnmatch_gae12c1286631f316647be6dc007170630}
+Disable backslash escaping. \hypertarget{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}{\index{Filename Matching Functions@{Filename Matching Functions}!A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H}}
+\index{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H~1}}\label{group__apr__fnmatch_gaea769621807400e4c741e7deddf6c3df}
+Match failed. \hypertarget{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}{\index{Filename Matching Functions@{Filename Matching Functions}!A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E}}
+\index{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-A\-T\-H\-N\-A\-M\-E~0x02}}\label{group__apr__fnmatch_ga0d421a2cef68cb590f958b5de6c7fe1b}
+Slash must be matched by slash. \hypertarget{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}{\index{Filename Matching Functions@{Filename Matching Functions}!A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D}}
+\index{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D@{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-P\-E\-R\-I\-O\-D~0x04}}\label{group__apr__fnmatch_ga4806f936b6eacc59dfed831d67b750ef}
+Period must be matched by period. 
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__fnmatch_gabe9c7d7efe6afc203a01befbc45bad96}{\index{Filename Matching Functions@{Filename Matching Functions}!apr\-\_\-fnmatch@{apr\-\_\-fnmatch}}
+\index{apr\-\_\-fnmatch@{apr\-\_\-fnmatch}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{apr\-\_\-fnmatch}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-fnmatch (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern, }
+\item[{const char $\ast$}]{strings, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{group__apr__fnmatch_gabe9c7d7efe6afc203a01befbc45bad96}
+Try to match the string to the given pattern, return A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if match, else return A\-P\-R\-\_\-\-F\-N\-M\-\_\-\-N\-O\-M\-A\-T\-C\-H. Note that there is no such thing as an illegal pattern.
+
+With all flags unset, a pattern is interpreted as such\-:
+
+P\-A\-T\-T\-E\-R\-N\-: Backslash followed by any character, including another backslash.\par
+ M\-A\-T\-C\-H\-E\-S\-: That character exactly.
+
+P\-A\-T\-T\-E\-R\-N\-: ?\par
+ M\-A\-T\-C\-H\-E\-S\-: Any single character. 
+
+P\-A\-T\-T\-E\-R\-N\-: $\ast$\par
+ M\-A\-T\-C\-H\-E\-S\-: Any sequence of zero or more characters. (Note that multiple $\ast$s in a row are equivalent to one.)
+
+P\-A\-T\-T\-E\-R\-N\-: Any character other than \textbackslash{}?$\ast$\mbox{[} or a \textbackslash{} at the end of the pattern\par
+ M\-A\-T\-C\-H\-E\-S\-: That character exactly. (Case sensitive.)
+
+P\-A\-T\-T\-E\-R\-N\-: \mbox{[} followed by a class description followed by \mbox{]}\par
+ M\-A\-T\-C\-H\-E\-S\-: A single character described by the class description. (Never matches, if the class description reaches until the end of the string without a \mbox{]}.) If the first character of the class description is $^\wedge$ or !, the sense of the description is reversed. The rest of the class description is a list of single characters or pairs of characters separated by -\/. Any of those characters can have a backslash in front of them, which is ignored; this lets you use the characters \mbox{]} and -\/ in the character class, as well as $^\wedge$ and ! at the beginning. The pattern matches a single character if it is one of the listed characters or falls into one of the listed ranges (inclusive, case sensitive). Ranges with the first character larger than the second are legal but never match. Edge cases\-: \mbox{[}\mbox{]} never matches, and \mbox{[}$^\wedge$\mbox{]} and \mbox{[}!\mbox{]} always match without consuming a character.
+
+Note that these patterns attempt to match the entire string, not just find a substring matching the pattern.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern to match to \\
+\hline
+{\em strings} & The string we are trying to match \\
+\hline
+{\em flags} & flags to use in the match. Bitwise O\-R of\-: 
+\begin{DoxyPre}
+             APR\_FNM\_NOESCAPE       Disable backslash escaping
+             APR\_FNM\_PATHNAME       Slash must be matched by slash
+             APR\_FNM\_PERIOD         Period must be matched by period
+             APR\_FNM\_CASE\_BLIND     Compare characters case-insensitively.
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__fnmatch_ga4e7828bb7be756d999f13b8af8202204}{\index{Filename Matching Functions@{Filename Matching Functions}!apr\-\_\-fnmatch\-\_\-test@{apr\-\_\-fnmatch\-\_\-test}}
+\index{apr\-\_\-fnmatch\-\_\-test@{apr\-\_\-fnmatch\-\_\-test}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{apr\-\_\-fnmatch\-\_\-test}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-fnmatch\-\_\-test (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{pattern}
+\end{DoxyParamCaption}
+)}}\label{group__apr__fnmatch_ga4e7828bb7be756d999f13b8af8202204}
+Determine if the given pattern is a regular expression. 
+\begin{DoxyParams}{Parameters}
+{\em pattern} & The pattern to search for glob characters. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+non-\/zero if pattern has any glob characters in it 
+\end{DoxyReturn}
+\hypertarget{group__apr__fnmatch_ga25c7eacaa966d0c9c09ef160644ac997}{\index{Filename Matching Functions@{Filename Matching Functions}!apr\-\_\-match\-\_\-glob@{apr\-\_\-match\-\_\-glob}}
+\index{apr\-\_\-match\-\_\-glob@{apr\-\_\-match\-\_\-glob}!Filename Matching Functions@{Filename Matching Functions}}
+\subsubsection[{apr\-\_\-match\-\_\-glob}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-match\-\_\-glob (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{dir\-\_\-pattern, }
+\item[{{\bf apr\-\_\-array\-\_\-header\-\_\-t} $\ast$$\ast$}]{result, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__fnmatch_ga25c7eacaa966d0c9c09ef160644ac997}
+Find all files that match a specified pattern in a directory. 
+\begin{DoxyParams}{Parameters}
+{\em dir\-\_\-pattern} & The pattern to use for finding files, appended to the search directory. The pattern is anything following the final forward or backward slash in the parameter. If no slash is found, the current directory is searched. \\
+\hline
+{\em result} & Array to use when storing the results \\
+\hline
+{\em p} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S if no processing errors occurred, A\-P\-R error code otherwise 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+The returned array may be empty even if A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S was returned. 
+\end{DoxyRemark}

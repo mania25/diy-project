@@ -1,0 +1,31 @@
+\hypertarget{apr__strmatch_8h}{\section{include/apr\-\_\-strmatch.h File Reference}
+\label{apr__strmatch_8h}\index{include/apr\-\_\-strmatch.\-h@{include/apr\-\_\-strmatch.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L string matching routines.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} \hyperlink{group___a_p_r___util___str_match_gab7fc6f6d1b15c8d8750b4637b8ac5679}{apr\-\_\-strmatch\-\_\-pattern}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___str_match_gada0fdf0c9dcb92083159bb4f8bfb9158}{apr\-\_\-strmatch} (const \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} $\ast$pattern, const char $\ast$s, apr\-\_\-size\-\_\-t slen)
+\item 
+const \hyperlink{structapr__strmatch__pattern}{apr\-\_\-strmatch\-\_\-pattern} $\ast$ \hyperlink{group___a_p_r___util___str_match_gaf38b738b333c59a3f6439b71f1277dd9}{apr\-\_\-strmatch\-\_\-precompile} (apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$s, int case\-\_\-sensitive)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L string matching routines. 

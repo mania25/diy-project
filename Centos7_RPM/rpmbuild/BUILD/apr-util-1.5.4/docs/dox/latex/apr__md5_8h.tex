@@ -1,0 +1,48 @@
+\hypertarget{apr__md5_8h}{\section{include/apr\-\_\-md5.h File Reference}
+\label{apr__md5_8h}\index{include/apr\-\_\-md5.\-h@{include/apr\-\_\-md5.\-h}}
+}
+
+
+A\-P\-R M\-D5 Routines.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-xlate.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___m_d5_ga0bb65e74ccdddca6ef75e886084e52dc}{A\-P\-R\-\_\-\-M\-D5\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t} \hyperlink{group___a_p_r___m_d5_gacb4d6bf2cf0a29553a63273ff0a6fe69}{apr\-\_\-md5\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_ga7a0502bfc466821beabe4876987fbcb5}{apr\-\_\-md5\-\_\-init} (\hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_gad80cbd97ca3197a237bbed006c033a57}{apr\-\_\-md5\-\_\-set\-\_\-xlate} (\hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t} $\ast$context, \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$xlate)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_ga1ae4e5c171ae98953e716ac02f026ed2}{apr\-\_\-md5\-\_\-update} (\hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t} $\ast$context, const void $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_ga245fb83991257b096ebadd2b1b8cef62}{apr\-\_\-md5\-\_\-final} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___m_d5_ga0bb65e74ccdddca6ef75e886084e52dc}{A\-P\-R\-\_\-\-M\-D5\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, \hyperlink{structapr__md5__ctx__t}{apr\-\_\-md5\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_gac98c04b75053ae04907ca325f46df955}{apr\-\_\-md5} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___m_d5_ga0bb65e74ccdddca6ef75e886084e52dc}{A\-P\-R\-\_\-\-M\-D5\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, const void $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_gaf902e64b62e4056c6dcc1594b2dca645}{apr\-\_\-md5\-\_\-encode} (const char $\ast$password, const char $\ast$salt, char $\ast$result, apr\-\_\-size\-\_\-t nbytes)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_ga9a82cd796a9a185c467b60f3a142dad2}{apr\-\_\-bcrypt\-\_\-encode} (const char $\ast$pw, unsigned int count, const unsigned char $\ast$salt, apr\-\_\-size\-\_\-t salt\-\_\-len, char $\ast$out, apr\-\_\-size\-\_\-t out\-\_\-len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___m_d5_ga9ea1aa7e468de57e603d6e1d1b1516f2}{apr\-\_\-password\-\_\-validate} (const char $\ast$passwd, const char $\ast$hash)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R M\-D5 Routines. 

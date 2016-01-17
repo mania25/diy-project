@@ -1,0 +1,126 @@
+\hypertarget{group___a_p_r___util}{\section{A\-P\-R Utility Functions}
+\label{group___a_p_r___util}\index{A\-P\-R Utility Functions@{A\-P\-R Utility Functions}}
+}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___a_p_r___util___base64}{Base64 Encoding}
+\item 
+\hyperlink{group___a_p_r___util___bucket___brigades}{Bucket Brigades}
+\item 
+\hyperlink{group___a_p_r___util___crypto}{Crypto routines}
+\item 
+\hyperlink{group___a_p_r___util___date}{Date routines}
+\item 
+\hyperlink{group___a_p_r___util___d_b_d}{D\-B\-D routines}
+\item 
+\hyperlink{group___a_p_r___util___d_b_m}{D\-B\-M routines}
+\item 
+\hyperlink{group___a_p_r___util___hook}{Hook Functions}
+\item 
+\hyperlink{group___a_p_r___util___l_d_a_p}{L\-D\-A\-P}
+\item 
+\hyperlink{group___a_p_r___util___m_d4}{M\-D4 Library}
+\item 
+\hyperlink{group___a_p_r___util___m_c}{Memcached Client Routines}
+\item 
+\hyperlink{group___a_p_r___util___opt}{Optional Functions}
+\item 
+\hyperlink{group___a_p_r___util___f_i_f_o}{Thread Safe F\-I\-F\-O bounded queue}
+\item 
+\hyperlink{group___a_p_r___util___r_l}{Resource List Routines}
+\item 
+\hyperlink{group___a_p_r___util___r_m_m}{Relocatable Memory Management Routines}
+\item 
+\hyperlink{group___a_p_r___util___str_match}{String matching routines}
+\item 
+\hyperlink{group___a_p_r___util___t_p}{Thread Pool routines}
+\item 
+\hyperlink{group___a_p_r___util___u_r_i}{U\-R\-I}
+\item 
+\hyperlink{group___a_p_r___util___x_m_l}{X\-M\-L}
+\item 
+\hyperlink{group__apu__errno}{Error Codes}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util_ga408498ed57031391c19bf360cc61733a}{\#define {\bfseries A\-P\-U\-\_\-\-D\-E\-C\-L\-A\-R\-E}(type)~type}\label{group___a_p_r___util_ga408498ed57031391c19bf360cc61733a}
+
+\item 
+\hypertarget{group___a_p_r___util_ga03b160043a3b3a93e975085361683ff0}{\#define {\bfseries A\-P\-U\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-N\-O\-N\-S\-T\-D}(type)~type}\label{group___a_p_r___util_ga03b160043a3b3a93e975085361683ff0}
+
+\item 
+\hypertarget{group___a_p_r___util_ga7009cc3d445c4b2f93c80990230d7b3f}{\#define {\bfseries A\-P\-U\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}}\label{group___a_p_r___util_ga7009cc3d445c4b2f93c80990230d7b3f}
+
+\item 
+\#define \hyperlink{group___a_p_r___util_ga9b0c0f8fe6546018d3a84a87fc3938f5}{A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}
+\item 
+\hypertarget{group___a_p_r___util_ga3a1ebf50d2a0bdb96f286004d29efbd3}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-S\-D\-B\-M}~1}\label{group___a_p_r___util_ga3a1ebf50d2a0bdb96f286004d29efbd3}
+
+\item 
+\hypertarget{group___a_p_r___util_ga34ced7f6008f09de7f93d477b1c127a1}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-G\-D\-B\-M}~0}\label{group___a_p_r___util_ga34ced7f6008f09de7f93d477b1c127a1}
+
+\item 
+\hypertarget{group___a_p_r___util_ga943eb69735e3e25b4eff0ab3a30c2aa7}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-N\-D\-B\-M}~0}\label{group___a_p_r___util_ga943eb69735e3e25b4eff0ab3a30c2aa7}
+
+\item 
+\hypertarget{group___a_p_r___util_gabcb2f1d6b7ac86678bfaa36d78477b8c}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-D\-B}~0}\label{group___a_p_r___util_gabcb2f1d6b7ac86678bfaa36d78477b8c}
+
+\item 
+\hypertarget{group___a_p_r___util_ga11a85b2049f152a2f5b4a89afa6051b7}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-P\-G\-S\-Q\-L}~1}\label{group___a_p_r___util_ga11a85b2049f152a2f5b4a89afa6051b7}
+
+\item 
+\hypertarget{group___a_p_r___util_gaf2b3aa8611321923353609fd49cfd7ad}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-M\-Y\-S\-Q\-L}~1}\label{group___a_p_r___util_gaf2b3aa8611321923353609fd49cfd7ad}
+
+\item 
+\hypertarget{group___a_p_r___util_ga1af39b80385311f086372077039e5cee}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-S\-Q\-L\-I\-T\-E3}~1}\label{group___a_p_r___util_ga1af39b80385311f086372077039e5cee}
+
+\item 
+\hypertarget{group___a_p_r___util_gafabfc94fb20df271e67ee9832cfed72f}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-S\-Q\-L\-I\-T\-E2}~0}\label{group___a_p_r___util_gafabfc94fb20df271e67ee9832cfed72f}
+
+\item 
+\hypertarget{group___a_p_r___util_gafdfb415d18dd26143342b8e2ff7c657d}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-O\-R\-A\-C\-L\-E}~0}\label{group___a_p_r___util_gafdfb415d18dd26143342b8e2ff7c657d}
+
+\item 
+\hypertarget{group___a_p_r___util_gab7324b13efeec2bbf5b555393c8d17c8}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-F\-R\-E\-E\-T\-D\-S}~1}\label{group___a_p_r___util_gab7324b13efeec2bbf5b555393c8d17c8}
+
+\item 
+\hypertarget{group___a_p_r___util_ga74a67f0582a8e83bc8dbe62dd6d5fd8a}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-O\-D\-B\-C}~1}\label{group___a_p_r___util_ga74a67f0582a8e83bc8dbe62dd6d5fd8a}
+
+\item 
+\hypertarget{group___a_p_r___util_ga593ff66e818403a6946ae379b0343f55}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-C\-R\-Y\-P\-T\-O}~1}\label{group___a_p_r___util_ga593ff66e818403a6946ae379b0343f55}
+
+\item 
+\hypertarget{group___a_p_r___util_ga1d00285ed9100b098da3d3ea4aa05d14}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-O\-P\-E\-N\-S\-S\-L}~1}\label{group___a_p_r___util_ga1d00285ed9100b098da3d3ea4aa05d14}
+
+\item 
+\hypertarget{group___a_p_r___util_gaca13a174095a8289b43d93526a4c4eeb}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-N\-S\-S}~1}\label{group___a_p_r___util_gaca13a174095a8289b43d93526a4c4eeb}
+
+\item 
+\hypertarget{group___a_p_r___util_ga05728c17575e69d12092d21e47065610}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-A\-P\-R\-\_\-\-I\-C\-O\-N\-V}~0}\label{group___a_p_r___util_ga05728c17575e69d12092d21e47065610}
+
+\item 
+\hypertarget{group___a_p_r___util_ga93b33ec545cbfd5ba93aa0104e197b01}{\#define {\bfseries A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-I\-C\-O\-N\-V}~1}\label{group___a_p_r___util_ga93b33ec545cbfd5ba93aa0104e197b01}
+
+\item 
+\hypertarget{group___a_p_r___util_ga1a88ee138f0f70a6dca12bc8415d8db4}{\#define {\bfseries A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-X\-L\-A\-T\-E}~(A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-A\-P\-R\-\_\-\-I\-C\-O\-N\-V $|$$|$ A\-P\-U\-\_\-\-H\-A\-V\-E\-\_\-\-I\-C\-O\-N\-V)}\label{group___a_p_r___util_ga1a88ee138f0f70a6dca12bc8415d8db4}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util_ga9b0c0f8fe6546018d3a84a87fc3938f5}{\index{A\-P\-R Utility Functions@{A\-P\-R Utility Functions}!A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A@{A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}}
+\index{A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A@{A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}!APR Utility Functions@{A\-P\-R Utility Functions}}
+\subsubsection[{A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A}}\label{group___a_p_r___util_ga9b0c0f8fe6546018d3a84a87fc3938f5}
+Declare a dso module's exported module structure as A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A.
+
+Unless A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-S\-T\-A\-T\-I\-C is defined at compile time, symbols declared with A\-P\-U\-\_\-\-M\-O\-D\-U\-L\-E\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-D\-A\-T\-A are always exported. 
+\begin{DoxyCode}
+* module \hyperlink{group___a_p_r___util_ga9b0c0f8fe6546018d3a84a87fc3938f5}{APU\_MODULE\_DECLARE\_DATA} mod\_tag
+* 
+\end{DoxyCode}
+ 

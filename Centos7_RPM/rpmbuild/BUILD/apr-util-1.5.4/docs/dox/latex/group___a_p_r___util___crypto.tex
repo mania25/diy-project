@@ -1,0 +1,657 @@
+\hypertarget{group___a_p_r___util___crypto}{\section{Crypto routines}
+\label{group___a_p_r___util___crypto}\index{Crypto routines@{Crypto routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___crypto_gaa0fd79c7b12efb93d12ed63767cfcfb0}{\#define {\bfseries A\-P\-U\-\_\-\-C\-R\-Y\-P\-T\-O\-\_\-\-R\-E\-C\-O\-M\-M\-E\-N\-D\-E\-D\-\_\-\-D\-R\-I\-V\-E\-R}~\char`\"{}openssl\char`\"{}}\label{group___a_p_r___util___crypto_gaa0fd79c7b12efb93d12ed63767cfcfb0}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga9185b416f007dc01079c5a7e812767ab}{typedef struct apr\-\_\-crypto\-\_\-driver\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-driver\-\_\-t}}\label{group___a_p_r___util___crypto_ga9185b416f007dc01079c5a7e812767ab}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga83bc88e4d9f7222320c49fd874646deb}{typedef struct apr\-\_\-crypto\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-t}}\label{group___a_p_r___util___crypto_ga83bc88e4d9f7222320c49fd874646deb}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_gad853527ecf6bf2011f3df33d1b725ec1}{typedef struct apr\-\_\-crypto\-\_\-config\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-config\-\_\-t}}\label{group___a_p_r___util___crypto_gad853527ecf6bf2011f3df33d1b725ec1}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga523c9ec387ef5261b43d234f7b1a8176}{typedef struct apr\-\_\-crypto\-\_\-key\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-key\-\_\-t}}\label{group___a_p_r___util___crypto_ga523c9ec387ef5261b43d234f7b1a8176}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_gac75e3dfee18a940164adc12a639c01d0}{typedef struct apr\-\_\-crypto\-\_\-block\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-block\-\_\-t}}\label{group___a_p_r___util___crypto_gac75e3dfee18a940164adc12a639c01d0}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e} \{ \\*
+{\bfseries A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-N\-O\-N\-E}, 
+{\bfseries A\-P\-R\-\_\-\-K\-E\-Y\-\_\-3\-D\-E\-S\-\_\-192}, 
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946a8c1d6aff8c24a476659f4ef074832ee6}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128}, 
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946aff350305e3e825a8b3fa0b0a6fc9804a}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192}, 
+\\*
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946add6da30b44e6546ef242b8d1d21ca9bc}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256}
+ \}
+\item 
+enum \hyperlink{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e} \{ {\bfseries A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153af7eb194825aa815880ddef6f3ad1ce14}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B}, 
+\hyperlink{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153a4830062ad4c3ae50545c9b5b0ef0bc49}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gac67bd5ffd6961c27e3bccad02021edd5}{apr\-\_\-crypto\-\_\-init} (apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Perform once-\/only initialisation. Call once only. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga88794e872ffee43d6fefb4f13072983f}{apr\-\_\-crypto\-\_\-clear} (apr\-\_\-pool\-\_\-t $\ast$pool, void $\ast$buffer, apr\-\_\-size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Register a cleanup to zero out the buffer provided when the pool is cleaned up. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga0a6a35349a7e108ee4964c2d3be5f362}{apr\-\_\-crypto\-\_\-get\-\_\-driver} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$$\ast$driver, const char $\ast$name, const char $\ast$params, const \hyperlink{structapu__err__t}{apu\-\_\-err\-\_\-t} $\ast$$\ast$result, apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Get the driver struct for a name. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___crypto_ga4cd6fef8b4b9b2d0914183a664d6e886}{apr\-\_\-crypto\-\_\-driver\-\_\-name} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver)
+\begin{DoxyCompactList}\small\item\em Return the name of the driver. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga9795c7187a309d1710541f30b0395204}{apr\-\_\-crypto\-\_\-error} (const \hyperlink{structapu__err__t}{apu\-\_\-err\-\_\-t} $\ast$$\ast$result, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get the result of the last operation on a context. If the result is N\-U\-L\-L, the operation was successful. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga2232e263ef558dd93dec5bb4f010c737}{apr\-\_\-crypto\-\_\-make} (apr\-\_\-crypto\-\_\-t $\ast$$\ast$f, const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver, const char $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Create a context for supporting encryption. Keys, certificates, algorithms and other parameters will be set per context. More than one context can be created at one time. A cleanup will be automatically registered with the given pool to guarantee a graceful shutdown. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga784f4ab59bfab55666e9ce9fd79f7724}{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types} (apr\-\_\-hash\-\_\-t $\ast$$\ast$types, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get a hash table of key types, keyed by the name of the type against an integer pointer constant. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga55368343c0e61228a941f76caf339e41}{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes} (apr\-\_\-hash\-\_\-t $\ast$$\ast$modes, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get a hash table of key modes, keyed by the name of the mode against an integer pointer constant. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga98dea2011c0e173ab1f059c5a9ea8b14}{apr\-\_\-crypto\-\_\-passphrase} (apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$$\ast$key, apr\-\_\-size\-\_\-t $\ast$iv\-Size, const char $\ast$pass, apr\-\_\-size\-\_\-t pass\-Len, const unsigned char $\ast$salt, apr\-\_\-size\-\_\-t salt\-Len, const \hyperlink{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e} type, const \hyperlink{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e} mode, const int do\-Pad, const int iterations, const apr\-\_\-crypto\-\_\-t $\ast$f, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Create a key from the given passphrase. By default, the P\-B\-K\-D\-F2 algorithm is used to generate the key from the passphrase. It is expected that the same pass phrase will generate the same key, regardless of the backend crypto platform used. The key is cleaned up when the context is cleaned, and may be reused with multiple encryption or decryption operations. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga191077110391e4a8b5b97f8820bdae23}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$ctx, const unsigned char $\ast$$\ast$iv, const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$key, apr\-\_\-size\-\_\-t $\ast$block\-Size, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise a context for encrypting arbitrary data using the given key. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga98110d8923632130a39f9398170bb99a}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt} (unsigned char $\ast$$\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, const unsigned char $\ast$in, apr\-\_\-size\-\_\-t inlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Encrypt data provided by in, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga02552ce92915fcd044ae9efe5b555c8b}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish} (unsigned char $\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Encrypt final data block, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gab24c68f757f14a4369ef6c79a04ab8c4}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$ctx, apr\-\_\-size\-\_\-t $\ast$block\-Size, const unsigned char $\ast$iv, const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$key, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise a context for decrypting arbitrary data using the given key. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gaf82e6b7f5768952464aa4b0af481de0c}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt} (unsigned char $\ast$$\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, const unsigned char $\ast$in, apr\-\_\-size\-\_\-t inlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Decrypt data provided by in, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gac13a4f1d70437f6722018006d3dde42d}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish} (unsigned char $\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Decrypt final data block, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga0f351ebb6527dd32604de58d5199846d}{apr\-\_\-crypto\-\_\-block\-\_\-cleanup} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Clean encryption / decryption context. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga39bf6b81c4f4cef03915029eb3266cc2}{apr\-\_\-crypto\-\_\-cleanup} (apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Clean encryption / decryption context. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga748292b8c676934763237bd062d094b9}{apr\-\_\-crypto\-\_\-shutdown} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver)
+\begin{DoxyCompactList}\small\item\em Shutdown the crypto library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e@{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e@{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e}}}\label{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B@{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B}!Crypto routines@{Crypto routines}}\index{Crypto routines@{Crypto routines}!A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B@{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B}}\item[{\em 
+\hypertarget{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153af7eb194825aa815880ddef6f3ad1ce14}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B}\label{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153af7eb194825aa815880ddef6f3ad1ce14}
+}]An error condition \index{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C@{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C}!Crypto routines@{Crypto routines}}\index{Crypto routines@{Crypto routines}!A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C@{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C}}\item[{\em 
+\hypertarget{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153a4830062ad4c3ae50545c9b5b0ef0bc49}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C}\label{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153a4830062ad4c3ae50545c9b5b0ef0bc49}
+}]Electronic Code Book Cipher Block Chaining \end{description}
+\end{Desc}
+\hypertarget{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e@{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e@{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e}}}\label{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}
+Symmetric Key types understood by the library.
+
+N\-O\-T\-E\-: It is expected that this list will grow over time.
+
+Interoperability Matrix\-:
+
+The matrix is based on the testcrypto.\-c unit test, which attempts to test whether a simple encrypt/decrypt will succeed, as well as testing whether an encrypted string by one library can be decrypted by the others.
+
+Some libraries will successfully encrypt and decrypt their own data, but won't decrypt data from another library. It is hoped that over time these anomalies will be found and fixed, but until then it is recommended that ciphers are chosen that interoperate across platform.
+
+An X below means the test passes, it does not necessarily mean that encryption performed is correct or secure. Applications should stick to ciphers that pass the interoperablity tests on the right hand side of the table.
+
+Aligned data is data whose length is a multiple of the block size for the chosen cipher. Padded data is data that is not aligned by block size and must be padded by the crypto library. \begin{DoxyVerb}             OpenSSL      NSS      Interop
+            Align Pad  Align Pad  Align Pad
+\end{DoxyVerb}
+ 3\-D\-E\-S\-\_\-192/\-C\-B\-C X X X X X X 3\-D\-E\-S\-\_\-192/\-E\-C\-B X X A\-E\-S\-\_\-256/\-C\-B\-C X X X X X X A\-E\-S\-\_\-256/\-E\-C\-B X X X X A\-E\-S\-\_\-192/\-C\-B\-C X X X X A\-E\-S\-\_\-192/\-E\-C\-B X X X A\-E\-S\-\_\-128/\-C\-B\-C X X X X A\-E\-S\-\_\-128/\-E\-C\-B X X X
+
+Conclusion\-: for padded data, use 3\-D\-E\-S\-\_\-192/\-C\-B\-C or A\-E\-S\-\_\-256/\-C\-B\-C. For aligned data, use 3\-D\-E\-S\-\_\-192/\-C\-B\-C, A\-E\-S\-\_\-256/\-C\-B\-C or A\-E\-S\-\_\-256/\-E\-C\-B. \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128}!Crypto routines@{Crypto routines}}\index{Crypto routines@{Crypto routines}!A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128}}\item[{\em 
+\hypertarget{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946a8c1d6aff8c24a476659f4ef074832ee6}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128}\label{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946a8c1d6aff8c24a476659f4ef074832ee6}
+}]192 bit (3-\/\-Key) 3\-D\-E\-S \index{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192}!Crypto routines@{Crypto routines}}\index{Crypto routines@{Crypto routines}!A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192}}\item[{\em 
+\hypertarget{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946aff350305e3e825a8b3fa0b0a6fc9804a}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192}\label{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946aff350305e3e825a8b3fa0b0a6fc9804a}
+}]128 bit A\-E\-S \index{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256}!Crypto routines@{Crypto routines}}\index{Crypto routines@{Crypto routines}!A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256@{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256}}\item[{\em 
+\hypertarget{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946add6da30b44e6546ef242b8d1d21ca9bc}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256}\label{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946add6da30b44e6546ef242b8d1d21ca9bc}
+}]192 bit A\-E\-S 256 bit A\-E\-S \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___crypto_ga0f351ebb6527dd32604de58d5199846d}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-cleanup@{apr\-\_\-crypto\-\_\-block\-\_\-cleanup}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-cleanup@{apr\-\_\-crypto\-\_\-block\-\_\-cleanup}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-cleanup (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga0f351ebb6527dd32604de58d5199846d}
+
+
+Clean encryption / decryption context. 
+
+\begin{DoxyNote}{Note}
+After cleanup, a context is free to be reused if necessary. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The block context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not supported. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_gaf82e6b7f5768952464aa4b0af481de0c}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-decrypt@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-decrypt@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-decrypt}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-decrypt (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{outlen, }
+\item[{const unsigned char $\ast$}]{in, }
+\item[{apr\-\_\-size\-\_\-t}]{inlen, }
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_gaf82e6b7f5768952464aa4b0af481de0c}
+
+
+Decrypt data provided by in, write it to out. 
+
+\begin{DoxyNote}{Note}
+The number of bytes written will be written to outlen. If out is N\-U\-L\-L, outlen will contain the maximum size of the buffer needed to hold the data, including any data generated by apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish below. If $\ast$out points to N\-U\-L\-L, a buffer sufficiently large will be created from the pool provided. If $\ast$out points to a not-\/\-N\-U\-L\-L value, this value will be used as a buffer instead. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Address of a buffer to which data will be written, see note. \\
+\hline
+{\em outlen} & Length of the output will be written here. \\
+\hline
+{\em in} & Address of the buffer to read. \\
+\hline
+{\em inlen} & Length of the buffer to read. \\
+\hline
+{\em ctx} & The block context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-C\-R\-Y\-P\-T if an error occurred. Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_gac13a4f1d70437f6722018006d3dde42d}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{out, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{outlen, }
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_gac13a4f1d70437f6722018006d3dde42d}
+
+
+Decrypt final data block, write it to out. 
+
+\begin{DoxyNote}{Note}
+If necessary the final block will be written out after being padded. Typically the final block will be written to the same buffer used by apr\-\_\-crypto\-\_\-block\-\_\-decrypt, offset by the number of bytes returned as actually written by the \hyperlink{group___a_p_r___util___crypto_gaf82e6b7f5768952464aa4b0af481de0c}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt()} call. After this call, the context is cleaned and can be reused by \hyperlink{group___a_p_r___util___crypto_gab24c68f757f14a4369ef6c79a04ab8c4}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init()}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Address of a buffer to which data will be written. This buffer must already exist, and is usually the same buffer used by apr\-\_\-evp\-\_\-crypt(). See note. \\
+\hline
+{\em outlen} & Length of the output will be written here. \\
+\hline
+{\em ctx} & The block context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-C\-R\-Y\-P\-T if an error occurred. 
+
+A\-P\-R\-\_\-\-E\-P\-A\-D\-D\-I\-N\-G if padding was enabled and the block was incorrectly formatted. 
+
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_gab24c68f757f14a4369ef6c79a04ab8c4}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init@{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$}]{ctx, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{block\-Size, }
+\item[{const unsigned char $\ast$}]{iv, }
+\item[{const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$}]{key, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_gab24c68f757f14a4369ef6c79a04ab8c4}
+
+
+Initialise a context for decrypting arbitrary data using the given key. 
+
+\begin{DoxyNote}{Note}
+If $\ast$ctx is N\-U\-L\-L, a apr\-\_\-crypto\-\_\-block\-\_\-t will be created from a pool. If $\ast$ctx is not N\-U\-L\-L, $\ast$ctx must point at a previously created structure. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The block context returned, see note. \\
+\hline
+{\em block\-Size} & The block size of the cipher. \\
+\hline
+{\em iv} & Optional initialisation vector. \\
+\hline
+{\em key} & The key structure to use. \\
+\hline
+{\em p} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-I\-V if an initialisation vector is required but not specified. Returns A\-P\-R\-\_\-\-E\-I\-N\-I\-T if the backend failed to initialise the context. Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga98110d8923632130a39f9398170bb99a}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-encrypt@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-encrypt@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-encrypt}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-encrypt (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$$\ast$}]{out, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{outlen, }
+\item[{const unsigned char $\ast$}]{in, }
+\item[{apr\-\_\-size\-\_\-t}]{inlen, }
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga98110d8923632130a39f9398170bb99a}
+
+
+Encrypt data provided by in, write it to out. 
+
+\begin{DoxyNote}{Note}
+The number of bytes written will be written to outlen. If out is N\-U\-L\-L, outlen will contain the maximum size of the buffer needed to hold the data, including any data generated by apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish below. If $\ast$out points to N\-U\-L\-L, a buffer sufficiently large will be created from the pool provided. If $\ast$out points to a not-\/\-N\-U\-L\-L value, this value will be used as a buffer instead. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Address of a buffer to which data will be written, see note. \\
+\hline
+{\em outlen} & Length of the output will be written here. \\
+\hline
+{\em in} & Address of the buffer to read. \\
+\hline
+{\em inlen} & Length of the buffer to read. \\
+\hline
+{\em ctx} & The block context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-C\-R\-Y\-P\-T if an error occurred. Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga02552ce92915fcd044ae9efe5b555c8b}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish (
+\begin{DoxyParamCaption}
+\item[{unsigned char $\ast$}]{out, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{outlen, }
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$}]{ctx}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga02552ce92915fcd044ae9efe5b555c8b}
+
+
+Encrypt final data block, write it to out. 
+
+\begin{DoxyNote}{Note}
+If necessary the final block will be written out after being padded. Typically the final block will be written to the same buffer used by apr\-\_\-crypto\-\_\-block\-\_\-encrypt, offset by the number of bytes returned as actually written by the \hyperlink{group___a_p_r___util___crypto_ga98110d8923632130a39f9398170bb99a}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt()} call. After this call, the context is cleaned and can be reused by \hyperlink{group___a_p_r___util___crypto_ga191077110391e4a8b5b97f8820bdae23}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init()}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Address of a buffer to which data will be written. This buffer must already exist, and is usually the same buffer used by apr\-\_\-evp\-\_\-crypt(). See note. \\
+\hline
+{\em outlen} & Length of the output will be written here. \\
+\hline
+{\em ctx} & The block context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-C\-R\-Y\-P\-T if an error occurred. 
+
+A\-P\-R\-\_\-\-E\-P\-A\-D\-D\-I\-N\-G if padding was enabled and the block was incorrectly formatted. 
+
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga191077110391e4a8b5b97f8820bdae23}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init}}
+\index{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init@{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$}]{ctx, }
+\item[{const unsigned char $\ast$$\ast$}]{iv, }
+\item[{const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$}]{key, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{block\-Size, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga191077110391e4a8b5b97f8820bdae23}
+
+
+Initialise a context for encrypting arbitrary data using the given key. 
+
+\begin{DoxyNote}{Note}
+If $\ast$ctx is N\-U\-L\-L, a apr\-\_\-crypto\-\_\-block\-\_\-t will be created from a pool. If $\ast$ctx is not N\-U\-L\-L, $\ast$ctx must point at a previously created structure. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em ctx} & The block context returned, see note. \\
+\hline
+{\em iv} & Optional initialisation vector. If the buffer pointed to is N\-U\-L\-L, an I\-V will be created at random, in space allocated from the pool. If the buffer pointed to is not N\-U\-L\-L, the I\-V in the buffer will be used. \\
+\hline
+{\em key} & The key structure to use. \\
+\hline
+{\em block\-Size} & The block size of the cipher. \\
+\hline
+{\em p} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-I\-V if an initialisation vector is required but not specified. Returns A\-P\-R\-\_\-\-E\-I\-N\-I\-T if the backend failed to initialise the context. Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga39bf6b81c4f4cef03915029eb3266cc2}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-cleanup@{apr\-\_\-crypto\-\_\-cleanup}}
+\index{apr\-\_\-crypto\-\_\-cleanup@{apr\-\_\-crypto\-\_\-cleanup}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-cleanup}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-cleanup (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-t $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga39bf6b81c4f4cef03915029eb3266cc2}
+
+
+Clean encryption / decryption context. 
+
+\begin{DoxyNote}{Note}
+After cleanup, a context is free to be reused if necessary. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em f} & The context to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not supported. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga88794e872ffee43d6fefb4f13072983f}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-clear@{apr\-\_\-crypto\-\_\-clear}}
+\index{apr\-\_\-crypto\-\_\-clear@{apr\-\_\-crypto\-\_\-clear}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-clear}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-clear (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool, }
+\item[{void $\ast$}]{buffer, }
+\item[{apr\-\_\-size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga88794e872ffee43d6fefb4f13072983f}
+
+
+Register a cleanup to zero out the buffer provided when the pool is cleaned up. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to register the cleanup \\
+\hline
+{\em buffer} & -\/ buffer to zero out \\
+\hline
+{\em size} & -\/ size of the buffer to zero out \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___crypto_ga4cd6fef8b4b9b2d0914183a664d6e886}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-driver\-\_\-name@{apr\-\_\-crypto\-\_\-driver\-\_\-name}}
+\index{apr\-\_\-crypto\-\_\-driver\-\_\-name@{apr\-\_\-crypto\-\_\-driver\-\_\-name}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-driver\-\_\-name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-crypto\-\_\-driver\-\_\-name (
+\begin{DoxyParamCaption}
+\item[{const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$}]{driver}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga4cd6fef8b4b9b2d0914183a664d6e886}
+
+
+Return the name of the driver. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ The driver in use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the driver. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga9795c7187a309d1710541f30b0395204}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-error@{apr\-\_\-crypto\-\_\-error}}
+\index{apr\-\_\-crypto\-\_\-error@{apr\-\_\-crypto\-\_\-error}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-error}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-error (
+\begin{DoxyParamCaption}
+\item[{const {\bf apu\-\_\-err\-\_\-t} $\ast$$\ast$}]{result, }
+\item[{const apr\-\_\-crypto\-\_\-t $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga9795c7187a309d1710541f30b0395204}
+
+
+Get the result of the last operation on a context. If the result is N\-U\-L\-L, the operation was successful. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em result} & -\/ the result structure \\
+\hline
+{\em f} & -\/ context pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga55368343c0e61228a941f76caf339e41}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes@{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes}}
+\index{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes@{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-hash\-\_\-t $\ast$$\ast$}]{modes, }
+\item[{const apr\-\_\-crypto\-\_\-t $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga55368343c0e61228a941f76caf339e41}
+
+
+Get a hash table of key modes, keyed by the name of the mode against an integer pointer constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em modes} & -\/ hashtable of key modes keyed to constants. \\
+\hline
+{\em f} & -\/ encryption context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga784f4ab59bfab55666e9ce9fd79f7724}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types@{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types}}
+\index{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types@{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-hash\-\_\-t $\ast$$\ast$}]{types, }
+\item[{const apr\-\_\-crypto\-\_\-t $\ast$}]{f}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga784f4ab59bfab55666e9ce9fd79f7724}
+
+
+Get a hash table of key types, keyed by the name of the type against an integer pointer constant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em types} & -\/ hashtable of key types keyed to constants. \\
+\hline
+{\em f} & -\/ encryption context \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga0a6a35349a7e108ee4964c2d3be5f362}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-get\-\_\-driver@{apr\-\_\-crypto\-\_\-get\-\_\-driver}}
+\index{apr\-\_\-crypto\-\_\-get\-\_\-driver@{apr\-\_\-crypto\-\_\-get\-\_\-driver}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-get\-\_\-driver}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-get\-\_\-driver (
+\begin{DoxyParamCaption}
+\item[{const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$$\ast$}]{driver, }
+\item[{const char $\ast$}]{name, }
+\item[{const char $\ast$}]{params, }
+\item[{const {\bf apu\-\_\-err\-\_\-t} $\ast$$\ast$}]{result, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga0a6a35349a7e108ee4964c2d3be5f362}
+
+
+Get the driver struct for a name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ pointer to driver struct. \\
+\hline
+{\em name} & -\/ driver name \\
+\hline
+{\em params} & -\/ array of initialisation parameters \\
+\hline
+{\em result} & -\/ result and error message on failure \\
+\hline
+{\em pool} & -\/ (process) pool to register cleanup \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S for success 
+
+A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L for no driver (when D\-S\-O not enabled) 
+
+A\-P\-R\-\_\-\-E\-D\-S\-O\-O\-P\-E\-N if D\-S\-O driver file can't be opened 
+
+A\-P\-R\-\_\-\-E\-S\-Y\-M\-N\-O\-T\-F\-O\-U\-N\-D if the driver file doesn't contain a driver 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+N\-S\-S\-: the params can have \char`\"{}dir\char`\"{}, \char`\"{}key3\char`\"{}, \char`\"{}cert7\char`\"{} and \char`\"{}secmod\char`\"{} keys, each followed by an equal sign and a value. Such key/value pairs can be delimited by space or tab. If the value contains a space, surround the whole key value pair in quotes\-: \char`\"{}dir=\-My Directory\char`\"{}. 
+
+Open\-S\-S\-L\-: currently no params are supported. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___crypto_gac67bd5ffd6961c27e3bccad02021edd5}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-init@{apr\-\_\-crypto\-\_\-init}}
+\index{apr\-\_\-crypto\-\_\-init@{apr\-\_\-crypto\-\_\-init}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_gac67bd5ffd6961c27e3bccad02021edd5}
+
+
+Perform once-\/only initialisation. Call once only. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pool} & -\/ pool to register any shutdown cleanups, etc \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-N\-O\-T\-I\-M\-P\-L in case of no crypto support. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga2232e263ef558dd93dec5bb4f010c737}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-make@{apr\-\_\-crypto\-\_\-make}}
+\index{apr\-\_\-crypto\-\_\-make@{apr\-\_\-crypto\-\_\-make}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-make}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-make (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-t $\ast$$\ast$}]{f, }
+\item[{const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$}]{driver, }
+\item[{const char $\ast$}]{params, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga2232e263ef558dd93dec5bb4f010c737}
+
+
+Create a context for supporting encryption. Keys, certificates, algorithms and other parameters will be set per context. More than one context can be created at one time. A cleanup will be automatically registered with the given pool to guarantee a graceful shutdown. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & -\/ context pointer will be written here \\
+\hline
+{\em driver} & -\/ driver to use \\
+\hline
+{\em params} & -\/ array of key parameters \\
+\hline
+{\em pool} & -\/ process pool \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-N\-O\-E\-N\-G\-I\-N\-E when the engine specified does not exist. A\-P\-R\-\_\-\-E\-I\-N\-I\-T\-E\-N\-G\-I\-N\-E if the engine cannot be initialised. 
+\end{DoxyReturn}
+\begin{DoxyRemark}{Remarks}
+N\-S\-S\-: currently no params are supported. 
+
+Open\-S\-S\-L\-: the params can have \char`\"{}engine\char`\"{} as a key, followed by an equal sign and a value. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___crypto_ga98dea2011c0e173ab1f059c5a9ea8b14}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-passphrase@{apr\-\_\-crypto\-\_\-passphrase}}
+\index{apr\-\_\-crypto\-\_\-passphrase@{apr\-\_\-crypto\-\_\-passphrase}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-passphrase}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-passphrase (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$$\ast$}]{key, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{iv\-Size, }
+\item[{const char $\ast$}]{pass, }
+\item[{apr\-\_\-size\-\_\-t}]{pass\-Len, }
+\item[{const unsigned char $\ast$}]{salt, }
+\item[{apr\-\_\-size\-\_\-t}]{salt\-Len, }
+\item[{const {\bf apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e}}]{type, }
+\item[{const {\bf apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e}}]{mode, }
+\item[{const int}]{do\-Pad, }
+\item[{const int}]{iterations, }
+\item[{const apr\-\_\-crypto\-\_\-t $\ast$}]{f, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga98dea2011c0e173ab1f059c5a9ea8b14}
+
+
+Create a key from the given passphrase. By default, the P\-B\-K\-D\-F2 algorithm is used to generate the key from the passphrase. It is expected that the same pass phrase will generate the same key, regardless of the backend crypto platform used. The key is cleaned up when the context is cleaned, and may be reused with multiple encryption or decryption operations. 
+
+\begin{DoxyNote}{Note}
+If $\ast$key is N\-U\-L\-L, a apr\-\_\-crypto\-\_\-key\-\_\-t will be created from a pool. If $\ast$key is not N\-U\-L\-L, $\ast$key must point at a previously created structure. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The key returned, see note. \\
+\hline
+{\em iv\-Size} & The size of the initialisation vector will be returned, based on whether an I\-V is relevant for this type of crypto. \\
+\hline
+{\em pass} & The passphrase to use. \\
+\hline
+{\em pass\-Len} & The passphrase length in bytes \\
+\hline
+{\em salt} & The salt to use. \\
+\hline
+{\em salt\-Len} & The salt length in bytes \\
+\hline
+{\em type} & 3\-D\-E\-S\-\_\-192, A\-E\-S\-\_\-128, A\-E\-S\-\_\-192, A\-E\-S\-\_\-256. \\
+\hline
+{\em mode} & Electronic Code Book / Cipher Block Chaining. \\
+\hline
+{\em do\-Pad} & Pad if necessary. \\
+\hline
+{\em iterations} & Number of iterations to use in algorithm \\
+\hline
+{\em f} & The context to use. \\
+\hline
+{\em p} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-K\-E\-Y if the pass phrase is missing or empty, or if a backend error occurred while generating the key. A\-P\-R\-\_\-\-E\-N\-O\-C\-I\-P\-H\-E\-R if the type or mode is not supported by the particular backend. A\-P\-R\-\_\-\-E\-K\-E\-Y\-T\-Y\-P\-E if the key type is not known. A\-P\-R\-\_\-\-E\-P\-A\-D\-D\-I\-N\-G if padding was requested but is not supported. A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not implemented. 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___crypto_ga748292b8c676934763237bd062d094b9}{\index{Crypto routines@{Crypto routines}!apr\-\_\-crypto\-\_\-shutdown@{apr\-\_\-crypto\-\_\-shutdown}}
+\index{apr\-\_\-crypto\-\_\-shutdown@{apr\-\_\-crypto\-\_\-shutdown}!Crypto routines@{Crypto routines}}
+\subsubsection[{apr\-\_\-crypto\-\_\-shutdown}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-crypto\-\_\-shutdown (
+\begin{DoxyParamCaption}
+\item[{const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$}]{driver}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___crypto_ga748292b8c676934763237bd062d094b9}
+
+
+Shutdown the crypto library. 
+
+\begin{DoxyNote}{Note}
+After shutdown, it is expected that the init function can be called again. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em driver} & -\/ driver to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if not supported. 
+\end{DoxyReturn}

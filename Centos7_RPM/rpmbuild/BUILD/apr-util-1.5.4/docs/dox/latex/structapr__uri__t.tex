@@ -1,0 +1,91 @@
+\hypertarget{structapr__uri__t}{\section{apr\-\_\-uri\-\_\-t Struct Reference}
+\label{structapr__uri__t}\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-uri.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a5d62fa370265b6bc956aa86d36024a5d}{scheme}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a985b18875320d40cdb33d722ecf20ac2}{hostinfo}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a2b763f50bec4fda0cf67e5238275b5fd}{user}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a7eabf4f785f98a12762076f7519d3959}{password}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a8c6bf3dfca3d159f091377d9f7228aec}{hostname}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_ad9d69051e1fb3f3709260c3c3c014012}{port\-\_\-str}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a61cff1baadb3c1b52a34b502c25bba7f}{path}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a88d889bcda9e95696022f04ffb470678}{query}
+\item 
+char $\ast$ \hyperlink{structapr__uri__t_a0e4abeaa1379c79dcc6fdac01d76715a}{fragment}
+\item 
+struct hostent $\ast$ \hyperlink{structapr__uri__t_a2ec4edaa7288f3c1ebcb8cbca3d0379c}{hostent}
+\item 
+apr\-\_\-port\-\_\-t \hyperlink{structapr__uri__t_a6e6e858ce56b5d58389287c1cc1134fa}{port}
+\item 
+unsigned \hyperlink{structapr__uri__t_a6f77dda6db6c31c2c3652f6026ea6b73}{is\-\_\-initialized}\-:1
+\item 
+unsigned \hyperlink{structapr__uri__t_ae28c03382cb6fcb226dfc76193699342}{dns\-\_\-looked\-\_\-up}\-:1
+\item 
+unsigned \hyperlink{structapr__uri__t_a805976fea6ef65f3ec1185c7d6dcf7f3}{dns\-\_\-resolved}\-:1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A structure to encompass all of the fields in a uri 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__uri__t_ae28c03382cb6fcb226dfc76193699342}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!dns\-\_\-looked\-\_\-up@{dns\-\_\-looked\-\_\-up}}
+\index{dns\-\_\-looked\-\_\-up@{dns\-\_\-looked\-\_\-up}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{dns\-\_\-looked\-\_\-up}]{\setlength{\rightskip}{0pt plus 5cm}unsigned apr\-\_\-uri\-\_\-t\-::dns\-\_\-looked\-\_\-up}}\label{structapr__uri__t_ae28c03382cb6fcb226dfc76193699342}
+has the D\-N\-S been looked up yet \hypertarget{structapr__uri__t_a805976fea6ef65f3ec1185c7d6dcf7f3}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!dns\-\_\-resolved@{dns\-\_\-resolved}}
+\index{dns\-\_\-resolved@{dns\-\_\-resolved}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{dns\-\_\-resolved}]{\setlength{\rightskip}{0pt plus 5cm}unsigned apr\-\_\-uri\-\_\-t\-::dns\-\_\-resolved}}\label{structapr__uri__t_a805976fea6ef65f3ec1185c7d6dcf7f3}
+has the dns been resolved yet \hypertarget{structapr__uri__t_a0e4abeaa1379c79dcc6fdac01d76715a}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!fragment@{fragment}}
+\index{fragment@{fragment}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{fragment}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::fragment}}\label{structapr__uri__t_a0e4abeaa1379c79dcc6fdac01d76715a}
+Trailing \char`\"{}\#fragment\char`\"{} string, if present \hypertarget{structapr__uri__t_a2ec4edaa7288f3c1ebcb8cbca3d0379c}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!hostent@{hostent}}
+\index{hostent@{hostent}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{hostent}]{\setlength{\rightskip}{0pt plus 5cm}struct hostent$\ast$ apr\-\_\-uri\-\_\-t\-::hostent}}\label{structapr__uri__t_a2ec4edaa7288f3c1ebcb8cbca3d0379c}
+structure returned from gethostbyname() \hypertarget{structapr__uri__t_a985b18875320d40cdb33d722ecf20ac2}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!hostinfo@{hostinfo}}
+\index{hostinfo@{hostinfo}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{hostinfo}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::hostinfo}}\label{structapr__uri__t_a985b18875320d40cdb33d722ecf20ac2}
+combined \mbox{[}user\mbox{[}\-:password\mbox{]}@\mbox{]}host\mbox{[}\-:port\mbox{]} \hypertarget{structapr__uri__t_a8c6bf3dfca3d159f091377d9f7228aec}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!hostname@{hostname}}
+\index{hostname@{hostname}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{hostname}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::hostname}}\label{structapr__uri__t_a8c6bf3dfca3d159f091377d9f7228aec}
+hostname from U\-R\-I (or from Host\-: header) \hypertarget{structapr__uri__t_a6f77dda6db6c31c2c3652f6026ea6b73}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!is\-\_\-initialized@{is\-\_\-initialized}}
+\index{is\-\_\-initialized@{is\-\_\-initialized}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{is\-\_\-initialized}]{\setlength{\rightskip}{0pt plus 5cm}unsigned apr\-\_\-uri\-\_\-t\-::is\-\_\-initialized}}\label{structapr__uri__t_a6f77dda6db6c31c2c3652f6026ea6b73}
+has the structure been initialized \hypertarget{structapr__uri__t_a7eabf4f785f98a12762076f7519d3959}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!password@{password}}
+\index{password@{password}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{password}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::password}}\label{structapr__uri__t_a7eabf4f785f98a12762076f7519d3959}
+password, as in \href{http://user:passwd}{\tt http\-://user\-:passwd}@host\-:port/ \hypertarget{structapr__uri__t_a61cff1baadb3c1b52a34b502c25bba7f}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!path@{path}}
+\index{path@{path}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{path}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::path}}\label{structapr__uri__t_a61cff1baadb3c1b52a34b502c25bba7f}
+the request path (or N\-U\-L\-L if only scheme\-://host was given) \hypertarget{structapr__uri__t_a6e6e858ce56b5d58389287c1cc1134fa}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!port@{port}}
+\index{port@{port}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-port\-\_\-t apr\-\_\-uri\-\_\-t\-::port}}\label{structapr__uri__t_a6e6e858ce56b5d58389287c1cc1134fa}
+The port number, numeric, valid only if port\-\_\-str != N\-U\-L\-L \hypertarget{structapr__uri__t_ad9d69051e1fb3f3709260c3c3c014012}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!port\-\_\-str@{port\-\_\-str}}
+\index{port\-\_\-str@{port\-\_\-str}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{port\-\_\-str}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::port\-\_\-str}}\label{structapr__uri__t_ad9d69051e1fb3f3709260c3c3c014012}
+port string (integer representation is in \char`\"{}port\char`\"{}) \hypertarget{structapr__uri__t_a88d889bcda9e95696022f04ffb470678}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!query@{query}}
+\index{query@{query}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{query}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::query}}\label{structapr__uri__t_a88d889bcda9e95696022f04ffb470678}
+Everything after a '?' in the path, if present \hypertarget{structapr__uri__t_a5d62fa370265b6bc956aa86d36024a5d}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!scheme@{scheme}}
+\index{scheme@{scheme}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{scheme}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::scheme}}\label{structapr__uri__t_a5d62fa370265b6bc956aa86d36024a5d}
+scheme (\char`\"{}http\char`\"{}/\char`\"{}ftp\char`\"{}/...) \hypertarget{structapr__uri__t_a2b763f50bec4fda0cf67e5238275b5fd}{\index{apr\-\_\-uri\-\_\-t@{apr\-\_\-uri\-\_\-t}!user@{user}}
+\index{user@{user}!apr_uri_t@{apr\-\_\-uri\-\_\-t}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ apr\-\_\-uri\-\_\-t\-::user}}\label{structapr__uri__t_a2b763f50bec4fda0cf67e5238275b5fd}
+user name, as in \href{http://user:passwd}{\tt http\-://user\-:passwd}@host\-:port/ 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__uri_8h}{apr\-\_\-uri.\-h}\end{DoxyCompactItemize}

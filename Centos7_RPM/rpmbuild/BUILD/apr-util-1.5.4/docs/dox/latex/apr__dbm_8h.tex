@@ -1,0 +1,67 @@
+\hypertarget{apr__dbm_8h}{\section{include/apr\-\_\-dbm.h File Reference}
+\label{apr__dbm_8h}\index{include/apr\-\_\-dbm.\-h@{include/apr\-\_\-dbm.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L D\-B\-M library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-file\-\_\-info.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m_gacd6e9c0783bd0c232bdd02b14655b6b1}{A\-P\-R\-\_\-\-D\-B\-M\-\_\-\-R\-E\-A\-D\-O\-N\-L\-Y}~1
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m_gaf693166e76d6f84b12a0d75307687053}{A\-P\-R\-\_\-\-D\-B\-M\-\_\-\-R\-E\-A\-D\-W\-R\-I\-T\-E}~2
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m_gabf461a27dab1f4cc7405e891d2ad6522}{A\-P\-R\-\_\-\-D\-B\-M\-\_\-\-R\-W\-C\-R\-E\-A\-T\-E}~3
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m_ga8bffe207158704162c24fa74dc1b9264}{A\-P\-R\-\_\-\-D\-B\-M\-\_\-\-R\-W\-T\-R\-U\-N\-C}~4
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} \hyperlink{group___a_p_r___util___d_b_m_ga47f6ff771143ed7b7987c686c20c8536}{apr\-\_\-dbm\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_gaf7295ba8157f487b78319e168e1344b4}{apr\-\_\-dbm\-\_\-open\-\_\-ex} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$$\ast$dbm, const char $\ast$type, const char $\ast$name, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perm, apr\-\_\-pool\-\_\-t $\ast$cntxt)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_gab2d9cc87f4922ae11a175556ec66e390}{apr\-\_\-dbm\-\_\-open} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$$\ast$dbm, const char $\ast$name, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perm, apr\-\_\-pool\-\_\-t $\ast$cntxt)
+\item 
+void \hyperlink{group___a_p_r___util___d_b_m_gaad1e796c7436bf855ce6ec3c567eb3eb}{apr\-\_\-dbm\-\_\-close} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_gac990e695db20e3fa6998089081685196}{apr\-\_\-dbm\-\_\-fetch} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pvalue)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_ga014a6acf6f86aaac5fc44af5b8951051}{apr\-\_\-dbm\-\_\-store} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} value)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_ga3b218881f3bb9f8e909f32d99ae2ad34}{apr\-\_\-dbm\-\_\-delete} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_m_ga20379004362aeeef11166bdaa8c47d1e}{apr\-\_\-dbm\-\_\-exists} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_gae5428eaa8df9a036212c8fad60e95e3c}{apr\-\_\-dbm\-\_\-firstkey} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pkey)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_ga92b8233ccf421b89d2144f834dd6f9a6}{apr\-\_\-dbm\-\_\-nextkey} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pkey)
+\item 
+void \hyperlink{group___a_p_r___util___d_b_m_gacd9f6bc4a633720ac882daba9e0d9873}{apr\-\_\-dbm\-\_\-freedatum} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} data)
+\item 
+char $\ast$ \hyperlink{group___a_p_r___util___d_b_m_ga597bd9e35de9575afb55b3326789c0f3}{apr\-\_\-dbm\-\_\-geterror} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, int $\ast$errcode, char $\ast$errbuf, apr\-\_\-size\-\_\-t errbufsize)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m_ga7a3a1bd1ece38d90739ecb7cf72bf4fb}{apr\-\_\-dbm\-\_\-get\-\_\-usednames\-\_\-ex} (apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$type, const char $\ast$pathname, const char $\ast$$\ast$used1, const char $\ast$$\ast$used2)
+\item 
+void \hyperlink{group___a_p_r___util___d_b_m_ga1ee45897c5e1b0718dfa4bd35a75dbe1}{apr\-\_\-dbm\-\_\-get\-\_\-usednames} (apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$pathname, const char $\ast$$\ast$used1, const char $\ast$$\ast$used2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L D\-B\-M library. 

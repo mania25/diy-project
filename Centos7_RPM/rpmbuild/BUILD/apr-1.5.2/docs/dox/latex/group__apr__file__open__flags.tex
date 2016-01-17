@@ -1,0 +1,247 @@
+\hypertarget{group__apr__file__open__flags}{\section{File Open Flags/\-Routines}
+\label{group__apr__file__open__flags}\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}~0x00001
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}~0x00002
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}~0x00004
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}~0x00008
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}~0x00010
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}~0x00020
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}~0x00040
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}~0x00080
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}~0x00100
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}~0x00200
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}~0x00400
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}~0x00800
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}~0x01000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}~0x04000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E}~0x08000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}~0x40000
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}{A\-P\-R\-\_\-\-R\-E\-A\-D}~\hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}{A\-P\-R\-\_\-\-W\-R\-I\-T\-E}~\hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}{A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E}~\hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}{A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D}~\hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}{A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}~\hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}{A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y}~\hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}{A\-P\-R\-\_\-\-E\-X\-C\-L}~\hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}{A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}~\hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}{A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}~\hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}{A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D}~\hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}{A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}~\hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}{A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}~\hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}{A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}~\hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}
+\item 
+\#define \hyperlink{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}{A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}~\hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D@{A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D}}
+\index{A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D@{A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-A\-P\-P\-E\-N\-D~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}}}\label{group__apr__file__open__flags_ga26d3de2bae5c90e5124869f56c141c2e}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000020}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y@{A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y}}
+\index{A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y@{A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}}}\label{group__apr__file__open__flags_ga0e7556bac0cc0d1dafdf38952a4e4015}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000022}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D@{A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}}
+\index{A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D@{A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}}}\label{group__apr__file__open__flags_ga6edc818199e8b90e3dabf97c42a27158}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000024}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E@{A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E}}
+\index{A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E@{A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-C\-R\-E\-A\-T\-E~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}}}\label{group__apr__file__open__flags_gac210e96bc821dbaa83c326e775dad028}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000019}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E@{A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}}
+\index{A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E@{A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}}}\label{group__apr__file__open__flags_gaebc7f034a72dffe64858b1b9451994ff}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000025}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-E\-X\-C\-L@{A\-P\-R\-\_\-\-E\-X\-C\-L}}
+\index{A\-P\-R\-\_\-\-E\-X\-C\-L@{A\-P\-R\-\_\-\-E\-X\-C\-L}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-E\-X\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-E\-X\-C\-L~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}}}\label{group__apr__file__open__flags_ga209c26b2b903cc23417f6781d4edf891}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000023}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P@{A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}}
+\index{A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P@{A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-L\-E\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}}}\label{group__apr__file__open__flags_ga3ef1061dbb3adf595701bd12edb062f9}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000028}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-A\-P\-P\-E\-N\-D~0x00008}}\label{group__apr__file__open__flags_ga45f353db9b71d4760a3f35cf3781cfc8}
+Append to the end of the file \hypertarget{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-I\-N\-A\-R\-Y~0x00020}}\label{group__apr__file__open__flags_gacb20b3028864f34cb26314fe2cacc3fa}
+Open the file in binary mode (This flag is ignored on U\-N\-I\-X because it has no meaning) \hypertarget{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-B\-U\-F\-F\-E\-R\-E\-D~0x00080}}\label{group__apr__file__open__flags_gac48fd4c853c9f561632a2e8aaf5d8d97}
+Open the file for buffered I/\-O \hypertarget{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E~0x00004}}\label{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}
+Create the file if not there \hypertarget{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-D\-E\-L\-O\-N\-C\-L\-O\-S\-E~0x00100}}\label{group__apr__file__open__flags_ga5d3756f6d242c667ed1d3f54af4916eb}
+Delete the file after close \hypertarget{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-E\-X\-C\-L~0x00040}}\label{group__apr__file__open__flags_gabb7fb062cdf1d58faee8c7ea518496f1}
+Open should fail if \hyperlink{group__apr__file__open__flags_gafe94f21ccbf411172e70e7f473af251a}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-C\-R\-E\-A\-T\-E} and file exists. \hypertarget{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E~0x04000}}\label{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}
+Platform dependent flag to enable large file support, see W\-A\-R\-N\-I\-N\-G below
+
+\begin{DoxyWarning}{Warning}
+A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E flag only has effect on some platforms where sizeof(apr\-\_\-off\-\_\-t) == 4. Where implemented, it allows opening and writing to a file which exceeds the size which can be represented by apr\-\_\-off\-\_\-t (2 gigabytes). When a file's size does exceed 2\-Gb, \hyperlink{group__apr__file__io_ga39be7fe05d0dda4a28f4358b61a44ac8}{apr\-\_\-file\-\_\-info\-\_\-get()} will fail with an error on the descriptor, likewise \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\-\_\-stat()}/apr\-\_\-lstat() will fail on the filename. \hyperlink{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{apr\-\_\-dir\-\_\-read()} will fail with \hyperlink{group___a_p_r___error_ga64dff43b83bcefd3f3c751be6b864ca1}{A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E} on a directory entry for a large file depending on the particular A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-$\ast$ flags. Generally, it is not recommended to use this flag. 
+\end{DoxyWarning}
+\hypertarget{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-C\-L\-E\-A\-N\-U\-P~0x00800}}\label{group__apr__file__open__flags_ga3fc9b5a7791d9f462997cd29de67eb80}
+Do not register a cleanup when the file is opened. The apr\-\_\-os\-\_\-file\-\_\-t handle in apr\-\_\-file\-\_\-t will not be closed when the pool is destroyed. \hypertarget{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K~0x40000}}\label{group__apr__file__open__flags_ga31e4d14068147e43e1778bcf975dda62}
+Platform dependent flag to enable non blocking file io
+
+\begin{DoxyWarning}{Warning}
+A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K is not implemented on all platforms. Callers should be prepared for it to fail with \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L}. 
+\end{DoxyWarning}
+\hypertarget{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D~0x00001}}\label{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}
+Open the file for reading \hypertarget{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D~0x01000}}\label{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}
+Advisory flag that this file should support apr\-\_\-socket\-\_\-sendfile operation \hypertarget{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K~0x00400}}\label{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}
+Platform dependent support for higher level locked read/write access to support writes across process/machines \hypertarget{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E~0x08000}}\label{group__apr__file__open__flags_ga0d155e9bb7fbf1a5cd4e84b5ede059f4}
+Platform dependent flag to enable sparse file support, see W\-A\-R\-N\-I\-N\-G below
+
+\begin{DoxyWarning}{Warning}
+A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-P\-A\-R\-S\-E may, depending on platform, convert a normal file to a sparse file. Some applications may be unable to decipher a sparse file, so it's critical that the sparse file flag should only be used for files accessed only by A\-P\-R or other applications known to be able to decipher them. A\-P\-R does not guarantee that it will compress the file into sparse segments if it was previously created and written without the sparse flag. On platforms which do not understand, or on file systems which cannot handle sparse files, the flag is ignored by \hyperlink{group__apr__file__io_gabda14cbf242fb4fe99055434213e5446}{apr\-\_\-file\-\_\-open()}. 
+\end{DoxyWarning}
+\hypertarget{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E~0x00010}}\label{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}
+Open the file and truncate to 0 length \hypertarget{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E~0x00002}}\label{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}
+Open the file for writing \hypertarget{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D~0x00200}}\label{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}
+Platform dependent tag to open the file for use across multiple threads \hypertarget{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E@{A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E@{A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E}}}\label{group__apr__file__open__flags_gaafa04fd4ec71910a5d7af1c7f5596bad}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000030}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gaf6cfaa4789e6264afd186235f0adbc22}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-L\-A\-R\-G\-E\-F\-I\-L\-E} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-R\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-R\-E\-A\-D@{A\-P\-R\-\_\-\-R\-E\-A\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-A\-D~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D}}}\label{group__apr__file__open__flags_ga0021db78d799d1c8825b701c7efee483}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000017}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gaf9e7303f028b130ff7d4b209d6662d7d}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-R\-E\-A\-D} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}}
+\index{A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D@{A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D}}}\label{group__apr__file__open__flags_ga17e216aadb23254580258889e10c53f3}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000029}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga60c21e28e4a612d58a874fe2cc71a6e4}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-E\-N\-D\-F\-I\-L\-E\-\_\-\-E\-N\-A\-B\-L\-E\-D} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K@{A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K@{A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K}}}\label{group__apr__file__open__flags_ga41277154f4f754a22287ed90e9466811}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000027}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga426f6e2a8457ab410d99248269059a18}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E@{A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}}
+\index{A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E@{A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E}}}\label{group__apr__file__open__flags_gaa8898fdebd69d3a64286731b713a6dc9}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000021}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga09b05a5bd5db534b93794f7657bcb146}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-T\-R\-U\-N\-C\-A\-T\-E} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-W\-R\-I\-T\-E}}
+\index{A\-P\-R\-\_\-\-W\-R\-I\-T\-E@{A\-P\-R\-\_\-\-W\-R\-I\-T\-E}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-W\-R\-I\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-W\-R\-I\-T\-E~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E}}}\label{group__apr__file__open__flags_ga3e427e53aceb1ccdb078d9a03cd63d01}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000018}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_gac598bb95fc9476b0bf2ed0b1c308842c}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-W\-R\-I\-T\-E} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}{\index{File Open Flags/\-Routines@{File Open Flags/\-Routines}!A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D@{A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D}!File Open Flags/Routines@{File Open Flags/\-Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-X\-T\-H\-R\-E\-A\-D~{\bf A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D}}}\label{group__apr__file__open__flags_gaa9120c0e395d8a0e640b5eafa8f11cce}
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000026}{Deprecated}]\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__open__flags_ga435cd9b2604b11796779c23ffa00a3dd}{A\-P\-R\-\_\-\-F\-O\-P\-E\-N\-\_\-\-X\-T\-H\-R\-E\-A\-D} 
+\end{DoxySeeAlso}

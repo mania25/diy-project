@@ -1,0 +1,56 @@
+\hypertarget{apr__reslist_8h}{\section{include/apr\-\_\-reslist.h File Reference}
+\label{apr__reslist_8h}\index{include/apr\-\_\-reslist.\-h@{include/apr\-\_\-reslist.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L Resource List Routines.  
+
+
+{\ttfamily \#include \char`\"{}apr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-time.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___r_l_gae442d99e6a2eef4a4957f0360822fcac}{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T}~0
+\item 
+\#define \hyperlink{group___a_p_r___util___r_l_gad93b2c229d154c8f6a5c9dfcd7488756}{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} \hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t}
+\item 
+\hypertarget{group___a_p_r___util___r_l_gab43e73c2fb526476d3e56d51f5aa214c}{typedef apr\-\_\-status\-\_\-t($\ast$ {\bfseries apr\-\_\-reslist\-\_\-constructor} )(void $\ast$$\ast$resource, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)}\label{group___a_p_r___util___r_l_gab43e73c2fb526476d3e56d51f5aa214c}
+
+\item 
+\hypertarget{group___a_p_r___util___r_l_ga60813240d319787f0430ae3171af838a}{typedef apr\-\_\-status\-\_\-t($\ast$ {\bfseries apr\-\_\-reslist\-\_\-destructor} )(void $\ast$resource, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)}\label{group___a_p_r___util___r_l_ga60813240d319787f0430ae3171af838a}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga608ebcddce542603a7f1d3cf51ae8d3c}{apr\-\_\-reslist\-\_\-create} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$$\ast$reslist, int min, int smax, int hmax, apr\-\_\-interval\-\_\-time\-\_\-t ttl, apr\-\_\-reslist\-\_\-constructor con, apr\-\_\-reslist\-\_\-destructor de, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga103e0cbac6c5da7cb93d4e52799233cb}{apr\-\_\-reslist\-\_\-destroy} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gadfbb592b31ff9215f45d3280636e41d7}{apr\-\_\-reslist\-\_\-acquire} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$$\ast$resource)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gaf65ca1701994a0323df639cdb4a8d8b2}{apr\-\_\-reslist\-\_\-release} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$resource)
+\item 
+void \hyperlink{group___a_p_r___util___r_l_gafe06c964d04a568f2625fb5a9ba7bad6}{apr\-\_\-reslist\-\_\-timeout\-\_\-set} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, apr\-\_\-interval\-\_\-time\-\_\-t timeout)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___r_l_gac37fbbcbc8a98ba9ed017638a2c6c1b7}{apr\-\_\-reslist\-\_\-acquired\-\_\-count} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga346c0604115a9659cf23ed0cc781f7a9}{apr\-\_\-reslist\-\_\-invalidate} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$resource)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gaa13a7724a30b5a37ac13548bd8dc56f6}{apr\-\_\-reslist\-\_\-maintain} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+void \hyperlink{group___a_p_r___util___r_l_ga7e8adfc4b12ffb63c6795d8d79ee5e95}{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, apr\-\_\-uint32\-\_\-t mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L Resource List Routines. 

@@ -1,0 +1,125 @@
+\hypertarget{group__apr__hook__probes}{\section{Hook probe capability}
+\label{group__apr__hook__probes}\index{Hook probe capability@{Hook probe capability}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__hook__probes_ga258d03fb4cf228fcb9d2fa094625ffaf}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D}
+\item 
+\#define \hyperlink{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y}(ud, ns, name, args)
+\item 
+\#define \hyperlink{group__apr__hook__probes_gab3017efe0bb66b97b6b7931245211692}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N}(ud, ns, name, rv, args)
+\item 
+\#define \hyperlink{group__apr__hook__probes_ga030df3d86fe087857b32388e01ad3928}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E}(ud, ns, name, src, args)
+\item 
+\#define \hyperlink{group__apr__hook__probes_ga5793578cb2da7815b20b9a87c281ed7c}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}(ud, ns, name, src, rv, args)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R hooks provide a trace probe capability for capturing the flow of control and return values with hooks.
+
+In order to use this facility, the application must define the symbol A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-S\-\_\-\-E\-N\-A\-B\-L\-E\-D and the four A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\- macros described below before including \hyperlink{apr__hooks_8h}{apr\-\_\-hooks.\-h} in files that use the A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-$\ast$ macros.
+
+This probe facility is not provided for A\-P\-R optional hooks. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__hook__probes_ga258d03fb4cf228fcb9d2fa094625ffaf}{\index{Hook probe capability@{Hook probe capability}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D}!Hook probe capability@{Hook probe capability}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-I\-N\-T\-\_\-\-D\-C\-L\-\_\-\-U\-D}}\label{group__apr__hook__probes_ga258d03fb4cf228fcb9d2fa094625ffaf}
+internal implementation detail to avoid the ud declaration when hook probes are not used \hypertarget{group__apr__hook__probes_ga5793578cb2da7815b20b9a87c281ed7c}{\index{Hook probe capability@{Hook probe capability}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}!Hook probe capability@{Hook probe capability}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-C\-O\-M\-P\-L\-E\-T\-E(
+\begin{DoxyParamCaption}
+\item[{}]{ud, }
+\item[{}]{ns, }
+\item[{}]{name, }
+\item[{}]{src, }
+\item[{}]{rv, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}}\label{group__apr__hook__probes_ga5793578cb2da7815b20b9a87c281ed7c}
+User-\/defined hook probe macro that is invoked after calling a hook function. 
+\begin{DoxyParams}{Parameters}
+{\em ud} & A void $\ast$ user data field that was filled in by the user-\/ provided \hyperlink{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y()}. \\
+\hline
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em src} & The value of apr\-\_\-hook\-\_\-debug\-\_\-current at the time the function was hooked (usually the source file implementing the hook function). \\
+\hline
+{\em rv} & The return value of the hook function, or 0 if the hook is void. \\
+\hline
+{\em args} & The argument list to the hook functions, with enclosing parens. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}{\index{Hook probe capability@{Hook probe capability}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y}!Hook probe capability@{Hook probe capability}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{ud, }
+\item[{}]{ns, }
+\item[{}]{name, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}}\label{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}
+User-\/defined hook probe macro that is invoked when the hook is run, before calling any hook functions. 
+\begin{DoxyParams}{Parameters}
+{\em ud} & A void $\ast$ user data field that should be filled in by this macro, and will be provided to the other hook probe macros. \\
+\hline
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em args} & The argument list to the hook functions, with enclosing parens. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__hook__probes_ga030df3d86fe087857b32388e01ad3928}{\index{Hook probe capability@{Hook probe capability}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E}!Hook probe capability@{Hook probe capability}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-I\-N\-V\-O\-K\-E(
+\begin{DoxyParamCaption}
+\item[{}]{ud, }
+\item[{}]{ns, }
+\item[{}]{name, }
+\item[{}]{src, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}}\label{group__apr__hook__probes_ga030df3d86fe087857b32388e01ad3928}
+User-\/defined hook probe macro that is invoked before calling a hook function. 
+\begin{DoxyParams}{Parameters}
+{\em ud} & A void $\ast$ user data field that was filled in by the user-\/ provided \hyperlink{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y()}. \\
+\hline
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em src} & The value of apr\-\_\-hook\-\_\-debug\-\_\-current at the time the function was hooked (usually the source file implementing the hook function). \\
+\hline
+{\em args} & The argument list to the hook functions, with enclosing parens. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__hook__probes_gab3017efe0bb66b97b6b7931245211692}{\index{Hook probe capability@{Hook probe capability}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N}!Hook probe capability@{Hook probe capability}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-R\-E\-T\-U\-R\-N(
+\begin{DoxyParamCaption}
+\item[{}]{ud, }
+\item[{}]{ns, }
+\item[{}]{name, }
+\item[{}]{rv, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}}\label{group__apr__hook__probes_gab3017efe0bb66b97b6b7931245211692}
+User-\/defined hook probe macro that is invoked after the hook has run. 
+\begin{DoxyParams}{Parameters}
+{\em ud} & A void $\ast$ user data field that was filled in by the user-\/ provided \hyperlink{group__apr__hook__probes_ga320422eebccc41f9329e34e11939e302}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-P\-R\-O\-B\-E\-\_\-\-E\-N\-T\-R\-Y()}. \\
+\hline
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em rv} & The return value of the hook, or 0 if the hook is void. \\
+\hline
+{\em args} & The argument list to the hook functions, with enclosing parens. \\
+\hline
+\end{DoxyParams}

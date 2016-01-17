@@ -1,0 +1,9 @@
+.//usr/lib64/apr-util-1/apr_dbd_odbc-1.so
+.//usr/lib64/apr-util-1/apr_crypto_nss-1.so
+.//usr/lib64/apr-util-1/apr_dbd_pgsql-1.so
+.//usr/lib64/apr-util-1/apr_dbd_mysql-1.so
+.//usr/lib64/apr-util-1/apr_crypto_openssl-1.so
+.//usr/lib64/apr-util-1/apr_dbd_sqlite3-1.so
+.//usr/lib64/apr-util-1/apr_dbd_freetds-1.so
+.//usr/lib64/apr-util-1/apr_ldap-1.so
+.//usr/lib64/libaprutil-1.so.0.5.4

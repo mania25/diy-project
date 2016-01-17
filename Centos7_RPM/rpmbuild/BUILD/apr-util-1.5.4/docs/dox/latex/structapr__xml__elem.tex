@@ -1,0 +1,81 @@
+\hypertarget{structapr__xml__elem}{\section{apr\-\_\-xml\-\_\-elem Struct Reference}
+\label{structapr__xml__elem}\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-xml.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structapr__xml__elem_a5b2fb684a9cfb244f88ad88f539fe3d6}{name}
+\item 
+int \hyperlink{structapr__xml__elem_a613ea31964572df7b41f5a9da8d0982e}{ns}
+\item 
+const char $\ast$ \hyperlink{structapr__xml__elem_a9a48a384f579816f62a7369aeb8b1a0c}{lang}
+\item 
+\hyperlink{structapr__text__header}{apr\-\_\-text\-\_\-header} \hyperlink{structapr__xml__elem_a732e8acd00e43330674fde57ef87163f}{first\-\_\-cdata}
+\item 
+\hyperlink{structapr__text__header}{apr\-\_\-text\-\_\-header} \hyperlink{structapr__xml__elem_a8d64c5343354e34c1cc7ac67f51cc89a}{following\-\_\-cdata}
+\item 
+struct \hyperlink{structapr__xml__elem}{apr\-\_\-xml\-\_\-elem} $\ast$ \hyperlink{structapr__xml__elem_a0fd30b383f2659a9ef245c2e99cb707d}{parent}
+\item 
+struct \hyperlink{structapr__xml__elem}{apr\-\_\-xml\-\_\-elem} $\ast$ \hyperlink{structapr__xml__elem_a8687253d504b1c1363c47117611042ac}{next}
+\item 
+struct \hyperlink{structapr__xml__elem}{apr\-\_\-xml\-\_\-elem} $\ast$ \hyperlink{structapr__xml__elem_a620a28337f36592d4cb1f6dd3d2e97e0}{first\-\_\-child}
+\item 
+struct \hyperlink{structapr__xml__attr}{apr\-\_\-xml\-\_\-attr} $\ast$ \hyperlink{structapr__xml__elem_aa9c71585c0b2a32269852047aebdd61c}{attr}
+\item 
+struct \hyperlink{structapr__xml__elem}{apr\-\_\-xml\-\_\-elem} $\ast$ \hyperlink{structapr__xml__elem_ad4f49811fc36f2377c72ac2c19e57abd}{last\-\_\-child}
+\item 
+struct apr\-\_\-xml\-\_\-ns\-\_\-scope $\ast$ \hyperlink{structapr__xml__elem_addfd70c22965dca4f7574639424a0c32}{ns\-\_\-scope}
+\item 
+void $\ast$ \hyperlink{structapr__xml__elem_a0bc4296aedb5d047325f86080604d939}{priv}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structapr__xml__elem}{apr\-\_\-xml\-\_\-elem}\-: holds a parsed X\-M\-L element 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__xml__elem_aa9c71585c0b2a32269852047aebdd61c}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!attr@{attr}}
+\index{attr@{attr}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{attr}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-xml\-\_\-attr}$\ast$ apr\-\_\-xml\-\_\-elem\-::attr}}\label{structapr__xml__elem_aa9c71585c0b2a32269852047aebdd61c}
+first attribute \hypertarget{structapr__xml__elem_a732e8acd00e43330674fde57ef87163f}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!first\-\_\-cdata@{first\-\_\-cdata}}
+\index{first\-\_\-cdata@{first\-\_\-cdata}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{first\-\_\-cdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-text\-\_\-header} apr\-\_\-xml\-\_\-elem\-::first\-\_\-cdata}}\label{structapr__xml__elem_a732e8acd00e43330674fde57ef87163f}
+cdata right after start tag \hypertarget{structapr__xml__elem_a620a28337f36592d4cb1f6dd3d2e97e0}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!first\-\_\-child@{first\-\_\-child}}
+\index{first\-\_\-child@{first\-\_\-child}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{first\-\_\-child}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-xml\-\_\-elem}$\ast$ apr\-\_\-xml\-\_\-elem\-::first\-\_\-child}}\label{structapr__xml__elem_a620a28337f36592d4cb1f6dd3d2e97e0}
+first child element \hypertarget{structapr__xml__elem_a8d64c5343354e34c1cc7ac67f51cc89a}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!following\-\_\-cdata@{following\-\_\-cdata}}
+\index{following\-\_\-cdata@{following\-\_\-cdata}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{following\-\_\-cdata}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-text\-\_\-header} apr\-\_\-xml\-\_\-elem\-::following\-\_\-cdata}}\label{structapr__xml__elem_a8d64c5343354e34c1cc7ac67f51cc89a}
+cdata after M\-Y end tag \hypertarget{structapr__xml__elem_a9a48a384f579816f62a7369aeb8b1a0c}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!lang@{lang}}
+\index{lang@{lang}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{lang}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-xml\-\_\-elem\-::lang}}\label{structapr__xml__elem_a9a48a384f579816f62a7369aeb8b1a0c}
+xml\-:lang for attrs/contents \hypertarget{structapr__xml__elem_ad4f49811fc36f2377c72ac2c19e57abd}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!last\-\_\-child@{last\-\_\-child}}
+\index{last\-\_\-child@{last\-\_\-child}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{last\-\_\-child}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-xml\-\_\-elem}$\ast$ apr\-\_\-xml\-\_\-elem\-::last\-\_\-child}}\label{structapr__xml__elem_ad4f49811fc36f2377c72ac2c19e57abd}
+last child element \hypertarget{structapr__xml__elem_a5b2fb684a9cfb244f88ad88f539fe3d6}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!name@{name}}
+\index{name@{name}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-xml\-\_\-elem\-::name}}\label{structapr__xml__elem_a5b2fb684a9cfb244f88ad88f539fe3d6}
+element name \hypertarget{structapr__xml__elem_a8687253d504b1c1363c47117611042ac}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!next@{next}}
+\index{next@{next}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-xml\-\_\-elem}$\ast$ apr\-\_\-xml\-\_\-elem\-::next}}\label{structapr__xml__elem_a8687253d504b1c1363c47117611042ac}
+next (sibling) element \hypertarget{structapr__xml__elem_a613ea31964572df7b41f5a9da8d0982e}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!ns@{ns}}
+\index{ns@{ns}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{ns}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-xml\-\_\-elem\-::ns}}\label{structapr__xml__elem_a613ea31964572df7b41f5a9da8d0982e}
+index into namespace array \hypertarget{structapr__xml__elem_addfd70c22965dca4f7574639424a0c32}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!ns\-\_\-scope@{ns\-\_\-scope}}
+\index{ns\-\_\-scope@{ns\-\_\-scope}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{ns\-\_\-scope}]{\setlength{\rightskip}{0pt plus 5cm}struct apr\-\_\-xml\-\_\-ns\-\_\-scope$\ast$ apr\-\_\-xml\-\_\-elem\-::ns\-\_\-scope}}\label{structapr__xml__elem_addfd70c22965dca4f7574639424a0c32}
+namespaces scoped by this elem \hypertarget{structapr__xml__elem_a0fd30b383f2659a9ef245c2e99cb707d}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!parent@{parent}}
+\index{parent@{parent}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-xml\-\_\-elem}$\ast$ apr\-\_\-xml\-\_\-elem\-::parent}}\label{structapr__xml__elem_a0fd30b383f2659a9ef245c2e99cb707d}
+parent element \hypertarget{structapr__xml__elem_a0bc4296aedb5d047325f86080604d939}{\index{apr\-\_\-xml\-\_\-elem@{apr\-\_\-xml\-\_\-elem}!priv@{priv}}
+\index{priv@{priv}!apr_xml_elem@{apr\-\_\-xml\-\_\-elem}}
+\subsubsection[{priv}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-xml\-\_\-elem\-::priv}}\label{structapr__xml__elem_a0bc4296aedb5d047325f86080604d939}
+Place for modules to store private data 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__xml_8h}{apr\-\_\-xml.\-h}\end{DoxyCompactItemize}

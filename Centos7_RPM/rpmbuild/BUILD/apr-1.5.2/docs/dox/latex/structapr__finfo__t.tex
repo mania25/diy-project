@@ -1,0 +1,106 @@
+\hypertarget{structapr__finfo__t}{\section{apr\-\_\-finfo\-\_\-t Struct Reference}
+\label{structapr__finfo__t}\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-file\-\_\-info.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$ \hyperlink{structapr__finfo__t_a71496f86b5489c87e58e9c03fe468fb8}{pool}
+\item 
+apr\-\_\-int32\-\_\-t \hyperlink{structapr__finfo__t_aff0cdf06637edec63c4701e582792019}{valid}
+\item 
+\hyperlink{group__apr__file__info_ga3af19c4c47007169064a70f9351bc7d8}{apr\-\_\-fileperms\-\_\-t} \hyperlink{structapr__finfo__t_a7c09d73ad1957e2c0e6c6b77d94e90ab}{protection}
+\item 
+\hyperlink{group__apr__file__info_gae3f0ce3014337a52b39852f8bf81ca7c}{apr\-\_\-filetype\-\_\-e} \hyperlink{structapr__finfo__t_a274ae0dd60b59182c2e0134bc9a09a20}{filetype}
+\item 
+\hyperlink{group__apr__user_gad1aa508f584bc230acf4f68ba4fc4de7}{apr\-\_\-uid\-\_\-t} \hyperlink{structapr__finfo__t_ab79d14bd50f50662d29ad433166c4bc5}{user}
+\item 
+\hyperlink{group__apr__user_ga22e9e224e984f837f3e276833e2f3a55}{apr\-\_\-gid\-\_\-t} \hyperlink{structapr__finfo__t_a15c9c056330308de4dafb3826a9b02bc}{group}
+\item 
+apr\-\_\-ino\-\_\-t \hyperlink{structapr__finfo__t_a73aebb666ddc391d53a871802c27eed6}{inode}
+\item 
+\hyperlink{group__apr__file__info_gae2c25c4b679613081599f776efa96c4a}{apr\-\_\-dev\-\_\-t} \hyperlink{structapr__finfo__t_a38cbfbff641284065481f5907d59c8bf}{device}
+\item 
+apr\-\_\-int32\-\_\-t \hyperlink{structapr__finfo__t_a98598f28735d75aa0c1994efc825e6d9}{nlink}
+\item 
+apr\-\_\-off\-\_\-t \hyperlink{structapr__finfo__t_a3e47a673c5b82a25a783a732dee6f946}{size}
+\item 
+apr\-\_\-off\-\_\-t \hyperlink{structapr__finfo__t_aeaa4a4def98ad4f162e05c2e2292321d}{csize}
+\item 
+\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\-\_\-time\-\_\-t} \hyperlink{structapr__finfo__t_ad78874e5751e9bba30debb0826eb96a7}{atime}
+\item 
+\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\-\_\-time\-\_\-t} \hyperlink{structapr__finfo__t_afc3bec0f6b3b10160428ba5602a41c60}{mtime}
+\item 
+\hyperlink{group__apr__time_gadb4bde16055748190eae190c55aa02bb}{apr\-\_\-time\-\_\-t} \hyperlink{structapr__finfo__t_aebbdb3dc755d825de3dce901cfba0883}{ctime}
+\item 
+const char $\ast$ \hyperlink{structapr__finfo__t_acfed83ab2943ee7a58a215aa1cfd9e47}{fname}
+\item 
+const char $\ast$ \hyperlink{structapr__finfo__t_a2915f9141ea76ae3672ccf9eb0fa77bb}{name}
+\item 
+struct \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$ \hyperlink{structapr__finfo__t_a7858e3d9c5f6ed062d9ff7f5c79b6336}{filehand}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The file information structure. This is analogous to the P\-O\-S\-I\-X stat structure. 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__finfo__t_ad78874e5751e9bba30debb0826eb96a7}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!atime@{atime}}
+\index{atime@{atime}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{atime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-time\-\_\-t} apr\-\_\-finfo\-\_\-t\-::atime}}\label{structapr__finfo__t_ad78874e5751e9bba30debb0826eb96a7}
+The time the file was last accessed \hypertarget{structapr__finfo__t_aeaa4a4def98ad4f162e05c2e2292321d}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!csize@{csize}}
+\index{csize@{csize}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{csize}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-off\-\_\-t apr\-\_\-finfo\-\_\-t\-::csize}}\label{structapr__finfo__t_aeaa4a4def98ad4f162e05c2e2292321d}
+The storage size consumed by the file \hypertarget{structapr__finfo__t_aebbdb3dc755d825de3dce901cfba0883}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!ctime@{ctime}}
+\index{ctime@{ctime}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{ctime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-time\-\_\-t} apr\-\_\-finfo\-\_\-t\-::ctime}}\label{structapr__finfo__t_aebbdb3dc755d825de3dce901cfba0883}
+The time the file was created, or the inode was last changed \hypertarget{structapr__finfo__t_a38cbfbff641284065481f5907d59c8bf}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!device@{device}}
+\index{device@{device}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-dev\-\_\-t} apr\-\_\-finfo\-\_\-t\-::device}}\label{structapr__finfo__t_a38cbfbff641284065481f5907d59c8bf}
+The id of the device the file is on. \hypertarget{structapr__finfo__t_a7858e3d9c5f6ed062d9ff7f5c79b6336}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!filehand@{filehand}}
+\index{filehand@{filehand}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{filehand}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf apr\-\_\-file\-\_\-t}$\ast$ apr\-\_\-finfo\-\_\-t\-::filehand}}\label{structapr__finfo__t_a7858e3d9c5f6ed062d9ff7f5c79b6336}
+Unused \hypertarget{structapr__finfo__t_a274ae0dd60b59182c2e0134bc9a09a20}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!filetype@{filetype}}
+\index{filetype@{filetype}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{filetype}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-filetype\-\_\-e} apr\-\_\-finfo\-\_\-t\-::filetype}}\label{structapr__finfo__t_a274ae0dd60b59182c2e0134bc9a09a20}
+The type of file. One of A\-P\-R\-\_\-\-R\-E\-G, A\-P\-R\-\_\-\-D\-I\-R, A\-P\-R\-\_\-\-C\-H\-R, A\-P\-R\-\_\-\-B\-L\-K, A\-P\-R\-\_\-\-P\-I\-P\-E, A\-P\-R\-\_\-\-L\-N\-K or A\-P\-R\-\_\-\-S\-O\-C\-K. If the type is undetermined, the value is A\-P\-R\-\_\-\-N\-O\-F\-I\-L\-E. If the type cannot be determined, the value is A\-P\-R\-\_\-\-U\-N\-K\-F\-I\-L\-E. \hypertarget{structapr__finfo__t_acfed83ab2943ee7a58a215aa1cfd9e47}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!fname@{fname}}
+\index{fname@{fname}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{fname}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-finfo\-\_\-t\-::fname}}\label{structapr__finfo__t_acfed83ab2943ee7a58a215aa1cfd9e47}
+The pathname of the file (possibly unrooted) \hypertarget{structapr__finfo__t_a15c9c056330308de4dafb3826a9b02bc}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!group@{group}}
+\index{group@{group}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{group}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-gid\-\_\-t} apr\-\_\-finfo\-\_\-t\-::group}}\label{structapr__finfo__t_a15c9c056330308de4dafb3826a9b02bc}
+The group id that owns the file \hypertarget{structapr__finfo__t_a73aebb666ddc391d53a871802c27eed6}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!inode@{inode}}
+\index{inode@{inode}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{inode}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-ino\-\_\-t apr\-\_\-finfo\-\_\-t\-::inode}}\label{structapr__finfo__t_a73aebb666ddc391d53a871802c27eed6}
+The inode of the file. \hypertarget{structapr__finfo__t_afc3bec0f6b3b10160428ba5602a41c60}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!mtime@{mtime}}
+\index{mtime@{mtime}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{mtime}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-time\-\_\-t} apr\-\_\-finfo\-\_\-t\-::mtime}}\label{structapr__finfo__t_afc3bec0f6b3b10160428ba5602a41c60}
+The time the file was last modified \hypertarget{structapr__finfo__t_a2915f9141ea76ae3672ccf9eb0fa77bb}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!name@{name}}
+\index{name@{name}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-finfo\-\_\-t\-::name}}\label{structapr__finfo__t_a2915f9141ea76ae3672ccf9eb0fa77bb}
+The file's name (no path) in filesystem case \hypertarget{structapr__finfo__t_a98598f28735d75aa0c1994efc825e6d9}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!nlink@{nlink}}
+\index{nlink@{nlink}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{nlink}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-int32\-\_\-t apr\-\_\-finfo\-\_\-t\-::nlink}}\label{structapr__finfo__t_a98598f28735d75aa0c1994efc825e6d9}
+The number of hard links to the file. \hypertarget{structapr__finfo__t_a71496f86b5489c87e58e9c03fe468fb8}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!pool@{pool}}
+\index{pool@{pool}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{pool}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-pool\-\_\-t}$\ast$ apr\-\_\-finfo\-\_\-t\-::pool}}\label{structapr__finfo__t_a71496f86b5489c87e58e9c03fe468fb8}
+Allocates memory and closes lingering handles in the specified pool \hypertarget{structapr__finfo__t_a7c09d73ad1957e2c0e6c6b77d94e90ab}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!protection@{protection}}
+\index{protection@{protection}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{protection}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-fileperms\-\_\-t} apr\-\_\-finfo\-\_\-t\-::protection}}\label{structapr__finfo__t_a7c09d73ad1957e2c0e6c6b77d94e90ab}
+The access permissions of the file. Mimics Unix access rights. \hypertarget{structapr__finfo__t_a3e47a673c5b82a25a783a732dee6f946}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!size@{size}}
+\index{size@{size}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-off\-\_\-t apr\-\_\-finfo\-\_\-t\-::size}}\label{structapr__finfo__t_a3e47a673c5b82a25a783a732dee6f946}
+The size of the file \hypertarget{structapr__finfo__t_ab79d14bd50f50662d29ad433166c4bc5}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!user@{user}}
+\index{user@{user}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{user}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-uid\-\_\-t} apr\-\_\-finfo\-\_\-t\-::user}}\label{structapr__finfo__t_ab79d14bd50f50662d29ad433166c4bc5}
+The user id that owns the file \hypertarget{structapr__finfo__t_aff0cdf06637edec63c4701e582792019}{\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!valid@{valid}}
+\index{valid@{valid}!apr_finfo_t@{apr\-\_\-finfo\-\_\-t}}
+\subsubsection[{valid}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-int32\-\_\-t apr\-\_\-finfo\-\_\-t\-::valid}}\label{structapr__finfo__t_aff0cdf06637edec63c4701e582792019}
+The bitmask describing valid fields of this \hyperlink{structapr__finfo__t}{apr\-\_\-finfo\-\_\-t} structure including all available 'wanted' fields and potentially more 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__file__info_8h}{apr\-\_\-file\-\_\-info.\-h}\end{DoxyCompactItemize}

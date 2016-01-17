@@ -1,0 +1,135 @@
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k}{\section{Optional Hook Functions}
+\label{group___a_p_r___util___o_p_t___h_o_o_k}\index{Optional Hook Functions@{Optional Hook Functions}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_ga808d07f9a3e5df6517ba027972c79e4f}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K}(ns, name, pfn, asz\-Pre, asz\-Succ, n\-Order)
+\item 
+\#define \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_ga3e6fa7b8e9ce140b26d8f6ce34e6ae82}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}(ns, link, ret, name, args\-\_\-decl, args\-\_\-use, ok, decline)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}{apr\-\_\-optional\-\_\-hook\-\_\-add} (const char $\ast$sz\-Name, void($\ast$pfn)(void), const char $\ast$const $\ast$asz\-Pre, const char $\ast$const $\ast$asz\-Succ, int n\-Order)
+\item 
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k_gae7cfa7b32c41fb38eb19f0bba85abfeb}{apr\-\_\-array\-\_\-header\-\_\-t $\ast$ {\bfseries apr\-\_\-optional\-\_\-hook\-\_\-get} (const char $\ast$sz\-Name)}\label{group___a_p_r___util___o_p_t___h_o_o_k_gae7cfa7b32c41fb38eb19f0bba85abfeb}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k_ga3e6fa7b8e9ce140b26d8f6ce34e6ae82}{\index{Optional Hook Functions@{Optional Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}!Optional Hook Functions@{Optional Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{ret, }
+\item[{}]{name, }
+\item[{}]{args\-\_\-decl, }
+\item[{}]{args\-\_\-use, }
+\item[{}]{ok, }
+\item[{}]{decline}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___o_p_t___h_o_o_k_ga3e6fa7b8e9ce140b26d8f6ce34e6ae82}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+link##\_DECLARE(ret) ns\textcolor{preprocessor}{##\_run\_##name args\_decl \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_LINK\_##name##\_t *pHook; \(\backslash\)}
+\textcolor{preprocessor}{    int n; \(\backslash\)}
+\textcolor{preprocessor}{    ret rv; \(\backslash\)}
+\textcolor{preprocessor}{    apr\_array\_header\_t *pHookArray=apr\_optional\_hook\_get(#name); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    if(!pHookArray) \(\backslash\)}
+\textcolor{preprocessor}{    return ok; \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    pHook=(ns##\_LINK\_##name##\_t *)pHookArray->elts; \(\backslash\)}
+\textcolor{preprocessor}{    for(n=0 ; n < pHookArray->nelts ; ++n) \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    rv=(pHook[n].pFunc)args\_use; \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    if(rv != ok && rv != decline) \(\backslash\)}
+\textcolor{preprocessor}{        return rv; \(\backslash\)}
+\textcolor{preprocessor}{    \} \(\backslash\)}
+\textcolor{preprocessor}{    return ok; \(\backslash\)}
+\textcolor{preprocessor}{    \}}
+\end{DoxyCode}
+Implement an optional hook that runs until one of the functions returns something other than O\-K or D\-E\-C\-L\-I\-N\-E.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em link} & The linkage declaration prefix of the hook \\
+\hline
+{\em ret} & The type of the return value of the hook \\
+\hline
+{\em ret} & The type of the return value of the hook \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em args\-\_\-decl} & The declaration of the arguments for the hook \\
+\hline
+{\em args\-\_\-use} & The names for the arguments for the hook \\
+\hline
+{\em ok} & Success value \\
+\hline
+{\em decline} & Decline value \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k_ga808d07f9a3e5df6517ba027972c79e4f}{\index{Optional Hook Functions@{Optional Hook Functions}!A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K@{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K}}
+\index{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K@{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K}!Optional Hook Functions@{Optional Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{name, }
+\item[{}]{pfn, }
+\item[{}]{asz\-Pre, }
+\item[{}]{asz\-Succ, }
+\item[{}]{n\-Order}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___o_p_t___h_o_o_k_ga808d07f9a3e5df6517ba027972c79e4f}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \(\backslash\)
+  ns##\_HOOK\_##name##\_t *apu\_\_hook = pfn; \hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}{  apr\_optional\_hook\_add}(#name,(\textcolor{keywordtype}{void} (*)(\textcolor{keywordtype}{void}))apu\_\_hook,aszPre, aszSucc, nOrder); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Hook to an optional hook.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em pfn} & A pointer to a function that will be called \\
+\hline
+{\em asz\-Pre} & a N\-U\-L\-L-\/terminated array of strings that name modules whose hooks should precede this one \\
+\hline
+{\em asz\-Succ} & a N\-U\-L\-L-\/terminated array of strings that name modules whose hooks should succeed this one \\
+\hline
+{\em n\-Order} & an integer determining order before honouring asz\-Pre and asz\-Succ (for example H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E) \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}{\index{Optional Hook Functions@{Optional Hook Functions}!apr\-\_\-optional\-\_\-hook\-\_\-add@{apr\-\_\-optional\-\_\-hook\-\_\-add}}
+\index{apr\-\_\-optional\-\_\-hook\-\_\-add@{apr\-\_\-optional\-\_\-hook\-\_\-add}!Optional Hook Functions@{Optional Hook Functions}}
+\subsubsection[{apr\-\_\-optional\-\_\-hook\-\_\-add}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-optional\-\_\-hook\-\_\-add (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-Name, }
+\item[{void($\ast$)(void)}]{pfn, }
+\item[{const char $\ast$const $\ast$}]{asz\-Pre, }
+\item[{const char $\ast$const $\ast$}]{asz\-Succ, }
+\item[{int}]{n\-Order}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___o_p_t___h_o_o_k_gaff32812046580ae53b0368918374a3b6}
+Function to implement the A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-H\-O\-O\-K Macro 

@@ -1,0 +1,61 @@
+\hypertarget{apr__sdbm_8h}{\section{include/apr\-\_\-sdbm.h File Reference}
+\label{apr__sdbm_8h}\index{include/apr\-\_\-sdbm.\-h@{include/apr\-\_\-sdbm.\-h}}
+}
+
+
+apr-\/util S\-D\-B\-M library  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-errno.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-file\-\_\-io.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gafabaf97932efa0eebfb1cc6b692a111f}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T}~\char`\"{}.dir\char`\"{}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaa03fa1d1183240ca0845c54cc07df557}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T}~\char`\"{}.pag\char`\"{}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gad42d896bab08b5e210f489fa59656807}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T}~0
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga84e2252c9ddf5e6c64ed1be43d2d0e53}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E}~1
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga64cd385609059cf151e54c7046d92ec3}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaf24cdea6e4884036a40484259efa68c6}{apr\-\_\-sdbm\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga08c6121b4159ae86cec6e915e1e5d758}{apr\-\_\-sdbm\-\_\-open} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$$\ast$db, const char $\ast$name, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perms, apr\-\_\-pool\-\_\-t $\ast$p)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaf684c3a70d2c9ebe02bb1e2fffe23e1e}{apr\-\_\-sdbm\-\_\-close} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga2c2edd6a123d8ca2a6334fa8874b724d}{apr\-\_\-sdbm\-\_\-lock} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, int type)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gab96a7e08ddac3cb6bff97a822b68de14}{apr\-\_\-sdbm\-\_\-unlock} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga7d9eae450e9f9a2f1bcf626a3f8ca43f}{apr\-\_\-sdbm\-\_\-fetch} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$value, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gac12993b882c50afa0777945ea4a88572}{apr\-\_\-sdbm\-\_\-store} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} value, int opt)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga5744462c07c40d26c275beaeb902ff9c}{apr\-\_\-sdbm\-\_\-delete} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, const \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gae5410d9dc681393e597f492f30c6447f}{apr\-\_\-sdbm\-\_\-firstkey} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga77d7f848ccb68e9f465a988d0af80911}{apr\-\_\-sdbm\-\_\-nextkey} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$key)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gabad67008f83fd219173acc5abdd0b42d}{apr\-\_\-sdbm\-\_\-rdonly} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+apr-\/util S\-D\-B\-M library 

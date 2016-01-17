@@ -1,0 +1,155 @@
+\hypertarget{group___a_p_r___x_l_a_t_e}{\section{I18\-N translation library}
+\label{group___a_p_r___x_l_a_t_e}\index{I18\-N translation library@{I18\-N translation library}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___x_l_a_t_e_ga3276c680eb0917ff51ff22c9b9959fa9}{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T}~(const char $\ast$)0
+\item 
+\#define \hyperlink{group___a_p_r___x_l_a_t_e_ga0e46c333fb1c900f0dd4a78664f5a0de}{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T}~(const char $\ast$)1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_gab7d55348056d7e4cadbc35cfb8e1e624}{apr\-\_\-xlate\-\_\-open} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$$\ast$convset, const char $\ast$topage, const char $\ast$frompage, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga578875b2e6b2a19f8466b80e0768792e}{apr\-\_\-xlate\-\_\-sb\-\_\-get} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, int $\ast$onoff)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_gab92a20b644aa78ca94c6147b254a54f1}{apr\-\_\-xlate\-\_\-conv\-\_\-buffer} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, const char $\ast$inbuf, apr\-\_\-size\-\_\-t $\ast$inbytes\-\_\-left, char $\ast$outbuf, apr\-\_\-size\-\_\-t $\ast$outbytes\-\_\-left)
+\item 
+apr\-\_\-int32\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga90173cefe2dee6e5032ff17b15fea14b}{apr\-\_\-xlate\-\_\-conv\-\_\-byte} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset, unsigned char inchar)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___x_l_a_t_e_ga2f88b0f72cd2512b8002344308480a8f}{apr\-\_\-xlate\-\_\-close} (\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$convset)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___x_l_a_t_e_ga3276c680eb0917ff51ff22c9b9959fa9}{\index{I18\-N translation library@{I18\-N translation library}!A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T@{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T}}
+\index{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T@{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T~(const char $\ast$)0}}\label{group___a_p_r___x_l_a_t_e_ga3276c680eb0917ff51ff22c9b9959fa9}
+This is to indicate the charset of the sourcecode at compile time names to indicate the charset of the source code at compile time. This is useful if there are literal strings in the source code which must be translated according to the charset of the source code. \hypertarget{group___a_p_r___x_l_a_t_e_ga0e46c333fb1c900f0dd4a78664f5a0de}{\index{I18\-N translation library@{I18\-N translation library}!A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T@{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T}}
+\index{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T@{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T~(const char $\ast$)1}}\label{group___a_p_r___x_l_a_t_e_ga0e46c333fb1c900f0dd4a78664f5a0de}
+To indicate charset names of the current locale 
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-t@{apr\-\_\-xlate\-\_\-t}}
+\index{apr\-\_\-xlate\-\_\-t@{apr\-\_\-xlate\-\_\-t}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-xlate\-\_\-t} {\bf apr\-\_\-xlate\-\_\-t}}}\label{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}
+Opaque translation buffer 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___x_l_a_t_e_ga2f88b0f72cd2512b8002344308480a8f}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-close@{apr\-\_\-xlate\-\_\-close}}
+\index{apr\-\_\-xlate\-\_\-close@{apr\-\_\-xlate\-\_\-close}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-xlate\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$}]{convset}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___x_l_a_t_e_ga2f88b0f72cd2512b8002344308480a8f}
+Close a codepage translation handle. 
+\begin{DoxyParams}{Parameters}
+{\em convset} & The codepage translation handle to close \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Return A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if charset transcoding is not available in this instance of apr-\/util (i.\-e., A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-X\-L\-A\-T\-E is undefined). 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___x_l_a_t_e_gab92a20b644aa78ca94c6147b254a54f1}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-conv\-\_\-buffer@{apr\-\_\-xlate\-\_\-conv\-\_\-buffer}}
+\index{apr\-\_\-xlate\-\_\-conv\-\_\-buffer@{apr\-\_\-xlate\-\_\-conv\-\_\-buffer}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-conv\-\_\-buffer}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-xlate\-\_\-conv\-\_\-buffer (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$}]{convset, }
+\item[{const char $\ast$}]{inbuf, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{inbytes\-\_\-left, }
+\item[{char $\ast$}]{outbuf, }
+\item[{apr\-\_\-size\-\_\-t $\ast$}]{outbytes\-\_\-left}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___x_l_a_t_e_gab92a20b644aa78ca94c6147b254a54f1}
+Convert a buffer of text from one codepage to another. 
+\begin{DoxyParams}{Parameters}
+{\em convset} & The handle allocated by apr\-\_\-xlate\-\_\-open, specifying the parameters of conversion \\
+\hline
+{\em inbuf} & The address of the source buffer \\
+\hline
+{\em inbytes\-\_\-left} & Input\-: the amount of input data to be translated Output\-: the amount of input data not yet translated \\
+\hline
+{\em outbuf} & The address of the destination buffer \\
+\hline
+{\em outbytes\-\_\-left} & Input\-: the size of the output buffer Output\-: the amount of the output buffer not yet used \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Returns A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if charset transcoding is not available in this instance of apr-\/util (i.\-e., A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-X\-L\-A\-T\-E is undefined). Returns A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E if the input buffer ends in an incomplete multi-\/byte character.
+\end{DoxyRemark}
+To correctly terminate the output buffer for some multi-\/byte character set encodings, a final call must be made to this function after the complete input string has been converted, passing the inbuf and inbytes\-\_\-left parameters as N\-U\-L\-L. (Note that this mode only works from version 1.\-1.\-0 onwards) \hypertarget{group___a_p_r___x_l_a_t_e_ga90173cefe2dee6e5032ff17b15fea14b}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-conv\-\_\-byte@{apr\-\_\-xlate\-\_\-conv\-\_\-byte}}
+\index{apr\-\_\-xlate\-\_\-conv\-\_\-byte@{apr\-\_\-xlate\-\_\-conv\-\_\-byte}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-conv\-\_\-byte}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-int32\-\_\-t apr\-\_\-xlate\-\_\-conv\-\_\-byte (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$}]{convset, }
+\item[{unsigned char}]{inchar}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___x_l_a_t_e_ga90173cefe2dee6e5032ff17b15fea14b}
+Convert a single-\/byte character from one charset to another. 
+\begin{DoxyParams}{Parameters}
+{\em convset} & The handle allocated by apr\-\_\-xlate\-\_\-open, specifying the parameters of conversion \\
+\hline
+{\em inchar} & The single-\/byte character to convert. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+This only works when converting between single-\/byte character sets. -\/1 will be returned if the conversion can't be performed. 
+\end{DoxyWarning}
+\hypertarget{group___a_p_r___x_l_a_t_e_gab7d55348056d7e4cadbc35cfb8e1e624}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-open@{apr\-\_\-xlate\-\_\-open}}
+\index{apr\-\_\-xlate\-\_\-open@{apr\-\_\-xlate\-\_\-open}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-xlate\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$$\ast$}]{convset, }
+\item[{const char $\ast$}]{topage, }
+\item[{const char $\ast$}]{frompage, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___x_l_a_t_e_gab7d55348056d7e4cadbc35cfb8e1e624}
+Set up for converting text from one charset to another. 
+\begin{DoxyParams}{Parameters}
+{\em convset} & The handle to be filled in by this function \\
+\hline
+{\em topage} & The name of the target charset \\
+\hline
+{\em frompage} & The name of the source charset \\
+\hline
+{\em pool} & The pool to use \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Specify A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T for one of the charset names to indicate the charset of the source code at compile time. This is useful if there are literal strings in the source code which must be translated according to the charset of the source code. A\-P\-R\-\_\-\-D\-E\-F\-A\-U\-L\-T\-\_\-\-C\-H\-A\-R\-S\-E\-T is not useful if the source code of the caller was not encoded in the same charset as A\-P\-R at compile time.
+
+Specify A\-P\-R\-\_\-\-L\-O\-C\-A\-L\-E\-\_\-\-C\-H\-A\-R\-S\-E\-T for one of the charset names to indicate the charset of the current locale.
+
+Return A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L if unable to procure a convset, or A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if charset transcoding is not available in this instance of apr-\/util at all (i.\-e., A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-X\-L\-A\-T\-E is undefined). 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___x_l_a_t_e_ga578875b2e6b2a19f8466b80e0768792e}{\index{I18\-N translation library@{I18\-N translation library}!apr\-\_\-xlate\-\_\-sb\-\_\-get@{apr\-\_\-xlate\-\_\-sb\-\_\-get}}
+\index{apr\-\_\-xlate\-\_\-sb\-\_\-get@{apr\-\_\-xlate\-\_\-sb\-\_\-get}!I18N translation library@{I18\-N translation library}}
+\subsubsection[{apr\-\_\-xlate\-\_\-sb\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-xlate\-\_\-sb\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$}]{convset, }
+\item[{int $\ast$}]{onoff}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___x_l_a_t_e_ga578875b2e6b2a19f8466b80e0768792e}
+Find out whether or not the specified conversion is single-\/byte-\/only. 
+\begin{DoxyParams}{Parameters}
+{\em convset} & The handle allocated by apr\-\_\-xlate\-\_\-open, specifying the parameters of conversion \\
+\hline
+{\em onoff} & Output\-: whether or not the conversion is single-\/byte-\/only \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Return A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L if charset transcoding is not available in this instance of apr-\/util (i.\-e., A\-P\-R\-\_\-\-H\-A\-S\-\_\-\-X\-L\-A\-T\-E is undefined). 
+\end{DoxyRemark}

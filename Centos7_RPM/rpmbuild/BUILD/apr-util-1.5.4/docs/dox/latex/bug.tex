@@ -1,0 +1,6 @@
+
+\begin{DoxyRefList}
+\item[\label{bug__bug000001}%
+\hypertarget{bug__bug000001}{}%
+Global \hyperlink{group___a_p_r___util___d_b_m_gaf7295ba8157f487b78319e168e1344b4}{apr\-\_\-dbm\-\_\-open\-\_\-ex} (\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$$\ast$dbm, const char $\ast$type, const char $\ast$name, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perm, apr\-\_\-pool\-\_\-t $\ast$cntxt)]In apr-\/util 0.\-9 and 1.\-x, the type arg was case insensitive. This was highly inefficient, and as of 2.\-x the dbm name must be provided in the correct case (lower case for all bundled providers) 
+\end{DoxyRefList}

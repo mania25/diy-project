@@ -1,0 +1,129 @@
+\hypertarget{apu__version_8h}{\section{include/apu\-\_\-version.h File Reference}
+\label{apu__version_8h}\index{include/apu\-\_\-version.\-h@{include/apu\-\_\-version.\-h}}
+}
+
+
+A\-P\-R-\/util Versioning Interface.  
+
+
+{\ttfamily \#include \char`\"{}apr\-\_\-version.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}
+\item 
+\#define \hyperlink{apu__version_8h_ac6ad13b6f97cfe3b3d9008ff34f0bb35}{A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}~1
+\item 
+\#define \hyperlink{apu__version_8h_a28a5f6fb38453905a840885a8c00152a}{A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}~5
+\item 
+\#define \hyperlink{apu__version_8h_a44b4590b3763f9c92f9d429fb9ce119b}{A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N}~4
+\item 
+\#define \hyperlink{apu__version_8h_ab47617bb2faf080300b78620a4a53a6c}{A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G}~\char`\"{}-\/dev\char`\"{}
+\item 
+\#define \hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}(n)~\hyperlink{apu__version_8h_aa2936265eef0c753fe6fe8ea9c81eec2}{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}(n)
+\item 
+\#define \hyperlink{apu__version_8h_aa2936265eef0c753fe6fe8ea9c81eec2}{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}(n)~\#n
+\item 
+\#define \hyperlink{apu__version_8h_a10c7d040b89f2aa014a57d574e5db3d1}{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G}
+\item 
+\#define \hyperlink{apu__version_8h_a0442a908106268fe88603f2c56388302}{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{apu__version_8h_a14cce37b5ee21096fc4307e7374a4970}{apu\-\_\-version} (apr\-\_\-version\-\_\-t $\ast$pvsn)
+\item 
+const char $\ast$ \hyperlink{apu__version_8h_a50777ba300ca00840f7fce3bf6c1e917}{apu\-\_\-version\-\_\-string} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/util Versioning Interface. A\-P\-R-\/util's Version
+
+There are several different mechanisms for accessing the version. There is a string form, and a set of numbers; in addition, there are constants which can be compiled into your application, and you can query the library being used for its actual version.
+
+Note that it is possible for an application to detect that it has been compiled against a different version of A\-P\-U by use of the compile-\/time constants and the use of the run-\/time query function.
+
+A\-P\-U version numbering follows the guidelines specified in\-: \begin{DoxyVerb}http://apr.apache.org/versioning.html\end{DoxyVerb}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{apu__version_8h_a0fe8228a801c2711398ff808f8b54f55}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T@{A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}}
+\index{A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T@{A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-C\-O\-P\-Y\-R\-I\-G\-H\-T}}\label{apu__version_8h_a0fe8228a801c2711398ff808f8b54f55}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{stringliteral}{"Copyright (c) 2000-2014 The Apache Software "} \(\backslash\)
+                      \textcolor{stringliteral}{"Foundation or its licensors, as applicable."}
+\end{DoxyCode}
+\hypertarget{apu__version_8h_ab47617bb2faf080300b78620a4a53a6c}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-S\-T\-R\-I\-N\-G~\char`\"{}-\/dev\char`\"{}}}\label{apu__version_8h_ab47617bb2faf080300b78620a4a53a6c}
+The symbol A\-P\-U\-\_\-\-I\-S\-\_\-\-D\-E\-V\-\_\-\-V\-E\-R\-S\-I\-O\-N is only defined for internal, \char`\"{}development\char`\"{} copies of A\-P\-U. It is undefined for released versions of A\-P\-U.\-Internal\-: string form of the \char`\"{}is dev\char`\"{} flag \hypertarget{apu__version_8h_ac6ad13b6f97cfe3b3d9008ff34f0bb35}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N~1}}\label{apu__version_8h_ac6ad13b6f97cfe3b3d9008ff34f0bb35}
+major version Major A\-P\-I changes that could cause compatibility problems for older programs such as structure size changes. No binary compatibility is possible across a change in the major version. \hypertarget{apu__version_8h_a28a5f6fb38453905a840885a8c00152a}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N~5}}\label{apu__version_8h_a28a5f6fb38453905a840885a8c00152a}
+minor version Minor A\-P\-I changes that do not cause binary compatibility problems. Reset to 0 when upgrading A\-P\-U\-\_\-\-M\-A\-J\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N \hypertarget{apu__version_8h_a44b4590b3763f9c92f9d429fb9ce119b}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N}}
+\index{A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N@{A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-P\-A\-T\-C\-H\-\_\-\-V\-E\-R\-S\-I\-O\-N~4}}\label{apu__version_8h_a44b4590b3763f9c92f9d429fb9ce119b}
+patch level The Patch Level never includes A\-P\-I changes, simply bug fixes. Reset to 0 when upgrading A\-P\-R\-\_\-\-M\-I\-N\-O\-R\-\_\-\-V\-E\-R\-S\-I\-O\-N \hypertarget{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}}
+\index{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y@{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~{\bf A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}(n)}}\label{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}
+Properly quote a value as a string in the C preprocessor \hypertarget{apu__version_8h_aa2936265eef0c753fe6fe8ea9c81eec2}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R@{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}}
+\index{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R@{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y\-\_\-\-H\-E\-L\-P\-E\-R(
+\begin{DoxyParamCaption}
+\item[{}]{n}
+\end{DoxyParamCaption}
+)~\#n}}\label{apu__version_8h_aa2936265eef0c753fe6fe8ea9c81eec2}
+Helper macro for A\-P\-U\-\_\-\-S\-T\-R\-I\-N\-G\-I\-F\-Y \hypertarget{apu__version_8h_a10c7d040b89f2aa014a57d574e5db3d1}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G}}
+\index{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G@{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G}}\label{apu__version_8h_a10c7d040b89f2aa014a57d574e5db3d1}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{APU\_STRINGIFY}(\hyperlink{apu__version_8h_ac6ad13b6f97cfe3b3d9008ff34f0bb35}{APU\_MAJOR\_VERSION}) \textcolor{stringliteral}{"."} \hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{\(\backslash\)}
+\hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{     APU\_STRINGIFY}(\hyperlink{apu__version_8h_a28a5f6fb38453905a840885a8c00152a}{APU\_MINOR\_VERSION}) \textcolor{stringliteral}{"."} \hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{\(\backslash\)}
+\hyperlink{apu__version_8h_a18a778c91b4b029e21691b9f0fa85284}{     APU\_STRINGIFY}(\hyperlink{apu__version_8h_a44b4590b3763f9c92f9d429fb9ce119b}{APU\_PATCH\_VERSION}) \hyperlink{apu__version_8h_ab47617bb2faf080300b78620a4a53a6c}{\(\backslash\)}
+\hyperlink{apu__version_8h_ab47617bb2faf080300b78620a4a53a6c}{     APU\_IS\_DEV\_STRING}
+\end{DoxyCode}
+The formatted string of A\-P\-U's version \hypertarget{apu__version_8h_a0442a908106268fe88603f2c56388302}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V@{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V}}
+\index{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V@{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-U\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-S\-T\-R\-I\-N\-G\-\_\-\-C\-S\-V}}\label{apu__version_8h_a0442a908106268fe88603f2c56388302}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{apu__version_8h_ac6ad13b6f97cfe3b3d9008ff34f0bb35}{APU\_MAJOR\_VERSION} ##, \(\backslash\)
+\textcolor{preprocessor}{                             ##APU\_MINOR\_VERSION ##, \(\backslash\)}
+\textcolor{preprocessor}{                             ##APU\_PATCH\_VERSION}
+\end{DoxyCode}
+An alternative formatted string of A\-P\-R's version 
+
+\subsection{Function Documentation}
+\hypertarget{apu__version_8h_a14cce37b5ee21096fc4307e7374a4970}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!apu\-\_\-version@{apu\-\_\-version}}
+\index{apu\-\_\-version@{apu\-\_\-version}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{apu\-\_\-version}]{\setlength{\rightskip}{0pt plus 5cm}void apu\-\_\-version (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-version\-\_\-t $\ast$}]{pvsn}
+\end{DoxyParamCaption}
+)}}\label{apu__version_8h_a14cce37b5ee21096fc4307e7374a4970}
+Return A\-P\-R-\/util's version information information in a numeric form.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pvsn} & Pointer to a version structure for returning the version information. \\
+\hline
+\end{DoxyParams}
+\hypertarget{apu__version_8h_a50777ba300ca00840f7fce3bf6c1e917}{\index{apu\-\_\-version.\-h@{apu\-\_\-version.\-h}!apu\-\_\-version\-\_\-string@{apu\-\_\-version\-\_\-string}}
+\index{apu\-\_\-version\-\_\-string@{apu\-\_\-version\-\_\-string}!apu_version.h@{apu\-\_\-version.\-h}}
+\subsubsection[{apu\-\_\-version\-\_\-string}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apu\-\_\-version\-\_\-string (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{apu__version_8h_a50777ba300ca00840f7fce3bf6c1e917}
+Return A\-P\-U's version information as a string. 

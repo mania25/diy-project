@@ -1,0 +1,54 @@
+\hypertarget{structapr__pollfd__t}{\section{apr\-\_\-pollfd\-\_\-t Struct Reference}
+\label{structapr__pollfd__t}\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-poll.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$ \hyperlink{structapr__pollfd__t_adae68586ed671472590efe8770de38cc}{p}
+\item 
+\hyperlink{group__apr__poll_ga0a8549d84c1721788b102a4cc8b4b0f0}{apr\-\_\-datatype\-\_\-e} \hyperlink{structapr__pollfd__t_acfafd260241a874745f49ba2df246c53}{desc\-\_\-type}
+\item 
+apr\-\_\-int16\-\_\-t \hyperlink{structapr__pollfd__t_abcedac7097a97823a38ece6e47f4ea9f}{reqevents}
+\item 
+apr\-\_\-int16\-\_\-t \hyperlink{structapr__pollfd__t_aed5b2109b27984975309922bfa84e3f6}{rtnevents}
+\item 
+\hyperlink{unionapr__descriptor}{apr\-\_\-descriptor} \hyperlink{structapr__pollfd__t_ad63baa71bb91f80513d33482e28fb967}{desc}
+\item 
+void $\ast$ \hyperlink{structapr__pollfd__t_a01220e7a71963456461baa40b2a05716}{client\-\_\-data}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Poll descriptor set. 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__pollfd__t_a01220e7a71963456461baa40b2a05716}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!client\-\_\-data@{client\-\_\-data}}
+\index{client\-\_\-data@{client\-\_\-data}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{client\-\_\-data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-pollfd\-\_\-t\-::client\-\_\-data}}\label{structapr__pollfd__t_a01220e7a71963456461baa40b2a05716}
+allows app to associate context \hypertarget{structapr__pollfd__t_ad63baa71bb91f80513d33482e28fb967}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!desc@{desc}}
+\index{desc@{desc}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{desc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-descriptor} apr\-\_\-pollfd\-\_\-t\-::desc}}\label{structapr__pollfd__t_ad63baa71bb91f80513d33482e28fb967}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{unionapr__descriptor}{apr\-\_\-descriptor} 
+\end{DoxySeeAlso}
+\hypertarget{structapr__pollfd__t_acfafd260241a874745f49ba2df246c53}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!desc\-\_\-type@{desc\-\_\-type}}
+\index{desc\-\_\-type@{desc\-\_\-type}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{desc\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-datatype\-\_\-e} apr\-\_\-pollfd\-\_\-t\-::desc\-\_\-type}}\label{structapr__pollfd__t_acfafd260241a874745f49ba2df246c53}
+descriptor type \hypertarget{structapr__pollfd__t_adae68586ed671472590efe8770de38cc}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!p@{p}}
+\index{p@{p}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-pool\-\_\-t}$\ast$ apr\-\_\-pollfd\-\_\-t\-::p}}\label{structapr__pollfd__t_adae68586ed671472590efe8770de38cc}
+associated pool \hypertarget{structapr__pollfd__t_abcedac7097a97823a38ece6e47f4ea9f}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!reqevents@{reqevents}}
+\index{reqevents@{reqevents}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{reqevents}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-int16\-\_\-t apr\-\_\-pollfd\-\_\-t\-::reqevents}}\label{structapr__pollfd__t_abcedac7097a97823a38ece6e47f4ea9f}
+requested events \hypertarget{structapr__pollfd__t_aed5b2109b27984975309922bfa84e3f6}{\index{apr\-\_\-pollfd\-\_\-t@{apr\-\_\-pollfd\-\_\-t}!rtnevents@{rtnevents}}
+\index{rtnevents@{rtnevents}!apr_pollfd_t@{apr\-\_\-pollfd\-\_\-t}}
+\subsubsection[{rtnevents}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-int16\-\_\-t apr\-\_\-pollfd\-\_\-t\-::rtnevents}}\label{structapr__pollfd__t_aed5b2109b27984975309922bfa84e3f6}
+returned events 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{apr__poll_8h}{apr\-\_\-poll.\-h}\end{DoxyCompactItemize}

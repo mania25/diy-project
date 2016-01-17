@@ -1,0 +1,105 @@
+\hypertarget{apr__memcache_8h}{\section{include/apr\-\_\-memcache.h File Reference}
+\label{apr__memcache_8h}\index{include/apr\-\_\-memcache.\-h@{include/apr\-\_\-memcache.\-h}}
+}
+
+
+Client interface for memcached.  
+
+
+{\ttfamily \#include \char`\"{}apr.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-time.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-strings.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-network\-\_\-io.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-ring.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-buckets.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-reslist.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-hash.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__value__t}{apr\-\_\-memcache\-\_\-value\-\_\-t}
+\item 
+struct \hyperlink{structapr__memcache__stats__t}{apr\-\_\-memcache\-\_\-stats\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}{apr\-\_\-memcache\-\_\-conn\-\_\-t} \hyperlink{group___a_p_r___util___m_c_gac4fabf6e3b3efb959eca48f473b73825}{apr\-\_\-memcache\-\_\-conn\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} \hyperlink{group___a_p_r___util___m_c_gaa7b43f2275de0fc700cc05e2467bbc4b}{apr\-\_\-memcache\-\_\-server\-\_\-t}
+\item 
+\hypertarget{group___a_p_r___util___m_c_ga27f0376041ada9a7a8efc657b543cd24}{typedef apr\-\_\-uint32\-\_\-t($\ast$ {\bfseries apr\-\_\-memcache\-\_\-hash\-\_\-func} )(void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)}\label{group___a_p_r___util___m_c_ga27f0376041ada9a7a8efc657b543cd24}
+
+\item 
+\hypertarget{group___a_p_r___util___m_c_ga5bec59e17d9a29de2ffb38afae165371}{typedef struct \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} {\bfseries apr\-\_\-memcache\-\_\-t}}\label{group___a_p_r___util___m_c_ga5bec59e17d9a29de2ffb38afae165371}
+
+\item 
+\hypertarget{group___a_p_r___util___m_c_gae9144ffbb456332c7edbe0dd09759bba}{typedef \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$($\ast$ {\bfseries apr\-\_\-memcache\-\_\-server\-\_\-func} )(void $\ast$baton, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)}\label{group___a_p_r___util___m_c_gae9144ffbb456332c7edbe0dd09759bba}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___m_c_ga3b18c7c3f0ecabb930b78aa549c2e2e8}{apr\-\_\-memcache\-\_\-server\-\_\-status\-\_\-t} \{ \hyperlink{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a211c8d3d7a4a187b5c8f936a6929d007}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-L\-I\-V\-E}, 
+\hyperlink{group___a_p_r___util___m_c_gga3b18c7c3f0ecabb930b78aa549c2e2e8a6dffa918006f926e0fdf0074f4bdac28}{A\-P\-R\-\_\-\-M\-C\-\_\-\-S\-E\-R\-V\-E\-R\-\_\-\-D\-E\-A\-D}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga945a83f7f56800b18243ec5933c16593}{apr\-\_\-memcache\-\_\-hash} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga103ab58d59ca8e4668d31631ee0d3222}{apr\-\_\-memcache\-\_\-hash\-\_\-crc32} (void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga6e2fa2e270332d2cdb44abf775f8022e}{apr\-\_\-memcache\-\_\-hash\-\_\-default} (void $\ast$baton, const char $\ast$data, const apr\-\_\-size\-\_\-t data\-\_\-len)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga22fe48405f08eaded915f5205d9fc221}{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga0c1f483d299b083e0c06e9ec1c9eb316}{apr\-\_\-memcache\-\_\-find\-\_\-server\-\_\-hash\-\_\-default} (void $\ast$baton, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const apr\-\_\-uint32\-\_\-t hash)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga9d6381d9d9f8f83f4fa5450cc8066590}{apr\-\_\-memcache\-\_\-add\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$server)
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ \hyperlink{group___a_p_r___util___m_c_ga76b77e042ced1bae3b23f71696482a7e}{apr\-\_\-memcache\-\_\-find\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$host, apr\-\_\-port\-\_\-t port)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gafe4824659cbe261409b57a48d85c34e3}{apr\-\_\-memcache\-\_\-enable\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gae8a982e8794a08a78264ec3a966797fc}{apr\-\_\-memcache\-\_\-disable\-\_\-server} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga18ddd72bc1ab5edb0a08a8f26f193bd3}{apr\-\_\-memcache\-\_\-server\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$host, apr\-\_\-port\-\_\-t port, apr\-\_\-uint32\-\_\-t min, apr\-\_\-uint32\-\_\-t smax, apr\-\_\-uint32\-\_\-t max, apr\-\_\-uint32\-\_\-t ttl, \hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$$\ast$ns)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga5a510d8ac3f5bf12cf2da1a445f4854b}{apr\-\_\-memcache\-\_\-create} (apr\-\_\-pool\-\_\-t $\ast$p, apr\-\_\-uint16\-\_\-t max\-\_\-servers, apr\-\_\-uint32\-\_\-t flags, \hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$$\ast$mc)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gac41597ff979e7a181da459398196196f}{apr\-\_\-memcache\-\_\-getp} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, apr\-\_\-pool\-\_\-t $\ast$p, const char $\ast$key, char $\ast$$\ast$baton, apr\-\_\-size\-\_\-t $\ast$len, apr\-\_\-uint16\-\_\-t $\ast$flags)
+\item 
+void \hyperlink{group___a_p_r___util___m_c_gac94d47eedb9baebe823b2e5eeed54157}{apr\-\_\-memcache\-\_\-add\-\_\-multget\-\_\-key} (apr\-\_\-pool\-\_\-t $\ast$data\-\_\-pool, const char $\ast$key, apr\-\_\-hash\-\_\-t $\ast$$\ast$values)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga4a5beadb98954331896e95c35324b0fc}{apr\-\_\-memcache\-\_\-multgetp} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, apr\-\_\-pool\-\_\-t $\ast$temp\-\_\-pool, apr\-\_\-pool\-\_\-t $\ast$data\-\_\-pool, apr\-\_\-hash\-\_\-t $\ast$values)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gaa5bbe2c60302a689773d6a70da8f99fb}{apr\-\_\-memcache\-\_\-set} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga3c150706f243bf2b9cd89152d416ee56}{apr\-\_\-memcache\-\_\-add} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga0f7b9fdb5d7a0a1feb5642d7778e268d}{apr\-\_\-memcache\-\_\-replace} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, char $\ast$baton, const apr\-\_\-size\-\_\-t data\-\_\-size, apr\-\_\-uint32\-\_\-t timeout, apr\-\_\-uint16\-\_\-t flags)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga97d2c5be42ef773ba82fd8293b219ece}{apr\-\_\-memcache\-\_\-delete} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-uint32\-\_\-t timeout)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga2cfc95fe963f2d4190996153a2ddb748}{apr\-\_\-memcache\-\_\-incr} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-int32\-\_\-t n, apr\-\_\-uint32\-\_\-t $\ast$nv)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gacf93837a1fd4c3d230644098f3043a39}{apr\-\_\-memcache\-\_\-decr} (\hyperlink{structapr__memcache__t}{apr\-\_\-memcache\-\_\-t} $\ast$mc, const char $\ast$key, apr\-\_\-int32\-\_\-t n, apr\-\_\-uint32\-\_\-t $\ast$new\-\_\-value)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_ga1d1b9478138b907eb9c10576cb1653ff}{apr\-\_\-memcache\-\_\-version} (\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms, apr\-\_\-pool\-\_\-t $\ast$p, char $\ast$$\ast$baton)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_c_gad81ba4ef97f7dd64e37a0fbb09677859}{apr\-\_\-memcache\-\_\-stats} (\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$ms, apr\-\_\-pool\-\_\-t $\ast$p, \hyperlink{structapr__memcache__stats__t}{apr\-\_\-memcache\-\_\-stats\-\_\-t} $\ast$$\ast$stats)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Client interface for memcached. \begin{DoxyRemark}{Remarks}
+To use this interface you must have a separate memcached server running. See the memcached website at \href{http://www.danga.com/memcached/}{\tt http\-://www.\-danga.\-com/memcached/} for more information. 
+\end{DoxyRemark}

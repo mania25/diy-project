@@ -1,0 +1,1348 @@
+\hypertarget{group__apr__thread__proc}{\section{Threads and Process Functions}
+\label{group__apr__thread__proc}\index{Threads and Process Functions@{Threads and Process Functions}}
+}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group___a_p_r___o_c}{Other Child Flags}
+\end{DoxyCompactItemize}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga689b0f3953cde83a4092931bad8b7183}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T}(x)~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T})
+\item 
+\#define \hyperlink{group__apr__thread__proc_gaa0a8a0b8785cc9392059c7accd71f5f6}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D}(x)~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L})
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga2249e96191b5d98d33fb7875bce49410}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P}(x)~(x \& \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E})
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab7cfcb8ed24e6c0a76cd41b5b113ae95}{A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga646af57314e71f4647243f36dd03e5ea}{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K}~1
+\item 
+\#define \hyperlink{group__apr__thread__proc_gae0707f76da785490830fc3491093767c}{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}~2
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga8653bab028b1c2b98754babc2547f988}{A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K}~3
+\item 
+\#define \hyperlink{group__apr__thread__proc_gacad9da4db7a22f46715e50fb8ec1c939}{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K}~4
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}~8
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}~8
+\item 
+\#define \hyperlink{group__apr__thread__proc_gaf8295548cb0821ee02249d6de8336bcb}{A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K}~3
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga36ff2de9664ad6995bd488b4ac715c9c}{A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K}~4
+\item 
+\#define \hyperlink{group__apr__thread__proc_gaad8a94c7ac2be58fe035b2fd6efec84f}{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga6dbb01bb357b078acff8fd87e9c494e8}{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M}~1
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga72e9be453a20f4e78bc6d7bd95d7c333}{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C}~2
+\item 
+\#define \hyperlink{group__apr__thread__proc_ga18d73099d66988698a9ad2aebdce2c9f}{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E}~3
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab57b448a464ac299c03d6127781df152}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D}~0
+\item 
+\#define \hyperlink{group__apr__thread__proc_gab4de7134fcc66c4127ae65b68631f846}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} \hyperlink{group__apr__thread__proc_gada60ec0f833048291d98e66f21f4c4c4}{apr\-\_\-proc\-\_\-t}
+\item 
+typedef void( \hyperlink{group__apr__thread__proc_ga8f8642f468f05b0ac2b1426b723af100}{apr\-\_\-child\-\_\-errfn\-\_\-t} )(\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$proc, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} err, const char $\ast$description)
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\-\_\-thread\-\_\-once\-\_\-t} \hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\-\_\-thread\-\_\-once\-\_\-t}
+\item 
+typedef struct \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t}
+\item 
+typedef struct \\*
+\hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t} \hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t}
+\item 
+typedef void $\ast$(\hyperlink{group__apr__platform_gade8f829f9bd98fd4386894acf72edd7c}{A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-F\-U\-N\-C} $\ast$ \hyperlink{group__apr__thread__proc_ga37193850d158ca870fc8f8759f0725a9}{apr\-\_\-thread\-\_\-start\-\_\-t} )(\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$, void $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}{apr\-\_\-cmdtype\-\_\-e} \{ \\*
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a02f5d83f79e2c12bfca5a86d7f14caa6}{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060ac128c1239a524cf21300b8ed6248ac99}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a6a3f9694aced0e449f6bb4b3e437233a}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V}, 
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060aa424b51bdc16e4d18bb757a32c6a346a}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H}, 
+\\*
+\hyperlink{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060afcefc45317b67fad6dc5459772ce9409}{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V}
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\-\_\-wait\-\_\-how\-\_\-e} \{ \hyperlink{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a057885ccf4b8b707e0d115c691037de4}{A\-P\-R\-\_\-\-W\-A\-I\-T}, 
+\hyperlink{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a0163031f6b72b0c4add9108052a672d5}{A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T}
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\-\_\-exit\-\_\-why\-\_\-e} \{ \hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T} = 1, 
+\hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L} = 2, 
+\hyperlink{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E} = 4
+ \}
+\item 
+enum \hyperlink{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}{apr\-\_\-kill\-\_\-conditions\-\_\-e} \{ \\*
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa33580ab0809e9498855fbdde8a1714ef}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affaf45d0f72811399b394d1311384e2dfe4}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa16a47aa786b1c1f31ef02353bcae9a1a}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}, 
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa6ada2605856ac94826edbe824e64e503}{A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T}, 
+\\*
+\hyperlink{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa24d6f47785093be4cea2a922eeaed098}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga66c2f55e5dff9ac37bd32e9febd38da5}{apr\-\_\-threadattr\-\_\-create} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$$\ast$new\-\_\-attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga85d44b3b021f28116122d5e40e024648}{apr\-\_\-threadattr\-\_\-detach\-\_\-set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t on)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gae5b7cdb3de542d1b7b52fe5d9d8cb00b}{apr\-\_\-threadattr\-\_\-detach\-\_\-get} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$attr)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga7849e0d637338a18cb44f66f11f28ed1}{apr\-\_\-threadattr\-\_\-stacksize\-\_\-set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$attr, apr\-\_\-size\-\_\-t stacksize)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga2e732f2913291180c0c484f57d727140}{apr\-\_\-threadattr\-\_\-guardsize\-\_\-set} (\hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$attr, apr\-\_\-size\-\_\-t guardsize)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gaeba6593f43f1de94c2b4495dd72b0e9f}{apr\-\_\-thread\-\_\-create} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$$\ast$new\-\_\-thread, \hyperlink{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{apr\-\_\-threadattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__thread__proc_ga37193850d158ca870fc8f8759f0725a9}{apr\-\_\-thread\-\_\-start\-\_\-t} func, void $\ast$data, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga0e35365e530578bca1b4bea522ac8c85}{apr\-\_\-thread\-\_\-exit} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thd, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} retval)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga1b950f36fa5bcd5a64887073f46f6d13}{apr\-\_\-thread\-\_\-join} (\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} $\ast$retval, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thd)
+\item 
+void \hyperlink{group__apr__thread__proc_gacd69fb862c069cb6f297f65d64b5c102}{apr\-\_\-thread\-\_\-yield} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga63f3bf667151053e45d5a2029daeda0d}{apr\-\_\-thread\-\_\-once\-\_\-init} (\hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\-\_\-thread\-\_\-once\-\_\-t} $\ast$$\ast$control, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga8f3645ee52ff07566c92181b4ce732d8}{apr\-\_\-thread\-\_\-once} (\hyperlink{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{apr\-\_\-thread\-\_\-once\-\_\-t} $\ast$control, void($\ast$func)(void))
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gadbd186912d5f6f2a19a175e1e02ba10e}{apr\-\_\-thread\-\_\-detach} (\hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gad799c8140ed068a12f1dbe134423eae7}{apr\-\_\-thread\-\_\-data\-\_\-get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thread)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gaa90d79c9935692db4f27a6573f437221}{apr\-\_\-thread\-\_\-data\-\_\-set} (void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thread)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gacb9553b2b3165388bfc0a54b1148804a}{apr\-\_\-threadkey\-\_\-private\-\_\-create} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$$\ast$key, void($\ast$dest)(void $\ast$), \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga371c87c122cc3df0b7ad0031f6e11167}{apr\-\_\-threadkey\-\_\-private\-\_\-get} (void $\ast$$\ast$new\-\_\-mem, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga63501a064ca7f1818aa056b40146aa0b}{apr\-\_\-threadkey\-\_\-private\-\_\-set} (void $\ast$priv, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga20b9b79892a6532784fff023a4ebd8cf}{apr\-\_\-threadkey\-\_\-private\-\_\-delete} (\hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$key)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gae203664972dfc5c555620ae1788f5b48}{apr\-\_\-threadkey\-\_\-data\-\_\-get} (void $\ast$$\ast$data, const char $\ast$key, \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$threadkey)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga1059158f34dded87f21ba82af1211951}{apr\-\_\-threadkey\-\_\-data\-\_\-set} (void $\ast$data, const char $\ast$key, \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t}($\ast$cleanup)(void $\ast$), \hyperlink{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{apr\-\_\-threadkey\-\_\-t} $\ast$threadkey)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga90f8ef684e601c110daad9b63da53cf3}{apr\-\_\-procattr\-\_\-create} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$$\ast$new\-\_\-attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t in, apr\-\_\-int32\-\_\-t out, apr\-\_\-int32\-\_\-t err)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga24f40119b1aa07dd45a681a44915cb1b}{apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$child\-\_\-in, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$parent\-\_\-in)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gabb97e9a49021ab4452ae3f1a281c977f}{apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$child\-\_\-out, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$parent\-\_\-out)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga6fad364c6c820e37c0915435cfb3921f}{apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set} (struct \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$child\-\_\-err, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$parent\-\_\-err)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga97766f50b0ae083a2f8a28e698a59baa}{apr\-\_\-procattr\-\_\-dir\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, const char $\ast$dir)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga1426acc5bdd96385769e7b42bfa6ebbd}{apr\-\_\-procattr\-\_\-cmdtype\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}{apr\-\_\-cmdtype\-\_\-e} cmd)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga3ccca55041f648f00f0605673d4e0fdc}{apr\-\_\-procattr\-\_\-detach\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t detach)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\-\_\-procattr\-\_\-limit\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t what, struct rlimit $\ast$limit)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gaa39deba0837e0772754ad41589b733cf}{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__thread__proc_ga8f8642f468f05b0ac2b1426b723af100}{apr\-\_\-child\-\_\-errfn\-\_\-t} $\ast$errfn)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga24076f050e9385af09ad8c3931d8dc43}{apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t chk)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga0f1dd02408995767efcb9c0d9c775620}{apr\-\_\-procattr\-\_\-addrspace\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, apr\-\_\-int32\-\_\-t addrspace)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga741ed3dc047b935b091a21528c49bb19}{apr\-\_\-procattr\-\_\-user\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, const char $\ast$username, const char $\ast$password)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga391f0d3831a5894ea2118762789a395d}{apr\-\_\-procattr\-\_\-group\-\_\-set} (\hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, const char $\ast$groupname)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}{apr\-\_\-proc\-\_\-fork} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$cont)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$new\-\_\-proc, const char $\ast$progname, const char $\ast$const $\ast$args, const char $\ast$const $\ast$env, \hyperlink{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{apr\-\_\-procattr\-\_\-t} $\ast$attr, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$pool)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga0936f7a7fe7e2d5e08979c9f343a5a1b}{apr\-\_\-proc\-\_\-wait} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, int $\ast$exitcode, \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\-\_\-exit\-\_\-why\-\_\-e} $\ast$exitwhy, \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\-\_\-wait\-\_\-how\-\_\-e} waithow)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga506183074e8413c3ff597539e4768ea4}{apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, int $\ast$exitcode, \hyperlink{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{apr\-\_\-exit\-\_\-why\-\_\-e} $\ast$exitwhy, \hyperlink{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{apr\-\_\-wait\-\_\-how\-\_\-e} waithow, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga56c2b005792752b63d804f2021596406}{apr\-\_\-proc\-\_\-detach} (int daemonize)
+\item 
+void \hyperlink{group__apr__thread__proc_gaf8d2be452a819161aa4cd6205a17761e}{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, void($\ast$maintenance)(int reason, void $\ast$, int status), void $\ast$data, \hyperlink{group__apr__file__io_gaa46e4763ac375ea3c7a43ba6f6099e22}{apr\-\_\-file\-\_\-t} $\ast$write\-\_\-fd, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\item 
+void \hyperlink{group__apr__thread__proc_ga10b1a4b224566c03c97f100ac8a2c830}{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister} (void $\ast$data)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga88701979c4e5ac4b94966c73e0159efd}{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, int reason, int status)
+\item 
+void \hyperlink{group__apr__thread__proc_ga74a905d90a3476a611adeeb304931a6c}{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh} (\hyperlink{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t} $\ast$ocr, int reason)
+\item 
+void \hyperlink{group__apr__thread__proc_gacff5e867a92619d30c4e78f9ad2a58e3}{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all} (int reason)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga4a5ff2fce2c68460281b0cb3ee0365d5}{apr\-\_\-proc\-\_\-kill} (\hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, int sig)
+\item 
+void \hyperlink{group__apr__thread__proc_gacbe3fd9491fa35149de28cebcae22f87}{apr\-\_\-pool\-\_\-note\-\_\-subprocess} (\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$a, \hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t} $\ast$proc, \hyperlink{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}{apr\-\_\-kill\-\_\-conditions\-\_\-e} how)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga7adc09cd24568666266edce81cfffbed}{apr\-\_\-setup\-\_\-signal\-\_\-thread} (void)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__thread__proc_ga2e53fa76ff725749c7affe6c81faa9e5}{apr\-\_\-signal\-\_\-thread} (int($\ast$signal\-\_\-handler)(int signum))
+\item 
+\hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$ \hyperlink{group__apr__thread__proc_ga089b70ae9d6c64d2675a1fd1e9cd0d0d}{apr\-\_\-thread\-\_\-pool\-\_\-get} (const \hyperlink{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{apr\-\_\-thread\-\_\-t} $\ast$thethread)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__thread__proc_gacad9da4db7a22f46715e50fb8ec1c939}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-B\-L\-O\-C\-K~4}}\label{group__apr__thread__proc_gacad9da4db7a22f46715e50fb8ec1c939}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga646af57314e71f4647243f36dd03e5ea}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K~1}}\label{group__apr__thread__proc_ga646af57314e71f4647243f36dd03e5ea}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} and \hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\-\_\-file\-\_\-pipe\-\_\-create\-\_\-ex} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_gae0707f76da785490830fc3491093767c}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-N\-O\-N\-B\-L\-O\-C\-K~2}}\label{group__apr__thread__proc_gae0707f76da785490830fc3491093767c}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} and \hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\-\_\-file\-\_\-pipe\-\_\-create\-\_\-ex} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_gaad8a94c7ac2be58fe035b2fd6efec84f}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U}}
+\index{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-C\-P\-U~0}}\label{group__apr__thread__proc_gaad8a94c7ac2be58fe035b2fd6efec84f}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\-\_\-procattr\-\_\-limit\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga6dbb01bb357b078acff8fd87e9c494e8}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M}}
+\index{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-M\-E\-M~1}}\label{group__apr__thread__proc_ga6dbb01bb357b078acff8fd87e9c494e8}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\-\_\-procattr\-\_\-limit\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga18d73099d66988698a9ad2aebdce2c9f}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-O\-F\-I\-L\-E~3}}\label{group__apr__thread__proc_ga18d73099d66988698a9ad2aebdce2c9f}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\-\_\-procattr\-\_\-limit\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga72e9be453a20f4e78bc6d7bd95d7c333}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C}}
+\index{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C@{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-L\-I\-M\-I\-T\-\_\-\-N\-P\-R\-O\-C~2}}\label{group__apr__thread__proc_ga72e9be453a20f4e78bc6d7bd95d7c333}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{apr\-\_\-procattr\-\_\-limit\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E~8}}\label{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set}
+
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Win32 only effective with version 1.\-2.\-12, portably introduced in 1.\-3.\-0 
+\end{DoxyNote}
+\hypertarget{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}}
+\index{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E~8}}\label{group__apr__thread__proc_ga597fb6a501c20cc3a597fe6c613f4310}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set}
+
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} 
+\end{DoxySeeAlso}
+\begin{DoxyNote}{Note}
+Win32 only effective with version 1.\-2.\-12, portably introduced in 1.\-3.\-0 
+\end{DoxyNote}
+\hypertarget{group__apr__thread__proc_gab7cfcb8ed24e6c0a76cd41b5b113ae95}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E}}
+\index{A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E@{A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E~0}}\label{group__apr__thread__proc_gab7cfcb8ed24e6c0a76cd41b5b113ae95}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga8653bab028b1c2b98754babc2547f988}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-A\-R\-E\-N\-T\-\_\-\-B\-L\-O\-C\-K~3}}\label{group__apr__thread__proc_ga8653bab028b1c2b98754babc2547f988}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga2249e96191b5d98d33fb7875bce49410}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P}}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-C\-O\-R\-E\-\_\-\-D\-U\-M\-P(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(x \& {\bf A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E})}}\label{group__apr__thread__proc_ga2249e96191b5d98d33fb7875bce49410}
+did we get core \hypertarget{group__apr__thread__proc_ga689b0f3953cde83a4092931bad8b7183}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T}}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-E\-X\-I\-T(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(x \& {\bf A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T})}}\label{group__apr__thread__proc_ga689b0f3953cde83a4092931bad8b7183}
+did we exit the process \hypertarget{group__apr__thread__proc_gaa0a8a0b8785cc9392059c7accd71f5f6}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D}}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-C\-H\-E\-C\-K\-\_\-\-S\-I\-G\-N\-A\-L\-E\-D(
+\begin{DoxyParamCaption}
+\item[{}]{x}
+\end{DoxyParamCaption}
+)~(x \& {\bf A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L})}}\label{group__apr__thread__proc_gaa0a8a0b8785cc9392059c7accd71f5f6}
+did we get a signal \hypertarget{group__apr__thread__proc_gab4de7134fcc66c4127ae65b68631f846}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-D\-A\-E\-M\-O\-N\-I\-Z\-E~1}}\label{group__apr__thread__proc_gab4de7134fcc66c4127ae65b68631f846}
+Detach \hypertarget{group__apr__thread__proc_gab57b448a464ac299c03d6127781df152}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D}}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-D\-E\-T\-A\-C\-H\-\_\-\-F\-O\-R\-E\-G\-R\-O\-U\-N\-D~0}}\label{group__apr__thread__proc_gab57b448a464ac299c03d6127781df152}
+Do not detach \hypertarget{group__apr__thread__proc_gaf8295548cb0821ee02249d6de8336bcb}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-A\-D\-\_\-\-B\-L\-O\-C\-K~3}}\label{group__apr__thread__proc_gaf8295548cb0821ee02249d6de8336bcb}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\-\_\-file\-\_\-pipe\-\_\-create\-\_\-ex} 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga36ff2de9664ad6995bd488b4ac715c9c}{\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K@{A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-W\-R\-I\-T\-E\-\_\-\-B\-L\-O\-C\-K~4}}\label{group__apr__thread__proc_ga36ff2de9664ad6995bd488b4ac715c9c}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__file__io_ga2fbbae715bee0e0ca9adadd66ac65e96}{apr\-\_\-file\-\_\-pipe\-\_\-create\-\_\-ex} 
+\end{DoxySeeAlso}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__thread__proc_ga8f8642f468f05b0ac2b1426b723af100}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-child\-\_\-errfn\-\_\-t@{apr\-\_\-child\-\_\-errfn\-\_\-t}}
+\index{apr\-\_\-child\-\_\-errfn\-\_\-t@{apr\-\_\-child\-\_\-errfn\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-child\-\_\-errfn\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( apr\-\_\-child\-\_\-errfn\-\_\-t)({\bf apr\-\_\-pool\-\_\-t} $\ast$proc, {\bf apr\-\_\-status\-\_\-t} err, const char $\ast$description)}}\label{group__apr__thread__proc_ga8f8642f468f05b0ac2b1426b723af100}
+The prototype for A\-P\-R child errfn functions. (See the description of \hyperlink{group__apr__thread__proc_gaa39deba0837e0772754ad41589b733cf}{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set()} for more information.) It is passed the following parameters\-: 
+\begin{DoxyParams}{Parameters}
+{\em pool} & Pool associated with the \hyperlink{structapr__proc__t}{apr\-\_\-proc\-\_\-t}. If your child error function needs user data, associate it with this pool. \\
+\hline
+{\em err} & A\-P\-R error code describing the error \\
+\hline
+{\em description} & Text description of type of processing which failed \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t@{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t}}
+\index{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t@{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t} {\bf apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t}}}\label{group__apr__thread__proc_gafc52ee8b19a7b222278d31ebb3f11a71}
+Opaque record of child process. \hypertarget{group__apr__thread__proc_gada60ec0f833048291d98e66f21f4c4c4}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-t@{apr\-\_\-proc\-\_\-t}}
+\index{apr\-\_\-proc\-\_\-t@{apr\-\_\-proc\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-proc\-\_\-t}  {\bf apr\-\_\-proc\-\_\-t}}}\label{group__apr__thread__proc_gada60ec0f833048291d98e66f21f4c4c4}
+The A\-P\-R process type \hypertarget{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-t@{apr\-\_\-procattr\-\_\-t}}
+\index{apr\-\_\-procattr\-\_\-t@{apr\-\_\-procattr\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-procattr\-\_\-t} {\bf apr\-\_\-procattr\-\_\-t}}}\label{group__apr__thread__proc_ga0d83919a6a0dd609598a864917f8b339}
+Opaque Process attributes structure. \hypertarget{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-once\-\_\-t@{apr\-\_\-thread\-\_\-once\-\_\-t}}
+\index{apr\-\_\-thread\-\_\-once\-\_\-t@{apr\-\_\-thread\-\_\-once\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-once\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-thread\-\_\-once\-\_\-t} {\bf apr\-\_\-thread\-\_\-once\-\_\-t}}}\label{group__apr__thread__proc_ga91841bcf20d0579e8e6acc6d3c220ac1}
+Opaque control variable for one-\/time atomic variables. \hypertarget{group__apr__thread__proc_ga37193850d158ca870fc8f8759f0725a9}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-start\-\_\-t@{apr\-\_\-thread\-\_\-start\-\_\-t}}
+\index{apr\-\_\-thread\-\_\-start\-\_\-t@{apr\-\_\-thread\-\_\-start\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-start\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void$\ast$({\bf A\-P\-R\-\_\-\-T\-H\-R\-E\-A\-D\-\_\-\-F\-U\-N\-C} $\ast$ apr\-\_\-thread\-\_\-start\-\_\-t)({\bf apr\-\_\-thread\-\_\-t} $\ast$, void $\ast$)}}\label{group__apr__thread__proc_ga37193850d158ca870fc8f8759f0725a9}
+The prototype for any A\-P\-R thread worker functions. \hypertarget{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-t@{apr\-\_\-thread\-\_\-t}}
+\index{apr\-\_\-thread\-\_\-t@{apr\-\_\-thread\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-thread\-\_\-t} {\bf apr\-\_\-thread\-\_\-t}}}\label{group__apr__thread__proc_ga646c71351e723d84f8cc8c8d1d5937be}
+Opaque Thread structure. \hypertarget{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-t@{apr\-\_\-threadattr\-\_\-t}}
+\index{apr\-\_\-threadattr\-\_\-t@{apr\-\_\-threadattr\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-threadattr\-\_\-t} {\bf apr\-\_\-threadattr\-\_\-t}}}\label{group__apr__thread__proc_ga35de571e9944871c10b38d8feef885ac}
+Opaque Thread attributes structure. \hypertarget{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-t@{apr\-\_\-threadkey\-\_\-t}}
+\index{apr\-\_\-threadkey\-\_\-t@{apr\-\_\-threadkey\-\_\-t}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-threadkey\-\_\-t} {\bf apr\-\_\-threadkey\-\_\-t}}}\label{group__apr__thread__proc_ga337c9c1bd2d47740022071a5c41f2edb}
+Opaque thread private address space. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-cmdtype\-\_\-e@{apr\-\_\-cmdtype\-\_\-e}}
+\index{apr\-\_\-cmdtype\-\_\-e@{apr\-\_\-cmdtype\-\_\-e}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-cmdtype\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-cmdtype\-\_\-e}}}\label{group__apr__thread__proc_gadcb981d7748c580eb69ac11dbf709060}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D@{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D@{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a02f5d83f79e2c12bfca5a86d7f14caa6}{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D}\label{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a02f5d83f79e2c12bfca5a86d7f14caa6}
+}]use the shell to invoke the program \index{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060ac128c1239a524cf21300b8ed6248ac99}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M}\label{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060ac128c1239a524cf21300b8ed6248ac99}
+}]invoke the program directly, no copied env \index{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a6a3f9694aced0e449f6bb4b3e437233a}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V}\label{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060a6a3f9694aced0e449f6bb4b3e437233a}
+}]invoke the program, replicating our environment \index{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H@{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060aa424b51bdc16e4d18bb757a32c6a346a}{A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H}\label{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060aa424b51bdc16e4d18bb757a32c6a346a}
+}]find program on P\-A\-T\-H, use our environment \index{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V@{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V@{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060afcefc45317b67fad6dc5459772ce9409}{A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V}\label{group__apr__thread__proc_ggadcb981d7748c580eb69ac11dbf709060afcefc45317b67fad6dc5459772ce9409}
+}]use the shell to invoke the program, replicating our environment \end{description}
+\end{Desc}
+\hypertarget{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-exit\-\_\-why\-\_\-e@{apr\-\_\-exit\-\_\-why\-\_\-e}}
+\index{apr\-\_\-exit\-\_\-why\-\_\-e@{apr\-\_\-exit\-\_\-why\-\_\-e}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-exit\-\_\-why\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-exit\-\_\-why\-\_\-e}}}\label{group__apr__thread__proc_gac097b4fa41e67024711c5983446d0951}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-E\-X\-I\-T}\label{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a977f140c82333af62aa4bed8c99a3ee2}
+}]process exited normally \index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L}\label{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a7e3421d18abe458ca27822d19424225b}
+}]process exited due to a signal \index{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E@{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E}}\item[{\em 
+\hypertarget{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}{A\-P\-R\-\_\-\-P\-R\-O\-C\-\_\-\-S\-I\-G\-N\-A\-L\-\_\-\-C\-O\-R\-E}\label{group__apr__thread__proc_ggac097b4fa41e67024711c5983446d0951a6b667be4983cb59e9bed37ee05a0dcce}
+}]process exited and dumped a core file \end{description}
+\end{Desc}
+\hypertarget{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-kill\-\_\-conditions\-\_\-e@{apr\-\_\-kill\-\_\-conditions\-\_\-e}}
+\index{apr\-\_\-kill\-\_\-conditions\-\_\-e@{apr\-\_\-kill\-\_\-conditions\-\_\-e}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-kill\-\_\-conditions\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-kill\-\_\-conditions\-\_\-e}}}\label{group__apr__thread__proc_ga3eaec78633742e7e0cb9480a21477aff}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa33580ab0809e9498855fbdde8a1714ef}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-N\-E\-V\-E\-R}\label{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa33580ab0809e9498855fbdde8a1714ef}
+}]process is never killed (i.\-e., never sent any signals), but it will be reaped if it exits before the pool is cleaned up \index{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affaf45d0f72811399b394d1311384e2dfe4}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-L\-W\-A\-Y\-S}\label{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affaf45d0f72811399b394d1311384e2dfe4}
+}]process is sent S\-I\-G\-K\-I\-L\-L on apr\-\_\-pool\-\_\-t cleanup \index{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa16a47aa786b1c1f31ef02353bcae9a1a}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-A\-F\-T\-E\-R\-\_\-\-T\-I\-M\-E\-O\-U\-T}\label{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa16a47aa786b1c1f31ef02353bcae9a1a}
+}]S\-I\-G\-T\-E\-R\-M, wait 3 seconds, S\-I\-G\-K\-I\-L\-L \index{A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T@{A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T@{A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa6ada2605856ac94826edbe824e64e503}{A\-P\-R\-\_\-\-J\-U\-S\-T\-\_\-\-W\-A\-I\-T}\label{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa6ada2605856ac94826edbe824e64e503}
+}]wait forever for the process to complete \index{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E@{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa24d6f47785093be4cea2a922eeaed098}{A\-P\-R\-\_\-\-K\-I\-L\-L\-\_\-\-O\-N\-L\-Y\-\_\-\-O\-N\-C\-E}\label{group__apr__thread__proc_gga3eaec78633742e7e0cb9480a21477affa24d6f47785093be4cea2a922eeaed098}
+}]send S\-I\-G\-T\-E\-R\-M and then wait \end{description}
+\end{Desc}
+\hypertarget{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-wait\-\_\-how\-\_\-e@{apr\-\_\-wait\-\_\-how\-\_\-e}}
+\index{apr\-\_\-wait\-\_\-how\-\_\-e@{apr\-\_\-wait\-\_\-how\-\_\-e}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-wait\-\_\-how\-\_\-e}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf apr\-\_\-wait\-\_\-how\-\_\-e}}}\label{group__apr__thread__proc_ga5e52d786644f3b66d6180571e68c7260}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{A\-P\-R\-\_\-\-W\-A\-I\-T@{A\-P\-R\-\_\-\-W\-A\-I\-T}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-W\-A\-I\-T@{A\-P\-R\-\_\-\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a057885ccf4b8b707e0d115c691037de4}{A\-P\-R\-\_\-\-W\-A\-I\-T}\label{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a057885ccf4b8b707e0d115c691037de4}
+}]wait for the specified process to finish \index{A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T@{A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T}!Threads and Process Functions@{Threads and Process Functions}}\index{Threads and Process Functions@{Threads and Process Functions}!A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T@{A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T}}\item[{\em 
+\hypertarget{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a0163031f6b72b0c4add9108052a672d5}{A\-P\-R\-\_\-\-N\-O\-W\-A\-I\-T}\label{group__apr__thread__proc_gga5e52d786644f3b66d6180571e68c7260a0163031f6b72b0c4add9108052a672d5}
+}]do not wait -- just see if it has finished \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__thread__proc_gacbe3fd9491fa35149de28cebcae22f87}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-pool\-\_\-note\-\_\-subprocess@{apr\-\_\-pool\-\_\-note\-\_\-subprocess}}
+\index{apr\-\_\-pool\-\_\-note\-\_\-subprocess@{apr\-\_\-pool\-\_\-note\-\_\-subprocess}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-pool\-\_\-note\-\_\-subprocess}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-pool\-\_\-note\-\_\-subprocess (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{a, }
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{{\bf apr\-\_\-kill\-\_\-conditions\-\_\-e}}]{how}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gacbe3fd9491fa35149de28cebcae22f87}
+Register a process to be killed when a pool dies. 
+\begin{DoxyParams}{Parameters}
+{\em a} & The pool to use to define the processes lifetime \\
+\hline
+{\em proc} & The process to register \\
+\hline
+{\em how} & How to kill the process, one of\-: 
+\begin{DoxyPre}
+        APR\_KILL\_NEVER         -- process is never sent any signals
+        APR\_KILL\_ALWAYS        -- process is sent SIGKILL on apr\_pool\_t cleanup
+        APR\_KILL\_AFTER\_TIMEOUT -- SIGTERM, wait 3 seconds, SIGKILL
+        APR\_JUST\_WAIT          -- wait forever for the process to complete
+        APR\_KILL\_ONLY\_ONCE     -- send SIGTERM and then wait
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-create@{apr\-\_\-proc\-\_\-create}}
+\index{apr\-\_\-proc\-\_\-create@{apr\-\_\-proc\-\_\-create}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{new\-\_\-proc, }
+\item[{const char $\ast$}]{progname, }
+\item[{const char $\ast$const $\ast$}]{args, }
+\item[{const char $\ast$const $\ast$}]{env, }
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}
+Create a new process and execute a new program within that process. 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-proc} & The resulting process handle. \\
+\hline
+{\em progname} & The program to run \\
+\hline
+{\em args} & the arguments to pass to the new program. The first one should be the program name. \\
+\hline
+{\em env} & The new environment table for the new process. This should be a list of N\-U\-L\-L-\/terminated strings. This argument is ignored for A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-E\-N\-V, A\-P\-R\-\_\-\-P\-R\-O\-G\-R\-A\-M\-\_\-\-P\-A\-T\-H, and A\-P\-R\-\_\-\-S\-H\-E\-L\-L\-C\-M\-D\-\_\-\-E\-N\-V types of commands. \\
+\hline
+{\em attr} & the procattr we should use to determine how to create the new process \\
+\hline
+{\em pool} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function returns without waiting for the new process to terminate; use apr\-\_\-proc\-\_\-wait for that. 
+\end{DoxyNote}
+\hypertarget{group__apr__thread__proc_ga56c2b005792752b63d804f2021596406}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-detach@{apr\-\_\-proc\-\_\-detach}}
+\index{apr\-\_\-proc\-\_\-detach@{apr\-\_\-proc\-\_\-detach}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-detach}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-detach (
+\begin{DoxyParamCaption}
+\item[{int}]{daemonize}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga56c2b005792752b63d804f2021596406}
+Detach the process from the controlling terminal. 
+\begin{DoxyParams}{Parameters}
+{\em daemonize} & set to non-\/zero if the process should daemonize and become a background process, else it will stay in the foreground. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-fork@{apr\-\_\-proc\-\_\-fork}}
+\index{apr\-\_\-proc\-\_\-fork@{apr\-\_\-proc\-\_\-fork}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-fork}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-fork (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga3d0415bf69b0a629a929833e82758b85}
+This is currently the only non-\/portable call in A\-P\-R. This executes a standard unix fork. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The resulting process handle. \\
+\hline
+{\em cont} & The pool to use. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+returns A\-P\-R\-\_\-\-I\-N\-C\-H\-I\-L\-D for the child, and A\-P\-R\-\_\-\-I\-N\-P\-A\-R\-E\-N\-T for the parent or an error. 
+\end{DoxyRemark}
+\hypertarget{group__apr__thread__proc_ga4a5ff2fce2c68460281b0cb3ee0365d5}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-kill@{apr\-\_\-proc\-\_\-kill}}
+\index{apr\-\_\-proc\-\_\-kill@{apr\-\_\-proc\-\_\-kill}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-kill}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-kill (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{int}]{sig}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga4a5ff2fce2c68460281b0cb3ee0365d5}
+Terminate a process. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The process to terminate. \\
+\hline
+{\em sig} & How to kill the process. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga88701979c4e5ac4b94966c73e0159efd}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert}}
+\index{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-alert (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{int}]{reason, }
+\item[{int}]{status}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga88701979c4e5ac4b94966c73e0159efd}
+Notify the maintenance callback of a registered other child process that application has detected an event, such as death. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The process to check \\
+\hline
+{\em reason} & The reason code to pass to the maintenance function \\
+\hline
+{\em status} & The status to pass to the maintenance function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+An example of code using this behavior; 
+\begin{DoxyPre}
+rv = apr\_proc\_wait\_all\_procs(&proc, &exitcode, &status, APR\_WAIT, p);
+if (\hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga1e6539dfa172cef4026105ca33b2b208}{APR\_STATUS\_IS\_CHILD\_DONE(rv)}) \{
+\#if APR\_HAS\_OTHER\_CHILD
+    if (apr\_proc\_other\_child\_alert(&proc, APR\_OC\_REASON\_DEATH, status)
+            == APR\_SUCCESS) \{
+        ;  (already handled)
+    \}
+    else
+\#endif
+        [... handling non-otherchild processes death ...]
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+\hypertarget{group__apr__thread__proc_ga74a905d90a3476a611adeeb304931a6c}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh}}
+\index{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-other\-\_\-child\-\_\-rec\-\_\-t} $\ast$}]{ocr, }
+\item[{int}]{reason}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga74a905d90a3476a611adeeb304931a6c}
+Test one specific other child processes and invoke the maintenance callback with the appropriate reason code, if still running, or the appropriate reason code if the process is no longer healthy. 
+\begin{DoxyParams}{Parameters}
+{\em ocr} & The registered other child \\
+\hline
+{\em reason} & The reason code (e.\-g. A\-P\-R\-\_\-\-O\-C\-\_\-\-R\-E\-A\-S\-O\-N\-\_\-\-R\-E\-S\-T\-A\-R\-T) if still running \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gacff5e867a92619d30c4e78f9ad2a58e3}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all}}
+\index{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-refresh\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{int}]{reason}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gacff5e867a92619d30c4e78f9ad2a58e3}
+Test all registered other child processes and invoke the maintenance callback with the appropriate reason code, if still running, or the appropriate reason code if the process is no longer healthy. 
+\begin{DoxyParams}{Parameters}
+{\em reason} & The reason code (e.\-g. A\-P\-R\-\_\-\-O\-C\-\_\-\-R\-E\-A\-S\-O\-N\-\_\-\-R\-E\-S\-T\-A\-R\-T) to running processes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gaf8d2be452a819161aa4cd6205a17761e}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register}}
+\index{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-register (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{void($\ast$)(int reason, void $\ast$, int status)}]{maintenance, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{write\-\_\-fd, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gaf8d2be452a819161aa4cd6205a17761e}
+Register an other\-\_\-child -- a child associated to its registered maintence callback. This callback is invoked when the process dies, is disconnected or disappears. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The child process to register. \\
+\hline
+{\em maintenance} & maintenance is a function that is invoked with a reason and the data pointer passed here. \\
+\hline
+{\em data} & Opaque context data passed to the maintenance function. \\
+\hline
+{\em write\-\_\-fd} & An fd that is probed for writing. If it is ever unwritable then the maintenance is invoked with reason O\-C\-\_\-\-R\-E\-A\-S\-O\-N\-\_\-\-U\-N\-W\-R\-I\-T\-A\-B\-L\-E. \\
+\hline
+{\em p} & The pool to use for allocating memory. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000010}{Bug}]write\-\_\-fd duplicates the proc-\/$>$out stream, it's really redundant and should be replaced in the A\-P\-R 1.\-0 A\-P\-I with a bitflag of which proc-\/$>$in/out/err handles should be health checked. 
+
+no platform currently tests the pipes health. \end{DoxyRefDesc}
+\hypertarget{group__apr__thread__proc_ga10b1a4b224566c03c97f100ac8a2c830}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister}}
+\index{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister@{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-proc\-\_\-other\-\_\-child\-\_\-unregister (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga10b1a4b224566c03c97f100ac8a2c830}
+Stop watching the specified other child. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to pass to the maintenance function. This is used to find the process to unregister. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyWarning}{Warning}
+Since this can be called by a maintenance function while we're scanning the other\-\_\-children list, all scanners should protect themself by loading ocr-\/$>$next before calling any maintenance function. 
+\end{DoxyWarning}
+\hypertarget{group__apr__thread__proc_ga0936f7a7fe7e2d5e08979c9f343a5a1b}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-wait@{apr\-\_\-proc\-\_\-wait}}
+\index{apr\-\_\-proc\-\_\-wait@{apr\-\_\-proc\-\_\-wait}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-wait}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-wait (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{int $\ast$}]{exitcode, }
+\item[{{\bf apr\-\_\-exit\-\_\-why\-\_\-e} $\ast$}]{exitwhy, }
+\item[{{\bf apr\-\_\-wait\-\_\-how\-\_\-e}}]{waithow}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga0936f7a7fe7e2d5e08979c9f343a5a1b}
+Wait for a child process to die 
+\begin{DoxyParams}{Parameters}
+{\em proc} & The process handle that corresponds to the desired child process \\
+\hline
+{\em exitcode} & The returned exit status of the child, if a child process dies, or the signal that caused the child to die. On platforms that don't support obtaining this information, the status parameter will be returned as A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L. \\
+\hline
+{\em exitwhy} & Why the child died, the bitwise or of\-: 
+\begin{DoxyPre}
+           APR\_PROC\_EXIT         -- process terminated normally
+           APR\_PROC\_SIGNAL       -- process was killed by a signal
+           APR\_PROC\_SIGNAL\_CORE  -- process was killed by a signal, and
+                                    generated a core dump.
+\end{DoxyPre}
+ \\
+\hline
+{\em waithow} & How should we wait. One of\-: 
+\begin{DoxyPre}
+           APR\_WAIT   -- block until the child process dies.
+           APR\_NOWAIT -- return immediately regardless of if the 
+                         child is dead or not.
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The child's status is in the return code to this process. It is one of\-: 
+\begin{DoxyPre}
+           APR\_CHILD\_DONE     -- child is no longer running.
+           APR\_CHILD\_NOTDONE  -- child is still running.
+\end{DoxyPre}
+ 
+\end{DoxyRemark}
+\hypertarget{group__apr__thread__proc_ga506183074e8413c3ff597539e4768ea4}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs@{apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs}}
+\index{apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs@{apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-proc\-\_\-wait\-\_\-all\-\_\-procs (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-proc\-\_\-t} $\ast$}]{proc, }
+\item[{int $\ast$}]{exitcode, }
+\item[{{\bf apr\-\_\-exit\-\_\-why\-\_\-e} $\ast$}]{exitwhy, }
+\item[{{\bf apr\-\_\-wait\-\_\-how\-\_\-e}}]{waithow, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga506183074e8413c3ff597539e4768ea4}
+Wait for any current child process to die and return information about that child. 
+\begin{DoxyParams}{Parameters}
+{\em proc} & Pointer to N\-U\-L\-L on entry, will be filled out with child's information \\
+\hline
+{\em exitcode} & The returned exit status of the child, if a child process dies, or the signal that caused the child to die. On platforms that don't support obtaining this information, the status parameter will be returned as A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L. \\
+\hline
+{\em exitwhy} & Why the child died, the bitwise or of\-: 
+\begin{DoxyPre}
+           APR\_PROC\_EXIT         -- process terminated normally
+           APR\_PROC\_SIGNAL       -- process was killed by a signal
+           APR\_PROC\_SIGNAL\_CORE  -- process was killed by a signal, and
+                                    generated a core dump.
+\end{DoxyPre}
+ \\
+\hline
+{\em waithow} & How should we wait. One of\-: 
+\begin{DoxyPre}
+           APR\_WAIT   -- block until the child process dies.
+           APR\_NOWAIT -- return immediately regardless of if the 
+                         child is dead or not.
+\end{DoxyPre}
+ \\
+\hline
+{\em p} & Pool to allocate child information out of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000009}{Bug}]Passing proc as a $\ast$proc rather than $\ast$$\ast$proc was an odd choice for some platforms... this should be revisited in 1.\-0 \end{DoxyRefDesc}
+\hypertarget{group__apr__thread__proc_ga0f1dd02408995767efcb9c0d9c775620}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-addrspace\-\_\-set@{apr\-\_\-procattr\-\_\-addrspace\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-addrspace\-\_\-set@{apr\-\_\-procattr\-\_\-addrspace\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-addrspace\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-addrspace\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{addrspace}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga0f1dd02408995767efcb9c0d9c775620}
+Determine if the child should start in its own address space or using the current one from its parent 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em addrspace} & Should the child start in its own address space? Default is no on Net\-Ware and yes on other platforms. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga6fad364c6c820e37c0915435cfb3921f}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-child\-\_\-err\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{child\-\_\-err, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{parent\-\_\-err}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga6fad364c6c820e37c0915435cfb3921f}
+Set the child\-\_\-err and parent\-\_\-err values to existing apr\-\_\-file\-\_\-t values. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em child\-\_\-err} & apr\-\_\-file\-\_\-t value to use as child\-\_\-err. Must be a valid file. \\
+\hline
+{\em parent\-\_\-err} & apr\-\_\-file\-\_\-t value to use as parent\-\_\-err. Must be a valid file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This is N\-O\-T a required initializer function. This is useful if you have already opened a pipe (or multiple files) that you wish to use, perhaps persistently across multiple process invocations -\/ such as a log file. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000008}{Bug}]Note that calling this function with two N\-U\-L\-L files on some platforms creates an A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K pipe, but this behavior is neither portable nor is it supported.\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} instead for simple pipes. 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_gaa39deba0837e0772754ad41589b733cf}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-child\-\_\-errfn\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-child\-\_\-errfn\-\_\-t} $\ast$}]{errfn}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gaa39deba0837e0772754ad41589b733cf}
+Specify an error function to be called in the child process if A\-P\-R encounters an error in the child prior to running the specified program. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr describing the child process to be created. \\
+\hline
+{\em errfn} & The function to call in the child process. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+At the present time, it will only be called from \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create()} on platforms where fork() is used. It will never be called on other platforms, on those platforms \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create()} will return the error in the parent process rather than invoke the callback in the now-\/forked child process. 
+\end{DoxyRemark}
+\hypertarget{group__apr__thread__proc_ga24f40119b1aa07dd45a681a44915cb1b}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-child\-\_\-in\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{child\-\_\-in, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{parent\-\_\-in}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga24f40119b1aa07dd45a681a44915cb1b}
+Set the child\-\_\-in and/or parent\-\_\-in values to existing apr\-\_\-file\-\_\-t values. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em child\-\_\-in} & apr\-\_\-file\-\_\-t value to use as child\-\_\-in. Must be a valid file. \\
+\hline
+{\em parent\-\_\-in} & apr\-\_\-file\-\_\-t value to use as parent\-\_\-in. Must be a valid file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This is N\-O\-T a required initializer function. This is useful if you have already opened a pipe (or multiple files) that you wish to use, perhaps persistently across multiple process invocations -\/ such as a log file. You can save some extra function calls by not creating your own pipe since this creates one in the process space for you. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000006}{Bug}]Note that calling this function with two N\-U\-L\-L files on some platforms creates an A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K pipe, but this behavior is neither portable nor is it supported.\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} instead for simple pipes. 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_gabb97e9a49021ab4452ae3f1a281c977f}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set@{apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-child\-\_\-out\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{struct {\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{child\-\_\-out, }
+\item[{{\bf apr\-\_\-file\-\_\-t} $\ast$}]{parent\-\_\-out}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gabb97e9a49021ab4452ae3f1a281c977f}
+Set the child\-\_\-out and parent\-\_\-out values to existing apr\-\_\-file\-\_\-t values. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em child\-\_\-out} & apr\-\_\-file\-\_\-t value to use as child\-\_\-out. Must be a valid file. \\
+\hline
+{\em parent\-\_\-out} & apr\-\_\-file\-\_\-t value to use as parent\-\_\-out. Must be a valid file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This is N\-O\-T a required initializer function. This is useful if you have already opened a pipe (or multiple files) that you wish to use, perhaps persistently across multiple process invocations -\/ such as a log file. 
+\end{DoxyRemark}
+\begin{DoxyRefDesc}{Bug}
+\item[\hyperlink{bug__bug000007}{Bug}]Note that calling this function with two N\-U\-L\-L files on some platforms creates an A\-P\-R\-\_\-\-F\-U\-L\-L\-\_\-\-B\-L\-O\-C\-K pipe, but this behavior is neither portable nor is it supported.\end{DoxyRefDesc}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{apr\-\_\-procattr\-\_\-io\-\_\-set} instead for simple pipes. 
+\end{DoxySeeAlso}
+\hypertarget{group__apr__thread__proc_ga1426acc5bdd96385769e7b42bfa6ebbd}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-cmdtype\-\_\-set@{apr\-\_\-procattr\-\_\-cmdtype\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-cmdtype\-\_\-set@{apr\-\_\-procattr\-\_\-cmdtype\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-cmdtype\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-cmdtype\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-cmdtype\-\_\-e}}]{cmd}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga1426acc5bdd96385769e7b42bfa6ebbd}
+Set what type of command the child process will call. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em cmd} & The type of command. One of\-: 
+\begin{DoxyPre}
+           APR\_SHELLCMD     --  Anything that the shell can handle
+           APR\_PROGRAM      --  Executable program   (default) 
+           APR\_PROGRAM\_ENV  --  Executable program, copy environment
+           APR\_PROGRAM\_PATH --  Executable program on PATH, copy env
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga90f8ef684e601c110daad9b63da53cf3}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-create@{apr\-\_\-procattr\-\_\-create}}
+\index{apr\-\_\-procattr\-\_\-create@{apr\-\_\-procattr\-\_\-create}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$$\ast$}]{new\-\_\-attr, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga90f8ef684e601c110daad9b63da53cf3}
+Create and initialize a new procattr variable 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-attr} & The newly created procattr. \\
+\hline
+{\em cont} & The pool to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga3ccca55041f648f00f0605673d4e0fdc}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-detach\-\_\-set@{apr\-\_\-procattr\-\_\-detach\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-detach\-\_\-set@{apr\-\_\-procattr\-\_\-detach\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-detach\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-detach\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{detach}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga3ccca55041f648f00f0605673d4e0fdc}
+Determine if the child should start in detached state. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em detach} & Should the child start in detached state? Default is no. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga97766f50b0ae083a2f8a28e698a59baa}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-dir\-\_\-set@{apr\-\_\-procattr\-\_\-dir\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-dir\-\_\-set@{apr\-\_\-procattr\-\_\-dir\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-dir\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-dir\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{const char $\ast$}]{dir}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga97766f50b0ae083a2f8a28e698a59baa}
+Set which directory the child process should start executing in. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em dir} & Which dir to start in. By default, this is the same dir as the parent currently resides in, when the createprocess call is made. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga24076f050e9385af09ad8c3931d8dc43}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set@{apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set@{apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-error\-\_\-check\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{chk}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga24076f050e9385af09ad8c3931d8dc43}
+Specify that \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create()} should do whatever it can to report failures to the caller of \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create()}, rather than find out in the child. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr describing the child process to be created. \\
+\hline
+{\em chk} & Flag to indicate whether or not extra work should be done to try to report failures to the caller. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+This flag only affects \hyperlink{group__apr__thread__proc_gab51dd90b98d365a969f0ec5c7bef4e14}{apr\-\_\-proc\-\_\-create()} on platforms where fork() is used. This leads to extra overhead in the calling process, but that may help the application handle such errors more gracefully. 
+\end{DoxyRemark}
+\hypertarget{group__apr__thread__proc_ga391f0d3831a5894ea2118762789a395d}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-group\-\_\-set@{apr\-\_\-procattr\-\_\-group\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-group\-\_\-set@{apr\-\_\-procattr\-\_\-group\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-group\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-group\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{const char $\ast$}]{groupname}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga391f0d3831a5894ea2118762789a395d}
+Set the group used for running process 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em groupname} & The group name used \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-io\-\_\-set@{apr\-\_\-procattr\-\_\-io\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-io\-\_\-set@{apr\-\_\-procattr\-\_\-io\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-io\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-io\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{in, }
+\item[{apr\-\_\-int32\-\_\-t}]{out, }
+\item[{apr\-\_\-int32\-\_\-t}]{err}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga2b1598bc6f5ab0bfcf2e55096d563c98}
+Determine if any of stdin, stdout, or stderr should be linked to pipes when starting a child process. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em in} & Should stdin be a pipe back to the parent? \\
+\hline
+{\em out} & Should stdout be a pipe back to the parent? \\
+\hline
+{\em err} & Should stderr be a pipe back to the parent? \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If A\-P\-R\-\_\-\-N\-O\-\_\-\-P\-I\-P\-E, there will be no special channel, the child inherits the parent's corresponding stdio stream. If A\-P\-R\-\_\-\-N\-O\-\_\-\-F\-I\-L\-E is specified, that corresponding stream is closed in the child (and will be I\-N\-V\-A\-L\-I\-D\-\_\-\-H\-A\-N\-D\-L\-E\-\_\-\-V\-A\-L\-U\-E when inspected on Win32). This can have ugly side effects, as the next file opened in the child on Unix will fall into the stdio stream fd slot! 
+\end{DoxyNote}
+\hypertarget{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-limit\-\_\-set@{apr\-\_\-procattr\-\_\-limit\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-limit\-\_\-set@{apr\-\_\-procattr\-\_\-limit\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-limit\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-limit\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{what, }
+\item[{struct rlimit $\ast$}]{limit}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga4de85cfd54d27476dbb943955c1b0a2a}
+Set the Resource Utilization limits when starting a new process. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em what} & Which limit to set, one of\-: 
+\begin{DoxyPre}
+                APR\_LIMIT\_CPU
+                APR\_LIMIT\_MEM
+                APR\_LIMIT\_NPROC
+                APR\_LIMIT\_NOFILE
+\end{DoxyPre}
+ \\
+\hline
+{\em limit} & Value to set the limit to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga741ed3dc047b935b091a21528c49bb19}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-procattr\-\_\-user\-\_\-set@{apr\-\_\-procattr\-\_\-user\-\_\-set}}
+\index{apr\-\_\-procattr\-\_\-user\-\_\-set@{apr\-\_\-procattr\-\_\-user\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-procattr\-\_\-user\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-procattr\-\_\-user\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-procattr\-\_\-t} $\ast$}]{attr, }
+\item[{const char $\ast$}]{username, }
+\item[{const char $\ast$}]{password}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga741ed3dc047b935b091a21528c49bb19}
+Set the username used for running process 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The procattr we care about. \\
+\hline
+{\em username} & The username used \\
+\hline
+{\em password} & User password if needed. Password is needed on W\-I\-N32 or any other platform having A\-P\-R\-\_\-\-P\-R\-O\-C\-A\-T\-T\-R\-\_\-\-U\-S\-E\-R\-\_\-\-S\-E\-T\-\_\-\-R\-E\-Q\-U\-I\-R\-E\-S\-\_\-\-P\-A\-S\-S\-W\-O\-R\-D set. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga7adc09cd24568666266edce81cfffbed}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-setup\-\_\-signal\-\_\-thread@{apr\-\_\-setup\-\_\-signal\-\_\-thread}}
+\index{apr\-\_\-setup\-\_\-signal\-\_\-thread@{apr\-\_\-setup\-\_\-signal\-\_\-thread}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-setup\-\_\-signal\-\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-setup\-\_\-signal\-\_\-thread (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga7adc09cd24568666266edce81cfffbed}
+Setup the process for a single thread to be used for all signal handling. \begin{DoxyWarning}{Warning}
+This must be called before any threads are created 
+\end{DoxyWarning}
+\hypertarget{group__apr__thread__proc_ga2e53fa76ff725749c7affe6c81faa9e5}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-signal\-\_\-thread@{apr\-\_\-signal\-\_\-thread}}
+\index{apr\-\_\-signal\-\_\-thread@{apr\-\_\-signal\-\_\-thread}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-signal\-\_\-thread}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-signal\-\_\-thread (
+\begin{DoxyParamCaption}
+\item[{int($\ast$)(int signum)}]{signal\-\_\-handler}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga2e53fa76ff725749c7affe6c81faa9e5}
+Make the current thread listen for signals. This thread will loop forever, calling a provided function whenever it receives a signal. That functions should return 1 if the signal has been handled, 0 otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em signal\-\_\-handler} & The function to call when a signal is received apr\-\_\-status\-\_\-t apr\-\_\-signal\-\_\-thread((int)($\ast$signal\-\_\-handler)(int signum)) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gaeba6593f43f1de94c2b4495dd72b0e9f}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-create@{apr\-\_\-thread\-\_\-create}}
+\index{apr\-\_\-thread\-\_\-create@{apr\-\_\-thread\-\_\-create}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$$\ast$}]{new\-\_\-thread, }
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$}]{attr, }
+\item[{{\bf apr\-\_\-thread\-\_\-start\-\_\-t}}]{func, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gaeba6593f43f1de94c2b4495dd72b0e9f}
+Create a new thread of execution 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-thread} & The newly created thread handle. \\
+\hline
+{\em attr} & The threadattr to use to determine how to create the thread \\
+\hline
+{\em func} & The function to start the new thread in \\
+\hline
+{\em data} & Any data to be passed to the starting function \\
+\hline
+{\em cont} & The pool to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gad799c8140ed068a12f1dbe134423eae7}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-data\-\_\-get@{apr\-\_\-thread\-\_\-data\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-data\-\_\-get@{apr\-\_\-thread\-\_\-data\-\_\-get}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-data\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-data\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gad799c8140ed068a12f1dbe134423eae7}
+Return user data associated with the current thread. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the thread. \\
+\hline
+{\em key} & The key to associate with the data \\
+\hline
+{\em thread} & The currently open thread. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gaa90d79c9935692db4f27a6573f437221}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-data\-\_\-set@{apr\-\_\-thread\-\_\-data\-\_\-set}}
+\index{apr\-\_\-thread\-\_\-data\-\_\-set@{apr\-\_\-thread\-\_\-data\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-data\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-data\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\-\_\-status\-\_\-t}($\ast$)(void $\ast$)}]{cleanup, }
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thread}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gaa90d79c9935692db4f27a6573f437221}
+Set user data associated with the current thread. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data to associate with the thread. \\
+\hline
+{\em key} & The key to use for associating the data with the thread \\
+\hline
+{\em cleanup} & The cleanup routine to use when the thread is destroyed. \\
+\hline
+{\em thread} & The currently open thread. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gadbd186912d5f6f2a19a175e1e02ba10e}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-detach@{apr\-\_\-thread\-\_\-detach}}
+\index{apr\-\_\-thread\-\_\-detach@{apr\-\_\-thread\-\_\-detach}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-detach}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-detach (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thd}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gadbd186912d5f6f2a19a175e1e02ba10e}
+detach a thread 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread to detach \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga0e35365e530578bca1b4bea522ac8c85}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-exit@{apr\-\_\-thread\-\_\-exit}}
+\index{apr\-\_\-thread\-\_\-exit@{apr\-\_\-thread\-\_\-exit}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-exit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-exit (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thd, }
+\item[{{\bf apr\-\_\-status\-\_\-t}}]{retval}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga0e35365e530578bca1b4bea522ac8c85}
+stop the current thread 
+\begin{DoxyParams}{Parameters}
+{\em thd} & The thread to stop \\
+\hline
+{\em retval} & The return value to pass back to any thread that cares \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga1b950f36fa5bcd5a64887073f46f6d13}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-join@{apr\-\_\-thread\-\_\-join}}
+\index{apr\-\_\-thread\-\_\-join@{apr\-\_\-thread\-\_\-join}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-join}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-join (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-status\-\_\-t} $\ast$}]{retval, }
+\item[{{\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thd}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga1b950f36fa5bcd5a64887073f46f6d13}
+block until the desired thread stops executing. 
+\begin{DoxyParams}{Parameters}
+{\em retval} & The return value from the dead thread. \\
+\hline
+{\em thd} & The thread to join \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga8f3645ee52ff07566c92181b4ce732d8}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-once@{apr\-\_\-thread\-\_\-once}}
+\index{apr\-\_\-thread\-\_\-once@{apr\-\_\-thread\-\_\-once}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-once}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-once (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-once\-\_\-t} $\ast$}]{control, }
+\item[{void($\ast$)(void)}]{func}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga8f3645ee52ff07566c92181b4ce732d8}
+Run the specified function one time, regardless of how many threads call it. 
+\begin{DoxyParams}{Parameters}
+{\em control} & The control variable. The same variable should be passed in each time the function is tried to be called. This is how the underlying functions determine if the function has ever been called before. \\
+\hline
+{\em func} & The function to call. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga63f3bf667151053e45d5a2029daeda0d}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-once\-\_\-init@{apr\-\_\-thread\-\_\-once\-\_\-init}}
+\index{apr\-\_\-thread\-\_\-once\-\_\-init@{apr\-\_\-thread\-\_\-once\-\_\-init}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-once\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-thread\-\_\-once\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-thread\-\_\-once\-\_\-t} $\ast$$\ast$}]{control, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga63f3bf667151053e45d5a2029daeda0d}
+Initialize the control variable for apr\-\_\-thread\-\_\-once. If this isn't called, apr\-\_\-initialize won't work. 
+\begin{DoxyParams}{Parameters}
+{\em control} & The control variable to initialize \\
+\hline
+{\em p} & The pool to allocate data from. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga089b70ae9d6c64d2675a1fd1e9cd0d0d}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-pool\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-get}}
+\index{apr\-\_\-thread\-\_\-pool\-\_\-get@{apr\-\_\-thread\-\_\-pool\-\_\-get}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-pool\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-pool\-\_\-t}$\ast$ apr\-\_\-thread\-\_\-pool\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{const {\bf apr\-\_\-thread\-\_\-t} $\ast$}]{thethread}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga089b70ae9d6c64d2675a1fd1e9cd0d0d}
+Get the child-\/pool used by the thread from the thread info. \begin{DoxyReturn}{Returns}
+apr\-\_\-pool\-\_\-t the pool 
+\end{DoxyReturn}
+\hypertarget{group__apr__thread__proc_gacd69fb862c069cb6f297f65d64b5c102}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-thread\-\_\-yield@{apr\-\_\-thread\-\_\-yield}}
+\index{apr\-\_\-thread\-\_\-yield@{apr\-\_\-thread\-\_\-yield}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-thread\-\_\-yield}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-thread\-\_\-yield (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gacd69fb862c069cb6f297f65d64b5c102}
+force the current thread to yield the processor \hypertarget{group__apr__thread__proc_ga66c2f55e5dff9ac37bd32e9febd38da5}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-create@{apr\-\_\-threadattr\-\_\-create}}
+\index{apr\-\_\-threadattr\-\_\-create@{apr\-\_\-threadattr\-\_\-create}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadattr\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$$\ast$}]{new\-\_\-attr, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga66c2f55e5dff9ac37bd32e9febd38da5}
+Create and initialize a new threadattr variable 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-attr} & The newly created threadattr. \\
+\hline
+{\em cont} & The pool to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gae5b7cdb3de542d1b7b52fe5d9d8cb00b}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-detach\-\_\-get@{apr\-\_\-threadattr\-\_\-detach\-\_\-get}}
+\index{apr\-\_\-threadattr\-\_\-detach\-\_\-get@{apr\-\_\-threadattr\-\_\-detach\-\_\-get}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-detach\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadattr\-\_\-detach\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$}]{attr}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gae5b7cdb3de542d1b7b52fe5d9d8cb00b}
+Get the detach state for this threadattr. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The threadattr to reference \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-D\-E\-T\-A\-C\-H if threads are to be detached, or A\-P\-R\-\_\-\-N\-O\-T\-D\-E\-T\-A\-C\-H if threads are to be joinable. 
+\end{DoxyReturn}
+\hypertarget{group__apr__thread__proc_ga85d44b3b021f28116122d5e40e024648}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-detach\-\_\-set@{apr\-\_\-threadattr\-\_\-detach\-\_\-set}}
+\index{apr\-\_\-threadattr\-\_\-detach\-\_\-set@{apr\-\_\-threadattr\-\_\-detach\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-detach\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadattr\-\_\-detach\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-int32\-\_\-t}]{on}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga85d44b3b021f28116122d5e40e024648}
+Set if newly created threads should be created in detached state. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The threadattr to affect \\
+\hline
+{\em on} & Non-\/zero if detached threads should be created. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga2e732f2913291180c0c484f57d727140}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-guardsize\-\_\-set@{apr\-\_\-threadattr\-\_\-guardsize\-\_\-set}}
+\index{apr\-\_\-threadattr\-\_\-guardsize\-\_\-set@{apr\-\_\-threadattr\-\_\-guardsize\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-guardsize\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadattr\-\_\-guardsize\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-size\-\_\-t}]{guardsize}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga2e732f2913291180c0c484f57d727140}
+Set the stack guard area size of newly created threads. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The threadattr to affect \\
+\hline
+{\em guardsize} & The stack guard area size in bytes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Thread library implementations commonly use a \char`\"{}guard area\char`\"{} after each thread's stack which is not readable or writable such that stack overflows cause a segfault; this consumes e.\-g. 4\-K of memory and increases memory management overhead. Setting the guard area size to zero hence trades off reliable behaviour on stack overflow for performance. 
+\end{DoxyNote}
+\hypertarget{group__apr__thread__proc_ga7849e0d637338a18cb44f66f11f28ed1}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadattr\-\_\-stacksize\-\_\-set@{apr\-\_\-threadattr\-\_\-stacksize\-\_\-set}}
+\index{apr\-\_\-threadattr\-\_\-stacksize\-\_\-set@{apr\-\_\-threadattr\-\_\-stacksize\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadattr\-\_\-stacksize\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadattr\-\_\-stacksize\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadattr\-\_\-t} $\ast$}]{attr, }
+\item[{apr\-\_\-size\-\_\-t}]{stacksize}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga7849e0d637338a18cb44f66f11f28ed1}
+Set the stack size of newly created threads. 
+\begin{DoxyParams}{Parameters}
+{\em attr} & The threadattr to affect \\
+\hline
+{\em stacksize} & The stack size in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gae203664972dfc5c555620ae1788f5b48}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-data\-\_\-get@{apr\-\_\-threadkey\-\_\-data\-\_\-get}}
+\index{apr\-\_\-threadkey\-\_\-data\-\_\-get@{apr\-\_\-threadkey\-\_\-data\-\_\-get}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-data\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-data\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$}]{threadkey}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gae203664972dfc5c555620ae1788f5b48}
+Return the pool associated with the current threadkey. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The user data associated with the threadkey. \\
+\hline
+{\em key} & The key associated with the data \\
+\hline
+{\em threadkey} & The currently open threadkey. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga1059158f34dded87f21ba82af1211951}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-data\-\_\-set@{apr\-\_\-threadkey\-\_\-data\-\_\-set}}
+\index{apr\-\_\-threadkey\-\_\-data\-\_\-set@{apr\-\_\-threadkey\-\_\-data\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-data\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-data\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{data, }
+\item[{const char $\ast$}]{key, }
+\item[{{\bf apr\-\_\-status\-\_\-t}($\ast$)(void $\ast$)}]{cleanup, }
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$}]{threadkey}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga1059158f34dded87f21ba82af1211951}
+Return the pool associated with the current threadkey. 
+\begin{DoxyParams}{Parameters}
+{\em data} & The data to set. \\
+\hline
+{\em key} & The key to associate with the data. \\
+\hline
+{\em cleanup} & The cleanup routine to use when the file is destroyed. \\
+\hline
+{\em threadkey} & The currently open threadkey. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_gacb9553b2b3165388bfc0a54b1148804a}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-private\-\_\-create@{apr\-\_\-threadkey\-\_\-private\-\_\-create}}
+\index{apr\-\_\-threadkey\-\_\-private\-\_\-create@{apr\-\_\-threadkey\-\_\-private\-\_\-create}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-private\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-private\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$$\ast$}]{key, }
+\item[{void($\ast$)(void $\ast$)}]{dest, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{cont}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_gacb9553b2b3165388bfc0a54b1148804a}
+Create and initialize a new thread private address space 
+\begin{DoxyParams}{Parameters}
+{\em key} & The thread private handle. \\
+\hline
+{\em dest} & The destructor to use when freeing the private memory. \\
+\hline
+{\em cont} & The pool to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga20b9b79892a6532784fff023a4ebd8cf}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-private\-\_\-delete@{apr\-\_\-threadkey\-\_\-private\-\_\-delete}}
+\index{apr\-\_\-threadkey\-\_\-private\-\_\-delete@{apr\-\_\-threadkey\-\_\-private\-\_\-delete}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-private\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-private\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga20b9b79892a6532784fff023a4ebd8cf}
+Free the thread private memory 
+\begin{DoxyParams}{Parameters}
+{\em key} & The handle for the desired thread private memory \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga371c87c122cc3df0b7ad0031f6e11167}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-private\-\_\-get@{apr\-\_\-threadkey\-\_\-private\-\_\-get}}
+\index{apr\-\_\-threadkey\-\_\-private\-\_\-get@{apr\-\_\-threadkey\-\_\-private\-\_\-get}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-private\-\_\-get}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-private\-\_\-get (
+\begin{DoxyParamCaption}
+\item[{void $\ast$$\ast$}]{new\-\_\-mem, }
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga371c87c122cc3df0b7ad0031f6e11167}
+Get a pointer to the thread private memory 
+\begin{DoxyParams}{Parameters}
+{\em new\-\_\-mem} & The data stored in private memory \\
+\hline
+{\em key} & The handle for the desired thread private memory \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__thread__proc_ga63501a064ca7f1818aa056b40146aa0b}{\index{Threads and Process Functions@{Threads and Process Functions}!apr\-\_\-threadkey\-\_\-private\-\_\-set@{apr\-\_\-threadkey\-\_\-private\-\_\-set}}
+\index{apr\-\_\-threadkey\-\_\-private\-\_\-set@{apr\-\_\-threadkey\-\_\-private\-\_\-set}!Threads and Process Functions@{Threads and Process Functions}}
+\subsubsection[{apr\-\_\-threadkey\-\_\-private\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-threadkey\-\_\-private\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{void $\ast$}]{priv, }
+\item[{{\bf apr\-\_\-threadkey\-\_\-t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group__apr__thread__proc_ga63501a064ca7f1818aa056b40146aa0b}
+Set the data to be stored in thread private memory 
+\begin{DoxyParams}{Parameters}
+{\em priv} & The data to be stored in private memory \\
+\hline
+{\em key} & The handle for the desired thread private memory \\
+\hline
+\end{DoxyParams}

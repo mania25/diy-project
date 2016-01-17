@@ -1,0 +1,71 @@
+\hypertarget{structapr__bucket}{\section{apr\-\_\-bucket Struct Reference}
+\label{structapr__bucket}\index{apr\-\_\-bucket@{apr\-\_\-bucket}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-buckets.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapr__bucket_ab1acff965e57e067dfde80321d04dea7}{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y} (\hyperlink{structapr__bucket}{apr\-\_\-bucket}) link
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const \hyperlink{structapr__bucket__type__t}{apr\-\_\-bucket\-\_\-type\-\_\-t} $\ast$ \hyperlink{structapr__bucket_ac27fa5ce798e688ad243ebe1615937fc}{type}
+\item 
+apr\-\_\-size\-\_\-t \hyperlink{structapr__bucket_a0898dfc78d9275187189b9a745e619bf}{length}
+\item 
+apr\-\_\-off\-\_\-t \hyperlink{structapr__bucket_a4a8791b606b3ad613b8672ec94145628}{start}
+\item 
+void $\ast$ \hyperlink{structapr__bucket_a7fc4604750889b3f762bda1a786d276a}{data}
+\item 
+void($\ast$ \hyperlink{structapr__bucket_ac50b1c1de2b171938c33bf3ac478f359}{free} )(void $\ast$e)
+\item 
+\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$ \hyperlink{structapr__bucket_a5a500b80105834621514d6c0814d0966}{list}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{structapr__bucket}{apr\-\_\-bucket} structures are allocated on the malloc() heap and their lifetime is controlled by the parent \hyperlink{structapr__bucket__brigade}{apr\-\_\-bucket\-\_\-brigade} structure. Buckets can move from one brigade to another e.\-g. by calling \hyperlink{group___a_p_r___util___bucket___brigades_ga7cecbc89be912ce9ab24c889eb8f955b}{A\-P\-R\-\_\-\-B\-R\-I\-G\-A\-D\-E\-\_\-\-C\-O\-N\-C\-A\-T()}. In general the data in a bucket has the same lifetime as the bucket and is freed when the bucket is destroyed; if the data is shared by more than one bucket (e.\-g. after a split) the data is freed when the last bucket goes away. 
+
+\subsection{Member Function Documentation}
+\hypertarget{structapr__bucket_ab1acff965e57e067dfde80321d04dea7}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y@{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y}}
+\index{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y@{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-bucket\-::\-A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-E\-N\-T\-R\-Y (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-bucket}}]{}
+\end{DoxyParamCaption}
+)}}\label{structapr__bucket_ab1acff965e57e067dfde80321d04dea7}
+Links to the rest of the brigade 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__bucket_a7fc4604750889b3f762bda1a786d276a}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!data@{data}}
+\index{data@{data}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{data}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-bucket\-::data}}\label{structapr__bucket_a7fc4604750889b3f762bda1a786d276a}
+type-\/dependent data hangs off this pointer \hypertarget{structapr__bucket_ac50b1c1de2b171938c33bf3ac478f359}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!free@{free}}
+\index{free@{free}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{free}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-bucket\-::free)(void $\ast$e)}}\label{structapr__bucket_ac50b1c1de2b171938c33bf3ac478f359}
+Pointer to function used to free the bucket. This function should always be defined and it should be consistent with the memory function used to allocate the bucket. For example, if malloc() is used to allocate the bucket, this pointer should point to \hyperlink{structapr__bucket_ac50b1c1de2b171938c33bf3ac478f359}{free()}. 
+\begin{DoxyParams}{Parameters}
+{\em e} & Pointer to the bucket being freed \\
+\hline
+\end{DoxyParams}
+\hypertarget{structapr__bucket_a0898dfc78d9275187189b9a745e619bf}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!length@{length}}
+\index{length@{length}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{length}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-size\-\_\-t apr\-\_\-bucket\-::length}}\label{structapr__bucket_a0898dfc78d9275187189b9a745e619bf}
+The length of the data in the bucket. This could have been implemented with a function, but this is an optimization, because the most common thing to do will be to get the length. If the length is unknown, the value of this field will be (apr\-\_\-size\-\_\-t)(-\/1). \hypertarget{structapr__bucket_a5a500b80105834621514d6c0814d0966}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!list@{list}}
+\index{list@{list}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t}$\ast$ apr\-\_\-bucket\-::list}}\label{structapr__bucket_a5a500b80105834621514d6c0814d0966}
+The freelist from which this bucket was allocated \hypertarget{structapr__bucket_a4a8791b606b3ad613b8672ec94145628}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!start@{start}}
+\index{start@{start}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{start}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-off\-\_\-t apr\-\_\-bucket\-::start}}\label{structapr__bucket_a4a8791b606b3ad613b8672ec94145628}
+The start of the data in the bucket relative to the private base pointer. The vast majority of bucket types allow a fixed block of data to be referenced by multiple buckets, each bucket pointing to a different segment of the data. That segment starts at base+start and ends at base+start+length. If the length == (apr\-\_\-size\-\_\-t)(-\/1), then start == -\/1. \hypertarget{structapr__bucket_ac27fa5ce798e688ad243ebe1615937fc}{\index{apr\-\_\-bucket@{apr\-\_\-bucket}!type@{type}}
+\index{type@{type}!apr_bucket@{apr\-\_\-bucket}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}const {\bf apr\-\_\-bucket\-\_\-type\-\_\-t}$\ast$ apr\-\_\-bucket\-::type}}\label{structapr__bucket_ac27fa5ce798e688ad243ebe1615937fc}
+The type of bucket. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__buckets_8h}{apr\-\_\-buckets.\-h}\end{DoxyCompactItemize}

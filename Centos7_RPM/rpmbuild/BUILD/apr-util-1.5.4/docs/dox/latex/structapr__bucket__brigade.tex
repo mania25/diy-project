@@ -1,0 +1,47 @@
+\hypertarget{structapr__bucket__brigade}{\section{apr\-\_\-bucket\-\_\-brigade Struct Reference}
+\label{structapr__bucket__brigade}\index{apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-buckets.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structapr__bucket__brigade_a76a313afc83dd161916f3f9b83eea734}{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D} (apr\-\_\-bucket\-\_\-list, \hyperlink{structapr__bucket}{apr\-\_\-bucket}) list
+\end{DoxyCompactItemize}
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-pool\-\_\-t $\ast$ \hyperlink{structapr__bucket__brigade_a8e03b4dd531903709ae3ae8ebe9e46ee}{p}
+\item 
+\hyperlink{group___a_p_r___util___bucket___brigades_ga9a30babfeb6e290db124d8f9b69e49e4}{apr\-\_\-bucket\-\_\-alloc\-\_\-t} $\ast$ \hyperlink{structapr__bucket__brigade_a9f58f90a088f02ebb6f935f004092aaa}{bucket\-\_\-alloc}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A list of buckets 
+
+\subsection{Member Function Documentation}
+\hypertarget{structapr__bucket__brigade_a76a313afc83dd161916f3f9b83eea734}{\index{apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}!A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D@{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D}}
+\index{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D@{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D}!apr_bucket_brigade@{apr\-\_\-bucket\-\_\-brigade}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-bucket\-\_\-brigade\-::\-A\-P\-R\-\_\-\-R\-I\-N\-G\-\_\-\-H\-E\-A\-D (
+\begin{DoxyParamCaption}
+\item[{apr\-\_\-bucket\-\_\-list}]{, }
+\item[{{\bf apr\-\_\-bucket}}]{}
+\end{DoxyParamCaption}
+)}}\label{structapr__bucket__brigade_a76a313afc83dd161916f3f9b83eea734}
+The buckets in the brigade are on this list. 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__bucket__brigade_a9f58f90a088f02ebb6f935f004092aaa}{\index{apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}!bucket\-\_\-alloc@{bucket\-\_\-alloc}}
+\index{bucket\-\_\-alloc@{bucket\-\_\-alloc}!apr_bucket_brigade@{apr\-\_\-bucket\-\_\-brigade}}
+\subsubsection[{bucket\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-bucket\-\_\-alloc\-\_\-t}$\ast$ apr\-\_\-bucket\-\_\-brigade\-::bucket\-\_\-alloc}}\label{structapr__bucket__brigade_a9f58f90a088f02ebb6f935f004092aaa}
+The freelist from which this bucket was allocated \hypertarget{structapr__bucket__brigade_a8e03b4dd531903709ae3ae8ebe9e46ee}{\index{apr\-\_\-bucket\-\_\-brigade@{apr\-\_\-bucket\-\_\-brigade}!p@{p}}
+\index{p@{p}!apr_bucket_brigade@{apr\-\_\-bucket\-\_\-brigade}}
+\subsubsection[{p}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-pool\-\_\-t$\ast$ apr\-\_\-bucket\-\_\-brigade\-::p}}\label{structapr__bucket__brigade_a8e03b4dd531903709ae3ae8ebe9e46ee}
+The pool to associate the brigade with. The data is not allocated out of the pool, but a cleanup is registered with this pool. If the brigade is destroyed by some mechanism other than pool destruction, the destroying function is responsible for killing the cleanup. 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__buckets_8h}{apr\-\_\-buckets.\-h}\end{DoxyCompactItemize}

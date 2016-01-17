@@ -1,0 +1,412 @@
+\hypertarget{group___a_p_r___util___hook}{\section{Hook Functions}
+\label{group___a_p_r___util___hook}\index{Hook Functions@{Hook Functions}}
+}
+\subsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__hook__probes}{Hook probe capability}
+\item 
+\hyperlink{group___a_p_r___util___o_p_t___h_o_o_k}{Optional Hook Functions}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga832a6d3b73a43b3f7c58c5702ddccce9}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O}(ns, link, name)~link\#\#\-\_\-\-D\-E\-C\-L\-A\-R\-E(apr\-\_\-array\-\_\-header\-\_\-t $\ast$) ns\#\#\-\_\-hook\-\_\-get\-\_\-\#\#name(void)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga69298243d3c4ffb4627fd3d04b522f44}{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K}(ns, link, ret, name, args)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gaa936f5a0d1164d301aa157de6023fae5}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T}(members)~static struct \{ members \} \-\_\-hooks;
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga5699f73166bae88b6f6ac0bf7618b0f6}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K}(name)~apr\-\_\-array\-\_\-header\-\_\-t $\ast$link\-\_\-\#\#name;
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E}(ns, link, name)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga2d11a43b6431ec568cc1647da4a2079c}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D}(ns, link, name, args\-\_\-decl, args\-\_\-use)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gab466280bdabe0cc2ee5880cbb512fa3d}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}(ns, link, ret, name, args\-\_\-decl, args\-\_\-use, ok, decline)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga0420a2aa9ca6b3c1638bdb76025ecc57}{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T}(ns, link, ret, name, args\-\_\-decl, args\-\_\-use, decline)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gab004dcbfff32997deb15040e48f07e92}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T}~(-\/10)
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_ga564dea4803813674cb6b742f65a3d2b2}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T}~0
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gab9a5d50c3478c4d640deccec6b0ce879}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E}~10
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gaa610a95f03d7b4aee922c28b0919f028}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T}~20
+\item 
+\#define \hyperlink{group___a_p_r___util___hook_gae3c7d2cf35e8c89828dfff7a85b0ed77}{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T}~30
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{group___a_p_r___util___hook_ga04843fe00dc3c08c23130fef3ba1260c}{apr\-\_\-hook\-\_\-sort\-\_\-register} (const char $\ast$sz\-Hook\-Name, apr\-\_\-array\-\_\-header\-\_\-t $\ast$$\ast$a\-Hooks)
+\item 
+void \hyperlink{group___a_p_r___util___hook_ga1e0b6cf91dac5417c1b9cbd1b46b8991}{apr\-\_\-hook\-\_\-sort\-\_\-all} (void)
+\item 
+void \hyperlink{group___a_p_r___util___hook_ga1de31557683f53c2a07f73990962c585}{apr\-\_\-hook\-\_\-debug\-\_\-show} (const char $\ast$sz\-Name, const char $\ast$const $\ast$asz\-Pre, const char $\ast$const $\ast$asz\-Succ)
+\item 
+void \hyperlink{group___a_p_r___util___hook_ga5d20451da75574c8433feb1bd5b2ce10}{apr\-\_\-hook\-\_\-deregister\-\_\-all} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-pool\-\_\-t $\ast$ \hyperlink{group___a_p_r___util___hook_ga8911bb699a5f03ad3c36d579ca0eca23}{apr\-\_\-hook\-\_\-global\-\_\-pool}
+\item 
+int \hyperlink{group___a_p_r___util___hook_ga59309caeb9b47d921727530494f264be}{apr\-\_\-hook\-\_\-debug\-\_\-enabled}
+\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___hook_ga37be3c217439ceddbda16054b020a658}{apr\-\_\-hook\-\_\-debug\-\_\-current}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___hook_ga69298243d3c4ffb4627fd3d04b522f44}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K@{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K}}
+\index{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K@{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{ret, }
+\item[{}]{name, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga69298243d3c4ffb4627fd3d04b522f44}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keyword}{typedef} ret ns##\_HOOK\_##name##\_t args; \(\backslash\)
+link##\_DECLARE(\textcolor{keywordtype}{void}) ns\textcolor{preprocessor}{##\_hook\_##name(ns##\_HOOK\_##name##\_t *pf, \(\backslash\)}
+\textcolor{preprocessor}{                                      const char * const *aszPre, \(\backslash\)}
+\textcolor{preprocessor}{                                      const char * const *aszSucc, int nOrder); \(\backslash\)}
+\textcolor{preprocessor}{link##\_DECLARE(ret) ns##\_run\_##name args; \(\backslash\)}
+\textcolor{preprocessor}{APR\_IMPLEMENT\_HOOK\_GET\_PROTO(ns,link,name); \(\backslash\)}
+\textcolor{preprocessor}{typedef struct ns##\_LINK\_##name##\_t \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_HOOK\_##name##\_t *pFunc; \(\backslash\)}
+\textcolor{preprocessor}{    const char *szName; \(\backslash\)}
+\textcolor{preprocessor}{    const char * const *aszPredecessors; \(\backslash\)}
+\textcolor{preprocessor}{    const char * const *aszSuccessors; \(\backslash\)}
+\textcolor{preprocessor}{    int nOrder; \(\backslash\)}
+\textcolor{preprocessor}{    \} ns##\_LINK\_##name##\_t;}
+\end{DoxyCode}
+macro to declare the hook correctly \hypertarget{group___a_p_r___util___hook_ga564dea4803813674cb6b742f65a3d2b2}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-F\-I\-R\-S\-T~0}}\label{group___a_p_r___util___hook_ga564dea4803813674cb6b742f65a3d2b2}
+run this hook first \hypertarget{group___a_p_r___util___hook_gaa610a95f03d7b4aee922c28b0919f028}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-A\-S\-T~20}}\label{group___a_p_r___util___hook_gaa610a95f03d7b4aee922c28b0919f028}
+run this hook after every other hook which is defined \hypertarget{group___a_p_r___util___hook_ga5699f73166bae88b6f6ac0bf7618b0f6}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-L\-I\-N\-K(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~apr\-\_\-array\-\_\-header\-\_\-t $\ast$link\-\_\-\#\#name;}}\label{group___a_p_r___util___hook_ga5699f73166bae88b6f6ac0bf7618b0f6}
+macro to link the hook structure \hypertarget{group___a_p_r___util___hook_gab9a5d50c3478c4d640deccec6b0ce879}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-M\-I\-D\-D\-L\-E~10}}\label{group___a_p_r___util___hook_gab9a5d50c3478c4d640deccec6b0ce879}
+run this hook somewhere \hypertarget{group___a_p_r___util___hook_gab004dcbfff32997deb15040e48f07e92}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-F\-I\-R\-S\-T~(-\/10)}}\label{group___a_p_r___util___hook_gab004dcbfff32997deb15040e48f07e92}
+run this hook first, before A\-N\-Y\-T\-H\-I\-N\-G \hypertarget{group___a_p_r___util___hook_gae3c7d2cf35e8c89828dfff7a85b0ed77}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-R\-E\-A\-L\-L\-Y\-\_\-\-L\-A\-S\-T~30}}\label{group___a_p_r___util___hook_gae3c7d2cf35e8c89828dfff7a85b0ed77}
+run this hook last, after E\-V\-E\-R\-Y\-T\-H\-I\-N\-G \hypertarget{group___a_p_r___util___hook_gaa936f5a0d1164d301aa157de6023fae5}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T}}
+\index{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T@{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-H\-O\-O\-K\-\_\-\-S\-T\-R\-U\-C\-T(
+\begin{DoxyParamCaption}
+\item[{}]{members}
+\end{DoxyParamCaption}
+)~static struct \{ members \} \-\_\-hooks;}}\label{group___a_p_r___util___hook_gaa936f5a0d1164d301aa157de6023fae5}
+macro to declare the hook structure \hypertarget{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-B\-A\-S\-E(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+link##\_DECLARE(\textcolor{keywordtype}{void}) ns\textcolor{preprocessor}{##\_hook\_##name(ns##\_HOOK\_##name##\_t *pf,const char * const *aszPre, \(\backslash\)}
+\textcolor{preprocessor}{                                      const char * const *aszSucc,int nOrder) \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_LINK\_##name##\_t *pHook; \(\backslash\)}
+\textcolor{preprocessor}{    if(!\_hooks.link\_##name) \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    \_hooks.link\_##name=apr\_array\_make(apr\_hook\_global\_pool,1,sizeof(ns##\_LINK\_##name##\_t)); \(\backslash\)}
+\textcolor{preprocessor}{    apr\_hook\_sort\_register(#name,&\_hooks.link\_##name); \(\backslash\)}
+\textcolor{preprocessor}{    \} \(\backslash\)}
+\textcolor{preprocessor}{    pHook=apr\_array\_push(\_hooks.link\_##name); \(\backslash\)}
+\textcolor{preprocessor}{    pHook->pFunc=pf; \(\backslash\)}
+\textcolor{preprocessor}{    pHook->aszPredecessors=aszPre; \(\backslash\)}
+\textcolor{preprocessor}{    pHook->aszSuccessors=aszSucc; \(\backslash\)}
+\textcolor{preprocessor}{    pHook->nOrder=nOrder; \(\backslash\)}
+\textcolor{preprocessor}{    pHook->szName=apr\_hook\_debug\_current; \(\backslash\)}
+\textcolor{preprocessor}{    if(apr\_hook\_debug\_enabled) \(\backslash\)}
+\textcolor{preprocessor}{    apr\_hook\_debug\_show(#name,aszPre,aszSucc); \(\backslash\)}
+\textcolor{preprocessor}{    \} \(\backslash\)}
+\textcolor{preprocessor}{    APR\_IMPLEMENT\_HOOK\_GET\_PROTO(ns,link,name) \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{        return \_hooks.link\_##name; \(\backslash\)}
+\textcolor{preprocessor}{    \}}
+\end{DoxyCode}
+macro to implement the hook \hypertarget{group___a_p_r___util___hook_gab466280bdabe0cc2ee5880cbb512fa3d}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-A\-L\-L(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{ret, }
+\item[{}]{name, }
+\item[{}]{args\-\_\-decl, }
+\item[{}]{args\-\_\-use, }
+\item[{}]{ok, }
+\item[{}]{decline}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_gab466280bdabe0cc2ee5880cbb512fa3d}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}{APR\_IMPLEMENT\_EXTERNAL\_HOOK\_BASE}(ns,link,name) \(\backslash\)
+link##\_DECLARE(ret) ns\textcolor{preprocessor}{##\_run\_##name args\_decl \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_LINK\_##name##\_t *pHook; \(\backslash\)}
+\textcolor{preprocessor}{    int n; \(\backslash\)}
+\textcolor{preprocessor}{    ret rv = ok; \(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_INT\_DCL\_UD; \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_ENTRY(ud, ns, name, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    if(\_hooks.link\_##name) \(\backslash\)}
+\textcolor{preprocessor}{        \{ \(\backslash\)}
+\textcolor{preprocessor}{        pHook=(ns##\_LINK\_##name##\_t *)\_hooks.link\_##name->elts; \(\backslash\)}
+\textcolor{preprocessor}{        for(n=0 ; n < \_hooks.link\_##name->nelts ; ++n) \(\backslash\)}
+\textcolor{preprocessor}{            \{ \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_INVOKE(ud, ns, name, (char *)pHook[n].szName, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{            rv=pHook[n].pFunc args\_use; \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_COMPLETE(ud, ns, name, (char *)pHook[n].szName, rv, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{            if(rv != ok && rv != decline) \(\backslash\)}
+\textcolor{preprocessor}{                break; \(\backslash\)}
+\textcolor{preprocessor}{            rv = ok; \(\backslash\)}
+\textcolor{preprocessor}{            \} \(\backslash\)}
+\textcolor{preprocessor}{        \} \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_RETURN(ud, ns, name, rv, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    return rv; \(\backslash\)}
+\textcolor{preprocessor}{    \}}
+\end{DoxyCode}
+Implement a hook that runs until one of the functions returns something other than O\-K or D\-E\-C\-L\-I\-N\-E 
+\begin{DoxyParams}{Parameters}
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em link} & The linkage declaration prefix of the hook \\
+\hline
+{\em ret} & Type to return \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em args\-\_\-decl} & The declaration of the arguments for the hook \\
+\hline
+{\em args\-\_\-use} & The names for the arguments for the hook \\
+\hline
+{\em ok} & Success value \\
+\hline
+{\em decline} & Decline value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The link prefix F\-O\-O corresponds to F\-O\-O\-\_\-\-D\-E\-C\-L\-A\-R\-E() macros, which provide export linkage from the module that I\-M\-P\-L\-E\-M\-E\-N\-Ts the hook, and import linkage from external modules that link to the hook's module. 
+\end{DoxyNote}
+\hypertarget{group___a_p_r___util___hook_ga0420a2aa9ca6b3c1638bdb76025ecc57}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-R\-U\-N\-\_\-\-F\-I\-R\-S\-T(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{ret, }
+\item[{}]{name, }
+\item[{}]{args\-\_\-decl, }
+\item[{}]{args\-\_\-use, }
+\item[{}]{decline}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga0420a2aa9ca6b3c1638bdb76025ecc57}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}{APR\_IMPLEMENT\_EXTERNAL\_HOOK\_BASE}(ns,link,name) \(\backslash\)
+link##\_DECLARE(ret) ns\textcolor{preprocessor}{##\_run\_##name args\_decl \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_LINK\_##name##\_t *pHook; \(\backslash\)}
+\textcolor{preprocessor}{    int n; \(\backslash\)}
+\textcolor{preprocessor}{    ret rv = decline; \(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_INT\_DCL\_UD; \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_ENTRY(ud, ns, name, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    if(\_hooks.link\_##name) \(\backslash\)}
+\textcolor{preprocessor}{        \{ \(\backslash\)}
+\textcolor{preprocessor}{        pHook=(ns##\_LINK\_##name##\_t *)\_hooks.link\_##name->elts; \(\backslash\)}
+\textcolor{preprocessor}{        for(n=0 ; n < \_hooks.link\_##name->nelts ; ++n) \(\backslash\)}
+\textcolor{preprocessor}{            \{ \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_INVOKE(ud, ns, name, (char *)pHook[n].szName, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{            rv=pHook[n].pFunc args\_use; \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_COMPLETE(ud, ns, name, (char *)pHook[n].szName, rv, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{            if(rv != decline) \(\backslash\)}
+\textcolor{preprocessor}{                break; \(\backslash\)}
+\textcolor{preprocessor}{            \} \(\backslash\)}
+\textcolor{preprocessor}{        \} \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_RETURN(ud, ns, name, rv, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    return rv; \(\backslash\)}
+\textcolor{preprocessor}{    \}}
+\end{DoxyCode}
+Implement a hook that runs until the first function returns something other than the value of decline 
+\begin{DoxyParams}{Parameters}
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em link} & The linkage declaration prefix of the hook \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em ret} & Type to return \\
+\hline
+{\em args\-\_\-decl} & The declaration of the arguments for the hook \\
+\hline
+{\em args\-\_\-use} & The names for the arguments for the hook \\
+\hline
+{\em decline} & Decline value \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The link prefix F\-O\-O corresponds to F\-O\-O\-\_\-\-D\-E\-C\-L\-A\-R\-E() macros, which provide export linkage from the module that I\-M\-P\-L\-E\-M\-E\-N\-Ts the hook, and import linkage from external modules that link to the hook's module. 
+\end{DoxyNote}
+\hypertarget{group___a_p_r___util___hook_ga2d11a43b6431ec568cc1647da4a2079c}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-E\-X\-T\-E\-R\-N\-A\-L\-\_\-\-H\-O\-O\-K\-\_\-\-V\-O\-I\-D(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{name, }
+\item[{}]{args\-\_\-decl, }
+\item[{}]{args\-\_\-use}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga2d11a43b6431ec568cc1647da4a2079c}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\hyperlink{group___a_p_r___util___hook_ga2500abadaa54b3a9d6ec25ff33a6b0cc}{APR\_IMPLEMENT\_EXTERNAL\_HOOK\_BASE}(ns,link,name) \(\backslash\)
+link##\_DECLARE(\textcolor{keywordtype}{void}) ns\textcolor{preprocessor}{##\_run\_##name args\_decl \(\backslash\)}
+\textcolor{preprocessor}{    \{ \(\backslash\)}
+\textcolor{preprocessor}{    ns##\_LINK\_##name##\_t *pHook; \(\backslash\)}
+\textcolor{preprocessor}{    int n; \(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_INT\_DCL\_UD; \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_ENTRY(ud, ns, name, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    if(\_hooks.link\_##name) \(\backslash\)}
+\textcolor{preprocessor}{        \{ \(\backslash\)}
+\textcolor{preprocessor}{        pHook=(ns##\_LINK\_##name##\_t *)\_hooks.link\_##name->elts; \(\backslash\)}
+\textcolor{preprocessor}{        for(n=0 ; n < \_hooks.link\_##name->nelts ; ++n) \(\backslash\)}
+\textcolor{preprocessor}{            \{ \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_INVOKE(ud, ns, name, (char *)pHook[n].szName, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{        pHook[n].pFunc args\_use; \(\backslash\)}
+\textcolor{preprocessor}{            APR\_HOOK\_PROBE\_COMPLETE(ud, ns, name, (char *)pHook[n].szName, 0, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{            \} \(\backslash\)}
+\textcolor{preprocessor}{        \} \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    APR\_HOOK\_PROBE\_RETURN(ud, ns, name, 0, args\_use); \(\backslash\)}
+\textcolor{preprocessor}{\(\backslash\)}
+\textcolor{preprocessor}{    \}}
+\end{DoxyCode}
+Implement a hook that has no return code, and therefore runs all of the registered functions 
+\begin{DoxyParams}{Parameters}
+{\em ns} & The namespace prefix of the hook functions \\
+\hline
+{\em link} & The linkage declaration prefix of the hook \\
+\hline
+{\em name} & The name of the hook \\
+\hline
+{\em args\-\_\-decl} & The declaration of the arguments for the hook \\
+\hline
+{\em args\-\_\-use} & The names for the arguments for the hook \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+The link prefix F\-O\-O corresponds to F\-O\-O\-\_\-\-D\-E\-C\-L\-A\-R\-E() macros, which provide export linkage from the module that I\-M\-P\-L\-E\-M\-E\-N\-Ts the hook, and import linkage from external modules that link to the hook's module. 
+\end{DoxyNote}
+\hypertarget{group___a_p_r___util___hook_ga832a6d3b73a43b3f7c58c5702ddccce9}{\index{Hook Functions@{Hook Functions}!A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O}}
+\index{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O@{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O}!Hook Functions@{Hook Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-I\-M\-P\-L\-E\-M\-E\-N\-T\-\_\-\-H\-O\-O\-K\-\_\-\-G\-E\-T\-\_\-\-P\-R\-O\-T\-O(
+\begin{DoxyParamCaption}
+\item[{}]{ns, }
+\item[{}]{link, }
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~link\#\#\-\_\-\-D\-E\-C\-L\-A\-R\-E(apr\-\_\-array\-\_\-header\-\_\-t $\ast$) ns\#\#\-\_\-hook\-\_\-get\-\_\-\#\#name(void)}}\label{group___a_p_r___util___hook_ga832a6d3b73a43b3f7c58c5702ddccce9}
+macro to return the prototype of the hook function 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___hook_ga1de31557683f53c2a07f73990962c585}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-debug\-\_\-show@{apr\-\_\-hook\-\_\-debug\-\_\-show}}
+\index{apr\-\_\-hook\-\_\-debug\-\_\-show@{apr\-\_\-hook\-\_\-debug\-\_\-show}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-debug\-\_\-show}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-hook\-\_\-debug\-\_\-show (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-Name, }
+\item[{const char $\ast$const $\ast$}]{asz\-Pre, }
+\item[{const char $\ast$const $\ast$}]{asz\-Succ}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga1de31557683f53c2a07f73990962c585}
+Print all of the information about the current hook. This is used for debugging purposes. 
+\begin{DoxyParams}{Parameters}
+{\em sz\-Name} & The name of the hook \\
+\hline
+{\em asz\-Pre} & All of the functions in the predecessor array \\
+\hline
+{\em asz\-Succ} & All of the functions in the successor array \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___hook_ga5d20451da75574c8433feb1bd5b2ce10}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-deregister\-\_\-all@{apr\-\_\-hook\-\_\-deregister\-\_\-all}}
+\index{apr\-\_\-hook\-\_\-deregister\-\_\-all@{apr\-\_\-hook\-\_\-deregister\-\_\-all}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-deregister\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-hook\-\_\-deregister\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga5d20451da75574c8433feb1bd5b2ce10}
+Remove all currently registered functions. \hypertarget{group___a_p_r___util___hook_ga1e0b6cf91dac5417c1b9cbd1b46b8991}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-sort\-\_\-all@{apr\-\_\-hook\-\_\-sort\-\_\-all}}
+\index{apr\-\_\-hook\-\_\-sort\-\_\-all@{apr\-\_\-hook\-\_\-sort\-\_\-all}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-sort\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-hook\-\_\-sort\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga1e0b6cf91dac5417c1b9cbd1b46b8991}
+Sort all of the registered functions for a given hook. \hypertarget{group___a_p_r___util___hook_ga04843fe00dc3c08c23130fef3ba1260c}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-sort\-\_\-register@{apr\-\_\-hook\-\_\-sort\-\_\-register}}
+\index{apr\-\_\-hook\-\_\-sort\-\_\-register@{apr\-\_\-hook\-\_\-sort\-\_\-register}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-sort\-\_\-register}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-hook\-\_\-sort\-\_\-register (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{sz\-Hook\-Name, }
+\item[{apr\-\_\-array\-\_\-header\-\_\-t $\ast$$\ast$}]{a\-Hooks}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___hook_ga04843fe00dc3c08c23130fef3ba1260c}
+Register a hook function to be sorted. 
+\begin{DoxyParams}{Parameters}
+{\em sz\-Hook\-Name} & The name of the Hook the function is registered for \\
+\hline
+{\em a\-Hooks} & The array which stores all of the functions for this hook \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\hypertarget{group___a_p_r___util___hook_ga37be3c217439ceddbda16054b020a658}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-debug\-\_\-current@{apr\-\_\-hook\-\_\-debug\-\_\-current}}
+\index{apr\-\_\-hook\-\_\-debug\-\_\-current@{apr\-\_\-hook\-\_\-debug\-\_\-current}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-debug\-\_\-current}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-hook\-\_\-debug\-\_\-current}}\label{group___a_p_r___util___hook_ga37be3c217439ceddbda16054b020a658}
+The name of the module that is currently registering a function. \hypertarget{group___a_p_r___util___hook_ga59309caeb9b47d921727530494f264be}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-debug\-\_\-enabled@{apr\-\_\-hook\-\_\-debug\-\_\-enabled}}
+\index{apr\-\_\-hook\-\_\-debug\-\_\-enabled@{apr\-\_\-hook\-\_\-debug\-\_\-enabled}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-debug\-\_\-enabled}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-hook\-\_\-debug\-\_\-enabled}}\label{group___a_p_r___util___hook_ga59309caeb9b47d921727530494f264be}
+A global variable to determine if debugging information about the hooks functions should be printed. \hypertarget{group___a_p_r___util___hook_ga8911bb699a5f03ad3c36d579ca0eca23}{\index{Hook Functions@{Hook Functions}!apr\-\_\-hook\-\_\-global\-\_\-pool@{apr\-\_\-hook\-\_\-global\-\_\-pool}}
+\index{apr\-\_\-hook\-\_\-global\-\_\-pool@{apr\-\_\-hook\-\_\-global\-\_\-pool}!Hook Functions@{Hook Functions}}
+\subsubsection[{apr\-\_\-hook\-\_\-global\-\_\-pool}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-pool\-\_\-t$\ast$ apr\-\_\-hook\-\_\-global\-\_\-pool}}\label{group___a_p_r___util___hook_ga8911bb699a5f03ad3c36d579ca0eca23}
+The global pool used to allocate any memory needed by the hooks. 

@@ -1,0 +1,420 @@
+\hypertarget{group__apr__skiplist}{\section{Skip list implementation}
+\label{group__apr__skiplist}\index{Skip list implementation@{Skip list implementation}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int($\ast$ \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} )(void $\ast$, void $\ast$)
+\item 
+typedef void($\ast$ \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} )(void $\ast$)
+\item 
+typedef struct \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist}
+\item 
+typedef struct \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga42fd4de5a4239c988c3d57f88bd685d6}{apr\-\_\-skiplist\-\_\-alloc} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, size\-\_\-t size)
+\item 
+void \hyperlink{group__apr__skiplist_ga9e799684f45cc8a1b673cc99ca935f2b}{apr\-\_\-skiplist\-\_\-free} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$mem)
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}{apr\-\_\-skiplist\-\_\-init} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$$\ast$sl, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$p)
+\item 
+void \hyperlink{group__apr__skiplist_ga61bebe90df16a4ea8a6ab6c6b6792e4a}{apr\-\_\-skiplist\-\_\-set\-\_\-compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} X\-X\-X1, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} X\-X\-X2)
+\item 
+void \hyperlink{group__apr__skiplist_ga7f9e8bd8d1900d64c82ca5c9113621a8}{apr\-\_\-skiplist\-\_\-add\-\_\-index} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} X\-X\-X1, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} X\-X\-X2)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga2a4515bc1a4174fde279c2edc5dd2593}{apr\-\_\-skiplist\-\_\-getlist} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gac1dc196aa51b1370cdc41e6258c36d7c}{apr\-\_\-skiplist\-\_\-find\-\_\-compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$$\ast$iter, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} func)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gab28a7376e3483ae1104f2665d9859b95}{apr\-\_\-skiplist\-\_\-find} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$$\ast$iter)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_gaca0e377b36847ed03c3a135f0f3f353e}{apr\-\_\-skiplist\-\_\-next} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$$\ast$iter)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga02ff03a8282b561edf01b3291c154af4}{apr\-\_\-skiplist\-\_\-previous} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$$\ast$iter)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga01b128d5160bc905f4b60a120ca10b2e}{apr\-\_\-skiplist\-\_\-insert\-\_\-compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} comp)
+\item 
+\hyperlink{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{apr\-\_\-skiplistnode} $\ast$ \hyperlink{group__apr__skiplist_ga1aaaa029b9f166baf320bf43e6887b4d}{apr\-\_\-skiplist\-\_\-insert} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data)
+\item 
+int \hyperlink{group__apr__skiplist_ga9770c39604e7491da4c67282758690c2}{apr\-\_\-skiplist\-\_\-remove\-\_\-compare} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} myfree, \hyperlink{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{apr\-\_\-skiplist\-\_\-compare} comp)
+\item 
+int \hyperlink{group__apr__skiplist_ga682f5e7dfcc4359097b9a4b96d053eff}{apr\-\_\-skiplist\-\_\-remove} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, void $\ast$data, \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} myfree)
+\item 
+void \hyperlink{group__apr__skiplist_ga67d3e8a4a817bf85f1999f41d9d4ec11}{apr\-\_\-skiplist\-\_\-remove\-\_\-all} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} myfree)
+\item 
+void \hyperlink{group__apr__skiplist_ga6d24c06537535773ad3b4d18c6efefc3}{apr\-\_\-skiplist\-\_\-destroy} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} myfree)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga237063a88253165f074c04ab9b0f17a3}{apr\-\_\-skiplist\-\_\-pop} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl, \hyperlink{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{apr\-\_\-skiplist\-\_\-freefunc} myfree)
+\item 
+void $\ast$ \hyperlink{group__apr__skiplist_ga96068b644647e86139bd6fdb0fcfebf3}{apr\-\_\-skiplist\-\_\-peek} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl)
+\item 
+\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$ \hyperlink{group__apr__skiplist_gab54881447708cf725758860c88ba52a6}{apr\-\_\-skiplist\-\_\-merge} (\hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl1, \hyperlink{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{apr\-\_\-skiplist} $\ast$sl2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Refer to \href{http://en.wikipedia.org/wiki/Skip_list}{\tt http\-://en.\-wikipedia.\-org/wiki/\-Skip\-\_\-list} for information about the purpose of and ideas behind skip lists. 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist@{apr\-\_\-skiplist}}
+\index{apr\-\_\-skiplist@{apr\-\_\-skiplist}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-skiplist} {\bf apr\-\_\-skiplist}}}\label{group__apr__skiplist_gac79ddf14bb5cb5b6d35961309eadec48}
+Opaque structure used to represent the skip list \hypertarget{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-compare@{apr\-\_\-skiplist\-\_\-compare}}
+\index{apr\-\_\-skiplist\-\_\-compare@{apr\-\_\-skiplist\-\_\-compare}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}typedef int($\ast$ apr\-\_\-skiplist\-\_\-compare)(void $\ast$, void $\ast$)}}\label{group__apr__skiplist_ga4e5bca4c34a9932deee61c3ac4ed7d4a}
+apr\-\_\-skiplist\-\_\-compare is the function type that must be implemented per object type that is used in a skip list for comparisons to maintain order. A value $<$0 indicates placement after this node; a value of 0 indicates collision with this exact node; a value $>$0 indicates placement before this node. \hypertarget{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-freefunc@{apr\-\_\-skiplist\-\_\-freefunc}}
+\index{apr\-\_\-skiplist\-\_\-freefunc@{apr\-\_\-skiplist\-\_\-freefunc}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-freefunc}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ apr\-\_\-skiplist\-\_\-freefunc)(void $\ast$)}}\label{group__apr__skiplist_gaca5605cd1a65a8520e1ead5316cc0a0a}
+apr\-\_\-skiplist\-\_\-freefunc is the function type that must be implemented to handle elements as they are removed from a skip list. \hypertarget{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplistnode@{apr\-\_\-skiplistnode}}
+\index{apr\-\_\-skiplistnode@{apr\-\_\-skiplistnode}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplistnode}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-skiplistnode} {\bf apr\-\_\-skiplistnode}}}\label{group__apr__skiplist_gafb934f577d03de823aa4d62b41399bc0}
+Opaque structure 
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__skiplist_ga7f9e8bd8d1900d64c82ca5c9113621a8}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-add\-\_\-index@{apr\-\_\-skiplist\-\_\-add\-\_\-index}}
+\index{apr\-\_\-skiplist\-\_\-add\-\_\-index@{apr\-\_\-skiplist\-\_\-add\-\_\-index}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-add\-\_\-index}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-skiplist\-\_\-add\-\_\-index (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{X\-X\-X1, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{X\-X\-X2}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga7f9e8bd8d1900d64c82ca5c9113621a8}
+Set the indexing functions to the specified comparison functions and rebuild the index. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em X\-X\-X1} & F\-I\-X\-M\-E \\
+\hline
+{\em X\-X\-X2} & F\-I\-X\-M\-E\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If an index already exists, it will not be replaced and the comparison functions will not be changed. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga42fd4de5a4239c988c3d57f88bd685d6}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-alloc@{apr\-\_\-skiplist\-\_\-alloc}}
+\index{apr\-\_\-skiplist\-\_\-alloc@{apr\-\_\-skiplist\-\_\-alloc}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-alloc}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-alloc (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{size\-\_\-t}]{size}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga42fd4de5a4239c988c3d57f88bd685d6}
+Allocate memory using the same mechanism as the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em size} & The amount to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If a pool was provided to \hyperlink{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}{apr\-\_\-skiplist\-\_\-init()}, memory will be allocated from the pool or from a free list maintained with the skip list. Otherwise, memory will be allocated using the C standard library heap functions. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga6d24c06537535773ad3b4d18c6efefc3}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-destroy@{apr\-\_\-skiplist\-\_\-destroy}}
+\index{apr\-\_\-skiplist\-\_\-destroy@{apr\-\_\-skiplist\-\_\-destroy}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-skiplist\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-freefunc}}]{myfree}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga6d24c06537535773ad3b4d18c6efefc3}
+Remove each element from the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em myfree} & A function to be called for each removed element \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_gab28a7376e3483ae1104f2665d9859b95}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-find@{apr\-\_\-skiplist\-\_\-find}}
+\index{apr\-\_\-skiplist\-\_\-find@{apr\-\_\-skiplist\-\_\-find}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-find}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-find (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-skiplistnode} $\ast$$\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_gab28a7376e3483ae1104f2665d9859b95}
+Return the next matching element in the skip list using the current comparison function. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The value to search for \\
+\hline
+{\em iter} & A pointer to the returned skip list node representing the element found \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_gac1dc196aa51b1370cdc41e6258c36d7c}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-find\-\_\-compare@{apr\-\_\-skiplist\-\_\-find\-\_\-compare}}
+\index{apr\-\_\-skiplist\-\_\-find\-\_\-compare@{apr\-\_\-skiplist\-\_\-find\-\_\-compare}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-find\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-find\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-skiplistnode} $\ast$$\ast$}]{iter, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{func}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_gac1dc196aa51b1370cdc41e6258c36d7c}
+Return the next matching element in the skip list using the specified comparison function. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The value to search for \\
+\hline
+{\em iter} & A pointer to the returned skip list node representing the element found \\
+\hline
+{\em func} & The comparison function to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_ga9e799684f45cc8a1b673cc99ca935f2b}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-free@{apr\-\_\-skiplist\-\_\-free}}
+\index{apr\-\_\-skiplist\-\_\-free@{apr\-\_\-skiplist\-\_\-free}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-free}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-skiplist\-\_\-free (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{mem}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga9e799684f45cc8a1b673cc99ca935f2b}
+Free memory using the same mechanism as the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em mem} & The object to free \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If a pool was provided to \hyperlink{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}{apr\-\_\-skiplist\-\_\-init()}, memory will be added to a free list maintained with the skip list and be available to operations on the skip list or to other calls to \hyperlink{group__apr__skiplist_ga42fd4de5a4239c988c3d57f88bd685d6}{apr\-\_\-skiplist\-\_\-alloc()}. Otherwise, memory will be freed using the C standard library heap functions. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga2a4515bc1a4174fde279c2edc5dd2593}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-getlist@{apr\-\_\-skiplist\-\_\-getlist}}
+\index{apr\-\_\-skiplist\-\_\-getlist@{apr\-\_\-skiplist\-\_\-getlist}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-getlist}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-skiplistnode}$\ast$ apr\-\_\-skiplist\-\_\-getlist (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga2a4515bc1a4174fde279c2edc5dd2593}
+Return the list maintained by the skip list abstraction. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-init@{apr\-\_\-skiplist\-\_\-init}}
+\index{apr\-\_\-skiplist\-\_\-init@{apr\-\_\-skiplist\-\_\-init}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-skiplist\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$$\ast$}]{sl, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga53f636612f9d82ef2886a85d33c704ed}
+Allocate a new skip list 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The pointer in which to return the newly created skip list \\
+\hline
+{\em p} & The pool from which to allocate the skip list (optional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Unlike most A\-P\-R functions, a pool is optional. If no pool is provided, the C standard library heap functions will be used instead. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga1aaaa029b9f166baf320bf43e6887b4d}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-insert@{apr\-\_\-skiplist\-\_\-insert}}
+\index{apr\-\_\-skiplist\-\_\-insert@{apr\-\_\-skiplist\-\_\-insert}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-insert}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-skiplistnode}$\ast$ apr\-\_\-skiplist\-\_\-insert (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga1aaaa029b9f166baf320bf43e6887b4d}
+Insert an element into the skip list using the existing comparison function if it does not already exist (as determined by the comparison function) 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The element to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If no comparison function has been set for the skip list, the element will not be inserted and N\-U\-L\-L will be returned. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga01b128d5160bc905f4b60a120ca10b2e}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-insert\-\_\-compare@{apr\-\_\-skiplist\-\_\-insert\-\_\-compare}}
+\index{apr\-\_\-skiplist\-\_\-insert\-\_\-compare@{apr\-\_\-skiplist\-\_\-insert\-\_\-compare}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-insert\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-skiplistnode}$\ast$ apr\-\_\-skiplist\-\_\-insert\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{comp}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga01b128d5160bc905f4b60a120ca10b2e}
+Insert an element into the skip list using the specified comparison function if it does not already exist. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The element to insert \\
+\hline
+{\em comp} & The comparison function to use for placement into the skip list \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_gab54881447708cf725758860c88ba52a6}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-merge@{apr\-\_\-skiplist\-\_\-merge}}
+\index{apr\-\_\-skiplist\-\_\-merge@{apr\-\_\-skiplist\-\_\-merge}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-merge}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-skiplist}$\ast$ apr\-\_\-skiplist\-\_\-merge (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl1, }
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl2}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_gab54881447708cf725758860c88ba52a6}
+Merge two skip lists. X\-X\-X S\-E\-M\-A\-N\-T\-I\-C\-S 
+\begin{DoxyParams}{Parameters}
+{\em sl1} & One of two skip lists to be merged \\
+\hline
+{\em sl2} & The other of two skip lists to be merged \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_gaca0e377b36847ed03c3a135f0f3f353e}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-next@{apr\-\_\-skiplist\-\_\-next}}
+\index{apr\-\_\-skiplist\-\_\-next@{apr\-\_\-skiplist\-\_\-next}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-next}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-next (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplistnode} $\ast$$\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_gaca0e377b36847ed03c3a135f0f3f353e}
+Return the next element in the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em iter} & On entry, a pointer to the skip list node to start with; on return, a pointer to the skip list node representing the element returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If iter points to a N\-U\-L\-L value on entry, N\-U\-L\-L will be returned. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga96068b644647e86139bd6fdb0fcfebf3}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-peek@{apr\-\_\-skiplist\-\_\-peek}}
+\index{apr\-\_\-skiplist\-\_\-peek@{apr\-\_\-skiplist\-\_\-peek}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-peek}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-peek (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga96068b644647e86139bd6fdb0fcfebf3}
+Return the first element in the skip list, leaving the element in the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+N\-U\-L\-L will be returned if there are no elements 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga237063a88253165f074c04ab9b0f17a3}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-pop@{apr\-\_\-skiplist\-\_\-pop}}
+\index{apr\-\_\-skiplist\-\_\-pop@{apr\-\_\-skiplist\-\_\-pop}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-freefunc}}]{myfree}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga237063a88253165f074c04ab9b0f17a3}
+Return the first element in the skip list, removing the element from the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em myfree} & A function to be called for the removed element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+N\-U\-L\-L will be returned if there are no elements 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga02ff03a8282b561edf01b3291c154af4}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-previous@{apr\-\_\-skiplist\-\_\-previous}}
+\index{apr\-\_\-skiplist\-\_\-previous@{apr\-\_\-skiplist\-\_\-previous}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-previous}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-skiplist\-\_\-previous (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplistnode} $\ast$$\ast$}]{iter}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga02ff03a8282b561edf01b3291c154af4}
+Return the previous element in the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em iter} & On entry, a pointer to the skip list node to start with; on return, a pointer to the skip list node representing the element returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If iter points to a N\-U\-L\-L value on entry, N\-U\-L\-L will be returned. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga682f5e7dfcc4359097b9a4b96d053eff}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-remove@{apr\-\_\-skiplist\-\_\-remove}}
+\index{apr\-\_\-skiplist\-\_\-remove@{apr\-\_\-skiplist\-\_\-remove}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-remove}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-skiplist\-\_\-remove (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-freefunc}}]{myfree}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga682f5e7dfcc4359097b9a4b96d053eff}
+Remove an element from the skip list using the existing comparison function for locating the element. In the case of duplicates, the 1st entry will be removed. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The element to remove \\
+\hline
+{\em myfree} & A function to be called for each removed element \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the element is not found, 0 will be returned. Otherwise, the height\-X\-X\-X will be returned. 
+
+If no comparison function has been set for the skip list, the element will not be removed and 0 will be returned. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga67d3e8a4a817bf85f1999f41d9d4ec11}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-remove\-\_\-all@{apr\-\_\-skiplist\-\_\-remove\-\_\-all}}
+\index{apr\-\_\-skiplist\-\_\-remove\-\_\-all@{apr\-\_\-skiplist\-\_\-remove\-\_\-all}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-remove\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-skiplist\-\_\-remove\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-freefunc}}]{myfree}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga67d3e8a4a817bf85f1999f41d9d4ec11}
+Remove all elements from the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em myfree} & A function to be called for each removed element \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__apr__skiplist_ga9770c39604e7491da4c67282758690c2}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-remove\-\_\-compare@{apr\-\_\-skiplist\-\_\-remove\-\_\-compare}}
+\index{apr\-\_\-skiplist\-\_\-remove\-\_\-compare@{apr\-\_\-skiplist\-\_\-remove\-\_\-compare}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-remove\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-skiplist\-\_\-remove\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{void $\ast$}]{data, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-freefunc}}]{myfree, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{comp}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga9770c39604e7491da4c67282758690c2}
+Remove an element from the skip list using the specified comparison function for locating the element. In the case of duplicates, the 1st entry will be removed. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em data} & The element to remove \\
+\hline
+{\em myfree} & A function to be called for each removed element \\
+\hline
+{\em comp} & The comparison function to use for placement into the skip list \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If the element is not found, 0 will be returned. Otherwise, the height\-X\-X\-X will be returned. 
+\end{DoxyRemark}
+\hypertarget{group__apr__skiplist_ga61bebe90df16a4ea8a6ab6c6b6792e4a}{\index{Skip list implementation@{Skip list implementation}!apr\-\_\-skiplist\-\_\-set\-\_\-compare@{apr\-\_\-skiplist\-\_\-set\-\_\-compare}}
+\index{apr\-\_\-skiplist\-\_\-set\-\_\-compare@{apr\-\_\-skiplist\-\_\-set\-\_\-compare}!Skip list implementation@{Skip list implementation}}
+\subsubsection[{apr\-\_\-skiplist\-\_\-set\-\_\-compare}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-skiplist\-\_\-set\-\_\-compare (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-skiplist} $\ast$}]{sl, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{X\-X\-X1, }
+\item[{{\bf apr\-\_\-skiplist\-\_\-compare}}]{X\-X\-X2}
+\end{DoxyParamCaption}
+)}}\label{group__apr__skiplist_ga61bebe90df16a4ea8a6ab6c6b6792e4a}
+Set the comparison functions to be used for searching the skip list. 
+\begin{DoxyParams}{Parameters}
+{\em sl} & The skip list \\
+\hline
+{\em X\-X\-X1} & F\-I\-X\-M\-E \\
+\hline
+{\em X\-X\-X2} & F\-I\-X\-M\-E\\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If existing comparison functions are being replaced, the index will be replaced during this call. That is a potentially expensive operation. 
+\end{DoxyRemark}

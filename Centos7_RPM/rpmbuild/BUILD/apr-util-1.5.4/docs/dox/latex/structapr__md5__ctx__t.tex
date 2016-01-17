@@ -1,0 +1,41 @@
+\hypertarget{structapr__md5__ctx__t}{\section{apr\-\_\-md5\-\_\-ctx\-\_\-t Struct Reference}
+\label{structapr__md5__ctx__t}\index{apr\-\_\-md5\-\_\-ctx\-\_\-t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-md5.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{structapr__md5__ctx__t_ab8acbc6cd7a3dcd16e66e64a7f5357b5}{state} \mbox{[}4\mbox{]}
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{structapr__md5__ctx__t_a3234a76e68a4ef546026a9854f9ba6d0}{count} \mbox{[}2\mbox{]}
+\item 
+unsigned char \hyperlink{structapr__md5__ctx__t_aed43a8aefc65c8973dbae804c94ad1e3}{buffer} \mbox{[}64\mbox{]}
+\item 
+\hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$ \hyperlink{structapr__md5__ctx__t_a391a62bc9e7fada71d03f786df4f49ba}{xlate}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+M\-D5 context. 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__md5__ctx__t_aed43a8aefc65c8973dbae804c94ad1e3}{\index{apr\-\_\-md5\-\_\-ctx\-\_\-t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}!buffer@{buffer}}
+\index{buffer@{buffer}!apr_md5_ctx_t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}}
+\subsubsection[{buffer}]{\setlength{\rightskip}{0pt plus 5cm}unsigned char apr\-\_\-md5\-\_\-ctx\-\_\-t\-::buffer\mbox{[}64\mbox{]}}}\label{structapr__md5__ctx__t_aed43a8aefc65c8973dbae804c94ad1e3}
+input buffer \hypertarget{structapr__md5__ctx__t_a3234a76e68a4ef546026a9854f9ba6d0}{\index{apr\-\_\-md5\-\_\-ctx\-\_\-t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}!count@{count}}
+\index{count@{count}!apr_md5_ctx_t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}}
+\subsubsection[{count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-md5\-\_\-ctx\-\_\-t\-::count\mbox{[}2\mbox{]}}}\label{structapr__md5__ctx__t_a3234a76e68a4ef546026a9854f9ba6d0}
+number of bits, modulo 2$^\wedge$64 (lsb first) \hypertarget{structapr__md5__ctx__t_ab8acbc6cd7a3dcd16e66e64a7f5357b5}{\index{apr\-\_\-md5\-\_\-ctx\-\_\-t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}!state@{state}}
+\index{state@{state}!apr_md5_ctx_t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}}
+\subsubsection[{state}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-md5\-\_\-ctx\-\_\-t\-::state\mbox{[}4\mbox{]}}}\label{structapr__md5__ctx__t_ab8acbc6cd7a3dcd16e66e64a7f5357b5}
+state (A\-B\-C\-D) \hypertarget{structapr__md5__ctx__t_a391a62bc9e7fada71d03f786df4f49ba}{\index{apr\-\_\-md5\-\_\-ctx\-\_\-t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}!xlate@{xlate}}
+\index{xlate@{xlate}!apr_md5_ctx_t@{apr\-\_\-md5\-\_\-ctx\-\_\-t}}
+\subsubsection[{xlate}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-xlate\-\_\-t}$\ast$ apr\-\_\-md5\-\_\-ctx\-\_\-t\-::xlate}}\label{structapr__md5__ctx__t_a391a62bc9e7fada71d03f786df4f49ba}
+translation handle ignored if xlate is unsupported 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__md5_8h}{apr\-\_\-md5.\-h}\end{DoxyCompactItemize}

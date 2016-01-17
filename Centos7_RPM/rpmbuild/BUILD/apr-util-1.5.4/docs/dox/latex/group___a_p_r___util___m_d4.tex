@@ -1,0 +1,130 @@
+\hypertarget{group___a_p_r___util___m_d4}{\section{M\-D4 Library}
+\label{group___a_p_r___util___m_d4}\index{M\-D4 Library@{M\-D4 Library}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} \hyperlink{group___a_p_r___util___m_d4_ga273e0d8ad064dba908e46bde074af0d8}{apr\-\_\-md4\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga3f2ae0d6d93b1dd7a5efe11c241aee4b}{apr\-\_\-md4\-\_\-init} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga86138845d199bf164093670fb2a803c3}{apr\-\_\-md4\-\_\-set\-\_\-xlate} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context, \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$xlate)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_gacbdaec9b84aa725c29fcaac196065556}{apr\-\_\-md4\-\_\-update} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context, const unsigned char $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga292ac23cbfedc3ff227ced262ec09b30}{apr\-\_\-md4\-\_\-final} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga8f11756aee7a293e2b05f9b1ed112431}{apr\-\_\-md4} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, const unsigned char $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{\index{M\-D4 Library@{M\-D4 Library}!A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E~16}}\label{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}
+The digestsize for M\-D4 
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___m_d4_ga273e0d8ad064dba908e46bde074af0d8}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4\-\_\-ctx\-\_\-t@{apr\-\_\-md4\-\_\-ctx\-\_\-t}}
+\index{apr\-\_\-md4\-\_\-ctx\-\_\-t@{apr\-\_\-md4\-\_\-ctx\-\_\-t}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4\-\_\-ctx\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-md4\-\_\-ctx\-\_\-t} {\bf apr\-\_\-md4\-\_\-ctx\-\_\-t}}}\label{group___a_p_r___util___m_d4_ga273e0d8ad064dba908e46bde074af0d8}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___m_d4_ga8f11756aee7a293e2b05f9b1ed112431}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4@{apr\-\_\-md4}}
+\index{apr\-\_\-md4@{apr\-\_\-md4}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-md4 (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{digest\mbox{[}\-A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E\mbox{]}, }
+\item[{const unsigned char $\ast$}]{input, }
+\item[{apr\-\_\-size\-\_\-t}]{input\-Len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_d4_ga8f11756aee7a293e2b05f9b1ed112431}
+M\-D4 digest computation 
+\begin{DoxyParams}{Parameters}
+{\em digest} & The M\-D4 digest \\
+\hline
+{\em input} & message block to use \\
+\hline
+{\em input\-Len} & The length of the message block \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_d4_ga292ac23cbfedc3ff227ced262ec09b30}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4\-\_\-final@{apr\-\_\-md4\-\_\-final}}
+\index{apr\-\_\-md4\-\_\-final@{apr\-\_\-md4\-\_\-final}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4\-\_\-final}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-md4\-\_\-final (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{digest\mbox{[}\-A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E\mbox{]}, }
+\item[{{\bf apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_d4_ga292ac23cbfedc3ff227ced262ec09b30}
+M\-D4 finalization. Ends an M\-D4 message-\/digest operation, writing the message digest and zeroing the context 
+\begin{DoxyParams}{Parameters}
+{\em digest} & The final M\-D4 digest \\
+\hline
+{\em context} & The M\-D4 content we are finalizing. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_d4_ga3f2ae0d6d93b1dd7a5efe11c241aee4b}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4\-\_\-init@{apr\-\_\-md4\-\_\-init}}
+\index{apr\-\_\-md4\-\_\-init@{apr\-\_\-md4\-\_\-init}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-md4\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_d4_ga3f2ae0d6d93b1dd7a5efe11c241aee4b}
+M\-D4 Initialize. Begins an M\-D4 operation, writing a new context. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The M\-D4 context to initialize. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_d4_ga86138845d199bf164093670fb2a803c3}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4\-\_\-set\-\_\-xlate@{apr\-\_\-md4\-\_\-set\-\_\-xlate}}
+\index{apr\-\_\-md4\-\_\-set\-\_\-xlate@{apr\-\_\-md4\-\_\-set\-\_\-xlate}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4\-\_\-set\-\_\-xlate}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-md4\-\_\-set\-\_\-xlate (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$}]{context, }
+\item[{{\bf apr\-\_\-xlate\-\_\-t} $\ast$}]{xlate}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_d4_ga86138845d199bf164093670fb2a803c3}
+M\-Dr4 translation setup. Provides the A\-P\-R translation handle to be used for translating the content before calculating the digest. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The M\-D4 content to set the translation for. \\
+\hline
+{\em xlate} & The translation handle to use for this M\-D4 context \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___m_d4_gacbdaec9b84aa725c29fcaac196065556}{\index{M\-D4 Library@{M\-D4 Library}!apr\-\_\-md4\-\_\-update@{apr\-\_\-md4\-\_\-update}}
+\index{apr\-\_\-md4\-\_\-update@{apr\-\_\-md4\-\_\-update}!MD4 Library@{M\-D4 Library}}
+\subsubsection[{apr\-\_\-md4\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-md4\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$}]{context, }
+\item[{const unsigned char $\ast$}]{input, }
+\item[{apr\-\_\-size\-\_\-t}]{input\-Len}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___m_d4_gacbdaec9b84aa725c29fcaac196065556}
+M\-D4 block update operation. Continue an M\-D4 message-\/digest operation, processing another message block, and updating the context. 
+\begin{DoxyParams}{Parameters}
+{\em context} & The M\-D4 content to update. \\
+\hline
+{\em input} & next message block to update \\
+\hline
+{\em input\-Len} & The length of the next message block \\
+\hline
+\end{DoxyParams}

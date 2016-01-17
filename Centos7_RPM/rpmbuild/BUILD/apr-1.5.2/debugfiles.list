@@ -1,0 +1,11 @@
+%dir /usr/lib/debug
+%dir /usr/lib/debug/.build-id
+%dir /usr/lib/debug/.build-id/25
+%dir /usr/lib/debug/usr
+%dir /usr/lib/debug/usr/lib64
+/usr/lib/debug/.build-id/25/f040c5ea8670d37def218f1422969e90049fdb.debug
+/usr/lib/debug/.build-id/25/f040c5ea8670d37def218f1422969e90049fdb
+/usr/lib/debug/usr/lib64/libapr-1.so.debug
+/usr/lib/debug/usr/lib64/libapr-1.so.0.debug
+/usr/lib/debug/usr/lib64/libapr-1.so.0.5.2.debug
+/usr/src/debug/apr-1.5.2

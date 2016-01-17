@@ -1,0 +1,97 @@
+\hypertarget{apr__crypto_8h}{\section{include/apr\-\_\-crypto.h File Reference}
+\label{apr__crypto_8h}\index{include/apr\-\_\-crypto.\-h@{include/apr\-\_\-crypto.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L Crypto library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-pools.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-tables.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-hash.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apu\-\_\-errno.\-h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___crypto_gaa0fd79c7b12efb93d12ed63767cfcfb0}{\#define {\bfseries A\-P\-U\-\_\-\-C\-R\-Y\-P\-T\-O\-\_\-\-R\-E\-C\-O\-M\-M\-E\-N\-D\-E\-D\-\_\-\-D\-R\-I\-V\-E\-R}~\char`\"{}openssl\char`\"{}}\label{group___a_p_r___util___crypto_gaa0fd79c7b12efb93d12ed63767cfcfb0}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga9185b416f007dc01079c5a7e812767ab}{typedef struct apr\-\_\-crypto\-\_\-driver\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-driver\-\_\-t}}\label{group___a_p_r___util___crypto_ga9185b416f007dc01079c5a7e812767ab}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga83bc88e4d9f7222320c49fd874646deb}{typedef struct apr\-\_\-crypto\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-t}}\label{group___a_p_r___util___crypto_ga83bc88e4d9f7222320c49fd874646deb}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_gad853527ecf6bf2011f3df33d1b725ec1}{typedef struct apr\-\_\-crypto\-\_\-config\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-config\-\_\-t}}\label{group___a_p_r___util___crypto_gad853527ecf6bf2011f3df33d1b725ec1}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_ga523c9ec387ef5261b43d234f7b1a8176}{typedef struct apr\-\_\-crypto\-\_\-key\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-key\-\_\-t}}\label{group___a_p_r___util___crypto_ga523c9ec387ef5261b43d234f7b1a8176}
+
+\item 
+\hypertarget{group___a_p_r___util___crypto_gac75e3dfee18a940164adc12a639c01d0}{typedef struct apr\-\_\-crypto\-\_\-block\-\_\-t {\bfseries apr\-\_\-crypto\-\_\-block\-\_\-t}}\label{group___a_p_r___util___crypto_gac75e3dfee18a940164adc12a639c01d0}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e} \{ \\*
+{\bfseries A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-N\-O\-N\-E}, 
+{\bfseries A\-P\-R\-\_\-\-K\-E\-Y\-\_\-3\-D\-E\-S\-\_\-192}, 
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946a8c1d6aff8c24a476659f4ef074832ee6}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-128}, 
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946aff350305e3e825a8b3fa0b0a6fc9804a}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-192}, 
+\\*
+\hyperlink{group___a_p_r___util___crypto_ggac62c799021d3bc28449626e60351e946add6da30b44e6546ef242b8d1d21ca9bc}{A\-P\-R\-\_\-\-K\-E\-Y\-\_\-\-A\-E\-S\-\_\-256}
+ \}
+\item 
+enum \hyperlink{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e} \{ {\bfseries A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-N\-O\-N\-E}, 
+\hyperlink{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153af7eb194825aa815880ddef6f3ad1ce14}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-E\-C\-B}, 
+\hyperlink{group___a_p_r___util___crypto_ggad29b01edfcd38649f12d76e803dd2153a4830062ad4c3ae50545c9b5b0ef0bc49}{A\-P\-R\-\_\-\-M\-O\-D\-E\-\_\-\-C\-B\-C}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gac67bd5ffd6961c27e3bccad02021edd5}{apr\-\_\-crypto\-\_\-init} (apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Perform once-\/only initialisation. Call once only. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga88794e872ffee43d6fefb4f13072983f}{apr\-\_\-crypto\-\_\-clear} (apr\-\_\-pool\-\_\-t $\ast$pool, void $\ast$buffer, apr\-\_\-size\-\_\-t size)
+\begin{DoxyCompactList}\small\item\em Register a cleanup to zero out the buffer provided when the pool is cleaned up. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga0a6a35349a7e108ee4964c2d3be5f362}{apr\-\_\-crypto\-\_\-get\-\_\-driver} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$$\ast$driver, const char $\ast$name, const char $\ast$params, const \hyperlink{structapu__err__t}{apu\-\_\-err\-\_\-t} $\ast$$\ast$result, apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Get the driver struct for a name. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group___a_p_r___util___crypto_ga4cd6fef8b4b9b2d0914183a664d6e886}{apr\-\_\-crypto\-\_\-driver\-\_\-name} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver)
+\begin{DoxyCompactList}\small\item\em Return the name of the driver. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga9795c7187a309d1710541f30b0395204}{apr\-\_\-crypto\-\_\-error} (const \hyperlink{structapu__err__t}{apu\-\_\-err\-\_\-t} $\ast$$\ast$result, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get the result of the last operation on a context. If the result is N\-U\-L\-L, the operation was successful. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga2232e263ef558dd93dec5bb4f010c737}{apr\-\_\-crypto\-\_\-make} (apr\-\_\-crypto\-\_\-t $\ast$$\ast$f, const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver, const char $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)
+\begin{DoxyCompactList}\small\item\em Create a context for supporting encryption. Keys, certificates, algorithms and other parameters will be set per context. More than one context can be created at one time. A cleanup will be automatically registered with the given pool to guarantee a graceful shutdown. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga784f4ab59bfab55666e9ce9fd79f7724}{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-types} (apr\-\_\-hash\-\_\-t $\ast$$\ast$types, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get a hash table of key types, keyed by the name of the type against an integer pointer constant. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga55368343c0e61228a941f76caf339e41}{apr\-\_\-crypto\-\_\-get\-\_\-block\-\_\-key\-\_\-modes} (apr\-\_\-hash\-\_\-t $\ast$$\ast$modes, const apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Get a hash table of key modes, keyed by the name of the mode against an integer pointer constant. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga98dea2011c0e173ab1f059c5a9ea8b14}{apr\-\_\-crypto\-\_\-passphrase} (apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$$\ast$key, apr\-\_\-size\-\_\-t $\ast$iv\-Size, const char $\ast$pass, apr\-\_\-size\-\_\-t pass\-Len, const unsigned char $\ast$salt, apr\-\_\-size\-\_\-t salt\-Len, const \hyperlink{group___a_p_r___util___crypto_gac62c799021d3bc28449626e60351e946}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-type\-\_\-e} type, const \hyperlink{group___a_p_r___util___crypto_gad29b01edfcd38649f12d76e803dd2153}{apr\-\_\-crypto\-\_\-block\-\_\-key\-\_\-mode\-\_\-e} mode, const int do\-Pad, const int iterations, const apr\-\_\-crypto\-\_\-t $\ast$f, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Create a key from the given passphrase. By default, the P\-B\-K\-D\-F2 algorithm is used to generate the key from the passphrase. It is expected that the same pass phrase will generate the same key, regardless of the backend crypto platform used. The key is cleaned up when the context is cleaned, and may be reused with multiple encryption or decryption operations. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga191077110391e4a8b5b97f8820bdae23}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-init} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$ctx, const unsigned char $\ast$$\ast$iv, const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$key, apr\-\_\-size\-\_\-t $\ast$block\-Size, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise a context for encrypting arbitrary data using the given key. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga98110d8923632130a39f9398170bb99a}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt} (unsigned char $\ast$$\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, const unsigned char $\ast$in, apr\-\_\-size\-\_\-t inlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Encrypt data provided by in, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga02552ce92915fcd044ae9efe5b555c8b}{apr\-\_\-crypto\-\_\-block\-\_\-encrypt\-\_\-finish} (unsigned char $\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Encrypt final data block, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gab24c68f757f14a4369ef6c79a04ab8c4}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-init} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$$\ast$ctx, apr\-\_\-size\-\_\-t $\ast$block\-Size, const unsigned char $\ast$iv, const apr\-\_\-crypto\-\_\-key\-\_\-t $\ast$key, apr\-\_\-pool\-\_\-t $\ast$p)
+\begin{DoxyCompactList}\small\item\em Initialise a context for decrypting arbitrary data using the given key. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gaf82e6b7f5768952464aa4b0af481de0c}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt} (unsigned char $\ast$$\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, const unsigned char $\ast$in, apr\-\_\-size\-\_\-t inlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Decrypt data provided by in, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_gac13a4f1d70437f6722018006d3dde42d}{apr\-\_\-crypto\-\_\-block\-\_\-decrypt\-\_\-finish} (unsigned char $\ast$out, apr\-\_\-size\-\_\-t $\ast$outlen, apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Decrypt final data block, write it to out. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga0f351ebb6527dd32604de58d5199846d}{apr\-\_\-crypto\-\_\-block\-\_\-cleanup} (apr\-\_\-crypto\-\_\-block\-\_\-t $\ast$ctx)
+\begin{DoxyCompactList}\small\item\em Clean encryption / decryption context. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga39bf6b81c4f4cef03915029eb3266cc2}{apr\-\_\-crypto\-\_\-cleanup} (apr\-\_\-crypto\-\_\-t $\ast$f)
+\begin{DoxyCompactList}\small\item\em Clean encryption / decryption context. \end{DoxyCompactList}\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___crypto_ga748292b8c676934763237bd062d094b9}{apr\-\_\-crypto\-\_\-shutdown} (const apr\-\_\-crypto\-\_\-driver\-\_\-t $\ast$driver)
+\begin{DoxyCompactList}\small\item\em Shutdown the crypto library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L Crypto library. 

@@ -1,0 +1,76 @@
+\hypertarget{structapr__dbm__type__t}{\section{apr\-\_\-dbm\-\_\-type\-\_\-t Struct Reference}
+\label{structapr__dbm__type__t}\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-dbm\-\_\-private.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{structapr__dbm__type__t_af023b97eba22415785caf005fc5dcf64}{name}
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_a4695443269822d7ca9208bd6579d3635}{open} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$$\ast$pdb, const char $\ast$pathname, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perm, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+void($\ast$ \hyperlink{structapr__dbm__type__t_a21e4c81ee578b14ef5503c5ac7ee9312}{close} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_a17d44119b2ba7594a9a6593b82bc8d5f}{fetch} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pvalue)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_ae156d00ff445fbe6472565165f7e746c}{store} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} value)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_a06d2f0a91b5ea931996acf364f392073}{del} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key)
+\item 
+int($\ast$ \hyperlink{structapr__dbm__type__t_ae671f4abb2d4f2ff42b6368f057c2166}{exists} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_a1beec34c5815d4c05e1e03d49be2ccb9}{firstkey} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pkey)
+\item 
+apr\-\_\-status\-\_\-t($\ast$ \hyperlink{structapr__dbm__type__t_ace0c5f3bc24df10170b4031b48fd9af0}{nextkey} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} $\ast$pkey)
+\item 
+void($\ast$ \hyperlink{structapr__dbm__type__t_a7adb82d3067a0c388d59ac8a7b7c0b20}{freedatum} )(\hyperlink{structapr__dbm__t}{apr\-\_\-dbm\-\_\-t} $\ast$dbm, \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t} data)
+\item 
+void($\ast$ \hyperlink{structapr__dbm__type__t_a9247cfe582aaf18915bb8552cd5c6bc7}{getusednames} )(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$pathname, const char $\ast$$\ast$used1, const char $\ast$$\ast$used2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Structure to describe the operations of the D\-B\-M 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__dbm__type__t_a21e4c81ee578b14ef5503c5ac7ee9312}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!close@{close}}
+\index{close@{close}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{close}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::close)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm)}}\label{structapr__dbm__type__t_a21e4c81ee578b14ef5503c5ac7ee9312}
+Close the D\-B\-M \hypertarget{structapr__dbm__type__t_a06d2f0a91b5ea931996acf364f392073}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!del@{del}}
+\index{del@{del}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{del}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::del)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} key)}}\label{structapr__dbm__type__t_a06d2f0a91b5ea931996acf364f392073}
+Delete a dbm record value by key \hypertarget{structapr__dbm__type__t_ae671f4abb2d4f2ff42b6368f057c2166}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!exists@{exists}}
+\index{exists@{exists}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{exists}]{\setlength{\rightskip}{0pt plus 5cm}int($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::exists)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} key)}}\label{structapr__dbm__type__t_ae671f4abb2d4f2ff42b6368f057c2166}
+Search for a key within the dbm \hypertarget{structapr__dbm__type__t_a17d44119b2ba7594a9a6593b82bc8d5f}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!fetch@{fetch}}
+\index{fetch@{fetch}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{fetch}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::fetch)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} key, {\bf apr\-\_\-datum\-\_\-t} $\ast$pvalue)}}\label{structapr__dbm__type__t_a17d44119b2ba7594a9a6593b82bc8d5f}
+Fetch a dbm record value by key \hypertarget{structapr__dbm__type__t_a1beec34c5815d4c05e1e03d49be2ccb9}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!firstkey@{firstkey}}
+\index{firstkey@{firstkey}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{firstkey}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::firstkey)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} $\ast$pkey)}}\label{structapr__dbm__type__t_a1beec34c5815d4c05e1e03d49be2ccb9}
+Retrieve the first record key from a dbm \hypertarget{structapr__dbm__type__t_a7adb82d3067a0c388d59ac8a7b7c0b20}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!freedatum@{freedatum}}
+\index{freedatum@{freedatum}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{freedatum}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::freedatum)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} data)}}\label{structapr__dbm__type__t_a7adb82d3067a0c388d59ac8a7b7c0b20}
+Proactively toss any memory associated with the \hyperlink{structapr__datum__t}{apr\-\_\-datum\-\_\-t}. \hypertarget{structapr__dbm__type__t_a9247cfe582aaf18915bb8552cd5c6bc7}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!getusednames@{getusednames}}
+\index{getusednames@{getusednames}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{getusednames}]{\setlength{\rightskip}{0pt plus 5cm}void($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::getusednames)(apr\-\_\-pool\-\_\-t $\ast$pool, const char $\ast$pathname, const char $\ast$$\ast$used1, const char $\ast$$\ast$used2)}}\label{structapr__dbm__type__t_a9247cfe582aaf18915bb8552cd5c6bc7}
+Get the names that the D\-B\-M will use for a given pathname. \hypertarget{structapr__dbm__type__t_af023b97eba22415785caf005fc5dcf64}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!name@{name}}
+\index{name@{name}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{name}]{\setlength{\rightskip}{0pt plus 5cm}const char$\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::name}}\label{structapr__dbm__type__t_af023b97eba22415785caf005fc5dcf64}
+The name of the D\-B\-M Type \hypertarget{structapr__dbm__type__t_ace0c5f3bc24df10170b4031b48fd9af0}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!nextkey@{nextkey}}
+\index{nextkey@{nextkey}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{nextkey}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::nextkey)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} $\ast$pkey)}}\label{structapr__dbm__type__t_ace0c5f3bc24df10170b4031b48fd9af0}
+Retrieve the next record key from a dbm \hypertarget{structapr__dbm__type__t_a4695443269822d7ca9208bd6579d3635}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!open@{open}}
+\index{open@{open}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{open}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::open)({\bf apr\-\_\-dbm\-\_\-t} $\ast$$\ast$pdb, const char $\ast$pathname, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perm, apr\-\_\-pool\-\_\-t $\ast$pool)}}\label{structapr__dbm__type__t_a4695443269822d7ca9208bd6579d3635}
+Open the D\-B\-M \hypertarget{structapr__dbm__type__t_ae156d00ff445fbe6472565165f7e746c}{\index{apr\-\_\-dbm\-\_\-type\-\_\-t@{apr\-\_\-dbm\-\_\-type\-\_\-t}!store@{store}}
+\index{store@{store}!apr_dbm_type_t@{apr\-\_\-dbm\-\_\-type\-\_\-t}}
+\subsubsection[{store}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t($\ast$ apr\-\_\-dbm\-\_\-type\-\_\-t\-::store)({\bf apr\-\_\-dbm\-\_\-t} $\ast$dbm, {\bf apr\-\_\-datum\-\_\-t} key, {\bf apr\-\_\-datum\-\_\-t} value)}}\label{structapr__dbm__type__t_ae156d00ff445fbe6472565165f7e746c}
+Store a dbm record value by key 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/private/apr\-\_\-dbm\-\_\-private.\-h\end{DoxyCompactItemize}

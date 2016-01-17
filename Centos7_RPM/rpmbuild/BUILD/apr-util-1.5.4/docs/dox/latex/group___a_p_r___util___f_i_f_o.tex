@@ -1,0 +1,205 @@
+\hypertarget{group___a_p_r___util___f_i_f_o}{\section{Thread Safe F\-I\-F\-O bounded queue}
+\label{group___a_p_r___util___f_i_f_o}\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} \hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga9c8c5ec3d8779a6c2ffffb8b74f784c7}{apr\-\_\-queue\-\_\-create} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$$\ast$queue, unsigned int queue\-\_\-capacity, apr\-\_\-pool\-\_\-t $\ast$a)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga220fffb8eb2f23aa2fe626b64076df88}{apr\-\_\-queue\-\_\-push} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga302387f5afb71d3c771b76448088bd34}{apr\-\_\-queue\-\_\-pop} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$$\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_gaba8216476d7e5abc3a5ec8a47adf96d5}{apr\-\_\-queue\-\_\-trypush} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$data)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga128207222433384f286f61ec806f4af8}{apr\-\_\-queue\-\_\-trypop} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue, void $\ast$$\ast$data)
+\item 
+unsigned int \hyperlink{group___a_p_r___util___f_i_f_o_gaf342a2e2ec195a30d6d8c9d95fbfbc30}{apr\-\_\-queue\-\_\-size} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_ga8757c7f87105e6ff4cf1ea5ac28dd26f}{apr\-\_\-queue\-\_\-interrupt\-\_\-all} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___f_i_f_o_gabb8115bceb96a41df3e21544ce79bc68}{apr\-\_\-queue\-\_\-term} (\hyperlink{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{apr\-\_\-queue\-\_\-t} $\ast$queue)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-t@{apr\-\_\-queue\-\_\-t}}
+\index{apr\-\_\-queue\-\_\-t@{apr\-\_\-queue\-\_\-t}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-queue\-\_\-t} {\bf apr\-\_\-queue\-\_\-t}}}\label{group___a_p_r___util___f_i_f_o_ga8c74c22abf47b63555a2109b06f83abb}
+opaque structure 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga9c8c5ec3d8779a6c2ffffb8b74f784c7}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-create@{apr\-\_\-queue\-\_\-create}}
+\index{apr\-\_\-queue\-\_\-create@{apr\-\_\-queue\-\_\-create}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$$\ast$}]{queue, }
+\item[{unsigned int}]{queue\-\_\-capacity, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{a}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_ga9c8c5ec3d8779a6c2ffffb8b74f784c7}
+create a F\-I\-F\-O queue 
+\begin{DoxyParams}{Parameters}
+{\em queue} & The new queue \\
+\hline
+{\em queue\-\_\-capacity} & maximum size of the queue \\
+\hline
+{\em a} & pool to allocate queue from \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga8757c7f87105e6ff4cf1ea5ac28dd26f}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-interrupt\-\_\-all@{apr\-\_\-queue\-\_\-interrupt\-\_\-all}}
+\index{apr\-\_\-queue\-\_\-interrupt\-\_\-all@{apr\-\_\-queue\-\_\-interrupt\-\_\-all}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-interrupt\-\_\-all}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-interrupt\-\_\-all (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_ga8757c7f87105e6ff4cf1ea5ac28dd26f}
+interrupt all the threads blocking on this queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga302387f5afb71d3c771b76448088bd34}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-pop@{apr\-\_\-queue\-\_\-pop}}
+\index{apr\-\_\-queue\-\_\-pop@{apr\-\_\-queue\-\_\-pop}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-pop}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-pop (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue, }
+\item[{void $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_ga302387f5afb71d3c771b76448088bd34}
+pop/get an object from the queue, blocking if the queue is already empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+{\em data} & the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-T\-R the blocking was interrupted (try again) 
+
+A\-P\-R\-\_\-\-E\-O\-F if the queue has been terminated 
+
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on a successful pop 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga220fffb8eb2f23aa2fe626b64076df88}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-push@{apr\-\_\-queue\-\_\-push}}
+\index{apr\-\_\-queue\-\_\-push@{apr\-\_\-queue\-\_\-push}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-push}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-push (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_ga220fffb8eb2f23aa2fe626b64076df88}
+push/add an object to the queue, blocking if the queue is already full
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+{\em data} & the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-T\-R the blocking was interrupted (try again) 
+
+A\-P\-R\-\_\-\-E\-O\-F the queue has been terminated 
+
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on a successful push 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___f_i_f_o_gaf342a2e2ec195a30d6d8c9d95fbfbc30}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-size@{apr\-\_\-queue\-\_\-size}}
+\index{apr\-\_\-queue\-\_\-size@{apr\-\_\-queue\-\_\-size}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int apr\-\_\-queue\-\_\-size (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_gaf342a2e2ec195a30d6d8c9d95fbfbc30}
+returns the size of the queue.
+
+\begin{DoxyWarning}{Warning}
+this is not threadsafe, and is intended for reporting/monitoring of the queue. 
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the size of the queue 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___f_i_f_o_gabb8115bceb96a41df3e21544ce79bc68}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-term@{apr\-\_\-queue\-\_\-term}}
+\index{apr\-\_\-queue\-\_\-term@{apr\-\_\-queue\-\_\-term}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-term}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-term (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_gabb8115bceb96a41df3e21544ce79bc68}
+terminate the queue, sending an interrupt to all the blocking threads
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___f_i_f_o_ga128207222433384f286f61ec806f4af8}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-trypop@{apr\-\_\-queue\-\_\-trypop}}
+\index{apr\-\_\-queue\-\_\-trypop@{apr\-\_\-queue\-\_\-trypop}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-trypop}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-trypop (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue, }
+\item[{void $\ast$$\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_ga128207222433384f286f61ec806f4af8}
+pop/get an object to the queue, returning immediately if the queue is empty
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+{\em data} & the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-T\-R the blocking operation was interrupted (try again) 
+
+A\-P\-R\-\_\-\-E\-A\-G\-A\-I\-N the queue is empty 
+
+A\-P\-R\-\_\-\-E\-O\-F the queue has been terminated 
+
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on a successful pop 
+\end{DoxyReturn}
+\hypertarget{group___a_p_r___util___f_i_f_o_gaba8216476d7e5abc3a5ec8a47adf96d5}{\index{Thread Safe F\-I\-F\-O bounded queue@{Thread Safe F\-I\-F\-O bounded queue}!apr\-\_\-queue\-\_\-trypush@{apr\-\_\-queue\-\_\-trypush}}
+\index{apr\-\_\-queue\-\_\-trypush@{apr\-\_\-queue\-\_\-trypush}!Thread Safe FIFO bounded queue@{Thread Safe F\-I\-F\-O bounded queue}}
+\subsubsection[{apr\-\_\-queue\-\_\-trypush}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-queue\-\_\-trypush (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-queue\-\_\-t} $\ast$}]{queue, }
+\item[{void $\ast$}]{data}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___f_i_f_o_gaba8216476d7e5abc3a5ec8a47adf96d5}
+push/add an object to the queue, returning immediately if the queue is full
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & the queue \\
+\hline
+{\em data} & the data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A\-P\-R\-\_\-\-E\-I\-N\-T\-R the blocking operation was interrupted (try again) 
+
+A\-P\-R\-\_\-\-E\-A\-G\-A\-I\-N the queue is full 
+
+A\-P\-R\-\_\-\-E\-O\-F the queue has been terminated 
+
+A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S on a successful push 
+\end{DoxyReturn}

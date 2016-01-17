@@ -1,0 +1,353 @@
+\hypertarget{apr__errno_8h}{\section{apr\-\_\-errno.\-h File Reference}
+\label{apr__errno_8h}\index{apr\-\_\-errno.\-h@{apr\-\_\-errno.\-h}}
+}
+
+
+A\-P\-R Error Codes.  
+
+
+{\ttfamily \#include \char`\"{}apr.\-h\char`\"{}}\\*
+{\ttfamily \#include $<$errno.\-h$>$}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e + \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})
+\item 
+\#define \hyperlink{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e == 0 ? \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S} \-: e -\/ \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R})
+\item 
+\#define \hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R}~20000
+\item 
+\#define \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}~50000
+\item 
+\#define \hyperlink{group__apr__errno_gaef5e79630739f24d1512d0d044c2bae7}{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E}~20000
+\item 
+\#define \hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_gadf26297a72afa0ea224e7097fe59a1cd}{A\-P\-R\-\_\-\-U\-T\-I\-L\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S}
+\item 
+\#define \hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_ga803b8badf8695bdfa4fbcf4d330371f0}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-E\-R\-R}~\hyperlink{group__apr__errno_gacd35b2de1e38a1fa4717e38d5e153571}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-U\-S\-E\-R\-E\-R\-R}
+\item 
+\#define \hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R}
+\item 
+\#define \hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_gad70a5cad6862a9abcc254d35e827ac8b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-Y\-S\-E\-R\-R}~(\hyperlink{group__apr__errno_ga2d04991cb57c67a896e22125a1f22b49}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-A\-I\-E\-R\-R} + \hyperlink{group__apr__errno_gadb8d97e6836ccdc57b43b6119a5acccf}{A\-P\-R\-\_\-\-O\-S\-\_\-\-E\-R\-R\-S\-P\-A\-C\-E\-\_\-\-S\-I\-Z\-E})
+\item 
+\#define \hyperlink{group__apr__errno_ga9ee311b7bf1c691dc521d721339ee2a6}{A\-P\-R\-\_\-\-S\-U\-C\-C\-E\-S\-S}~0
+\item 
+\#define \hyperlink{group___a_p_r___error_ga7995805cf68be1fb16f684c544e45fbe}{A\-P\-R\-\_\-\-E\-N\-O\-S\-T\-A\-T}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 1)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaa8461873202e5e0b4c0ea261e05b07a9}{A\-P\-R\-\_\-\-E\-N\-O\-P\-O\-O\-L}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 2)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga7911720c540a929cc08a2c25e606b56e}{A\-P\-R\-\_\-\-E\-B\-A\-D\-D\-A\-T\-E}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 4)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga548032b79ce0671d9986db0654858812}{A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L\-S\-O\-C\-K}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 5)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga18aa6d4ebaefda39478649c20bbeb9df}{A\-P\-R\-\_\-\-E\-N\-O\-P\-R\-O\-C}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 6)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga7acfb436774a21ae93ff5c1b89e7c4f5}{A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-E}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 7)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga9a8077e85b6241c1e91b69548395fc09}{A\-P\-R\-\_\-\-E\-N\-O\-D\-I\-R}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 8)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga9c411624c42f7562a5c6c3461bdcb0ec}{A\-P\-R\-\_\-\-E\-N\-O\-L\-O\-C\-K}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 9)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaeff8d4ed7bf9b99cbe62a3e7068e85b7}{A\-P\-R\-\_\-\-E\-N\-O\-P\-O\-L\-L}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 10)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga99e125e203a1d44f12bd88b41696716d}{A\-P\-R\-\_\-\-E\-N\-O\-S\-O\-C\-K\-E\-T}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 11)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga7b43e1e075ff031e142aa809295ee441}{A\-P\-R\-\_\-\-E\-N\-O\-T\-H\-R\-E\-A\-D}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 12)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga29faf801fac647a14360e7493f7fd74e}{A\-P\-R\-\_\-\-E\-N\-O\-T\-H\-D\-K\-E\-Y}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 13)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga18f5678bea0c2c704a2b6a186c9e158b}{A\-P\-R\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 14)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga67516f4e87197490333480a8bbc78725}{A\-P\-R\-\_\-\-E\-N\-O\-S\-H\-M\-A\-V\-A\-I\-L}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 15)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga96180fb8075ae0150bfed50c2e7f7a59}{A\-P\-R\-\_\-\-E\-B\-A\-D\-I\-P}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 16)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga5249b5edc27466f6b60b3dfa1541ba31}{A\-P\-R\-\_\-\-E\-B\-A\-D\-M\-A\-S\-K}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 17)
+\item 
+\#define \hyperlink{group___a_p_r___error_gac96fbde76282364e8c482d6f23bc61bb}{A\-P\-R\-\_\-\-E\-D\-S\-O\-O\-P\-E\-N}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 19)
+\item 
+\#define \hyperlink{group___a_p_r___error_gafd1ffc5bf2bf215ad048780408913d0e}{A\-P\-R\-\_\-\-E\-A\-B\-S\-O\-L\-U\-T\-E}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 20)
+\item 
+\#define \hyperlink{group___a_p_r___error_gae4688dfa866265b9ec3623689c23923b}{A\-P\-R\-\_\-\-E\-R\-E\-L\-A\-T\-I\-V\-E}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 21)
+\item 
+\#define \hyperlink{group___a_p_r___error_gab4357bcbdc2922183e0594865b59ce58}{A\-P\-R\-\_\-\-E\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 22)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga4828cc04f97dc7bed691456adf7c073e}{A\-P\-R\-\_\-\-E\-A\-B\-O\-V\-E\-R\-O\-O\-T}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 23)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga1731292eb3e3cdc801d3bf0b09cd8da7}{A\-P\-R\-\_\-\-E\-B\-A\-D\-P\-A\-T\-H}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 24)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga01d0fb965051103b5c8f15a43ad2c767}{A\-P\-R\-\_\-\-E\-P\-A\-T\-H\-W\-I\-L\-D}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 25)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga8d96410fc32408160e1e85e2e96402fa}{A\-P\-R\-\_\-\-E\-S\-Y\-M\-N\-O\-T\-F\-O\-U\-N\-D}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 26)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga01b21dc62b410707f44641d3cea3e6ed}{A\-P\-R\-\_\-\-E\-P\-R\-O\-C\-\_\-\-U\-N\-K\-N\-O\-W\-N}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 27)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaaee9e4e763844197e3750bb66ff75cd0}{A\-P\-R\-\_\-\-E\-N\-O\-T\-E\-N\-O\-U\-G\-H\-E\-N\-T\-R\-O\-P\-Y}~(\hyperlink{group__apr__errno_ga191894048b7bd0cca3cf0bdff1eb695b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-E\-R\-R\-O\-R} + 28)
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga1f0d21900aa879ca4866b1bf846cfd0d}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-S\-T\-A\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga7995805cf68be1fb16f684c544e45fbe}{A\-P\-R\-\_\-\-E\-N\-O\-S\-T\-A\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga71f149437af305f0a0cabde2cc3f3b19}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-P\-O\-O\-L}(s)~((s) == \hyperlink{group___a_p_r___error_gaa8461873202e5e0b4c0ea261e05b07a9}{A\-P\-R\-\_\-\-E\-N\-O\-P\-O\-O\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaf1313bed3538d6d57995bca164ebac20}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-A\-D\-D\-A\-T\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga7911720c540a929cc08a2c25e606b56e}{A\-P\-R\-\_\-\-E\-B\-A\-D\-D\-A\-T\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga7fcc752663660de85fa046b2de014b97}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-V\-A\-L\-S\-O\-C\-K}(s)~((s) == \hyperlink{group___a_p_r___error_ga548032b79ce0671d9986db0654858812}{A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L\-S\-O\-C\-K})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga566f4c9b9db8a0c31199a938bdc4e38a}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-P\-R\-O\-C}(s)~((s) == \hyperlink{group___a_p_r___error_ga18aa6d4ebaefda39478649c20bbeb9df}{A\-P\-R\-\_\-\-E\-N\-O\-P\-R\-O\-C})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga65cb54d0b5902784037626841e26e709}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-I\-M\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga7acfb436774a21ae93ff5c1b89e7c4f5}{A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga666c0bcfb97d26df7e7e360041d93fc6}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-D\-I\-R}(s)~((s) == \hyperlink{group___a_p_r___error_ga9a8077e85b6241c1e91b69548395fc09}{A\-P\-R\-\_\-\-E\-N\-O\-D\-I\-R})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaced66cdb08529210dbf2f6bcbba99258}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-L\-O\-C\-K}(s)~((s) == \hyperlink{group___a_p_r___error_ga9c411624c42f7562a5c6c3461bdcb0ec}{A\-P\-R\-\_\-\-E\-N\-O\-L\-O\-C\-K})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga590bc2090fe120d142853dec27eaf9e8}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-P\-O\-L\-L}(s)~((s) == \hyperlink{group___a_p_r___error_gaeff8d4ed7bf9b99cbe62a3e7068e85b7}{A\-P\-R\-\_\-\-E\-N\-O\-P\-O\-L\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae415d3119f7b13edc8af627a5e3f440b}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-S\-O\-C\-K\-E\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga99e125e203a1d44f12bd88b41696716d}{A\-P\-R\-\_\-\-E\-N\-O\-S\-O\-C\-K\-E\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaf33e51e4df639e2b93c99a2fa8b5c7e7}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-H\-R\-E\-A\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga7b43e1e075ff031e142aa809295ee441}{A\-P\-R\-\_\-\-E\-N\-O\-T\-H\-R\-E\-A\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga782b37d892214ee60911062791871ae2}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-H\-D\-K\-E\-Y}(s)~((s) == \hyperlink{group___a_p_r___error_ga29faf801fac647a14360e7493f7fd74e}{A\-P\-R\-\_\-\-E\-N\-O\-T\-H\-D\-K\-E\-Y})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gab015701a084807912b3c0464c6badf1a}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L}(s)~((s) == \hyperlink{group___a_p_r___error_ga18f5678bea0c2c704a2b6a186c9e158b}{A\-P\-R\-\_\-\-E\-G\-E\-N\-E\-R\-A\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga99af86378a3ac8eb5a59f1acffec6440}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-S\-H\-M\-A\-V\-A\-I\-L}(s)~((s) == \hyperlink{group___a_p_r___error_ga67516f4e87197490333480a8bbc78725}{A\-P\-R\-\_\-\-E\-N\-O\-S\-H\-M\-A\-V\-A\-I\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga02d9309a113e07050308af66e955d600}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-A\-D\-I\-P}(s)~((s) == \hyperlink{group___a_p_r___error_ga96180fb8075ae0150bfed50c2e7f7a59}{A\-P\-R\-\_\-\-E\-B\-A\-D\-I\-P})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabec95c93d0c5996f14a94e2cc37e1904}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-A\-D\-M\-A\-S\-K}(s)~((s) == \hyperlink{group___a_p_r___error_ga5249b5edc27466f6b60b3dfa1541ba31}{A\-P\-R\-\_\-\-E\-B\-A\-D\-M\-A\-S\-K})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae87f4877aa35535eb3546b499ef9d9f3}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-D\-S\-O\-O\-P\-E\-N}(s)~((s) == \hyperlink{group___a_p_r___error_gac96fbde76282364e8c482d6f23bc61bb}{A\-P\-R\-\_\-\-E\-D\-S\-O\-O\-P\-E\-N})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae662804298416a68e63c4f84f245d30c}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-A\-B\-S\-O\-L\-U\-T\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gafd1ffc5bf2bf215ad048780408913d0e}{A\-P\-R\-\_\-\-E\-A\-B\-S\-O\-L\-U\-T\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga7a8fca5102890e9a0bc4133ba848d52c}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-R\-E\-L\-A\-T\-I\-V\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gae4688dfa866265b9ec3623689c23923b}{A\-P\-R\-\_\-\-E\-R\-E\-L\-A\-T\-I\-V\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae7354f40a912dc43fe76ba2a59de0403}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gab4357bcbdc2922183e0594865b59ce58}{A\-P\-R\-\_\-\-E\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae89b8de1e40b855cf95987ce5947b442}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-A\-B\-O\-V\-E\-R\-O\-O\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga4828cc04f97dc7bed691456adf7c073e}{A\-P\-R\-\_\-\-E\-A\-B\-O\-V\-E\-R\-O\-O\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga0758d7227209e4311c843c752c0dd075}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-A\-D\-P\-A\-T\-H}(s)~((s) == \hyperlink{group___a_p_r___error_ga1731292eb3e3cdc801d3bf0b09cd8da7}{A\-P\-R\-\_\-\-E\-B\-A\-D\-P\-A\-T\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae23aedf7ad4e6a111ffd6acf4167b00e}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-P\-A\-T\-H\-W\-I\-L\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga01d0fb965051103b5c8f15a43ad2c767}{A\-P\-R\-\_\-\-E\-P\-A\-T\-H\-W\-I\-L\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gafab6c5fe2f9b906d533d253097a16e09}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-S\-Y\-M\-N\-O\-T\-F\-O\-U\-N\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga8d96410fc32408160e1e85e2e96402fa}{A\-P\-R\-\_\-\-E\-S\-Y\-M\-N\-O\-T\-F\-O\-U\-N\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gab1267636d1f3fe0dcb79a22b735a5010}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-P\-R\-O\-C\-\_\-\-U\-N\-K\-N\-O\-W\-N}(s)~((s) == \hyperlink{group___a_p_r___error_ga01b21dc62b410707f44641d3cea3e6ed}{A\-P\-R\-\_\-\-E\-P\-R\-O\-C\-\_\-\-U\-N\-K\-N\-O\-W\-N})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gab8b0af2df80bfb9edfc8dbcbb6bdf925}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-E\-N\-O\-U\-G\-H\-E\-N\-T\-R\-O\-P\-Y}(s)~((s) == \hyperlink{group___a_p_r___error_gaaee9e4e763844197e3750bb66ff75cd0}{A\-P\-R\-\_\-\-E\-N\-O\-T\-E\-N\-O\-U\-G\-H\-E\-N\-T\-R\-O\-P\-Y})
+\item 
+\#define \hyperlink{group___a_p_r___error_ga5a2bb63099778699feeae9627474c179}{A\-P\-R\-\_\-\-I\-N\-C\-H\-I\-L\-D}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 1)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga79abc0fb43e51e0db87f90fa49745d89}{A\-P\-R\-\_\-\-I\-N\-P\-A\-R\-E\-N\-T}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 2)
+\item 
+\#define \hyperlink{group___a_p_r___error_gab3f8849983a52f6558016303fb4f5cff}{A\-P\-R\-\_\-\-D\-E\-T\-A\-C\-H}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 3)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga83b8407fb5de5840f51dfd2c1439987b}{A\-P\-R\-\_\-\-N\-O\-T\-D\-E\-T\-A\-C\-H}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 4)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga2a78375cab66b8c1a4e06329e0cfcaf4}{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-D\-O\-N\-E}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 5)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga00bba31c29774cce3e72a31f88610340}{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-N\-O\-T\-D\-O\-N\-E}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 6)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga9ac087c25ffb0d3bb4d75bee36709853}{A\-P\-R\-\_\-\-T\-I\-M\-E\-U\-P}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 7)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga64dff43b83bcefd3f3c751be6b864ca1}{A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 8)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga6f3ca71069880d9fe5678687a257d616}{A\-P\-R\-\_\-\-B\-A\-D\-C\-H}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 12)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga771bf48ab38d93355be8530f6efe4ae9}{A\-P\-R\-\_\-\-B\-A\-D\-A\-R\-G}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 13)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga35d9dca2514c522a2840aca0f3e2ebd3}{A\-P\-R\-\_\-\-E\-O\-F}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 14)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga9bd83273ff02f31f71fb4dc6f29df4a9}{A\-P\-R\-\_\-\-N\-O\-T\-F\-O\-U\-N\-D}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 15)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga738a229b0c27bd96ae0173fecab251b7}{A\-P\-R\-\_\-\-A\-N\-O\-N\-Y\-M\-O\-U\-S}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 19)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga28a6d59b62d2698208451a9343399fbb}{A\-P\-R\-\_\-\-F\-I\-L\-E\-B\-A\-S\-E\-D}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 20)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaac52bebace264494fa94cdf0b4344d26}{A\-P\-R\-\_\-\-K\-E\-Y\-B\-A\-S\-E\-D}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 21)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaacd087793c97a3493eafc14075775b82}{A\-P\-R\-\_\-\-E\-I\-N\-I\-T}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 22)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 23)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\-P\-R\-\_\-\-E\-M\-I\-S\-M\-A\-T\-C\-H}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 24)
+\item 
+\#define \hyperlink{group___a_p_r___error_gab6e5bc99dbace4a91d8d0adcbd8fd66b}{A\-P\-R\-\_\-\-E\-B\-U\-S\-Y}~(\hyperlink{group__apr__errno_ga450e1a5734732e092ddaa5b67414f69b}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-S\-T\-A\-T\-U\-S} + 25)
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad60d170a73ed74ec209a1b2165cacb61}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-I\-N\-C\-H\-I\-L\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga5a2bb63099778699feeae9627474c179}{A\-P\-R\-\_\-\-I\-N\-C\-H\-I\-L\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga4471f8de6eda3a673aa1f306114c012e}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-I\-N\-P\-A\-R\-E\-N\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga79abc0fb43e51e0db87f90fa49745d89}{A\-P\-R\-\_\-\-I\-N\-P\-A\-R\-E\-N\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga64d5d0a6bfe141a387dfdd430a38465b}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-D\-E\-T\-A\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_gab3f8849983a52f6558016303fb4f5cff}{A\-P\-R\-\_\-\-D\-E\-T\-A\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga3084551fdf84919e3c3db4384234521d}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-N\-O\-T\-D\-E\-T\-A\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_ga83b8407fb5de5840f51dfd2c1439987b}{A\-P\-R\-\_\-\-N\-O\-T\-D\-E\-T\-A\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga1e6539dfa172cef4026105ca33b2b208}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-C\-H\-I\-L\-D\-\_\-\-D\-O\-N\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga2a78375cab66b8c1a4e06329e0cfcaf4}{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-D\-O\-N\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga86190a4a2c04bbbbedc2491bb93ab432}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-C\-H\-I\-L\-D\-\_\-\-N\-O\-T\-D\-O\-N\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga00bba31c29774cce3e72a31f88610340}{A\-P\-R\-\_\-\-C\-H\-I\-L\-D\-\_\-\-N\-O\-T\-D\-O\-N\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga864b207719c86ac4deeba696943262d0}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-T\-I\-M\-E\-U\-P}(s)~((s) == \hyperlink{group___a_p_r___error_ga9ac087c25ffb0d3bb4d75bee36709853}{A\-P\-R\-\_\-\-T\-I\-M\-E\-U\-P})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga8385878e572abf0b2f78a0ab7d1bc8a5}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga64dff43b83bcefd3f3c751be6b864ca1}{A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga20308232897ebff445dc10d0b69a0be2}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-B\-A\-D\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_ga6f3ca71069880d9fe5678687a257d616}{A\-P\-R\-\_\-\-B\-A\-D\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga88b31c127ad48d12353d175926913cb3}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-B\-A\-D\-A\-R\-G}(s)~((s) == \hyperlink{group___a_p_r___error_ga771bf48ab38d93355be8530f6efe4ae9}{A\-P\-R\-\_\-\-B\-A\-D\-A\-R\-G})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaf4232cd96b47b76aec9607b1a78e694f}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-O\-F}(s)~((s) == \hyperlink{group___a_p_r___error_ga35d9dca2514c522a2840aca0f3e2ebd3}{A\-P\-R\-\_\-\-E\-O\-F})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga51bc0a0e249f5d09dba3ed9dc02c49e5}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-N\-O\-T\-F\-O\-U\-N\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga9bd83273ff02f31f71fb4dc6f29df4a9}{A\-P\-R\-\_\-\-N\-O\-T\-F\-O\-U\-N\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabf2969f69ac131cb06178c0809abf943}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-A\-N\-O\-N\-Y\-M\-O\-U\-S}(s)~((s) == \hyperlink{group___a_p_r___error_ga738a229b0c27bd96ae0173fecab251b7}{A\-P\-R\-\_\-\-A\-N\-O\-N\-Y\-M\-O\-U\-S})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga7e46240d526e81f5ffbc266ca29b9f6a}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-F\-I\-L\-E\-B\-A\-S\-E\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga28a6d59b62d2698208451a9343399fbb}{A\-P\-R\-\_\-\-F\-I\-L\-E\-B\-A\-S\-E\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaf43f4a40f5ab2fe196acb4e12f20b79e}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-K\-E\-Y\-B\-A\-S\-E\-D}(s)~((s) == \hyperlink{group___a_p_r___error_gaac52bebace264494fa94cdf0b4344d26}{A\-P\-R\-\_\-\-K\-E\-Y\-B\-A\-S\-E\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaeaa5fbb21b72fcbbe98b0f100d204048}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-I\-T}(s)~((s) == \hyperlink{group___a_p_r___error_gaacd087793c97a3493eafc14075775b82}{A\-P\-R\-\_\-\-E\-I\-N\-I\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gacab882e24f5d6491777e8ef7763d02fb}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L}(s)~((s) == \hyperlink{group___a_p_r___error_ga939ddb834a30bc9a5a0a329b13000161}{A\-P\-R\-\_\-\-E\-N\-O\-T\-I\-M\-P\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga7234b0d01a8e3ea8e5345f3f242df030}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-M\-I\-S\-M\-A\-T\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_ga31e65a44daba96aa6d943529e94498e7}{A\-P\-R\-\_\-\-E\-M\-I\-S\-M\-A\-T\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gabb92ad7b6ef304132de70e9e5cbaa896}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-U\-S\-Y}(s)~((s) == \hyperlink{group___a_p_r___error_gab6e5bc99dbace4a91d8d0adcbd8fd66b}{A\-P\-R\-\_\-\-E\-B\-U\-S\-Y})
+\item 
+\#define \hyperlink{group___a_p_r___error_ga407fc0ea7ead60f7a97fb9d70061bd41}{A\-P\-R\-\_\-\-E\-A\-C\-C\-E\-S}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 1)
+\item 
+\#define \hyperlink{group___a_p_r___error_gafa7f353804388017a0ea71bc14f0dda5}{A\-P\-R\-\_\-\-E\-E\-X\-I\-S\-T}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 2)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga3db63b16c2b332efe441e2661f593377}{A\-P\-R\-\_\-\-E\-N\-A\-M\-E\-T\-O\-O\-L\-O\-N\-G}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 3)
+\item 
+\#define \hyperlink{group___a_p_r___error_gacc26a4afe01b6cc141f839be71fddf1c}{A\-P\-R\-\_\-\-E\-N\-O\-E\-N\-T}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 4)
+\item 
+\#define \hyperlink{group___a_p_r___error_gacfaa73cea75d14d49cc5c81e6c494330}{A\-P\-R\-\_\-\-E\-N\-O\-T\-D\-I\-R}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 5)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga1dfc0bbf080f17b0b9010ef967542193}{A\-P\-R\-\_\-\-E\-N\-O\-S\-P\-C}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 6)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga6a453e60000000609a95817efabebf4f}{A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 7)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaec391eaf0bfa6aed03457ed3f796942d}{A\-P\-R\-\_\-\-E\-M\-F\-I\-L\-E}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 8)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaf46f59147b00c2c87d76b9eb75674456}{A\-P\-R\-\_\-\-E\-N\-F\-I\-L\-E}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 9)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga204df8a37a5c7fd6b2c74ea098fbac02}{A\-P\-R\-\_\-\-E\-B\-A\-D\-F}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 10)
+\item 
+\#define \hyperlink{group___a_p_r___error_gae3ffc41994444e71ce522c036ca1d9a4}{A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 11)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga3be81035cd2da76fbc27c75496489359}{A\-P\-R\-\_\-\-E\-S\-P\-I\-P\-E}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 12)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga0b2a5ebb819de5ce93d326939b586578}{A\-P\-R\-\_\-\-E\-A\-G\-A\-I\-N}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 13)
+\item 
+\#define \hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\-P\-R\-\_\-\-E\-I\-N\-T\-R}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 14)
+\item 
+\#define \hyperlink{group___a_p_r___error_gad456312527050c661dc19a8f17a0f0ef}{A\-P\-R\-\_\-\-E\-N\-O\-T\-S\-O\-C\-K}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 15)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga1b4d1d847bebdfc48af343bc2486ecb8}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-R\-E\-F\-U\-S\-E\-D}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 16)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga5c311361f4f68f289c90f3cdfd77eb79}{A\-P\-R\-\_\-\-E\-I\-N\-P\-R\-O\-G\-R\-E\-S\-S}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 17)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga9458da18e0ee46a5d37c9cdfdc43efd2}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-A\-B\-O\-R\-T\-E\-D}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 18)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga264bfe2056e917728e9ed060b58869c2}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-R\-E\-S\-E\-T}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 19)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga6aeccbe9accb34f0adc1cb1ab9a82a8d}{A\-P\-R\-\_\-\-E\-T\-I\-M\-E\-D\-O\-U\-T}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 20)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga489b0c02fa7cf33ed6d698d385661f86}{A\-P\-R\-\_\-\-E\-H\-O\-S\-T\-U\-N\-R\-E\-A\-C\-H}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 21)
+\item 
+\#define \hyperlink{group___a_p_r___error_gab9b7124a88817d1b69cdef059f7dc689}{A\-P\-R\-\_\-\-E\-N\-E\-T\-U\-N\-R\-E\-A\-C\-H}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 22)
+\item 
+\#define \hyperlink{group___a_p_r___error_gac358701354d03c37e3f0de12ed6d9afc}{A\-P\-R\-\_\-\-E\-F\-T\-Y\-P\-E}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 23)
+\item 
+\#define \hyperlink{group___a_p_r___error_gae985330e30e374714ff1742485597f5d}{A\-P\-R\-\_\-\-E\-P\-I\-P\-E}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 24)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga0562023bd8ebe580b9bbb9f7b04d3f5d}{A\-P\-R\-\_\-\-E\-X\-D\-E\-V}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 25)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga01d9259eccdf0576f58b89c4ad8ca4eb}{A\-P\-R\-\_\-\-E\-N\-O\-T\-E\-M\-P\-T\-Y}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 26)
+\item 
+\#define \hyperlink{group___a_p_r___error_ga76b558840838bcb94a4811a8e52df7a6}{A\-P\-R\-\_\-\-E\-A\-F\-N\-O\-S\-U\-P\-P\-O\-R\-T}~(\hyperlink{group__apr__errno_ga7bca957c11b80b31cb54b0d2cbe9e025}{A\-P\-R\-\_\-\-O\-S\-\_\-\-S\-T\-A\-R\-T\-\_\-\-C\-A\-N\-O\-N\-E\-R\-R} + 27)
+\item 
+\#define \hyperlink{group__apr__errno_ga2096daff578ef301e060b80c7a4525bf}{A\-P\-R\-\_\-\-F\-R\-O\-M\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e)
+\item 
+\#define \hyperlink{group__apr__errno_ga2385cae04b04afbdcb65f1a45c4d8506}{A\-P\-R\-\_\-\-T\-O\-\_\-\-O\-S\-\_\-\-E\-R\-R\-O\-R}(e)~(e)
+\item 
+\#define \hyperlink{group__apr__errno_gaa76e122da00af0ce2e8c8d7ff538bdfa}{apr\-\_\-get\-\_\-os\-\_\-error}()~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_ga9a2d9a03ad314b03a142574be6d7d8a7}{apr\-\_\-set\-\_\-os\-\_\-error}(e)~(errno = (e))
+\item 
+\#define \hyperlink{group__apr__errno_ga66e54f155b4a80ac7df9118af9bd896a}{apr\-\_\-get\-\_\-netos\-\_\-error}()~(errno)
+\item 
+\#define \hyperlink{group__apr__errno_gaafc38481621653ece6f592f9c5a9a09b}{apr\-\_\-set\-\_\-netos\-\_\-error}(e)~(errno = (e))
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga61e7a9958689dec6da6279f0cb6073ca}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-A\-C\-C\-E\-S}(s)~((s) == \hyperlink{group___a_p_r___error_ga407fc0ea7ead60f7a97fb9d70061bd41}{A\-P\-R\-\_\-\-E\-A\-C\-C\-E\-S})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga37707a0f41b084f1ce1a13575f4f21db}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-E\-X\-I\-S\-T}(s)~((s) == \hyperlink{group___a_p_r___error_gafa7f353804388017a0ea71bc14f0dda5}{A\-P\-R\-\_\-\-E\-E\-X\-I\-S\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad39fb68ea626722634f81a764b3626df}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-A\-M\-E\-T\-O\-O\-L\-O\-N\-G}(s)~((s) == \hyperlink{group___a_p_r___error_ga3db63b16c2b332efe441e2661f593377}{A\-P\-R\-\_\-\-E\-N\-A\-M\-E\-T\-O\-O\-L\-O\-N\-G})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad15c3b9bda78a88c02466a0d405c6047}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-E\-N\-T}(s)~((s) == \hyperlink{group___a_p_r___error_gacc26a4afe01b6cc141f839be71fddf1c}{A\-P\-R\-\_\-\-E\-N\-O\-E\-N\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gace6923483aa351b05b8f41e0bdb1df60}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-D\-I\-R}(s)~((s) == \hyperlink{group___a_p_r___error_gacfaa73cea75d14d49cc5c81e6c494330}{A\-P\-R\-\_\-\-E\-N\-O\-T\-D\-I\-R})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga5c77e7bb1de1b6ec319f2a42eb80be1e}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-S\-P\-C}(s)~((s) == \hyperlink{group___a_p_r___error_ga1dfc0bbf080f17b0b9010ef967542193}{A\-P\-R\-\_\-\-E\-N\-O\-S\-P\-C})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga38ab0ab9f00c849f24aae626f5118fce}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-M\-E\-M}(s)~((s) == \hyperlink{group___a_p_r___error_ga6a453e60000000609a95817efabebf4f}{A\-P\-R\-\_\-\-E\-N\-O\-M\-E\-M})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gae50825e6293023c570a92d185b38e393}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-M\-F\-I\-L\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gaec391eaf0bfa6aed03457ed3f796942d}{A\-P\-R\-\_\-\-E\-M\-F\-I\-L\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga4274ec4c91423ae54ab8a1d53991fb76}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-F\-I\-L\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gaf46f59147b00c2c87d76b9eb75674456}{A\-P\-R\-\_\-\-E\-N\-F\-I\-L\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaa843153a73806cca500287940e9f175f}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-B\-A\-D\-F}(s)~((s) == \hyperlink{group___a_p_r___error_ga204df8a37a5c7fd6b2c74ea098fbac02}{A\-P\-R\-\_\-\-E\-B\-A\-D\-F})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga3f620bb28c1c7f6fd3412dac2137d0fd}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-V\-A\-L}(s)~((s) == \hyperlink{group___a_p_r___error_gae3ffc41994444e71ce522c036ca1d9a4}{A\-P\-R\-\_\-\-E\-I\-N\-V\-A\-L})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gac9b1e593377ac3b93b259f30f04a1185}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-S\-P\-I\-P\-E}(s)~((s) == \hyperlink{group___a_p_r___error_ga3be81035cd2da76fbc27c75496489359}{A\-P\-R\-\_\-\-E\-S\-P\-I\-P\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga9dd578bfcd76a2d997395608ae5b3a4e}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-A\-G\-A\-I\-N}(s)~((s) == \hyperlink{group___a_p_r___error_ga0b2a5ebb819de5ce93d326939b586578}{A\-P\-R\-\_\-\-E\-A\-G\-A\-I\-N})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga30615baf6479221e44870c620e372b5b}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-T\-R}(s)~((s) == \hyperlink{group___a_p_r___error_gaee1ce306c0ebf1701b34172310aa1bd5}{A\-P\-R\-\_\-\-E\-I\-N\-T\-R})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga7b7807755d3d6f24e9978337b9faa5a1}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-S\-O\-C\-K}(s)~((s) == \hyperlink{group___a_p_r___error_gad456312527050c661dc19a8f17a0f0ef}{A\-P\-R\-\_\-\-E\-N\-O\-T\-S\-O\-C\-K})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga4decf55c5cea9660a44fed0c74265ee6}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-C\-O\-N\-N\-R\-E\-F\-U\-S\-E\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga1b4d1d847bebdfc48af343bc2486ecb8}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-R\-E\-F\-U\-S\-E\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga777e9ba36fe05ac8002113a9597073ea}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-I\-N\-P\-R\-O\-G\-R\-E\-S\-S}(s)~((s) == \hyperlink{group___a_p_r___error_ga5c311361f4f68f289c90f3cdfd77eb79}{A\-P\-R\-\_\-\-E\-I\-N\-P\-R\-O\-G\-R\-E\-S\-S})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga528a8032b13c75fbdeb9bf7e4c0be493}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-C\-O\-N\-N\-A\-B\-O\-R\-T\-E\-D}(s)~((s) == \hyperlink{group___a_p_r___error_ga9458da18e0ee46a5d37c9cdfdc43efd2}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-A\-B\-O\-R\-T\-E\-D})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga85e2cb1b4c904a9edfbc0d94203f76b6}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-C\-O\-N\-N\-R\-E\-S\-E\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga264bfe2056e917728e9ed060b58869c2}{A\-P\-R\-\_\-\-E\-C\-O\-N\-N\-R\-E\-S\-E\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga6adc2f539eabedb504294458be4f6251}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-T\-I\-M\-E\-D\-O\-U\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga6aeccbe9accb34f0adc1cb1ab9a82a8d}{A\-P\-R\-\_\-\-E\-T\-I\-M\-E\-D\-O\-U\-T})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad9307ff02e50296c528b79a670dc80bb}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-H\-O\-S\-T\-U\-N\-R\-E\-A\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_ga489b0c02fa7cf33ed6d698d385661f86}{A\-P\-R\-\_\-\-E\-H\-O\-S\-T\-U\-N\-R\-E\-A\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga19911958b3dd62559fb6c245ec579c27}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-E\-T\-U\-N\-R\-E\-A\-C\-H}(s)~((s) == \hyperlink{group___a_p_r___error_gab9b7124a88817d1b69cdef059f7dc689}{A\-P\-R\-\_\-\-E\-N\-E\-T\-U\-N\-R\-E\-A\-C\-H})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gaf37f4f8f6c929728bf55b927576bdb69}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-F\-T\-Y\-P\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gac358701354d03c37e3f0de12ed6d9afc}{A\-P\-R\-\_\-\-E\-F\-T\-Y\-P\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_gad1c0cf4e5619025a87c8edfc668d49f6}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-P\-I\-P\-E}(s)~((s) == \hyperlink{group___a_p_r___error_gae985330e30e374714ff1742485597f5d}{A\-P\-R\-\_\-\-E\-P\-I\-P\-E})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga1a11d6ff007e40f93f9db1b3c6e76617}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-X\-D\-E\-V}(s)~((s) == \hyperlink{group___a_p_r___error_ga0562023bd8ebe580b9bbb9f7b04d3f5d}{A\-P\-R\-\_\-\-E\-X\-D\-E\-V})
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga6cced4e794d3e7ed6dae3e53c337cc02}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-N\-O\-T\-E\-M\-P\-T\-Y}(s)
+\item 
+\#define \hyperlink{group___a_p_r___s_t_a_t_u_s___i_s_ga9309aade5bd335ac5233170e8c120cb9}{A\-P\-R\-\_\-\-S\-T\-A\-T\-U\-S\-\_\-\-I\-S\-\_\-\-E\-A\-F\-N\-O\-S\-U\-P\-P\-O\-R\-T}(s)~((s) == \hyperlink{group___a_p_r___error_ga76b558840838bcb94a4811a8e52df7a6}{A\-P\-R\-\_\-\-E\-A\-F\-N\-O\-S\-U\-P\-P\-O\-R\-T})
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef int \hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{group__apr__errno_gaf2edf92be162ab8fb1bbc6f22856a131}{apr\-\_\-strerror} (\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} statcode, char $\ast$buf, apr\-\_\-size\-\_\-t bufsize)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R Error Codes. 

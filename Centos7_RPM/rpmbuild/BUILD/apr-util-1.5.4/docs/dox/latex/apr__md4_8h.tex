@@ -1,0 +1,42 @@
+\hypertarget{apr__md4_8h}{\section{include/apr\-\_\-md4.h File Reference}
+\label{apr__md4_8h}\index{include/apr\-\_\-md4.\-h@{include/apr\-\_\-md4.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L M\-D4 Library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-xlate.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} \hyperlink{group___a_p_r___util___m_d4_ga273e0d8ad064dba908e46bde074af0d8}{apr\-\_\-md4\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga3f2ae0d6d93b1dd7a5efe11c241aee4b}{apr\-\_\-md4\-\_\-init} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga86138845d199bf164093670fb2a803c3}{apr\-\_\-md4\-\_\-set\-\_\-xlate} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context, \hyperlink{group___a_p_r___x_l_a_t_e_ga069dabbadc30e3a4157c38104a250e77}{apr\-\_\-xlate\-\_\-t} $\ast$xlate)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_gacbdaec9b84aa725c29fcaac196065556}{apr\-\_\-md4\-\_\-update} (\hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context, const unsigned char $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga292ac23cbfedc3ff227ced262ec09b30}{apr\-\_\-md4\-\_\-final} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, \hyperlink{structapr__md4__ctx__t}{apr\-\_\-md4\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___m_d4_ga8f11756aee7a293e2b05f9b1ed112431}{apr\-\_\-md4} (unsigned char digest\mbox{[}\hyperlink{group___a_p_r___util___m_d4_ga84489272090a11902d831c288c81c20f}{A\-P\-R\-\_\-\-M\-D4\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, const unsigned char $\ast$input, apr\-\_\-size\-\_\-t input\-Len)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L M\-D4 Library. 

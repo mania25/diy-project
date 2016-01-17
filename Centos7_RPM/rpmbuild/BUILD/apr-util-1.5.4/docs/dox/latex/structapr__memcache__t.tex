@@ -1,0 +1,58 @@
+\hypertarget{structapr__memcache__t}{\section{apr\-\_\-memcache\-\_\-t Struct Reference}
+\label{structapr__memcache__t}\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}}
+}
+
+
+{\ttfamily \#include $<$apr\-\_\-memcache.\-h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{structapr__memcache__t_aeb0639bc75fd5bc7561ab88f671f75d3}{flags}
+\item 
+apr\-\_\-uint16\-\_\-t \hyperlink{structapr__memcache__t_a95d15cfa5b291700cd9a697687eeac73}{nalloc}
+\item 
+apr\-\_\-uint16\-\_\-t \hyperlink{structapr__memcache__t_a94e1353d23d4d02a18a9f0ca0e90005d}{ntotal}
+\item 
+\hyperlink{structapr__memcache__server__t}{apr\-\_\-memcache\-\_\-server\-\_\-t} $\ast$$\ast$ \hyperlink{structapr__memcache__t_a85f916183d0aae6aaa88251edc7a1f81}{live\-\_\-servers}
+\item 
+\hypertarget{structapr__memcache__t_a5157d1b71f12ecbdf8439eca46525c87}{apr\-\_\-pool\-\_\-t $\ast$ {\bfseries p}}\label{structapr__memcache__t_a5157d1b71f12ecbdf8439eca46525c87}
+
+\item 
+void $\ast$ \hyperlink{structapr__memcache__t_a26614ee9cfdc014d7e5ea46df253193a}{hash\-\_\-baton}
+\item 
+\hypertarget{structapr__memcache__t_ac63433f48f39aab248e93a12109c2028}{apr\-\_\-memcache\-\_\-hash\-\_\-func {\bfseries hash\-\_\-func}}\label{structapr__memcache__t_ac63433f48f39aab248e93a12109c2028}
+
+\item 
+\hypertarget{structapr__memcache__t_aea9d227dec27ab31af244d5759c3939a}{void $\ast$ {\bfseries server\-\_\-baton}}\label{structapr__memcache__t_aea9d227dec27ab31af244d5759c3939a}
+
+\item 
+\hypertarget{structapr__memcache__t_a010fc90cc07583737ab09f958d182b8d}{apr\-\_\-memcache\-\_\-server\-\_\-func {\bfseries server\-\_\-func}}\label{structapr__memcache__t_a010fc90cc07583737ab09f958d182b8d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Container for a set of memcached servers 
+
+\subsection{Field Documentation}
+\hypertarget{structapr__memcache__t_aeb0639bc75fd5bc7561ab88f671f75d3}{\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}!flags@{flags}}
+\index{flags@{flags}!apr_memcache_t@{apr\-\_\-memcache\-\_\-t}}
+\subsubsection[{flags}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-memcache\-\_\-t\-::flags}}\label{structapr__memcache__t_aeb0639bc75fd5bc7561ab88f671f75d3}
+Flags, Not currently used \hypertarget{structapr__memcache__t_a26614ee9cfdc014d7e5ea46df253193a}{\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}!hash\-\_\-baton@{hash\-\_\-baton}}
+\index{hash\-\_\-baton@{hash\-\_\-baton}!apr_memcache_t@{apr\-\_\-memcache\-\_\-t}}
+\subsubsection[{hash\-\_\-baton}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ apr\-\_\-memcache\-\_\-t\-::hash\-\_\-baton}}\label{structapr__memcache__t_a26614ee9cfdc014d7e5ea46df253193a}
+Pool to use for allocations \hypertarget{structapr__memcache__t_a85f916183d0aae6aaa88251edc7a1f81}{\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}!live\-\_\-servers@{live\-\_\-servers}}
+\index{live\-\_\-servers@{live\-\_\-servers}!apr_memcache_t@{apr\-\_\-memcache\-\_\-t}}
+\subsubsection[{live\-\_\-servers}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-memcache\-\_\-server\-\_\-t}$\ast$$\ast$ apr\-\_\-memcache\-\_\-t\-::live\-\_\-servers}}\label{structapr__memcache__t_a85f916183d0aae6aaa88251edc7a1f81}
+Array of Servers \hypertarget{structapr__memcache__t_a95d15cfa5b291700cd9a697687eeac73}{\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}!nalloc@{nalloc}}
+\index{nalloc@{nalloc}!apr_memcache_t@{apr\-\_\-memcache\-\_\-t}}
+\subsubsection[{nalloc}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint16\-\_\-t apr\-\_\-memcache\-\_\-t\-::nalloc}}\label{structapr__memcache__t_a95d15cfa5b291700cd9a697687eeac73}
+Number of Servers Allocated \hypertarget{structapr__memcache__t_a94e1353d23d4d02a18a9f0ca0e90005d}{\index{apr\-\_\-memcache\-\_\-t@{apr\-\_\-memcache\-\_\-t}!ntotal@{ntotal}}
+\index{ntotal@{ntotal}!apr_memcache_t@{apr\-\_\-memcache\-\_\-t}}
+\subsubsection[{ntotal}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint16\-\_\-t apr\-\_\-memcache\-\_\-t\-::ntotal}}\label{structapr__memcache__t_a94e1353d23d4d02a18a9f0ca0e90005d}
+Number of Servers Added 
+
+The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{apr__memcache_8h}{apr\-\_\-memcache.\-h}\end{DoxyCompactItemize}

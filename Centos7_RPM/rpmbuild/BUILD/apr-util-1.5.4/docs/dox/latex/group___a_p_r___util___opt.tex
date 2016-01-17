@@ -1,0 +1,102 @@
+\hypertarget{group___a_p_r___util___opt}{\section{Optional Functions}
+\label{group___a_p_r___util___opt}\index{Optional Functions@{Optional Functions}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name)~apr\-\_\-\-O\-F\-N\-\_\-\#\#name\#\#\-\_\-t
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_gaf3ff372e28978d4ce0be7517ca2fddbd}{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(ret, name, args)~typedef ret (\hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name)) args
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_gab611deabd6e78b5f666071e8cbdcc736}{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(name)
+\item 
+\#define \hyperlink{group___a_p_r___util___opt_ga35f2df25ca06248d2fdd3e7463446418}{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}(name)~(\hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name) $\ast$)apr\-\_\-dynamic\-\_\-fn\-\_\-retrieve(\#name)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void( \hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} )(void)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group___a_p_r___util___opt_gaa9c7d3cc32128521274543c384e9698d}{void {\bfseries apr\-\_\-dynamic\-\_\-fn\-\_\-register} (const char $\ast$sz\-Name, \hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} $\ast$pfn)}\label{group___a_p_r___util___opt_gaa9c7d3cc32128521274543c384e9698d}
+
+\item 
+\hypertarget{group___a_p_r___util___opt_ga1ecfa6a6ced7332d03b5867735a5e49d}{\hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\-\_\-opt\-\_\-fn\-\_\-t} $\ast$ {\bfseries apr\-\_\-dynamic\-\_\-fn\-\_\-retrieve} (const char $\ast$sz\-Name)}\label{group___a_p_r___util___opt_ga1ecfa6a6ced7332d03b5867735a5e49d}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Typesafe registration and retrieval of functions that may not be present (i.\-e. functions exported by optional modules) 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___opt_gaf3ff372e28978d4ce0be7517ca2fddbd}{\index{Optional Functions@{Optional Functions}!A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}}
+\index{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}!Optional Functions@{Optional Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-D\-E\-C\-L\-A\-R\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N(
+\begin{DoxyParamCaption}
+\item[{}]{ret, }
+\item[{}]{name, }
+\item[{}]{args}
+\end{DoxyParamCaption}
+)~typedef ret ({\bf A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name)) args}}\label{group___a_p_r___util___opt_gaf3ff372e28978d4ce0be7517ca2fddbd}
+Declare an optional function. 
+\begin{DoxyParams}{Parameters}
+{\em ret} & The return type of the function \\
+\hline
+{\em name} & The name of the function \\
+\hline
+{\em args} & The function arguments (including brackets) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{\index{Optional Functions@{Optional Functions}!A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E@{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}}
+\index{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E@{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}!Optional Functions@{Optional Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~apr\-\_\-\-O\-F\-N\-\_\-\#\#name\#\#\-\_\-t}}\label{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}
+The type of an optional function. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the function \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___opt_gab611deabd6e78b5f666071e8cbdcc736}{\index{Optional Functions@{Optional Functions}!A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}}
+\index{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}!Optional Functions@{Optional Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-G\-I\-S\-T\-E\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___opt_gab611deabd6e78b5f666071e8cbdcc736}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \{ \hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{\(\backslash\)}
+\hyperlink{group___a_p_r___util___opt_ga987fcf75505450f1b4ff9d7b3a7ff5d3}{  APR\_OPTIONAL\_FN\_TYPE}(name) *apu\_\_opt = name; \(\backslash\)
+  apr\_dynamic\_fn\_register(#name,(\hyperlink{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{apr\_opt\_fn\_t} *)apu\_\_opt); \(\backslash\)
+\} \textcolor{keywordflow}{while} (0)
+\end{DoxyCode}
+Register an optional function. This can be later retrieved, type-\/safely, by name. Like all global functions, the name must be unique. Note that, confusingly but correctly, the function itself can be static! 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the function \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___opt_ga35f2df25ca06248d2fdd3e7463446418}{\index{Optional Functions@{Optional Functions}!A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}}
+\index{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N@{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}!Optional Functions@{Optional Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-T\-R\-I\-E\-V\-E\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N(
+\begin{DoxyParamCaption}
+\item[{}]{name}
+\end{DoxyParamCaption}
+)~({\bf A\-P\-R\-\_\-\-O\-P\-T\-I\-O\-N\-A\-L\-\_\-\-F\-N\-\_\-\-T\-Y\-P\-E}(name) $\ast$)apr\-\_\-dynamic\-\_\-fn\-\_\-retrieve(\#name)}}\label{group___a_p_r___util___opt_ga35f2df25ca06248d2fdd3e7463446418}
+Retrieve an optional function. Returns N\-U\-L\-L if the function is not present. 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the function \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}{\index{Optional Functions@{Optional Functions}!apr\-\_\-opt\-\_\-fn\-\_\-t@{apr\-\_\-opt\-\_\-fn\-\_\-t}}
+\index{apr\-\_\-opt\-\_\-fn\-\_\-t@{apr\-\_\-opt\-\_\-fn\-\_\-t}!Optional Functions@{Optional Functions}}
+\subsubsection[{apr\-\_\-opt\-\_\-fn\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef void( apr\-\_\-opt\-\_\-fn\-\_\-t)(void)}}\label{group___a_p_r___util___opt_ga35e08c2dbf593e3dc5a2cb0fdc8cd637}
+X\-X\-X\-: This doesn't belong here, then! Private function! D\-O N\-O\-T U\-S\-E! 

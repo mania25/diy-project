@@ -1,0 +1,153 @@
+\hypertarget{apr__sha1_8h}{\section{include/apr\-\_\-sha1.h File Reference}
+\label{apr__sha1_8h}\index{include/apr\-\_\-sha1.\-h@{include/apr\-\_\-sha1.\-h}}
+}
+
+
+A\-P\-R-\/\-U\-T\-I\-L S\-H\-A1 library.  
+
+
+{\ttfamily \#include \char`\"{}apu.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-general.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{apr__sha1_8h_af4ce94a96702e0d9fe96e1d861168af9}{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}~20
+\item 
+\#define \hyperlink{apr__sha1_8h_afec390451cd4f502babb1f982a78690b}{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D}~\char`\"{}\{S\-H\-A\}\char`\"{}
+\item 
+\#define \hyperlink{apr__sha1_8h_a6e6ab60388eea5f855f1613425f8e34c}{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N}~5
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} \hyperlink{apr__sha1_8h_a1acfd1f91495d6d22a188308b0b2d2b5}{apr\-\_\-sha1\-\_\-ctx\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{apr__sha1_8h_a38a5ac487992a24e941b7501273829e8}{apr\-\_\-sha1\-\_\-base64} (const char $\ast$clear, int len, char $\ast$out)
+\item 
+void \hyperlink{apr__sha1_8h_a79220a1d610128cca63a6c363ea27d01}{apr\-\_\-sha1\-\_\-init} (\hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$context)
+\item 
+void \hyperlink{apr__sha1_8h_ad85fb14e7e8d1c26e6591eb681b047b0}{apr\-\_\-sha1\-\_\-update} (\hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$context, const char $\ast$input, unsigned int input\-Len)
+\item 
+void \hyperlink{apr__sha1_8h_a3db65581e6cd2f029735c8689485b11a}{apr\-\_\-sha1\-\_\-update\-\_\-binary} (\hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$context, const unsigned char $\ast$input, unsigned int input\-Len)
+\item 
+void \hyperlink{apr__sha1_8h_a037d3697f6604bdaa2f46c0f381a2bba}{apr\-\_\-sha1\-\_\-final} (unsigned char digest\mbox{[}\hyperlink{apr__sha1_8h_af4ce94a96702e0d9fe96e1d861168af9}{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}\mbox{]}, \hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$context)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-U\-T\-I\-L S\-H\-A1 library. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{apr__sha1_8h_af4ce94a96702e0d9fe96e1d861168af9}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E~20}}\label{apr__sha1_8h_af4ce94a96702e0d9fe96e1d861168af9}
+size of the S\-H\-A1 D\-I\-G\-E\-S\-T \hypertarget{apr__sha1_8h_afec390451cd4f502babb1f982a78690b}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D@{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D}}
+\index{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D@{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D~\char`\"{}\{S\-H\-A\}\char`\"{}}}\label{apr__sha1_8h_afec390451cd4f502babb1f982a78690b}
+Define the Magic String prefix that identifies a password as being hashed using our algorithm. \hypertarget{apr__sha1_8h_a6e6ab60388eea5f855f1613425f8e34c}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N@{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N}}
+\index{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N@{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-H\-A1\-P\-W\-\_\-\-I\-D\-L\-E\-N~5}}\label{apr__sha1_8h_a6e6ab60388eea5f855f1613425f8e34c}
+length of the S\-H\-A Password 
+
+\subsection{Typedef Documentation}
+\hypertarget{apr__sha1_8h_a1acfd1f91495d6d22a188308b0b2d2b5}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-ctx\-\_\-t@{apr\-\_\-sha1\-\_\-ctx\-\_\-t}}
+\index{apr\-\_\-sha1\-\_\-ctx\-\_\-t@{apr\-\_\-sha1\-\_\-ctx\-\_\-t}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-ctx\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t} {\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t}}}\label{apr__sha1_8h_a1acfd1f91495d6d22a188308b0b2d2b5}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{structapr__sha1__ctx__t}{apr\-\_\-sha1\-\_\-ctx\-\_\-t} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\hypertarget{apr__sha1_8h_a38a5ac487992a24e941b7501273829e8}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-base64@{apr\-\_\-sha1\-\_\-base64}}
+\index{apr\-\_\-sha1\-\_\-base64@{apr\-\_\-sha1\-\_\-base64}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-base64}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-sha1\-\_\-base64 (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{clear, }
+\item[{int}]{len, }
+\item[{char $\ast$}]{out}
+\end{DoxyParamCaption}
+)}}\label{apr__sha1_8h_a38a5ac487992a24e941b7501273829e8}
+Provide a means to S\-H\-A1 crypt/encode a plaintext password in a way which makes password file compatible with those commonly use in netscape web and ldap installations. 
+\begin{DoxyParams}{Parameters}
+{\em clear} & The plaintext password \\
+\hline
+{\em len} & The length of the plaintext password \\
+\hline
+{\em out} & The encrypted/encoded password \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+S\-H\-A1 support is useful for migration purposes, but is less secure than \hyperlink{namespace_apache}{Apache}'s password format, since \hyperlink{namespace_apache}{Apache}'s (M\-D5) password format uses a random eight character salt to generate one of many possible hashes for the same password. Netscape uses plain S\-H\-A1 without a salt, so the same password will always generate the same hash, making it easier to break since the search space is smaller. 
+\end{DoxyNote}
+\hypertarget{apr__sha1_8h_a037d3697f6604bdaa2f46c0f381a2bba}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-final@{apr\-\_\-sha1\-\_\-final}}
+\index{apr\-\_\-sha1\-\_\-final@{apr\-\_\-sha1\-\_\-final}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-final}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-sha1\-\_\-final (
+\begin{DoxyParamCaption}
+\item[{unsigned char}]{digest\mbox{[}\-A\-P\-R\-\_\-\-S\-H\-A1\-\_\-\-D\-I\-G\-E\-S\-T\-S\-I\-Z\-E\mbox{]}, }
+\item[{{\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{apr__sha1_8h_a037d3697f6604bdaa2f46c0f381a2bba}
+Finish computing the S\-H\-A digest 
+\begin{DoxyParams}{Parameters}
+{\em digest} & the output buffer in which to store the digest \\
+\hline
+{\em context} & The context to finalize \\
+\hline
+\end{DoxyParams}
+\hypertarget{apr__sha1_8h_a79220a1d610128cca63a6c363ea27d01}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-init@{apr\-\_\-sha1\-\_\-init}}
+\index{apr\-\_\-sha1\-\_\-init@{apr\-\_\-sha1\-\_\-init}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-init}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-sha1\-\_\-init (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$}]{context}
+\end{DoxyParamCaption}
+)}}\label{apr__sha1_8h_a79220a1d610128cca63a6c363ea27d01}
+Initialize the S\-H\-A digest 
+\begin{DoxyParams}{Parameters}
+{\em context} & The S\-H\-A context to initialize \\
+\hline
+\end{DoxyParams}
+\hypertarget{apr__sha1_8h_ad85fb14e7e8d1c26e6591eb681b047b0}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-update@{apr\-\_\-sha1\-\_\-update}}
+\index{apr\-\_\-sha1\-\_\-update@{apr\-\_\-sha1\-\_\-update}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-update}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-sha1\-\_\-update (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$}]{context, }
+\item[{const char $\ast$}]{input, }
+\item[{unsigned int}]{input\-Len}
+\end{DoxyParamCaption}
+)}}\label{apr__sha1_8h_ad85fb14e7e8d1c26e6591eb681b047b0}
+Update the S\-H\-A digest 
+\begin{DoxyParams}{Parameters}
+{\em context} & The S\-H\-A1 context to update \\
+\hline
+{\em input} & The buffer to add to the S\-H\-A digest \\
+\hline
+{\em input\-Len} & The length of the input buffer \\
+\hline
+\end{DoxyParams}
+\hypertarget{apr__sha1_8h_a3db65581e6cd2f029735c8689485b11a}{\index{apr\-\_\-sha1.\-h@{apr\-\_\-sha1.\-h}!apr\-\_\-sha1\-\_\-update\-\_\-binary@{apr\-\_\-sha1\-\_\-update\-\_\-binary}}
+\index{apr\-\_\-sha1\-\_\-update\-\_\-binary@{apr\-\_\-sha1\-\_\-update\-\_\-binary}!apr_sha1.h@{apr\-\_\-sha1.\-h}}
+\subsubsection[{apr\-\_\-sha1\-\_\-update\-\_\-binary}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-sha1\-\_\-update\-\_\-binary (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sha1\-\_\-ctx\-\_\-t} $\ast$}]{context, }
+\item[{const unsigned char $\ast$}]{input, }
+\item[{unsigned int}]{input\-Len}
+\end{DoxyParamCaption}
+)}}\label{apr__sha1_8h_a3db65581e6cd2f029735c8689485b11a}
+Update the S\-H\-A digest with binary data 
+\begin{DoxyParams}{Parameters}
+{\em context} & The S\-H\-A1 context to update \\
+\hline
+{\em input} & The buffer to add to the S\-H\-A digest \\
+\hline
+{\em input\-Len} & The length of the input buffer \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,175 @@
+\hypertarget{group__apr__file__stat}{\section{Stat Functions}
+\label{group__apr__file__stat}\index{Stat Functions@{Stat Functions}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__finfo__t}{apr\-\_\-finfo\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K}~0x00000001
+\item 
+\#define \hyperlink{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E}~0x00000010
+\item 
+\#define \hyperlink{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E}~0x00000020
+\item 
+\#define \hyperlink{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E}~0x00000040
+\item 
+\#define \hyperlink{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E}~0x00000100
+\item 
+\#define \hyperlink{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E}~0x00000200
+\item 
+\#define \hyperlink{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V}~0x00001000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E}~0x00002000
+\item 
+\#define \hyperlink{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K}~0x00004000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E}~0x00008000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R}~0x00010000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P}~0x00020000
+\item 
+\#define \hyperlink{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T}~0x00100000
+\item 
+\#define \hyperlink{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T}~0x00200000
+\item 
+\#define \hyperlink{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T}~0x00400000
+\item 
+\#define \hyperlink{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E}~0x01000000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E}~0x02000000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N}~0x00008170
+\item 
+\#define \hyperlink{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T}~0x00003000
+\item 
+\#define \hyperlink{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R}~0x00030000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T}~0x00700000
+\item 
+\#define \hyperlink{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M}~0x0073b170
+\item 
+\#define \hyperlink{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T}~0x02000000
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__finfo__t}{apr\-\_\-finfo\-\_\-t} \hyperlink{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}{apr\-\_\-finfo\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__apr__errno_gaf76ee4543247e9fb3f3546203e590a6c}{apr\-\_\-status\-\_\-t} \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\-\_\-stat} (\hyperlink{structapr__finfo__t}{apr\-\_\-finfo\-\_\-t} $\ast$finfo, const char $\ast$fname, apr\-\_\-int32\-\_\-t wanted, \hyperlink{group__apr__pools_gaf137f28edcf9a086cd6bc36c20d7cdfb}{apr\-\_\-pool\-\_\-t} $\ast$pool)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-A\-T\-I\-M\-E~0x00000040}}\label{group__apr__file__stat_ga17d7656d02a35ffc05afe22032a8da15}
+Access Time \hypertarget{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-S\-I\-Z\-E~0x00000200}}\label{group__apr__file__stat_gaf87a09b89935d730cb1ade80d5b6ada0}
+Storage size consumed by the file \hypertarget{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-C\-T\-I\-M\-E~0x00000020}}\label{group__apr__file__stat_ga98bef78baf71fa63b06352704f128bca}
+Creation or inode-\/changed time \hypertarget{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-E\-V~0x00001000}}\label{group__apr__file__stat_ga0890d31145211f62d38dd8e444b5660a}
+Device \hypertarget{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-D\-I\-R\-E\-N\-T~0x02000000}}\label{group__apr__file__stat_gaac6679307cc735f2f0373960db96b931}
+an atomic unix \hyperlink{group__apr__dir_ga3e4ee253e0c712160bee10bfb9c8e4a8}{apr\-\_\-dir\-\_\-read()} \hypertarget{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-P\-R\-O\-T~0x00200000}}\label{group__apr__file__stat_gadfa294303e34528b1fcae1bc009140c1}
+Group protection bits \hypertarget{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-G\-R\-O\-U\-P~0x00020000}}\label{group__apr__file__stat_ga8420798139d34a88678498aa848803ff}
+Group \hypertarget{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-C\-A\-S\-E~0x01000000}}\label{group__apr__file__stat_gac46eeba0ae0e771c6ed3cb27fd5492d8}
+if dev is case insensitive \hypertarget{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-D\-E\-N\-T~0x00003000}}\label{group__apr__file__stat_ga3ac8c8d0492291417be3d32556464108}
+dev and inode \hypertarget{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-I\-N\-O\-D\-E~0x00002000}}\label{group__apr__file__stat_ga4fee7341395912db501b40de81dbba26}
+Inode \hypertarget{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-L\-I\-N\-K~0x00000001}}\label{group__apr__file__stat_ga9b0c1d02401b845f928f836fdd3c6712}
+Stat the link not the file itself if it is a link \hypertarget{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-I\-N~0x00008170}}\label{group__apr__file__stat_ga341104571b05550aa923cb14898a82ef}
+type, mtime, ctime, atime, size \hypertarget{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-M\-T\-I\-M\-E~0x00000010}}\label{group__apr__file__stat_ga992ce1f4f75d519fd2a9d241c5a12515}
+Modification Time \hypertarget{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-A\-M\-E~0x02000000}}\label{group__apr__file__stat_ga7fa4caf84808c11a1ec33c5c8d613e4b}
+-\/$>$name in proper case \hypertarget{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-L\-I\-N\-K~0x00004000}}\label{group__apr__file__stat_gabb2ba05b8ed45e59b1f06e1b7b4c91c2}
+Number of links \hypertarget{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-N\-O\-R\-M~0x0073b170}}\label{group__apr__file__stat_gad3f64010d25d2fe926191804d7c99379}
+an atomic unix \hyperlink{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{apr\-\_\-stat()} \hypertarget{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-O\-W\-N\-E\-R~0x00030000}}\label{group__apr__file__stat_ga27dee9407b38a459c57618098c3920b0}
+user and group \hypertarget{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-P\-R\-O\-T~0x00700000}}\label{group__apr__file__stat_gad902be0636860cb3f8ad76a59abbcd7c}
+all protections \hypertarget{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-S\-I\-Z\-E~0x00000100}}\label{group__apr__file__stat_gadf72493da450c0b1e3d279e98a973120}
+Size of the file \hypertarget{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-T\-Y\-P\-E~0x00008000}}\label{group__apr__file__stat_gad5d25f25527ee77c08bb20aae141306c}
+Type \hypertarget{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-P\-R\-O\-T~0x00100000}}\label{group__apr__file__stat_gac85e4335fcf91881b11b3e8a4b224aca}
+User protection bits \hypertarget{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-U\-S\-E\-R~0x00010000}}\label{group__apr__file__stat_ga599d92111a5cca379a06980025044e12}
+User \hypertarget{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}{\index{Stat Functions@{Stat Functions}!A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T}}
+\index{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T@{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T}!Stat Functions@{Stat Functions}}
+\subsubsection[{A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\-\-W\-P\-R\-O\-T~0x00400000}}\label{group__apr__file__stat_gab970792384fe9a805cf66983350eefdc}
+World protection bits 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}{\index{Stat Functions@{Stat Functions}!apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}}
+\index{apr\-\_\-finfo\-\_\-t@{apr\-\_\-finfo\-\_\-t}!Stat Functions@{Stat Functions}}
+\subsubsection[{apr\-\_\-finfo\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-finfo\-\_\-t} {\bf apr\-\_\-finfo\-\_\-t}}}\label{group__apr__file__stat_ga3d390fdda1d16ae462c11b2d3b18efd1}
+file info structure 
+
+\subsection{Function Documentation}
+\hypertarget{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}{\index{Stat Functions@{Stat Functions}!apr\-\_\-stat@{apr\-\_\-stat}}
+\index{apr\-\_\-stat@{apr\-\_\-stat}!Stat Functions@{Stat Functions}}
+\subsubsection[{apr\-\_\-stat}]{\setlength{\rightskip}{0pt plus 5cm}{\bf apr\-\_\-status\-\_\-t} apr\-\_\-stat (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-finfo\-\_\-t} $\ast$}]{finfo, }
+\item[{const char $\ast$}]{fname, }
+\item[{apr\-\_\-int32\-\_\-t}]{wanted, }
+\item[{{\bf apr\-\_\-pool\-\_\-t} $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group__apr__file__stat_gafb0f4a4fa4545c155e20ddd8f2001c1a}
+get the specified file's stats. The file is specified by filename, instead of using a pre-\/opened file. 
+\begin{DoxyParams}{Parameters}
+{\em finfo} & Where to store the information about the file, which is never touched if the call fails. \\
+\hline
+{\em fname} & The name of the file to stat. \\
+\hline
+{\em wanted} & The desired \hyperlink{structapr__finfo__t}{apr\-\_\-finfo\-\_\-t} fields, as a bit flag of A\-P\-R\-\_\-\-F\-I\-N\-F\-O\-\_\- values \\
+\hline
+{\em pool} & the pool to use to allocate the new file.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+If {\ttfamily A\-P\-R\-\_\-\-I\-N\-C\-O\-M\-P\-L\-E\-T\-E} is returned all the fields in {\itshape finfo} may not be filled in, and you need to check the {\ttfamily finfo-\/$>$valid} bitmask to verify that what you're looking for is there. 
+\end{DoxyNote}

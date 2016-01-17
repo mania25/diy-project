@@ -1,0 +1,107 @@
+\hypertarget{apr__anylock_8h}{\section{include/apr\-\_\-anylock.h File Reference}
+\label{apr__anylock_8h}\index{include/apr\-\_\-anylock.\-h@{include/apr\-\_\-anylock.\-h}}
+}
+
+
+A\-P\-R-\/\-Util transparent any lock flavor wrapper.  
+
+
+{\ttfamily \#include \char`\"{}apr\-\_\-proc\-\_\-mutex.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-thread\-\_\-mutex.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}apr\-\_\-thread\-\_\-rwlock.\-h\char`\"{}}\\*
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t}
+\item 
+union \hyperlink{unionapr__anylock__t_1_1apr__anylock__u__t}{apr\-\_\-anylock\-\_\-t\-::apr\-\_\-anylock\-\_\-u\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{apr__anylock_8h_ac43b130fb19a434647c34e1d7040fc49}{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K}(lck)
+\item 
+\#define \hyperlink{apr__anylock_8h_afbc6bc9b6cabe0db55e8896fc26053f4}{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K}(lck)
+\item 
+\#define \hyperlink{apr__anylock_8h_a367f0d4cc5239e95ee925542d4a0b3fb}{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K}(lck)
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} \hyperlink{apr__anylock_8h_a6ecda6cbd4d00b792990249d285bec15}{apr\-\_\-anylock\-\_\-t}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A\-P\-R-\/\-Util transparent any lock flavor wrapper. 
+
+\subsection{Macro Definition Documentation}
+\hypertarget{apr__anylock_8h_ac43b130fb19a434647c34e1d7040fc49}{\index{apr\-\_\-anylock.\-h@{apr\-\_\-anylock.\-h}!A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K}!apr_anylock.h@{apr\-\_\-anylock.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-L\-O\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{lck}
+\end{DoxyParamCaption}
+)}}\label{apr__anylock_8h_ac43b130fb19a434647c34e1d7040fc49}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(((lck)->type == apr\_anylock\_none)         \(\backslash\)
+      ? APR\_SUCCESS                              \(\backslash\)
+      : (((lck)->type == apr\_anylock\_threadmutex)  \(\backslash\)
+          ? apr\_thread\_mutex\_lock((lck)->lock.tm)    \(\backslash\)
+          : (((lck)->type == apr\_anylock\_procmutex)    \(\backslash\)
+              ? apr\_proc\_mutex\_lock((lck)->lock.pm)      \(\backslash\)
+              : (((lck)->type == apr\_anylock\_readlock)     \(\backslash\)
+                  ? apr\_thread\_rwlock\_rdlock((lck)->lock.rw) \(\backslash\)
+                  : (((lck)->type == apr\_anylock\_writelock)    \(\backslash\)
+                      ? apr\_thread\_rwlock\_wrlock((lck)->lock.rw) \(\backslash\)
+                      : APR\_EINVAL)))))
+\end{DoxyCode}
+Lock an \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} structure \hypertarget{apr__anylock_8h_afbc6bc9b6cabe0db55e8896fc26053f4}{\index{apr\-\_\-anylock.\-h@{apr\-\_\-anylock.\-h}!A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K}!apr_anylock.h@{apr\-\_\-anylock.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-T\-R\-Y\-L\-O\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{lck}
+\end{DoxyParamCaption}
+)}}\label{apr__anylock_8h_afbc6bc9b6cabe0db55e8896fc26053f4}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(((lck)->type == apr\_anylock\_none)            \(\backslash\)
+      ? APR\_SUCCESS                                 \(\backslash\)
+      : (((lck)->type == apr\_anylock\_threadmutex)     \(\backslash\)
+          ? apr\_thread\_mutex\_trylock((lck)->lock.tm)    \(\backslash\)
+          : (((lck)->type == apr\_anylock\_procmutex)       \(\backslash\)
+              ? apr\_proc\_mutex\_trylock((lck)->lock.pm)      \(\backslash\)
+              : (((lck)->type == apr\_anylock\_readlock)        \(\backslash\)
+                  ? apr\_thread\_rwlock\_tryrdlock((lck)->lock.rw) \(\backslash\)
+                  : (((lck)->type == apr\_anylock\_writelock)       \(\backslash\)
+                      ? apr\_thread\_rwlock\_trywrlock((lck)->lock.rw) \(\backslash\)
+                          : APR\_EINVAL)))))
+\end{DoxyCode}
+Try to lock an \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} structure \hypertarget{apr__anylock_8h_a367f0d4cc5239e95ee925542d4a0b3fb}{\index{apr\-\_\-anylock.\-h@{apr\-\_\-anylock.\-h}!A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K}}
+\index{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K@{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K}!apr_anylock.h@{apr\-\_\-anylock.\-h}}
+\subsubsection[{A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-A\-N\-Y\-L\-O\-C\-K\-\_\-\-U\-N\-L\-O\-C\-K(
+\begin{DoxyParamCaption}
+\item[{}]{lck}
+\end{DoxyParamCaption}
+)}}\label{apr__anylock_8h_a367f0d4cc5239e95ee925542d4a0b3fb}
+{\bfseries Value\-:}
+\begin{DoxyCode}
+(((lck)->type == apr\_anylock\_none)         \(\backslash\)
+      ? APR\_SUCCESS                              \(\backslash\)
+      : (((lck)->type == apr\_anylock\_threadmutex)  \(\backslash\)
+          ? apr\_thread\_mutex\_unlock((lck)->lock.tm)  \(\backslash\)
+          : (((lck)->type == apr\_anylock\_procmutex)    \(\backslash\)
+              ? apr\_proc\_mutex\_unlock((lck)->lock.pm)    \(\backslash\)
+              : ((((lck)->type == apr\_anylock\_readlock) || \(\backslash\)
+                  ((lck)->type == apr\_anylock\_writelock))    \(\backslash\)
+                  ? apr\_thread\_rwlock\_unlock((lck)->lock.rw)   \(\backslash\)
+                      : APR\_EINVAL))))
+\end{DoxyCode}
+Unlock an \hyperlink{structapr__anylock__t}{apr\-\_\-anylock\-\_\-t} structure 
+
+\subsection{Typedef Documentation}
+\hypertarget{apr__anylock_8h_a6ecda6cbd4d00b792990249d285bec15}{\index{apr\-\_\-anylock.\-h@{apr\-\_\-anylock.\-h}!apr\-\_\-anylock\-\_\-t@{apr\-\_\-anylock\-\_\-t}}
+\index{apr\-\_\-anylock\-\_\-t@{apr\-\_\-anylock\-\_\-t}!apr_anylock.h@{apr\-\_\-anylock.\-h}}
+\subsubsection[{apr\-\_\-anylock\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-anylock\-\_\-t}  {\bf apr\-\_\-anylock\-\_\-t}}}\label{apr__anylock_8h_a6ecda6cbd4d00b792990249d285bec15}
+Structure that may contain any A\-P\-R lock type 

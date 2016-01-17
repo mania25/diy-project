@@ -1,0 +1,221 @@
+\hypertarget{group___a_p_r___util___r_l}{\section{Resource List Routines}
+\label{group___a_p_r___util___r_l}\index{Resource List Routines@{Resource List Routines}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___r_l_gae442d99e6a2eef4a4957f0360822fcac}{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T}~0
+\item 
+\#define \hyperlink{group___a_p_r___util___r_l_gad93b2c229d154c8f6a5c9dfcd7488756}{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T}~1
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} \hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t}
+\item 
+\hypertarget{group___a_p_r___util___r_l_gab43e73c2fb526476d3e56d51f5aa214c}{typedef apr\-\_\-status\-\_\-t($\ast$ {\bfseries apr\-\_\-reslist\-\_\-constructor} )(void $\ast$$\ast$resource, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)}\label{group___a_p_r___util___r_l_gab43e73c2fb526476d3e56d51f5aa214c}
+
+\item 
+\hypertarget{group___a_p_r___util___r_l_ga60813240d319787f0430ae3171af838a}{typedef apr\-\_\-status\-\_\-t($\ast$ {\bfseries apr\-\_\-reslist\-\_\-destructor} )(void $\ast$resource, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)}\label{group___a_p_r___util___r_l_ga60813240d319787f0430ae3171af838a}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga608ebcddce542603a7f1d3cf51ae8d3c}{apr\-\_\-reslist\-\_\-create} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$$\ast$reslist, int min, int smax, int hmax, apr\-\_\-interval\-\_\-time\-\_\-t ttl, apr\-\_\-reslist\-\_\-constructor con, apr\-\_\-reslist\-\_\-destructor de, void $\ast$params, apr\-\_\-pool\-\_\-t $\ast$pool)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga103e0cbac6c5da7cb93d4e52799233cb}{apr\-\_\-reslist\-\_\-destroy} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gadfbb592b31ff9215f45d3280636e41d7}{apr\-\_\-reslist\-\_\-acquire} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$$\ast$resource)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gaf65ca1701994a0323df639cdb4a8d8b2}{apr\-\_\-reslist\-\_\-release} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$resource)
+\item 
+void \hyperlink{group___a_p_r___util___r_l_gafe06c964d04a568f2625fb5a9ba7bad6}{apr\-\_\-reslist\-\_\-timeout\-\_\-set} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, apr\-\_\-interval\-\_\-time\-\_\-t timeout)
+\item 
+apr\-\_\-uint32\-\_\-t \hyperlink{group___a_p_r___util___r_l_gac37fbbcbc8a98ba9ed017638a2c6c1b7}{apr\-\_\-reslist\-\_\-acquired\-\_\-count} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_ga346c0604115a9659cf23ed0cc781f7a9}{apr\-\_\-reslist\-\_\-invalidate} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, void $\ast$resource)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___r_l_gaa13a7724a30b5a37ac13548bd8dc56f6}{apr\-\_\-reslist\-\_\-maintain} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist)
+\item 
+void \hyperlink{group___a_p_r___util___r_l_ga7e8adfc4b12ffb63c6795d8d79ee5e95}{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set} (\hyperlink{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{apr\-\_\-reslist\-\_\-t} $\ast$reslist, apr\-\_\-uint32\-\_\-t mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___r_l_gae442d99e6a2eef4a4957f0360822fcac}{\index{Resource List Routines@{Resource List Routines}!A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T}}
+\index{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T@{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-D\-E\-F\-A\-U\-L\-T~0}}\label{group___a_p_r___util___r_l_gae442d99e6a2eef4a4957f0360822fcac}
+default pool cleanup \hypertarget{group___a_p_r___util___r_l_gad93b2c229d154c8f6a5c9dfcd7488756}{\index{Resource List Routines@{Resource List Routines}!A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T}}
+\index{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T@{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T~1}}\label{group___a_p_r___util___r_l_gad93b2c229d154c8f6a5c9dfcd7488756}
+use pool pre cleanup 
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-t@{apr\-\_\-reslist\-\_\-t}}
+\index{apr\-\_\-reslist\-\_\-t@{apr\-\_\-reslist\-\_\-t}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-reslist\-\_\-t} {\bf apr\-\_\-reslist\-\_\-t}}}\label{group___a_p_r___util___r_l_ga670f6719dfeffe1037e063eaab7b82ac}
+Opaque resource list object 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___r_l_gadfbb592b31ff9215f45d3280636e41d7}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-acquire@{apr\-\_\-reslist\-\_\-acquire}}
+\index{apr\-\_\-reslist\-\_\-acquire@{apr\-\_\-reslist\-\_\-acquire}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-acquire}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-acquire (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist, }
+\item[{void $\ast$$\ast$}]{resource}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_gadfbb592b31ff9215f45d3280636e41d7}
+Retrieve a resource from the list, creating a new one if necessary. If we have met our maximum number of resources, we will block until one becomes available. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+{\em resource} & An address where the pointer to the resource will be stored. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_gac37fbbcbc8a98ba9ed017638a2c6c1b7}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-acquired\-\_\-count@{apr\-\_\-reslist\-\_\-acquired\-\_\-count}}
+\index{apr\-\_\-reslist\-\_\-acquired\-\_\-count@{apr\-\_\-reslist\-\_\-acquired\-\_\-count}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-acquired\-\_\-count}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-uint32\-\_\-t apr\-\_\-reslist\-\_\-acquired\-\_\-count (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_gac37fbbcbc8a98ba9ed017638a2c6c1b7}
+Return the number of outstanding resources. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_ga7e8adfc4b12ffb63c6795d8d79ee5e95}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set@{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set}}
+\index{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set@{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-reslist\-\_\-cleanup\-\_\-order\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist, }
+\item[{apr\-\_\-uint32\-\_\-t}]{mode}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_ga7e8adfc4b12ffb63c6795d8d79ee5e95}
+Set reslist cleanup order. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+{\em mode} & Cleanup order mode 
+\begin{DoxyPre}
+          APR\_RESLIST\_CLEANUP\_DEFAULT  default pool cleanup order
+          APR\_RESLIST\_CLEANUP\_FIRST    use pool pre cleanup
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If A\-P\-R\-\_\-\-R\-E\-S\-L\-I\-S\-T\-\_\-\-C\-L\-E\-A\-N\-U\-P\-\_\-\-F\-I\-R\-S\-T is used the destructors will be called before child pools of the pool used to create the reslist are destroyed. This allows to explicitly destroy the child pools inside reslist destructors. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___r_l_ga608ebcddce542603a7f1d3cf51ae8d3c}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-create@{apr\-\_\-reslist\-\_\-create}}
+\index{apr\-\_\-reslist\-\_\-create@{apr\-\_\-reslist\-\_\-create}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-create}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-create (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$$\ast$}]{reslist, }
+\item[{int}]{min, }
+\item[{int}]{smax, }
+\item[{int}]{hmax, }
+\item[{apr\-\_\-interval\-\_\-time\-\_\-t}]{ttl, }
+\item[{apr\-\_\-reslist\-\_\-constructor}]{con, }
+\item[{apr\-\_\-reslist\-\_\-destructor}]{de, }
+\item[{void $\ast$}]{params, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{pool}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_ga608ebcddce542603a7f1d3cf51ae8d3c}
+Create a new resource list with the following parameters\-: 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & An address where the pointer to the new resource list will be stored. \\
+\hline
+{\em min} & Allowed minimum number of available resources. Zero creates new resources only when needed. \\
+\hline
+{\em smax} & Resources will be destroyed during reslist maintenance to meet this maximum restriction as they expire (reach their ttl). \\
+\hline
+{\em hmax} & Absolute maximum limit on the number of total resources. \\
+\hline
+{\em ttl} & If non-\/zero, sets the maximum amount of time in microseconds an unused resource is valid. Any resource which has exceeded this time will be destroyed, either when encountered by \hyperlink{group___a_p_r___util___r_l_gadfbb592b31ff9215f45d3280636e41d7}{apr\-\_\-reslist\-\_\-acquire()} or during reslist maintenance. \\
+\hline
+{\em con} & Constructor routine that is called to create a new resource. \\
+\hline
+{\em de} & Destructor routine that is called to destroy an expired resource. \\
+\hline
+{\em params} & Passed to constructor and deconstructor \\
+\hline
+{\em pool} & The pool from which to create this resource list. Also the same pool that is passed to the constructor and destructor routines. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+If A\-P\-R has been compiled without thread support, hmax will be automatically set to 1 and values of min and smax will be forced to 1 for any non-\/zero value. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___r_l_ga103e0cbac6c5da7cb93d4e52799233cb}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-destroy@{apr\-\_\-reslist\-\_\-destroy}}
+\index{apr\-\_\-reslist\-\_\-destroy@{apr\-\_\-reslist\-\_\-destroy}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-destroy}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-destroy (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_ga103e0cbac6c5da7cb93d4e52799233cb}
+Destroy the given resource list and all resources controlled by this list. F\-I\-X\-M\-E\-: Should this block until all resources become available, or maybe just destroy all the free ones, or maybe destroy them even though they might be in use by something else? Currently it will abort if there are resources that haven't been released, so there is an assumption that all resources have been released to the list before calling this function. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The reslist to destroy \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_ga346c0604115a9659cf23ed0cc781f7a9}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-invalidate@{apr\-\_\-reslist\-\_\-invalidate}}
+\index{apr\-\_\-reslist\-\_\-invalidate@{apr\-\_\-reslist\-\_\-invalidate}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-invalidate}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-invalidate (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist, }
+\item[{void $\ast$}]{resource}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_ga346c0604115a9659cf23ed0cc781f7a9}
+Invalidate a resource in the pool -\/ e.\-g. a database connection that returns a \char`\"{}lost connection\char`\"{} error and can't be restored. Use this instead of apr\-\_\-reslist\-\_\-release if the resource is bad. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+{\em resource} & The resource to invalidate. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_gaa13a7724a30b5a37ac13548bd8dc56f6}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-maintain@{apr\-\_\-reslist\-\_\-maintain}}
+\index{apr\-\_\-reslist\-\_\-maintain@{apr\-\_\-reslist\-\_\-maintain}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-maintain}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-maintain (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_gaa13a7724a30b5a37ac13548bd8dc56f6}
+Perform routine maintenance on the resource list. This call may instantiate new resources or expire old resources. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_gaf65ca1701994a0323df639cdb4a8d8b2}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-release@{apr\-\_\-reslist\-\_\-release}}
+\index{apr\-\_\-reslist\-\_\-release@{apr\-\_\-reslist\-\_\-release}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-release}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-reslist\-\_\-release (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist, }
+\item[{void $\ast$}]{resource}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_gaf65ca1701994a0323df639cdb4a8d8b2}
+Return a resource back to the list of available resources. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+{\em resource} & The resource to return to the list. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___r_l_gafe06c964d04a568f2625fb5a9ba7bad6}{\index{Resource List Routines@{Resource List Routines}!apr\-\_\-reslist\-\_\-timeout\-\_\-set@{apr\-\_\-reslist\-\_\-timeout\-\_\-set}}
+\index{apr\-\_\-reslist\-\_\-timeout\-\_\-set@{apr\-\_\-reslist\-\_\-timeout\-\_\-set}!Resource List Routines@{Resource List Routines}}
+\subsubsection[{apr\-\_\-reslist\-\_\-timeout\-\_\-set}]{\setlength{\rightskip}{0pt plus 5cm}void apr\-\_\-reslist\-\_\-timeout\-\_\-set (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-reslist\-\_\-t} $\ast$}]{reslist, }
+\item[{apr\-\_\-interval\-\_\-time\-\_\-t}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___r_l_gafe06c964d04a568f2625fb5a9ba7bad6}
+Set the timeout the acquire will wait for a free resource when the maximum number of resources is exceeded. 
+\begin{DoxyParams}{Parameters}
+{\em reslist} & The resource list. \\
+\hline
+{\em timeout} & Timeout to wait. The zero waits forever. \\
+\hline
+\end{DoxyParams}

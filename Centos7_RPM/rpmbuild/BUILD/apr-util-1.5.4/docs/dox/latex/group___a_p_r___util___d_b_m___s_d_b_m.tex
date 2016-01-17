@@ -1,0 +1,269 @@
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m}{\section{S\-D\-B\-M library}
+\label{group___a_p_r___util___d_b_m___s_d_b_m}\index{S\-D\-B\-M library@{S\-D\-B\-M library}}
+}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gafabaf97932efa0eebfb1cc6b692a111f}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T}~\char`\"{}.dir\char`\"{}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaa03fa1d1183240ca0845c54cc07df557}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T}~\char`\"{}.pag\char`\"{}
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gad42d896bab08b5e210f489fa59656807}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T}~0
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga84e2252c9ddf5e6c64ed1be43d2d0e53}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E}~1
+\item 
+\#define \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga64cd385609059cf151e54c7046d92ec3}{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P}~2
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaf24cdea6e4884036a40484259efa68c6}{apr\-\_\-sdbm\-\_\-t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga08c6121b4159ae86cec6e915e1e5d758}{apr\-\_\-sdbm\-\_\-open} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$$\ast$db, const char $\ast$name, apr\-\_\-int32\-\_\-t mode, apr\-\_\-fileperms\-\_\-t perms, apr\-\_\-pool\-\_\-t $\ast$p)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gaf684c3a70d2c9ebe02bb1e2fffe23e1e}{apr\-\_\-sdbm\-\_\-close} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga2c2edd6a123d8ca2a6334fa8874b724d}{apr\-\_\-sdbm\-\_\-lock} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, int type)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gab96a7e08ddac3cb6bff97a822b68de14}{apr\-\_\-sdbm\-\_\-unlock} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga7d9eae450e9f9a2f1bcf626a3f8ca43f}{apr\-\_\-sdbm\-\_\-fetch} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$value, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gac12993b882c50afa0777945ea4a88572}{apr\-\_\-sdbm\-\_\-store} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} value, int opt)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga5744462c07c40d26c275beaeb902ff9c}{apr\-\_\-sdbm\-\_\-delete} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, const \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gae5410d9dc681393e597f492f30c6447f}{apr\-\_\-sdbm\-\_\-firstkey} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$key)
+\item 
+apr\-\_\-status\-\_\-t \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_ga77d7f848ccb68e9f465a988d0af80911}{apr\-\_\-sdbm\-\_\-nextkey} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db, \hyperlink{structapr__sdbm__datum__t}{apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$key)
+\item 
+int \hyperlink{group___a_p_r___util___d_b_m___s_d_b_m_gabad67008f83fd219173acc5abdd0b42d}{apr\-\_\-sdbm\-\_\-rdonly} (\hyperlink{structapr__sdbm__t}{apr\-\_\-sdbm\-\_\-t} $\ast$db)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gafabaf97932efa0eebfb1cc6b692a111f}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T}}
+\index{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-D\-I\-R\-F\-E\-X\-T~\char`\"{}.dir\char`\"{}}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gafabaf97932efa0eebfb1cc6b692a111f}
+S\-D\-B\-M Directory file extension \hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gad42d896bab08b5e210f489fa59656807}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T}}
+\index{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T~0}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gad42d896bab08b5e210f489fa59656807}
+Insert \hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga64cd385609059cf151e54c7046d92ec3}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P}}
+\index{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-I\-N\-S\-E\-R\-T\-D\-U\-P~2}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga64cd385609059cf151e54c7046d92ec3}
+Insert with duplicates \hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gaa03fa1d1183240ca0845c54cc07df557}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T}}
+\index{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-P\-A\-G\-F\-E\-X\-T~\char`\"{}.pag\char`\"{}}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gaa03fa1d1183240ca0845c54cc07df557}
+S\-D\-B\-M page file extension \hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga84e2252c9ddf5e6c64ed1be43d2d0e53}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E}}
+\index{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E@{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-R\-\_\-\-S\-D\-B\-M\-\_\-\-R\-E\-P\-L\-A\-C\-E~1}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga84e2252c9ddf5e6c64ed1be43d2d0e53}
+Replace 
+
+\subsection{Typedef Documentation}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gaf24cdea6e4884036a40484259efa68c6}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-t@{apr\-\_\-sdbm\-\_\-t}}
+\index{apr\-\_\-sdbm\-\_\-t@{apr\-\_\-sdbm\-\_\-t}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf apr\-\_\-sdbm\-\_\-t} {\bf apr\-\_\-sdbm\-\_\-t}}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gaf24cdea6e4884036a40484259efa68c6}
+Structure for referencing an sdbm 
+
+\subsection{Function Documentation}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gaf684c3a70d2c9ebe02bb1e2fffe23e1e}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-close@{apr\-\_\-sdbm\-\_\-close}}
+\index{apr\-\_\-sdbm\-\_\-close@{apr\-\_\-sdbm\-\_\-close}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-close}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-close (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gaf684c3a70d2c9ebe02bb1e2fffe23e1e}
+Close an sdbm file previously opened by apr\-\_\-sdbm\-\_\-open 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database to close \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga5744462c07c40d26c275beaeb902ff9c}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-delete@{apr\-\_\-sdbm\-\_\-delete}}
+\index{apr\-\_\-sdbm\-\_\-delete@{apr\-\_\-sdbm\-\_\-delete}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-delete}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-delete (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{const {\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t}}]{key}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga5744462c07c40d26c275beaeb902ff9c}
+Delete an sdbm record value by key 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em key} & The key datum of the record to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+It is not an error to delete a non-\/existent record. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga7d9eae450e9f9a2f1bcf626a3f8ca43f}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-fetch@{apr\-\_\-sdbm\-\_\-fetch}}
+\index{apr\-\_\-sdbm\-\_\-fetch@{apr\-\_\-sdbm\-\_\-fetch}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-fetch}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-fetch (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$}]{value, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t}}]{key}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga7d9eae450e9f9a2f1bcf626a3f8ca43f}
+Fetch an sdbm record value by key 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em value} & The value datum retrieved for this record \\
+\hline
+{\em key} & The key datum to find this record \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gae5410d9dc681393e597f492f30c6447f}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-firstkey@{apr\-\_\-sdbm\-\_\-firstkey}}
+\index{apr\-\_\-sdbm\-\_\-firstkey@{apr\-\_\-sdbm\-\_\-firstkey}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-firstkey}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-firstkey (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gae5410d9dc681393e597f492f30c6447f}
+Retrieve the first record key from a dbm 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em key} & The key datum of the first record \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The keys returned are not ordered. To traverse the list of keys for an sdbm opened with A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K, the caller must use apr\-\_\-sdbm\-\_\-lock prior to retrieving the first record, and hold the lock until after the last call to apr\-\_\-sdbm\-\_\-nextkey. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga2c2edd6a123d8ca2a6334fa8874b724d}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-lock@{apr\-\_\-sdbm\-\_\-lock}}
+\index{apr\-\_\-sdbm\-\_\-lock@{apr\-\_\-sdbm\-\_\-lock}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-lock}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-lock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{int}]{type}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga2c2edd6a123d8ca2a6334fa8874b724d}
+Lock an sdbm database for concurency of multiple operations 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database to lock \\
+\hline
+{\em type} & The lock type 
+\begin{DoxyPre}
+          APR\_FLOCK\_SHARED
+          APR\_FLOCK\_EXCLUSIVE
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+Calls to apr\-\_\-sdbm\-\_\-lock may be nested. All apr\-\_\-sdbm functions perform implicit locking. Since an A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D lock cannot be portably promoted to an A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-E\-X\-C\-L\-U\-S\-I\-V\-E lock, apr\-\_\-sdbm\-\_\-store and apr\-\_\-sdbm\-\_\-delete calls will fail if an A\-P\-R\-\_\-\-F\-L\-O\-C\-K\-\_\-\-S\-H\-A\-R\-E\-D lock is held. The apr\-\_\-sdbm\-\_\-lock call requires the database to be opened with the A\-P\-R\-\_\-\-S\-H\-A\-R\-E\-L\-O\-C\-K mode value. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga77d7f848ccb68e9f465a988d0af80911}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-nextkey@{apr\-\_\-sdbm\-\_\-nextkey}}
+\index{apr\-\_\-sdbm\-\_\-nextkey@{apr\-\_\-sdbm\-\_\-nextkey}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-nextkey}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-nextkey (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t} $\ast$}]{key}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga77d7f848ccb68e9f465a988d0af80911}
+Retrieve the next record key from an sdbm 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em key} & The key datum of the next record \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_ga08c6121b4159ae86cec6e915e1e5d758}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-open@{apr\-\_\-sdbm\-\_\-open}}
+\index{apr\-\_\-sdbm\-\_\-open@{apr\-\_\-sdbm\-\_\-open}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-open}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-open (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$$\ast$}]{db, }
+\item[{const char $\ast$}]{name, }
+\item[{apr\-\_\-int32\-\_\-t}]{mode, }
+\item[{apr\-\_\-fileperms\-\_\-t}]{perms, }
+\item[{apr\-\_\-pool\-\_\-t $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_ga08c6121b4159ae86cec6e915e1e5d758}
+Open an sdbm database by file name 
+\begin{DoxyParams}{Parameters}
+{\em db} & The newly opened database \\
+\hline
+{\em name} & The sdbm file to open \\
+\hline
+{\em mode} & The flag values (A\-P\-R\-\_\-\-R\-E\-A\-D and A\-P\-R\-\_\-\-B\-I\-N\-A\-R\-Y flags are implicit) 
+\begin{DoxyPre}
+          APR\_WRITE          open for read-write access
+          APR\_CREATE         create the sdbm if it does not exist
+          APR\_TRUNCATE       empty the contents of the sdbm
+          APR\_EXCL           fail for APR\_CREATE if the file exists
+          APR\_DELONCLOSE     delete the sdbm when closed
+          APR\_SHARELOCK      support locking across process/machines
+\end{DoxyPre}
+ \\
+\hline
+{\em perms} & Permissions to apply to if created \\
+\hline
+{\em p} & The pool to use when creating the sdbm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyRemark}{Remarks}
+The sdbm name is not a true file name, as sdbm appends suffixes for seperate data and index files. 
+\end{DoxyRemark}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gabad67008f83fd219173acc5abdd0b42d}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-rdonly@{apr\-\_\-sdbm\-\_\-rdonly}}
+\index{apr\-\_\-sdbm\-\_\-rdonly@{apr\-\_\-sdbm\-\_\-rdonly}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-rdonly}]{\setlength{\rightskip}{0pt plus 5cm}int apr\-\_\-sdbm\-\_\-rdonly (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gabad67008f83fd219173acc5abdd0b42d}
+Returns true if the sdbm database opened for read-\/only access 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database to test \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gac12993b882c50afa0777945ea4a88572}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-store@{apr\-\_\-sdbm\-\_\-store}}
+\index{apr\-\_\-sdbm\-\_\-store@{apr\-\_\-sdbm\-\_\-store}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-store}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-store (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t}}]{key, }
+\item[{{\bf apr\-\_\-sdbm\-\_\-datum\-\_\-t}}]{value, }
+\item[{int}]{opt}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gac12993b882c50afa0777945ea4a88572}
+Store an sdbm record value by key 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database \\
+\hline
+{\em key} & The key datum to store this record by \\
+\hline
+{\em value} & The value datum to store in this record \\
+\hline
+{\em opt} & The method used to store the record 
+\begin{DoxyPre}
+          APR\_SDBM\_INSERT     return an error if the record exists
+          APR\_SDBM\_REPLACE    overwrite any existing record for key
+\end{DoxyPre}
+ \\
+\hline
+\end{DoxyParams}
+\hypertarget{group___a_p_r___util___d_b_m___s_d_b_m_gab96a7e08ddac3cb6bff97a822b68de14}{\index{S\-D\-B\-M library@{S\-D\-B\-M library}!apr\-\_\-sdbm\-\_\-unlock@{apr\-\_\-sdbm\-\_\-unlock}}
+\index{apr\-\_\-sdbm\-\_\-unlock@{apr\-\_\-sdbm\-\_\-unlock}!SDBM library@{S\-D\-B\-M library}}
+\subsubsection[{apr\-\_\-sdbm\-\_\-unlock}]{\setlength{\rightskip}{0pt plus 5cm}apr\-\_\-status\-\_\-t apr\-\_\-sdbm\-\_\-unlock (
+\begin{DoxyParamCaption}
+\item[{{\bf apr\-\_\-sdbm\-\_\-t} $\ast$}]{db}
+\end{DoxyParamCaption}
+)}}\label{group___a_p_r___util___d_b_m___s_d_b_m_gab96a7e08ddac3cb6bff97a822b68de14}
+Release an sdbm lock previously aquired by apr\-\_\-sdbm\-\_\-lock 
+\begin{DoxyParams}{Parameters}
+{\em db} & The database to unlock \\
+\hline
+\end{DoxyParams}
