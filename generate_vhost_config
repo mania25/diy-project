@@ -1,0 +1,478 @@
+#!/bin/bash
+
+#	Apache HTTP Virtual Host Generator v1.0
+#	 
+#	A script to generate Apache HTTPD Virtual Host Configuration File
+#
+#
+#	Author 	: mania25
+#	Email	: abdurrahmanalpen@gmail.com
+#	
+#
+
+regex_domain="^([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z0-9])?\$"
+
+regex_ip="^([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})[.]([0-9]{1,3})$"
+
+done_config=false
+
+function checkLetsEncryptInstallation
+{
+	letsencrypt_installed=false
+	if hash letsencrypt 2> /dev/null; then
+		letsencrypt_installed=true
+	fi
+}
+
+function checkLetsEncryptDependency
+{
+	letsencrypt_dependency_installed=false
+	if hash git 2> /dev/null ; then
+		letsencrypt_dependency_installed=true
+	fi
+}
+
+function installLetsEncryptDependencies
+{
+	SUDO=$1
+	if [ -r /etc/rc.d/init.d/functions ]; then
+		echo -e "Detected : Red-Hat Based Distribution Linux \n"
+		sleep 2
+		if hash yum 2> /dev/null ; then
+			$SUDO yum update -y
+			$SUDO yum install git -y
+		elif hash dnf 2> /dev/null ; then
+			$SUDO dnf update -y
+			$SUDO dnf install git -y
+		fi
+	elif [ -r /lib/lsb/init-functions ]; then
+		echo -e "Detected : Ubuntu Based Distribution Linux \n"
+		sleep 2
+		$SUDO apt-get -y update
+		$SUDO apt-get -y install git 
+	fi
+}
+
+function isUserRoot
+{
+	sudo -k
+	if [[ $EUID != 0 ]]; 
+	then
+		local SUDO_ROOT=sudo
+		echo "$SUDO_ROOT"
+	else
+		local SUDO_ROOT=""
+		echo "$SUDO_ROOT"
+	fi
+}
+
+function installLetsEncrypt
+{
+	SUDO=$1
+	$SUDO chmod 755 /opt/
+	$SUDO git clone https://github.com/letsencrypt/letsencrypt.git /opt/letsencrypt/
+	$SUDO ln -s /opt/letsencrypt/letsencrypt-auto /usr/local/bin/letsencrypt
+	$SUDO ln -s /opt/letsencrypt/letsencrypt-auto /usr/bin/letsencrypt
+}
+
+function generateCertificate
+{
+	pid=$(lsof -i:80 -t) 
+	if [[ $pid != "" ]]; then
+		echo -e "Error: Port 80 Has Been Used \n"
+		echo -e ""
+		sleep 2
+		return 
+	else 
+		if [[ $1 == sudo  ]]; then
+			$1 letsencrypt certonly --rsa-key-size 4096 --redirect --renew-by-default --hsts --uir -d $2
+		else
+			/opt/letsencrypt/letsencrypt-auto certonly --rsa-key-size 4096 --redirect --renew-by-default --hsts --uir -d $1
+		fi
+	fi
+	echo -e ""
+}
+
+function enterWebrootPath 
+{
+	finished=false
+	while [[ $finished == false ]] 
+	do
+		echo -e "Enter Webroot Path : \c"
+		read webroot_path
+		if [[ $webroot_path == "" ]]; then
+			echo -e "Error: Invalid Webroot Directory \n"
+		fi
+		if [[ ! -d $webroot_path ]];
+		then
+			echo -e "Webroot Path Directory Does'nt exist, do you want to create one ? (y/n)"
+			read webroot_choice
+			if [[ $webroot_choice == "y" ]]; then
+				echo -e "Creating Webroot Path Directory Folder. . ."
+				mkdir -p $webroot_path
+				sleep 2
+				echo -e "Webroot Directory Folder has been created"
+			fi
+		fi
+		echo -e ""
+		finished=true
+	done
+}
+
+function enterIpAddress 
+{
+	finished=false
+	while [[ $finished == false ]]
+	do
+		echo -e "Enter Public Server IP Address : \c"
+		read ip_addr
+		if [[ ! $ip_addr =~ $regex_ip ]]
+		then
+			echo -e "Error: Invalid IP Address \n"
+		else
+			echo -e ""
+			finished=true
+		fi
+	done
+}
+
+function enterDomain 
+{
+	finished=false
+	while [[ $finished == false ]]
+	do
+		echo -e "Enter Domain Name : \c"
+		read domain_name
+		if [[ ! $domain_name =~ $regex_domain ]]
+		then
+			echo -e "Error: Invalid Domain Name \n"
+		else
+			echo -e ""
+			finished=true
+		fi
+	done
+}
+
+function enterCertFilePath
+{
+	finished=false
+	while [[ $finished == false ]]
+	do
+		echo -e "Enter Certificate File Directory : \c"
+		read certFile_path
+		if [[ ! -f $certFile_path ]] || [[ $certFile_path == "" ]];
+		then
+			echo -e "Error: Invalid Certificate File Directory Or Certificate File Not Found \n"
+			echo -e ""
+			break
+		else
+			echo -e ""
+			finished=true
+		fi
+	done
+}
+
+function enterCertKeyFilePath
+{
+	finished=false
+	while [[ $finished == false ]]
+	do
+		echo -e "Enter Certificate Key File Directory : \c"
+		read certKeyFile_path
+		if [[ ! -f $certKeyFile_path ]] || [[ $certKeyFile_path == "" ]];
+		then
+			echo "Error: Invalid Certificate Key File Directory \n"
+			break
+		else
+			echo -e ""
+			finished=true
+		fi
+	done
+}
+
+function defaultVhostHttpConf
+{
+	if [[ $ip_addr == "" ]] && [[ $domain_name == "" ]] && [[ $webroot_path == "" ]];
+	then
+		echo -e "Error: There are one or more empty required field."
+	else
+		echo -e "<VirtualHost $ip_addr:80>" >> $domain_name.conf
+		echo -e "\t ServerName $domain_name" >> $domain_name.conf
+		echo -e "\t ServerAlias $domain_name" >> $domain_name.conf
+		echo -e "\t DocumentRoot $webroot_path" >> $domain_name.conf
+		echo -e "" >> $domain_name.conf
+		echo -e "\t ErrorLog \${APACHE_LOG_DIR}/error.log" >> $domain_name.conf
+		echo -e "\t CustomLog \${APACHE_LOG_DIR}/access.log combined" >> $domain_name.conf
+		echo -e "</VirtualHost>" >> $domain_name.conf
+	fi
+}
+
+function defaultVhostHttptoHttpsRedirectConf
+{
+	if [[ $ip_addr == "" ]] && [[ $domain_name == "" ]] && [[ $webroot_path == "" ]];
+	then
+		echo -e "Error: There are one or more empty required field."
+	else
+		echo -e "<VirtualHost $ip_addr:80>" >> $domain_name.conf
+		echo -e "\t ServerName $domain_name" >> $domain_name.conf
+		echo -e "\t ServerAlias $domain_name" >> $domain_name.conf
+		echo -e "" >> $domain_name.conf
+		echo -e "\t Redirect / https://$domain_name/" >> $domain_name.conf
+		echo -e "</VirtualHost>" >> $domain_name.conf
+	fi
+}
+
+function defaultVhostHttpsConf
+{
+	if [[ $ip_addr == "" ]] && [[ $domain_name == "" ]] && [[ $webroot_path == "" ]] && [[ $certFile_path == "" ]] && [[ $certKeyFile_path == "" ]]
+	then
+		echo -e "Error: There are one or more empty required field."
+	else
+		if [[ $1 == "http_to_https_redirect" ]]; then
+			echo -e "\n" >> $domain_name.conf
+		fi
+
+		echo -e "Listen 443 https" >> $domain_name.conf
+
+		echo -e "<VirtualHost $ip_addr:443>" >> $domain_name.conf
+		
+		echo -e "\t ServerName $domain_name:443" >> $domain_name.conf
+		echo -e "\t ServerAlias $domain_name:443" >> $domain_name.conf
+		echo -e "\t DocumentRoot $webroot_path" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t ErrorLog \${APACHE_LOG_DIR}/error.log" >> $domain_name.conf
+		echo -e "\t CustomLog \${APACHE_LOG_DIR}/access.log combined" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t SSLEngine On" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t Header always set Strict-Transport-Security \"max-age=15768000\"" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t SSLCipherSuite ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:ECDHE-RSA-DES-CBC3-SHA:ECDHE-ECDSA-DES-CBC3-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t SSLHonorCipherOrder On" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t SSLCertificateFile $certFile_path" >> $domain_name.conf
+		echo -e "\t SSLCertificateKeyFile $certKeyFile_path" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t <FilesMatch \"\.(cgi|shtml|phtml|php)$\">" >> $domain_name.conf
+			echo -e "\t \t SSLOptions +StdEnvVars" >> $domain_name.conf
+		echo -e "\t </FilesMatch>" >> $domain_name.conf
+		
+		echo -e "" >> $domain_name.conf
+		
+		echo -e "\t <Directory /usr/lib/cgi-bin>" >> $domain_name.conf
+			echo -e "\t \t SSLOptions +StdEnvVars" >> $domain_name.conf
+		echo -e "\t </Directory>" >> $domain_name.conf
+		echo -e "" >> $domain_name.conf
+		echo -e "\t BrowserMatch \"MSIE [2-6]\" \ " >> $domain_name.conf
+			echo -e "\t \t nokeepalive ssl-unclean-shutdown \ " >> $domain_name.conf
+			echo -e "\t \t downgrade-1.0 force-response-1.0 " >> $domain_name.conf
+		echo -e "\t BrowserMatch \"MSIE [17-9]\" ssl-unclean-shutdown" >> $domain_name.conf
+		echo -e "</VirtualHost>" >> $domain_name.conf
+	fi	
+}
+
+echo -e ""
+echo -e "========================================================================== \n"
+echo -e "= Welcome to Apache HTTPD Virtual Host Configuration File Generator v1.0 = \n"
+echo -e "========================================================================== \n"
+echo -e ""
+read -p "Press Enter to Continue. . ."
+echo -e ""
+
+while [[ $done_config == false ]]
+do
+	echo -e "Main Menu : \n"
+	echo -e ""
+	echo -e "1. Generate For HTTP Only. \n"
+	echo -e "2. Generate For HTTPS Only. \n"
+	echo -e "3. Generate For HTTPS With HTTP Redirection. \n"
+	echo -e "4. Generate SSL Certificate File with Lets-Encrypt \n"
+	echo -e "5. Terminate Application. \n"
+	echo -e ""
+	echo -e "Your Choice : \c"
+	read choice
+	case $choice in
+		1)
+			sure=0
+			while [[ $sure == 0 ]]; do
+				echo -e ""
+				enterWebrootPath
+				enterDomain
+				enterIpAddress
+				echo -e "Current Configuration : \n"
+				echo -e ""
+				echo -e "Webroot Path             : $webroot_path \n"
+				echo -e "Domain Name              : $domain_name \n"
+				echo -e "Public Server IP Address : $ip_addr \n"
+				echo -e ""
+				echo -e "Are you sure ? (y/n) \c"
+				read sure_choice
+				if [[ $sure_choice == 'y' ]]
+				then
+					echo -e ""
+					echo -e "Generating Default HTTP Config File. . . \n"
+					defaultVhostHttpConf
+					sleep 5
+					echo -e "Done. . . \n"
+					sleep 1
+					sure=1
+				fi
+			done ;;
+		2)
+			sure=0
+			echo -e ""
+			echo -e "Attention: Before continue, please make sure you have your own SSL Certificate File \n"
+			echo -e ""
+			echo -e "Enter SSL Certificate Directory : \c"
+			read ssl_cert_dir
+			if [[ ! -f $ssl_cert_dir ]]; then
+				echo -e "Error: SSL Certificate Doesn't Exist \n"
+			else 
+				if ! openssl x509 -noout -in $ssl_cert_dir 2> /dev/null ; then
+					echo -e "Please, enter a valid SSL Certificate \n"
+				else
+					while [[ $sure == 0 ]]; do
+						echo -e ""
+						enterWebrootPath
+						enterDomain
+						enterIpAddress
+						enterCertFilePath
+						enterCertKeyFilePath
+						echo -e "Current Configuration : \n"
+						echo -e ""
+						echo -e "Webroot Path                   : $webroot_path \n"
+						echo -e "Domain Name                    : $domain_name \n"
+						echo -e "Public Server IP Address       : $ip_addr \n"
+						echo -e "Certificate File Directory     : $certFile_path \n"
+						echo -e "Certificate Key File Directory : $certKeyFile_path \n"
+						echo -e ""
+						echo -e "Are you sure ? (y/n) \c"
+						read sure_choice
+						if [[ $sure_choice == 'y' ]]
+						then
+							echo -e ""
+							echo -e "Generating Default HTTPS Config File. . . \n"
+							defaultVhostHttpsConf
+							sleep 5
+							echo -e "Done. . . \n"
+							sleep 1
+							sure=1
+						fi
+					done
+				fi
+			fi ;;
+		3)
+			sure=0
+			echo -e ""
+			echo -e "Attention: Before continue, please make sure you have your own SSL Certificate File \n"
+			echo -e ""
+			echo -e "Enter SSL Certificate Directory : \c"
+			read ssl_cert_dir
+			if [[ ! -f $ssl_cert_dir ]]; then
+				echo -e "Error: SSL Certificate Doesn't Exist \n"
+			else 
+				if ! openssl x509 -noout -in $ssl_cert_dir 2> /dev/null ; then
+					echo -e "Please, enter a valid SSL Certificate \n"
+				else
+					while [[ $sure == 0 ]]; do
+						echo -e ""
+						enterWebrootPath
+						enterDomain
+						enterIpAddress
+						enterCertFilePath
+						enterCertKeyFilePath
+						echo -e "Current Configuration : \n"
+						echo -e ""
+						echo -e "Webroot Path                   : $webroot_path \n"
+						echo -e "Domain Name                    : $domain_name \n"
+						echo -e "Public Server IP Address       : $ip_addr \n"
+						echo -e "Certificate File Directory     : $certFile_path \n"
+						echo -e "Certificate Key File Directory : $certKeyFile_path \n"
+						echo -e ""
+						echo -e "Are you sure ? (y/n) \c"
+						read sure_choice
+						if [[ $sure_choice == 'y' ]]
+						then
+							echo -e ""
+							echo -e "Generating Default HTTPS Config File. . . \n"
+							defaultVhostHttptoHttpsRedirectConf
+							defaultVhostHttpsConf http_to_https_redirect
+							sleep 5
+							echo -e "Done. . . \n"
+							sleep 1
+							sure=1
+						fi
+					done
+				fi
+			fi ;;
+		4)
+			echo -e ""
+			checkLetsEncryptInstallation
+			if [[ $letsencrypt_installed != true ]]; then
+				echo -e "Lets-Encrypt is not installed \n"
+				echo -e "Do you want to install Lets-Encrypt ? (y/n) \c"
+				read letsencrypt_choice
+				if [[ $letsencrypt_choice == "y" ]]; then
+					echo -e ""
+					echo -e "Checking Lets-Encrypt Dependencies. . ."
+					checkLetsEncryptDependency
+					sleep 2
+					if [[ $letsencrypt_dependency_installed != true ]]; then
+						installLetsEncryptDependencies $(isUserRoot)
+						echo -e "Lets-Encrypt Dependencies has been successfully installed. . . \n"
+						sleep 2
+						echo -e ""
+						echo -e "Installing Lets-Encrypt Application. . . \n"
+						sleep 2
+						installLetsEncrypt $(isUserRoot)
+						sleep 2
+						echo -e ""
+						echo -e "Lets-Encrypt has been successfully installed. . . \n"
+					else
+						echo -e ""
+						echo -e "Installing Lets-Encrypt Application. . . \n"
+						sleep 2
+						installLetsEncrypt $(isUserRoot)
+						sleep 2
+						echo -e ""
+						echo -e "Lets-Encrypt has been successfully installed. . . \n"
+					fi
+				fi
+			else
+				echo -e ""
+				echo -e "Lets-Encrypt has been installed \n"
+			fi
+
+			echo -e "Preparing to generate SSL Certificate. . .\n"
+			echo -e ""
+			enterDomain
+			if [[ $? == 0 ]]; then
+				echo -e "Generating SSL Certificate ($domain_name). . . \n"
+				generateCertificate $(isUserRoot) $domain_name
+			else
+				echo -e "There was an error, please try again. . . \n"
+			fi;;
+		*)
+			echo -e ""
+			echo -e "Closing Application. . . \n"
+			sleep 5
+			echo -e "Good Bye :), Thank You For Using This Application. . . \n"
+			sleep 1
+			exit 0 ;;
+	esac
+done
